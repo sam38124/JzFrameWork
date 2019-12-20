@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--最终翻译-->
+    <string name="app_agree">同意</string>
+    <string name="app_disagree">不同意</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_connection">连线</string>
+    <string name="app_sign_in">登入</string>
+    <string name="app_registration">注册</string>
+    <string name="app_forgot_password">忘记密码</string>
+    <string name="Programming">烧录中</string>
+    <string name="app_menue">主选单</string>
+    <string name="app_home_check_sensor">检查感测器</string>
+    <string name="app_trigger">触发</string>
+    <string name="app_home_program_sensor_phone">烧录感测器</string>
+    <string name="app_home_id_copy">复制感测器ID</string>
+    <string name="app_setup">系统设定</string>
+    <string name="app_home_obdii_relearn">车辆OBDII学码</string>
+    <string name="app_home_cloud_information">云端资讯</string>
+    <string name="app_home_online_shopping">线上订购</string>
+    <string name="app_user_manual">使用说明</string>
+
+    <string name="app_scan_2d_code">扫描二维码</string>
+    <string name="app_mmy">车辆选择</string>
+    <string name="app_select_car_makes">选择车型</string>
+    <string name="app_select_car_model">选择车款</string>
+    <string name="app_select_year">选择年份</string>
+    <string name="app_number_choice">选择烧录数量</string>
+    <string name="app_start">开始</string>
+    <string name="app_key_in">输入指定感测器ID</string>
+    <string name="app_scan_and_packing">请扫描感测器外壳或包装盒上的二维码</string>
+    <string name="app_program">烧录</string>
+    <string name="app_copy_original">复制原感测器ID</string>
+    <string name="app_original_sensor">原感测器</string>
+    <string name="app_original_id">原感测器ID</string>
+    <string name="app_new_sensor">新感测器</string>
+    <string name="app_new_sensor_list">新感测器列表</string>
+    <string name="app_my_favorite">我的最爱</string>
+    <string name="app_scan">扫描</string>
+
+    <string name="app_setting">系统设定</string>
+    <string name="app_setting_my_favorite">系统设定/我的最爱</string>
+    <string name="app_my_favorite_setting">设定我的最爱</string>
+    <string name="app_setting_wifi">系统设定/WIFI</string>
+    <string name="app_wifi">WIFI设定</string>
+    <string name="app_setting_bluetooth">系统设定/蓝牙</string>
+    <string name="app_bluetooth">蓝牙</string>
+    <string name="app_my_device">我的装置</string>
+    <string name="app_bluebud_other_device">其它装置</string>
+    <string name="app_setting_unit">系统设定/显示单位</string>
+    <string name="app_units_tire">胎压</string>
+    <string name="app_temp_title">温度</string>
+    <string name="app_id_dec_hex">ID格式(10/16进制)</string>
+    <string name="app_auto">自动</string>
+    <string name="app_minutes">分钟</string>
+    <string name="app_never">不使用</string>
+    <string name="app_setting_language">系统设定/语言</string>
+    <string name="app_setting_device_information">系统设定/装置资讯</string>
+    <string name="app_device_name">装置名称</string>
+    <string name="app_model">装置型号</string>
+    <string name="infomation_serial_number">装置序号</string>
+    <string name="infomation_software_version">软体版本</string>
+    <string name="app_hardware_version">硬体版本</string>
+    <string name="app_database_version">资料库版本</string>
+    <string name="app_check_for_updates">检查更新</string>
+    <string name="app_system_update_auto">自动更新</string>
+    <string name="app_reset_all_settings">恢复预设值</string>
+    <string name="app_setting_privacy_policy">系统设定/隐私权</string>
+    <string name="app_scan_tips">请扫描目录或海报上的二维码</string>
+    <string name="Setting">设定</string>
+    <string name="Area">地區</string>
+    <string name="to_give">应用程序可能会根据您的所在地区为您提供当地内容</string>
+    <string name="Select">选择</string>
+    <string name="Languages">语言</string>
+    <string name="Languages_info">应用程序会使用列表上的第一个有支持的语言
+    </string>
+    <string name="Privacy_Policy">隐私权政策</string>
+    <string name="Welcome">隐私权政策
+        非常欢迎您使用「Orange USB TPMS 应用程序 」，当您开始使用我们的产品，即表示您信赖我们对您个人信息的处理方式。本《隐私权政策》旨在协助您了解我们收集的数据类型、收集这些数据的原因以及这些数据的用途及方法。请您详阅下列内容，若有任何疑问，欢迎与我们连络sales@orange-electronic.com
+        一、隐私权保护政策的适用范围
+        我们的《隐私权政策》适用于本产品的所有服务。我们的《隐私权政策》不适用于由其他公司或个人提供的服务，或我们服务所连结到的其他网站。
+        二、个人资料的收集、处理
+        • 我们提供产品和服务来帮助您更新产品程序数据、和提升产品功能。当您造访本产品或使用本产品所提供之功能服务时，我们将视该服务功能性质，请您提供必要的个人资料、或收集一些信息，并在该特定目的范围内处理及利用您的个人资料，我们使用数据来增进产品和服务及提供更好的支持。我们只会在征得您的同意时，才与本公司以外的其他公司、机构或个人分享个人信息。
+        • 我们收集信息的管道如下:
+        1. 您提供的信息:可能包括但不限于您的姓名、联络信箱、连络电话、产品序号、购买日期、公司名称、主要销售品牌、地址、或地址。在建立用户帐户或注册产品、请求提供产品支持或其他服务、请求提供有关产品的信息、或参与调查等相关情况下可能会要求您提供此类信息。
+        2. 我们经由您使用我们的产品和服务而取得的信息:我们会针对您使用的服务和使用方式收集相关信息，可能包括：
+         装置信息：装置专属信息例如装置ID编号，包括机器ID、IMEI和/或MEID、产品授权和识别号码，以及移动电话号码在内的行动网络信息等。
+         记录信息：当您使用本产品时，我们会自动收集特定信息并储存在服务器纪录中。这类信息包括：因特网通讯协议(IP)地址、用户名称和帐户名称及相关数据、产品系统活动、设定等。
+         位置信息：我们会收集并处理您实际所在位置的相关信息，包括IP地址、GPS/Wi-Fi/通信网路本地信息确定的地理位置等。
+         Cookie和类似技术之使用：Cookie是您在使用我们的产品时，本产品传送给装置的一小段文字，可让我们的产品储存您的使用信息。为了提供您最佳的服务，当您使用我们的产品时，我们会使用各种技术收集并储存信息，这可能包括使用 Cookie 或类似技术来识别您的装置。我们使用Cookie的目的有很多，例如：储存您的偏好语言和其他设定，方便您下次使用我们的产品时套用同样的设定或提供更实用的服务。我们会透过Cookie将特定活动储存在本产品上，您可以终止网络联机来停止本产品所有Cookie，不过，请务必记得，如果您停用Cookie，我们有许多服务可能便无法正常运作，例如可能无法记住您的语言偏好设定。
+        三、个人资料的使用
+        • 本公司会将所收集的信息用于提供、维持、保护与改善服务、开发新的服务，以及保护本公司产品和本公司产品用户。本公司可能会将您的个人资料用于各种目的，包括：
+        1. 响应您的信息要求，并为您提供更有效和高效的客户服务
+        2. 向您提供有关您向本公司购买的产品更新和信息
+        3. 分析，市场调查和报告、管理与改善本公司业务
+        4. 或适用法律允许或要求。
+        5. 本公司也可能使用您的个人信息通过电子邮件与您联系，了解本公司产品，服务，促销活动和特殊活动。
+        四、您的选择权利
+        大家对于隐私权的疑虑各有不同，我们的目标是明列我们所收集的信息，让您了解使用信息的方式，再做选择。例如，您可以：
+        • 删除数据：您可自行清除联机装置的Cookie，或联络我们要求删除帐户相关数据。
+        • 变更或更正数据：您可以透过我们的产品帐户编辑部分个人资料。在部分情况下，特别是资料有误时，您也可以要求我们变更、更新或订正您的数据。
+        • 反对或限制数据使用：您可以要求我们停止使用所有或部分您的个人资料（例如：我们没有持续使用的法定权利）或限制我们使用（例如：如果您的个人资料不正确或是透过非法取得的）。
+        • 读取和／或获得您的数据： 您可以要求我们提供您个人资料的副本。
+        五、个人资料的保护
+        我们致力于保护所持有本公司和用户的相关信息，防止未经授权而遭到存取、窜改、揭露或毁损。尤其是：
+        • 我们会审查收集、储存、处理信息的做法 (包括采取实体安全措施)，保护系统不致发生未经授权的存取。
+        • 我们仅允许为了代表我们处理个人信息而需要知悉该等信息的员工、承包商和代理人存取信息。且相关人员均须遵守严格的契约保密义务，一旦未遵守义务便将受到惩戒或解约处分。
+        • 我们会定期审查本身产品和服务是否遵守《隐私权政策》。我们收到正式的书面申诉后，将与申诉人联络，处理后续事宜。我们会与适当的主管机关 (包括当地的数据保护主管机关) 合作，解决任何有关个人资料移转且无法由我们直接与使用者解决的申诉。
+        六、网站对外的相关连结
+        本产品的网页提供其他网站的网络链接，您也可经由本产品所提供的链接，点选进入其他网站。但该链接网站不适用本产品的隐私权保护政策，您必须参考该连结网站中的隐私权保护政策。
+        七、我们分享的信息
+        除非适用下列任一情况，否则我们不会与本公司以外的其他公司、机构或个人分享用户的个人信息：
+        • 事先征得您的同意 :
+        我们只会在征得您的同意时，才与本公司以外的其他公司、机构或个人分享个人信息。分享任何敏感的个人信息前，我们都会先征求您的同意。
+        • 供外部处理
+        我们会将个人信息提供给我们的关系企业或其他可信赖的公司或人员，请他们根据我们的指示，并遵守本《隐私权政策》和任何其他适当的保密和安全措施，代为处理这类信息。
+        •  基于法律原因
+        如果我们真诚地认为，为了达到下列目的，对个人信息的存取、使用、保存或揭露属合理必要行为时，我们将与 本公司以外的其他公司、机构或个人分享个人信息：
+        1. 符合任何适用法律、法规、法律函状或强制性政府调阅要求的规定。
+        2. 执行适用《服务条款》，包括调查可能的违规情事。
+        3. 侦测、防止或以其他方式处理诈欺、安全或技术问题。
+        4. 依法律规范应在合法范围内，保护本公司、使用者或公众之权利、财产或安全不致遭受危害。
+        我们可能会对外公开并与合作伙伴(例如发布商、广告客户或连结网站)分享不含身分识别内容的信息。举例来说，我们可能会将信息对外公开，让外界了解本公司服务的一般使用趋势。
+        如果本公司涉及合并、收购事宜或出售资产，我们将继续严守任何个人信息之保密，并于个人信息移转或应适用不同隐私权政策前，先行通知受影响的使用者。
+        八、隐私权保护政策之变更
+        我们的《隐私权政策》会不时变更。我们不会在未经您明确同意的情况下，即缩减本《隐私权政策》赋予您的权利。隐私权政策变更时一律会在本产品APP上发布；如果属于重大变更，我们会提供更明显的通知，让您在选择继续使用我们的产品前，有机会审阅修订后的政策。
+
+    </string>
+    <string name="Agree">同意</string>
+    <string name="Disagree">不同意</string>
+    <string name="Sign_in">登入</string>
+    <string name="E_mail">E-mail</string>
+    <string name="Registration">注册</string>
+    <string name="Password">密码</string>
+    <string name="Forgot_password">忘記密码</string>
+    <string name="Reset_Password">重设密码</string>
+    <string name="Og_email">请输入注册O-Genius所设定的
+        《电子邮件信箱》
+    </string>
+    <string name="Submit">发送</string>
+    <string name="Go_email">请至您的电子信箱收取信件，
+        找到我们发送的电子邮件，
+        主题为“重设密码”。
+    </string>
+    <string name="Account_creation">建立账户</string>
+    <string name="Create_your_email_account">创建您的账户</string>
+    <string name="Account_Number">账号</string>
+    <string name="Choose_a_password">输入密码</string>
+    <string name="At_least_8_characters">至少8个字符</string>
+    <string name="Repeat_password">再次输入密码</string>
+    <string name="Product_serial_number">产品序号</string>
+    <string name="Personal_details">个人资料</string>
+    <string name="First_Name">名字</string>
+    <string name="Last_Name">姓</string>
+    <string name="Company">公司</string>
+    <string name="Contact_Phone_Number">电话</string>
+    <string name="Physical_address_Mailing_address">邮件地址</string>
+    <string name="Country">区域</string>
+    <string name="Street">街</string>
+    <string name="City">市</string>
+    <string name="State">省</string>
+    <string name="ZP_Code">邮政编码</string>
+    <string name="Registration_success">注册成功</string>
+    <string name="Orange_USB_TPMS">Orange USB TPMS</string>
+    <string name="Data_Loading">加载信息</string>
+    <string name="Orange_USB_TPMS_Application">Orange USB TPMS Application</string>
+    <string name="Program_USB_TPMS">USB CABLE</string>
+    <string name="Program_USB_PAD">USB PAD</string>
+    <string name="Cloud_information">云端数据</string>
+    <string name="Online_shopping">在线购物</string>
+    <string name="Users_manual">使用说明</string>
+    <string name="Log_out">注销</string>
+    <string name="Are_you_sure_you_want_to_log_out">你确定要退出吗？</string>
+    <string name="Yes">是</string>
+    <string name="cancel">取消</string>
+    <string name="ProgramUSB_TPMS">Program (USB TPMS)</string>
+    <string name="Download_MYY_data">加载车辆数据</string>
+    <string name="ID_COPY">ID COPY</string>
+    <string name="Program">Program</string>
+    <string name="Methods_of_vehicle_data_selection">选择车辆数据方法</string>
+    <string name="Scan_Code">扫描QR码</string>
+    <string name="Vehicle_data_selection">车辆数据选择</string>
+    <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">请扫描发射器或包装盒上的ID QR码
+    </string>
+    <string name="Select_CAR_Make">选择车型</string>
+    <string name="Select_CAR_Model">选择车款</string>
+    <string name="Select_Year">选择年份</string>
+    <string name="Please_insert_the_sensor_into_the_USB_PAD">將傳感器插入USB PAD</string>
+    <string name="Unlinked">未连结</string>
+    <string name="START">开始</string>
+    <string name="MENU">选单</string>
+    <string name="Programming_completed">程序烧录完成</string>
+    <string name="Please_remove_the_sensor">请取下传感器</string>
+    <string name="Programming_failed">程序烧录失败</string>
+    <string name="Please_press_RE_PROGRAM">请按重新烧录</string>
+    <string name="RE_PROGRAM">重新烧录</string>
+    <string name="Relearn_Procedure">学码步骤</string>
+    <string name="Key_in_the_original_sensor_ID_number">输入原传感器ID号码</string>
+    <string name="ID_code_should_be_8_characters">ID码需为8个字符</string>
+    <string name="Bluetooth_pairing_requirements">蓝牙配对要求</string>
+    <string name="would_like_to_with_pair">USB PAD将与您手机进行配对</string>
+    <string name="Cancel">取消</string>
+    <string name="Pair">配對</string>
+    <string name="Program_sensor">Program sensor</string>
+    <string name="Programming_do_not_move_sensors">烧录中请勿移动传感器</string>
+    <string name="Next">下一步</string>
+    <string name="error">error</string>
+    <string name="Programming_failed_where">刻录失败</string>
+    <string name="Get_location">必须开启定位功能才能启动蓝芽服务.</string>
+    <string name="Prog_Sensor">Prog.Sensor</string>
+    <string name="Sound">音效</string>
+    <string name="AreaLanguage">区域和语言</string>
+    <string name="Version_update">更新</string>
+    <string name="Please_Confirm_That_The_Sensor_Is_Connect">Please confirm that the sensor is connect</string>
+    <string name="ProvideUsbTpmsApp">提供USB TPMS APP\n烧录模式说明</string>
+    <string name="step1_1">步骤1.\n
+        请将USB TPMS烧录线连接手机与传感器
+    </string>
+    <string name="step1_2">步骤2.\n
+        点选Program（USB TPMS）
+    </string>
+    <string name="step1_3">步骤3.\n
+        1.确认烧录线已连线\n
+        2.确认你的烧录模式\n
+        3.选择确认车辆资讯方式</string>
+    <string name="step1_4">步骤4-1.\n
+        按下扫描键后，请扫描目录上您要的车辆资讯的二维码，并跳至步骤6</string>
+    <string name="step1_5">步骤4-2.\n
+        按下车辆资讯键后，依序选择品牌→选择车型→选择年份
+    </string>
+    <string name="step1_6">步骤5.\n
+        确认提示栏车辆资讯正确，并按下“START”进行烧录 </string>
+    <string name="step1_7"> 步骤6.\n
+        烧录完成后，如需续烧录相同资料传感器，请更换下一颗传感器，按下PROG.SENSOR
+    </string>
+    <string name="step1_8">步骤7.\n
+        烧录错误，请按下RE-PROGRAM按键，重新执行烧录
+    </string>
+    <string name="step2_1">步骤1.\n
+        请将USB TPMS烧录线连接手机与传感器
+    </string>
+    <string name="step2_2">步骤2.\n
+        点选Program（USB TPMS）
+    </string>
+    <string name="step2_3">步骤3.\n
+        1.确认烧录线已连线\n
+        2.确认你的烧录模式\n
+        3.选择确认车辆资讯方式</string>
+    <string name="step2_4">步骤4-1.\n
+        按下扫描键后，请扫描目录上您要的车辆资讯的二维码，并跳至步骤6</string>
+    <string name="step2_5">步骤4-2.\n
+        按下车辆资讯键后，依序选择品牌→选择车型→选择年份
+    </string>
+    <string name="step2_6">步骤5.\n
+        选择原发射器ID号码输入方式</string>
+    <string name="step2_7">步骤6.\n
+        1.输入原本传感器ID号码\n
+        2.按下PROGRAM进行烧录
+    </string>
+    <string name="step2_8"> 步骤7.\n
+        烧录完成后，如需继续复制其他传感器，请更换下一颗传感器，按下PROG.SENSOR
+    </string>
+    <string name="step2_9">步骤8.\n
+        烧录错误，请按下RE-PROGRAM按键，重新执行烧录 </string>
+    <string name="step3_1">步骤1.\n
+        请先连接电源线，确认USB PAD是否有过电（底部绿灯亮起），再将预烧录的传感器放入
+    </string>
+    <string name="step3_2">步骤2.\n
+        点选Program(USB PAD)
+    </string>
+    <string name="step3_3">步骤3.\n
+        USB PAD会与您的手机进行蓝芽配对
+        （需确定手机定位功能已开启）
+    </string>
+    <string name="step3_4">步骤4.\n
+        1.确认USB PAD已连线\n
+        2.确认你的烧录模式\n
+        3.选择确认车辆资讯方式 </string>
+    <string name="step3_5">步骤5-1.\n
+        按下扫描键后，请扫描目录上您要的车辆资讯的二维码，并跳至步骤6</string>
+    <string name="step3_6">步骤5-2.\n
+        按下车辆资讯键后，依序选择品牌→选择车型→选择年份
+    </string>
+    <string name="step3_7">步骤6.\n
+        选择车辆资讯后，将自动依序读取PAD中的传感器，读取完成后请按下程序传感器
+    </string>
+    <string name="step3_8">步骤7.\n
+        烧录完成后，如需烧录相同资料的传感器，请更换USB PAD中的传感器，并按下PROG.SENSOR
+    </string>
+    <string name="step3_9">步骤8.\n
+        烧录错误，请按下RE-PROGRAM按键，重新执行烧录
+    </string>
+    <string name="step4_1">步骤1.\n
+        请先连接电源线，确认USB PAD是否有过电（底部绿灯亮起），再将预烧录的传感器放入
+    </string>
+    <string name="step4_2">步骤2.\n
+        点选Program(USB PAD)
+    </string>
+    <string name="step4_3">步骤3.\n
+        USB PAD会与您的手机进行蓝芽配对
+        （需确定手机定位功能已开启）
+    </string>
+    <string name="step4_4">步骤4.\n
+        1.确认USB PAD已连线\n
+        2.确认你的烧录模式\n
+        3.选择确认车辆资讯方式 </string>
+    <string name="step4_5">步骤5-1.\n
+        按下扫描键后，请扫描目录上您要的车辆资讯的二维码，并跳至步骤6</string>
+    <string name="step4_6">步骤5-2.\n
+        按下车辆资讯键后，依序选择品牌→选择车型→选择年份
+    </string>
+    <string name="step4_7">步骤6.\n
+        选择原发射器ID号码输入方式</string>
+    <string name="step4_8">步骤7.\n
+        请依照轮位顺序输入原始传感器 ID, 输入完后请按下一步
+    </string>
+    <string name="step4_9">步骤8.\n
+        USB TPMS 将自动依序读取PAD中的传感器，
+        读取完成后请按下 PROGRAM SENSOR </string>
+    <string name="step4_10">步骤9.\n
+        烧录完成后，如需复制其他的传感器，请更换USB PAD中的传感器，并按下PROG.SENSOR
+    </string>
+    <string name="step4_11">步骤10.\n
+        烧录错误，请按下RE-PROGRAM按键，重新执行烧录 </string>
+    <string name="Set_up">确认</string>
+    <string name="Check_for_updates">检查更新</string>
+    <string name="update">更新</string>
+    <string name="Automatic_update">自动更新</string>
+    <string name="USB_TPMS_APP_will_automatically_install_updates">USB TPMS APP将自动安装更新</string>
+    <string name="paired_with_your_device">配对中</string>
+    <string name="SelectDevice">选择设备</string>
+    <string name="For_developer_information">关于开发者资讯，请访问网站：www.orange-electronic.com</string>
+    <string name="Updating">更新中</string>
+    <string name="Please_scan_the_correct_QR_code">请扫描正确的二维码</string>
+    <string name="norelarm">学码流程尚未完成，请耐心等待，我们会尽快更新</string>
+    <string name="confirm_password">请确认密码</string>
+    <string name="be_register">装置已被注册</string>
+    <string name="signfall">登入失败</string>
+    <string name="nointernet">网路连线逾时</string>
+    <string name="store_type">商店类型</string>
+    <string name="Distributor">经销商</string>
+    <string name="Retailer">轮胎行</string>
+    <string name="nointer">网路连线逾时</string>
+    <string name="errorpass">帐号或密码错误</string>
+    <string name="update_success">更新成功</string>
+    <string name="need_upadte">请更新至最新版本</string>
+    <string name="is_latest">以更新至最新版本</string>
+    <string name="SayQusition">您好，请详细说明产品问题</string>
+    <string name="PleaseMessage">请输入信件内容</string>
+    <string name="notempty">讯息不得为空</string>
+    <string name="sendsuccess">传送成功</string>
+    <string name="sendfalse">传送失败</string>
+    <string name="minuteago">1分钟前</string>
+    <string name="dayago">1天前</string>
+    <string name="secago">刚刚</string>
+    <string name="Online_customer_service">线上客服</string>
+    <string name="Customer_service_specialist">客服专员</string>
+    <string name="hourago">1小时前</string>
+    <string name="monthago">1个月前</string>
+    <string name="yeargo">1年前</string>
+    <string name="checkscan">请确认要烧录的发射器以加入USB PAD， 再点选轮位进行扫描</string>
+    <string name="Scan_Two">请扫描目录或海报上的二维码</string>
+    <string name="keyin">手动输入</string>
+    <string name="app_sensor_info_read">读取感测器</string>
+    <string name="app_press">按下</string>
+    <string name="app_to_trigger_sensor">按下触发键</string>
+    <string name="app_sensor_info_position">检查传感器安装位置</string>
+    <string name="Notall">并非所有OE传感器都包含温度、 电池和电压状态</string>
+    <string name="app_voltage">电压:</string>
+    <string name="array_language_english">English</string>
+    <string name="array_language_simch">简体中文</string>
+    <string name="array_language_trach">繁體中文</string>
+    <string name="array_language_italian">italiano</string>
+    <string name="array_language_german">Deutsch</string>
+    <string name="app_reset">重置</string>
+    <string name="app_connecting">连接中…</string>
+    <string name="app_content_empty">内容不能为空</string>
+    <string name="app_default">默认</string>
+    <string name="app_device_information">装置资讯</string>
+    <string name="app_sounds_vibration">声音及振动</string>
+    <string name="app_sleep">休眠</string>
+    <string name="app_sensor_quantity">选择烧录数量</string>
+    <string name="app_bat">电池</string>
+    <string name="app_to_program_sensor">Premere per scansionare il codice ID del sensore</string>
+    <string name="app_blue_bud">蓝牙</string>
+    <string name="app_wifi_setting">Wifi</string>
+    <string name="app_blue_bud_open">打开</string>
+    <string name="app_wifi_connected">无线网络连接</string>
+    <string name="app_connected_failed">连接失败</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="app_wifi_disconnected">Wifi Disconnected</string>
+    <string name="app_permission">Permission</string>
+    <string name="app_permission_requre">Our function requires you to open relevant permissions</string>
+    <string name="app_permission_reject">You have denied the relevant permission. The function is abnormal. Please go to
+        settings to open the relevant permission
+    </string>
+    <string name="app_email_send">E-mail has bean send</string>
+    <string name="app_wifi_connecting">Wifi Connection…</string>
+    <string name="app_sign_ing">Sign in…</string>
+    <string name="app_registrating">Registration…</string>
+    <string name="app_updating">Updating…</string>
+    <string name="app_update_completed">Update completed</string>
+    <string name="app_data_uploading">Data uploading…</string>
+    <string name="app_data_reading">Data reading…</string>
+    <string name="app_loading_data">Loading data…</string>
+    <string name="app_scaning">Scaning…</string>
+    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_bootaloader_mode">Currently in bootaloader mode, unable to operate, please burn flash.</string>
+    <string name="app_burning_module_firmware">Burning module firmware</string>
+    <string name="app_updating_model_database">Updating model database</string>
+    <string name="app_burning_succeeded">Burning succeeded!</string>
+    <string name="app_module_firmware_updated">Module firmware has been updated. Do you want to update?</string>
+    <string name="app_vehicle_payment_updated">There is an update to the vehicle payment database. Do you want to update
+        it?
+    </string>
+    <string name="app_sendor_firmware_updated">Sensor firmware has been updated. Do you want to update it?</string>
+    <string name="app_model_database_finished">Model database update finished!</string>
+    <string name="app_writing_model_database">Writing to model database</string>
+    <string name="app_wiFi_scan_failed">WiFi scan failed</string>
+    <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
+    <string name="app_invalid_mmy_qrcode">Invalid mmy QR code</string>
+    <string name="app_invalid_sensor_qrcode">Invalid sensor ID QR code</string>
+    <string name="app_account_password_empty">Account or password cannot be empty</string>
+    <string name="app_regist_success">Register was successful</string>
+    <string name="app_wrong_format">Wrong format</string>
+    <string name="app_re_program">重新烧录</string>
+    <string name="app_sensor_repeated">Sensor repeated</string>
+    <string name="app_checking">Checking…</string>
+    <string name="app_scan_code_timeout">Scan code timeout</string>
+    <string name="app_duplicate_items">There are duplicate items. Please delete them and try again</string>
+    <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
+    <string name="app_login_failed">Login failed</string>
+    <string name="app_no_sensor_set">No sensor is set, please add it first</string>
+    <string name="app_sensor_copy_different">The number of sensor IDs to be copied is different</string>
+    <string name="app_no_data_to_copy">No data to copy</string>
+    <string name="app_module_is_empty">Module is empty!</string>
+    <string name="app_year_is_empty">Year is empty!</string>
+    <string name="app_read_failed">读取失败，请重新读取！</string>
+    <string name="app_name">TPMS</string>
+    <string name="app_sure">Sure</string>
+    <string name="app_ok">OK</string>
+    <string name="app_ssid">SSID</string>
+    <string name="app_tigger">触发</string>
+    <string name="app_back">Back</string>
+    <string name="app_check">Check</string>
+    <string name="app_id_clear">ID</string>
+    <string name="app_fr">FR</string>
+    <string name="app_rr">RR</string>
+    <string name="app_rl">LR</string>
+    <string name="app_fl">LF</string>
+    <string name="app_pcs">pcs</string>
+    <string name="app_orange_sensor">(Orange sensor)</string>
+    <string name="app_copy_new">CREATE NEW SENSOR</string>
+    <string name="app_psi">PSI</string>
+    <string name="app_temp">°C</string>
+    <string name="app_bat_clear">BAT</string>
+    <string name="app_check_up">CHECK</string>
+    <string name="app_wifi_choose">CHOOSE A NETWORK</string>
+    <string name="app_wifi_ask">Ask to join Networks</string>
+    <string name="app_wifi_auto_tips">Known networks will be automatically. If no known networks are avalible ,you will
+        be have to manualy select a networks.
+    </string>
+    <string name="app_connected">Connected</string>
+    <string name="app_disconnected">Disconnected</string>
+    <string name="app_bluebud_my_device">My Device</string>
+    <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
+    <string name="app_bluebud_other_devicename">ORANGE FNNB01</string>
+    <string name="app_units_temp">Temperature</string>
+    <string name="app_units_numeral">Numeral system</string>
+    <string name="app_sounds_vibrate">Vibrae</string>
+    <string name="app_sounds_ranger_alerts">Ranger and Alerts</string>
+    <string name="app_sounds_shocl">Shock</string>
+    <string name="app_system_update">System Update</string>
+    <string name="app_system_reset">System Reset</string>
+    <string name="app_system_on">On</string>
+    <string name="app_system_password_tips">Please enter your password</string>
+    <string name="app_version">OG 1.0.1</string>
+    <string name="app_app_name">Orange Electronic</string>
+    <string name="app_size">822.1MB</string>
+    <string name="app_tips">For develop information, please visite the website:www.orange-electronic.com</string>
+    <string name="app_reset_password">Reset Password</string>
+    <string name="app_reset_tips">Please provide the email address that you used when you signed up for O-GENIUS
+        account.
+    </string>
+    <string name="app_reset_email">Go to your email inbox and find an email from us with the subject “Reset your
+        password”.
+    </string>
+    <string name="app_submit">Submit</string>
+    <string name="app_register_title">Account Setup</string>
+    <string name="app_register_account_title">Create your email account</string>
+    <string name="app_register_account_number">Account Number</string>
+    <string name="app_register_password">Password</string>
+    <string name="app_register_password_hint">At least 8 characters</string>
+    <string name="app_register_password_repeat">Repeat password</string>
+    <string name="app_register_choose_password">Choose a password</string>
+    <string name="app_register_product">Product serial number</string>
+    <string name="app_register_personal">Personal details</string>
+    <string name="app_register_firstname">First Name</string>
+    <string name="app_register_lastname">Last Name</string>
+    <string name="app_register_company">Company</string>
+    <string name="app_register_contact">Contact Phone Number</string>
+    <string name="app_register_address_title">Physical address / Mailing address</string>
+    <string name="app_register_country">Country</string>
+    <string name="app_register_street">Street</string>
+    <string name="app_register_city">City</string>
+    <string name="app_register_state">State</string>
+    <string name="app_register_zpcode">ZP Code</string>
+    <string name="app_register_sign">Sign up</string>
+    <string name="app_orange_co">Orange Electronic Co., Ltd</string>
+    <string name="array_autolock_1">1 minute</string>
+    <string name="array_autolock_3">3 minutes</string>
+    <string name="array_autolock_5">5 minutes</string>
+    <string name="array_autolock_ten">10 minutes</string>
+    <string name="array_autolock_thirty">30 minutes</string>
+    <string name="array_autolock_never">Never</string>
+    <string name="array_area_europe">Europe</string>
+    <string name="array_area_north_america">North America</string>
+    <string name="array_area_asia">Asia</string>
+    <string name="array_unit_c">C</string>
+    <string name="array_unit_f">F</string>
+    <string name="array_unit_psi">Psi</string>
+    <string name="array_unit_bar">Bar</string>
+    <string name="array_unit_kpa">Kpa</string>
+    <string name="array_unit_auto">Auto</string>
+    <string name="array_unit_dec">Dec</string>
+    <string name="array_unit_hex">Hex</string>
+    <string name="original_way">Enter original sensor ID code</string>
+    <string name="new_way">Enter new sensor ID code</string>
+    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="updatefault">update false,Please reconnect wifi and try again!</string>
+    <string name="enginer">工程模式</string>
+    <string name="maxsize">max size is 12</string>
+    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="app_blue_bud_close">Close</string>
+    <string name="app_unit">显示单位</string>
+    <string name="app_language_setting">Language</string>
+    <string name="app_sensor_info">SENSOR INFORMATION</string>
+    <string name="app_id">ID:</string>
+    <string name="app_kpa">Kpa:</string>
+    <string name="app_c">°C:</string>
+    <string name="infomation_name">Name</string>
+    <string name="infomation_module">Module</string>
+    <string name="infomation_version">Version</string>
+    <string name="infomation_data_version">Data Version</string>
+    <string name="idcopyobd">复制ID（OBD）</string>
+    <string name="prusbpad">烧录传感器（USB PAD）</string>
+    <string name="idusbpad">复制ID（USB PAD）</string>
+</resources>

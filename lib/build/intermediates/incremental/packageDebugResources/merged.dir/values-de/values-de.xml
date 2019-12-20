@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Account_Number">Acoount Nummer</string>
+    <string name="Account_creation">Konto-Erstellung</string>
+    <string name="Agree">akzeptieren</string>
+    <string name="Are_you_sure_you_want_to_log_out">Sind Sie sicher, dass Sie sich ausloggen wollen?</string>
+    <string name="Area">Bereich</string>
+    <string name="AreaLanguage">Bereich &amp; Sprachen</string>
+    <string name="At_least_8_characters">mit mindestens acht Buchstaben</string>
+    <string name="Automatic_update">Automatische Updates</string>
+    <string name="Bluetooth_pairing_requirements">Bluetooth-Verbindung erforderlich</string>
+    <string name="Cancel">löschen</string>
+    <string name="Check_for_updates">Auf Updates prüfen</string>
+    <string name="Choose_a_password">Wählen Sie ein Passwort aus</string>
+    <string name="City">Stadt</string>
+    <string name="Cloud_information">Cloud Informationen</string>
+    <string name="Company">Firma</string>
+    <string name="Contact_Phone_Number">Telefon-Nummer</string>
+    <string name="Country">Land</string>
+    <string name="Create_your_email_account">erstellen Sie Ihren email account</string>
+    <string name="Customer_service_specialist">Kundendienstspezialist</string>
+    <string name="Data_Loading">Daten herunterladen</string>
+    <string name="Disagree">nicht akzeptieren</string>
+    <string name="Distributor">Händler</string>
+    <string name="Download_MYY_data">MYY-Daten herunterladen</string>
+    <string name="E_mail">E-mail</string>
+    <string name="First_Name">Erster Name</string>
+    <string name="For_developer_information">Informationen für Entwickler finden Sie auf dieser Website: www.orange-electronic.com </string>
+    <string name="Forgot_password">Passwort vergessen</string>
+    <string name="Get_location">Die Ortungsfunktion muss aktiviert sein,
+        um den Bluetooth-Dienst zu starten.</string>
+    <string name="Go_email">Gehen Sie zu ihrer email-Liste und suchen Sie die email mit dem Namen "Reset your password"</string>
+    <string name="ID_COPY">ID kopieren</string>
+    <string name="ID_code_should_be_8_characters">ID Code soll aus 8 Buchstaben bestehen</string>
+    <string name="Key_in_the_original_sensor_ID_number">Bitte geben sie die Sensor ID Nummer gemäß der Position ein </string>
+    <string name="Languages">Sprachen</string>
+    <string name="Languages_info">Eine app zeigt die erste Sprache in der Liste an, die sie unterstützt.</string>
+    <string name="Last_Name">Zweiter Name</string>
+    <string name="Log_out">Ausloggen</string>
+    <string name="MENU">Menü</string>
+    <string name="Methods_of_vehicle_data_selection">Wege um Fahrzeugdaten auszuwählen</string>
+    <string name="Next">Nächster</string>
+    <string name="Notall">Nicht alle OE-Sensoren enthalten den Temperatur-, Batterie- und Spannungsstatus</string>
+    <string name="Og_email">Bitte stellen sie die e-mail-Adresse zur Verfügung, die sie genommen haben, als sie sich für den O-GENIUS-Account angemeldet haben</string>
+    <string name="Online_customer_service">Online-Kundendienst</string>
+    <string name="Online_shopping">online shopping</string>
+    <string name="Orange_USB_TPMS">Orange USB TPMS</string>
+    <string name="Orange_USB_TPMS_Application">Orange USB TPMS-Anwendung</string>
+    <string name="Pair">Paar</string>
+    <string name="Password"> Passwort </string>
+    <string name="Personal_details">persönliche Details</string>
+    <string name="Physical_address_Mailing_address">persönliche Adresse/Mail-Adresse</string>
+    <string name="PleaseMessage">Bitte geben Sie den Inhalt des Briefes ein</string>
+    <string name="Please_Confirm_That_The_Sensor_Is_Connect">Bitte bestätigen Sie, dass der Sensor verbunden ist</string>
+    <string name="Please_insert_the_sensor_into_the_USB_PAD">Bitte scannen Sie den QR Code vom Katalog oder Poster</string>
+    <string name="Please_press_RE_PROGRAM">Bitte drücken Sie RE-PROGRAM</string>
+    <string name="Please_remove_the_sensor">Bitte entfernen Sie den Sensor</string>
+    <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">Bitte scannen Sie den ID QR Code auf dem Sender oder der Box.</string>
+    <string name="Please_scan_the_correct_QR_code">Bitte scannen Sie den richtigen QR-Code</string>
+    <string name="Privacy_Policy">Datenschutzbestimmungen</string>
+    <string name="Product_serial_number">Produkt-Serien-Nummer</string>
+    <string name="Prog_Sensor">Prog.sensor</string>
+    <string name="Program">Programm</string>
+    <string name="ProgramUSB_TPMS">Program (USB TPMS)</string>
+    <string name="Program_USB_PAD">USB PAD</string>
+    <string name="Program_USB_TPMS">USB CABLE</string>
+    <string name="Program_sensor">Sensor programmieren</string>
+    <string name="Programming">Programmierung</string>
+    <string name="Programming_completed">Programmierung beendet</string>
+    <string name="Programming_do_not_move_sensors">Programmierung, bitte Sensor nicht bewegen</string>
+    <string name="Programming_failed">Programmierung Fehler</string>
+    <string name="Programming_failed_where">Fehler</string>
+    <string name="ProvideUsbTpmsApp">Unterstützt USB RDKS App\nProgrammier-Beschreibung</string>
+    <string name="RE_PROGRAM">neu programmieren</string>
+    <string name="Registration">Registration</string>
+    <string name="Registration_success">Registrierung erfolgreich</string>
+    <string name="Relearn_Procedure">Anlern-Prozedur</string>
+    <string name="Repeat_password">wiederholen Sie das Passwort</string>
+    <string name="Reset_Password">Passwort zurücksetzen</string>
+    <string name="Retailer">Reifenreihe</string>
+    <string name="START">START</string>
+    <string name="SayQusition">Hallo, bitte erläutern Sie das Produktproblem</string>
+    <string name="Scan_Code">2D code scannen</string>
+    <string name="Scan_Two">Bitte scannen Sie den QR Code vom Katalog oder Poster</string>
+    <string name="Select">Wählen</string>
+    <string name="SelectDevice">Wählen Sie Gerät</string>
+    <string name="Select_CAR_Make">wählen sie Fahrzeug-Hersteller</string>
+    <string name="Select_CAR_Model">wählen sie Fahrzeug-Modell</string>
+    <string name="Select_Year">wählen sie Baujahr</string>
+    <string name="Set_up">Konfiguration</string>
+    <string name="Setting">Rahmen</string>
+    <string name="Sign_in">Einloggen</string>
+    <string name="Sound">Klingen</string>
+    <string name="State">Bundesland</string>
+    <string name="Street">Straße</string>
+    <string name="Submit">einreichen</string>
+    <string name="USB_TPMS_APP_will_automatically_install_updates">Die USB TPMS APP installiert die Updates automatisch.</string>
+    <string name="Unlinked">Nicht verbunden</string>
+    <string name="Updating">Aktualisierung</string>
+    <string name="Users_manual">Benutzer-Handbuch</string>
+    <string name="Vehicle_data_selection">Fahrzeug auswählen</string>
+    <string name="Version_update">Aktualisieren</string>
+    <string name="Welcome">Sie sind herzlich eingeladen, die Orange USB TPMS-Anwendung (im Folgenden als diese Anwendung bezeichnet) zu besuchen. Damit Sie die Dienste und Informationen der Anwendung nutzen können, erklären wir Ihnen hiermit die Datenschutzerklärung dieser Anwendung, um Ihre Rechte zu schützen Bitte lesen Sie die folgenden Details:
+
+        ich. Geltungsbereich der Datenschutzerklärung
+        Datenschutzbestimmungen, einschließlich der Art und Weise, wie diese Anwendung mit personenbezogenen Daten umgeht, die erfasst werden, wenn Sie die Dienste der Anwendung nutzen. Die Datenschutzrichtlinie gilt nicht für verlinkte Websites außer der Anwendung oder für diejenigen, die nicht mit der Verwaltung dieser Anwendung beauftragt sind.
+
+        Ii. Erhebung, Verarbeitung und Nutzung personenbezogener Daten
+        Wenn Sie diese Anwendung besuchen oder die auf dieser Anwendung bereitgestellten funktionalen Dienste nutzen, behandeln wir die Art des Dienstes als solche, stellen Ihnen die erforderlichen personenbezogenen Daten zur Verfügung, verarbeiten und verwenden Ihre personenbezogenen Daten innerhalb dieses bestimmten Zwecks und tun dies auch Personenbezogene Daten ohne Ihre schriftliche Zustimmung nicht für andere Zwecke verwenden.
+
+        Diese Anwendung behält Ihren Namen, Ihre E-Mail-Adresse, Ihre Kontaktinformationen und die Nutzungszeit, wenn Sie die interaktiven Funktionen wie Service-Boxen und Umfragen verwenden.
+
+        Beim allgemeinen Browsen zeichnet der Server die relevanten Aktionen auf, einschließlich der Verwendung der IP-Adresse des Online-Geräts, der Zeit, des verwendeten Browsers, des Browsens und der Datensichtaufzeichnungen als Referenz zur Verbesserung der Website Dienste, dieser Datensatz für interne Anwendungen, niemals veröffentlicht.
+
+        Um einen genauen Service zu bieten, werden wir den Inhalt der Fragebogenumfrage für statistische Daten und Analysen, Analyseergebnisse von statistischen Daten oder die Beschreibung des beschreibenden Textes zusammenstellen. Zusätzlich zu internen Untersuchungen werden wir Statistiken und erläuternden Text nach Bedarf veröffentlichen, tun dies jedoch keine spezifischen personenbezogenen Daten enthalten.
+
+
+        Drittens der Schutz von Daten
+        Der Host dieser  Anwendung verfügt über eine Firewall, ein Antiviren-System und andere zugehörige Einrichtungen zur Informationssicherheit sowie die erforderlichen Sicherheitsmaßnahmen, um die Website und Ihre personenbezogenen Daten durch strenge Schutzmaßnahmen zu schützen, und nur durch autorisiertes Personal, um Ihre persönlichen Daten zu kontaktieren. Das betreffende Verarbeitungspersonal ist unterzeichnete Vertraulichkeitsverträge. Bei Verstößen gegen die Geheimhaltungspflichten werden die entsprechenden gesetzlichen Sanktionen verhängt.
+
+        Wenn es für das Unternehmen erforderlich ist, andere Einheiten mit der Erbringung von Dienstleistungen zu beauftragen, wird diese Website auch streng ihre Vertraulichkeitsverpflichtungen einhalten und die erforderlichen Überprüfungsverfahren einhalten, um festzustellen, dass sie tatsächlich die Anforderungen erfüllen.
+
+        Iv. RELATED-Links zu externen Websites
+        Die Webseiten dieser Anwendung enthalten Links zu anderen Websites. Sie können auch auf die Links auf dieser Anwendung klicken, um auf andere Websites zuzugreifen. Die verlinkte Seite gilt jedoch nicht für die Datenschutzrichtlinie dieser Anwendung, und Sie müssen sich auf die Datenschutzerklärung der verlinkten Website beziehen.
+
+        V. Die Politik der Weitergabe personenbezogener Daten an Dritte
+        Diese Website wird niemals Ihre personenbezogenen Daten an andere Personen, Gruppen, private Unternehmen oder öffentliche Stellen vermitteln, austauschen, vermieten oder verkaufen, jedoch mit rechtlichen Grundlagen oder vertraglichen Verpflichtungen.
+
+        Im Falle des vorangehenden Absatzes umfasst das Buch nicht nur:
+
+        durch Ihre schriftliche Zustimmung.
+        Das Gesetz schreibt ausdrücklich vor.
+        Um Sie von jeder Gefahr für Leben, Körper, Freiheit oder Eigentum zu befreien.
+        In Zusammenarbeit mit Behörden oder akademischen Forschungseinrichtungen muss statistische oder akademische Forschung auf dem gemeinsamen Interesse basieren, und die Daten werden vom Anbieter so verarbeitet oder erhoben, dass keine bestimmte Partei von ihm identifiziert wird seine Offenlegung.
+        Wenn Sie auf der Anwendung handeln, gegen die Servicebedingungen verstoßen oder die Rechte der Anwendung und anderer Benutzer verletzen oder Personen schaden können, analysiert die Anwendung-Verwaltungseinheit die Offenlegung Ihrer persönlichen Daten zu diesem Zweck erforderlichenfalls zu identifizieren, Kontakt aufzunehmen oder rechtliche Schritte einzuleiten.
+        Nutzen Sie Ihre Interessen.
+        Wenn die Anwendung von einem Hersteller mit der Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten beauftragt wird, ist er für die Überwachung und Verwaltung des Outsourcing-Herstellers oder der Einzelperson verantwortlich.
+        Vi. Verwendung von Cookies
+        Um Ihnen den bestmöglichen Service zu bieten, werden auf dieser Anwendung Cookies platziert und auf diese Cookies zugegriffen. Wenn Sie keine Cookies akzeptieren möchten, können Sie es ablehnen, Cookies zu schreiben, indem Sie ein hohes Datenschutzniveau festlegen die von Ihnen verwendeten Browserfunktionen, kann jedoch dazu führen, dass bestimmte Funktionen der Anwendung nicht ordnungsgemäß funktionieren.
+
+        Vii. Änderungen der Datenschutzrichtlinie
+        Die Datenschutzbestimmungen dieser Anwendung werden zu jeder Zeit als Reaktion auf die Nachfrage geändert und die geänderten Bedingungen werden auf der Website veröffentlicht.
+    </string>
+    <string name="Yes">Ja</string>
+    <string name="ZP_Code">Postleitzahl</string>
+    <string name="app_account_password_empty">Account or password cannot be empty</string>
+    <string name="app_agree">akzeptieren</string>
+    <string name="app_app_name">Orange Electronic</string>
+    <string name="app_auto">Automatisch</string>
+    <string name="app_back">Back</string>
+    <string name="app_bat">BAT:</string>
+    <string name="app_bat_clear">BAT</string>
+    <string name="app_blue_bud">Bluetooth</string>
+    <string name="app_blue_bud_close">Close</string>
+    <string name="app_blue_bud_open">Open</string>
+    <string name="app_bluebud_my_device">My Device</string>
+    <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
+    <string name="app_bluebud_other_device">andere Geräte</string>
+    <string name="app_bluebud_other_devicename">ORANGE FNNB01</string>
+    <string name="app_bluetooth">Bluetooth</string>
+    <string name="app_bootaloader_mode">Derzeit im Boot-Loader-Modus, kann nicht ausgeführt werden. Bitte brennen Sie den Flash.</string>
+    <string name="app_burning_module_firmware">Brennen der Modul-Firmware</string>
+    <string name="app_burning_succeeded">Brennen erfolgreich!</string>
+    <string name="app_c">°C:</string>
+    <string name="app_cancel">löschen</string>
+    <string name="app_check">Check</string>
+    <string name="app_check_for_updates">nach updates suchen</string>
+    <string name="app_check_up">CHECK</string>
+    <string name="app_checking">Checking…</string>
+    <string name="app_connected">Connected</string>
+    <string name="app_connected_failed">Verbindung fehlgeschlagen</string>
+    <string name="app_connecting">Anschließen…</string>
+    <string name="app_connection">Verbindung</string>
+    <string name="app_content_empty">Der Inhalt darf nicht leer sein</string>
+    <string name="app_copy_new">CREATE NEW SENSOR</string>
+    <string name="app_copy_original">Original-Sensor kopieren</string>
+    <string name="app_data_reading">Daten herunterladen…</string>
+    <string name="app_data_uploading">Daten werden hochgeladen …</string>
+    <string name="app_database_version">Datanbank Version</string>
+    <string name="app_default">Standard</string>
+    <string name="app_device_information">Geräteinformation</string>
+    <string name="app_device_name">Geräte-Name</string>
+    <string name="app_disagree">nicht akzeptieren</string>
+    <string name="app_disconnected">Disconnected</string>
+    <string name="app_duplicate_items">There are duplicate items. Please delete them and try again</string>
+    <string name="app_email_send">E-Mail hat Bean senden</string>
+    <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
+    <string name="app_fl">LF</string>
+    <string name="app_forgot_password">Passwort vergessen</string>
+    <string name="app_fr">FR</string>
+    <string name="app_hardware_version">Hardware Version</string>
+    <string name="app_home_check_sensor">Sensor prüfen</string>
+    <string name="app_home_cloud_information">Cloud Informationen</string>
+    <string name="app_home_id_copy">ID kopieren</string>
+    <string name="app_home_obdii_relearn">OPBDII anlernen</string>
+    <string name="app_home_online_shopping">online shopping</string>
+    <string name="app_home_program_sensor_phone">Sensor programmieren</string>
+    <string name="app_id">ID:</string>
+    <string name="app_id_clear">ID</string>
+    <string name="app_id_dec_hex">ID(Dezimal/Hexadezimal)</string>
+    <string name="app_invalid_mmy_qrcode">Invalid mmy QR code</string>
+    <string name="app_invalid_sensor_qrcode">Invalid sensor ID QR code</string>
+    <string name="app_key_in">eintippen</string>
+    <string name="app_kpa">Kpa:</string>
+    <string name="app_language_setting">Language</string>
+    <string name="app_loading_data">Daten herunterladen…</string>
+    <string name="app_login_failed">Login failed</string>
+    <string name="app_menue">Menü</string>
+    <string name="app_minutes">Minuten</string>
+    <string name="app_mmy">Fahrzeug auswählen</string>
+    <string name="app_model">Modell</string>
+    <string name="app_model_database_finished">Modelldatenbank-Update abgeschlossen!</string>
+    <string name="app_module_firmware_updated">Die Firmware des Moduls wurde aktualisiert. Möchten Sie aktualisieren?</string>
+    <string name="app_module_is_empty">Module is empty!</string>
+    <string name="app_my_device">mein Gerät</string>
+    <string name="app_my_favorite">mein Favorit</string>
+    <string name="app_my_favorite_setting">meine bevorzugte Einstellung</string>
+    <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
+    <string name="app_name">TPMS</string>
+    <string name="app_never">nie</string>
+    <string name="app_new_sensor">neuer Sensor</string>
+    <string name="app_new_sensor_list">neue Sensorliste</string>
+    <string name="app_new_version_detect">Neue Version erkannt, Wetter aktualisiert?</string>
+    <string name="app_no_data_to_copy">No data to copy</string>
+    <string name="app_no_sensor_set">No sensor is set, please add it first</string>
+    <string name="app_number_choice">Auswahlmöglichkeiten</string>
+    <string name="app_ok">OK</string>
+    <string name="app_orange_co">Orange Electronic Co., Ltd</string>
+    <string name="app_orange_sensor">(Orange sensor)</string>
+    <string name="app_original_id">Original ID</string>
+    <string name="app_original_sensor">Original-Sensor </string>
+    <string name="app_pcs">pcs</string>
+    <string name="app_permission">Genehmigung</string>
+    <string name="app_permission_reject">Sie haben die entsprechende Erlaubnis verweigert. Die Funktion ist abnormal. Bitte gehe zu
+        Einstellungen, um die entsprechende Berechtigung zu öffnen
+    </string>
+    <string name="app_permission_requre">Für unsere Funktion müssen Sie die entsprechenden Berechtigungen öffnen</string>
+    <string name="app_press">Drücken Sie</string>
+    <string name="app_program">programmieren</string>
+    <string name="app_psi">PSI</string>
+    <string name="app_re_program">neu programmieren</string>
+    <string name="app_read_failed">Lesen fehlgeschlagen, bitte nochmal lesen!</string>
+    <string name="app_regist_success">Register was successful</string>
+    <string name="app_register_account_number">Account Number</string>
+    <string name="app_register_account_title">Create your email account</string>
+    <string name="app_register_address_title">Physical address / Mailing address</string>
+    <string name="app_register_choose_password">Choose a password</string>
+    <string name="app_register_city">City</string>
+    <string name="app_register_company">Company</string>
+    <string name="app_register_contact">Contact Phone Number</string>
+    <string name="app_register_country">Country</string>
+    <string name="app_register_firstname">First Name</string>
+    <string name="app_register_lastname">Last Name</string>
+    <string name="app_register_password">Password</string>
+    <string name="app_register_password_hint">At least 8 characters</string>
+    <string name="app_register_password_repeat">Repeat password</string>
+    <string name="app_register_personal">Personal details</string>
+    <string name="app_register_product">Product serial number</string>
+    <string name="app_register_sign">Sign up</string>
+    <string name="app_register_state">State</string>
+    <string name="app_register_street">Street</string>
+    <string name="app_register_title">Account Setup</string>
+    <string name="app_register_zpcode">ZP Code</string>
+    <string name="app_registrating">Registrierung…</string>
+    <string name="app_registration">Registrierung</string>
+    <string name="app_reset">Zurücksetzen</string>
+    <string name="app_reset_all_settings">alle Einstellungen zurück setzen</string>
+    <string name="app_reset_email">Go to your email inbox and find an email from us with the subject “Reset your
+        password”.
+    </string>
+    <string name="app_reset_password">Reset Password</string>
+    <string name="app_reset_tips">Please provide the email address that you used when you signed up for O-GENIUS
+        account.
+    </string>
+    <string name="app_rl">LR</string>
+    <string name="app_rr">RR</string>
+    <string name="app_scan">scannen</string>
+    <string name="app_scan_2d_code">2D code scannen</string>
+    <string name="app_scan_and_packing">Bitte scannen sie den Code auf dem Sensor oder der Verpackung</string>
+    <string name="app_scan_code_timeout">Scan code timeout</string>
+    <string name="app_scan_tips">Bitte scannen Sie den QR Code vom Katalog oder Poster</string>
+    <string name="app_scaning">Scannen…</string>
+    <string name="app_select_car_makes">wählen sie Fahrzeug-Hersteller</string>
+    <string name="app_select_car_model">wählen sie Fahrzeug-Modell</string>
+    <string name="app_select_year">wählen sie Baujahr</string>
+    <string name="app_sendor_firmware_updated">Die Firmware des Sensors wurde aktualisiert. Möchten Sie es aktualisieren?</string>
+    <string name="app_sensor_copy_different">The number of sensor IDs to be copied is different</string>
+    <string name="app_sensor_info">SENSOR INFORMATION</string>
+    <string name="app_sensor_info_position">Prüfen Sie diePosition der Sensor Installation </string>
+    <string name="app_sensor_info_read">Sensor lesen</string>
+    <string name="app_sensor_quantity">Sensormenge</string>
+    <string name="app_sensor_repeated">Sensor repeated</string>
+    <string name="app_setting">Einstellung</string>
+    <string name="app_setting_bluetooth">Einstellung/Bluetooth</string>
+    <string name="app_setting_device_information">Einstellung/Geräteinformation</string>
+    <string name="app_setting_language">Einstellung/Sprache</string>
+    <string name="app_setting_my_favorite">Einstellung/mein Favorit</string>
+    <string name="app_setting_privacy_policy">Einstellung/ Datenschutz-Richtlinie</string>
+    <string name="app_setting_unit">Einstellung/Einheit</string>
+    <string name="app_setting_wifi">Einstellung/WIFI</string>
+    <string name="app_setup">Setup</string>
+    <string name="app_sign_in">eintragen</string>
+    <string name="app_sign_ing">eintragen…</string>
+    <string name="app_size">822.1MB</string>
+    <string name="app_sleep">Schlafmodus</string>
+    <string name="app_sounds_ranger_alerts">Ranger and Alerts</string>
+    <string name="app_sounds_shocl">Shock</string>
+    <string name="app_sounds_vibrate">Vibrae</string>
+    <string name="app_sounds_vibration">Klang &amp; Vibration</string>
+    <string name="app_ssid">SSID</string>
+    <string name="app_start">Start</string>
+    <string name="app_submit">Submit</string>
+    <string name="app_sure">Sure</string>
+    <string name="app_system_on">On</string>
+    <string name="app_system_password_tips">Please enter your password</string>
+    <string name="app_system_reset">System Reset</string>
+    <string name="app_system_update">System Update</string>
+    <string name="app_system_update_auto">automatisches update</string>
+    <string name="app_temp">°C</string>
+    <string name="app_temp_title">Temperatur</string>
+    <string name="app_tigger">aktivieren</string>
+    <string name="app_tips">For develop information, please visite the website:www.orange-electronic.com</string>
+    <string name="app_to_program_sensor">Drücken Sie den Auslöser</string>
+    <string name="app_to_trigger_sensor">Drücken Sie den aktivieren sensor</string>
+    <string name="app_trigger">aktivieren</string>
+    <string name="app_unit">Einheit</string>
+    <string name="app_units_numeral">Numeral system</string>
+    <string name="app_units_temp">Temperature</string>
+    <string name="app_units_tire">Reifenluftdruck</string>
+    <string name="app_update_completed">Update abgeschlossen</string>
+    <string name="app_updating">Aktualisierung…</string>
+    <string name="app_updating_model_database">Modelldatenbank wird aktualisiert</string>
+    <string name="app_user_manual">Benutzer-Handbuch</string>
+    <string name="app_vehicle_payment_updated">Die Fahrzeugzahlungsdatenbank wurde aktualisiert. Möchten Sie aktualisieren
+        es?
+    </string>
+    <string name="app_version">OG 1.0.1</string>
+    <string name="app_voltage">Volt:</string>
+    <string name="app_wiFi_scan_failed">WiFi scan failed</string>
+    <string name="app_wifi">WIFI</string>
+    <string name="app_wifi_ask">Ask to join Networks</string>
+    <string name="app_wifi_auto_tips">Known networks will be automatically. If no known networks are avalible ,you will
+        be have to manualy select a networks.
+    </string>
+    <string name="app_wifi_choose">CHOOSE A NETWORK</string>
+    <string name="app_wifi_connected">Wifi Connected</string>
+    <string name="app_wifi_connecting">WiFi Verbindung…</string>
+    <string name="app_wifi_disconnected">Wifi getrennt</string>
+    <string name="app_wifi_setting">Wifi</string>
+    <string name="app_writing_model_database">Writing to model database</string>
+    <string name="app_wrong_format">Wrong format</string>
+    <string name="app_year_is_empty">Year is empty!</string>
+    <string name="array_area_asia">Asia</string>
+    <string name="array_area_europe">Europe</string>
+    <string name="array_area_north_america">North America</string>
+    <string name="array_autolock_1">1 minute</string>
+    <string name="array_autolock_3">3 minutes</string>
+    <string name="array_autolock_5">5 minutes</string>
+    <string name="array_autolock_never">Never</string>
+    <string name="array_autolock_ten">10 minutes</string>
+    <string name="array_autolock_thirty">30 minutes</string>
+    <string name="array_language_english">English</string>
+    <string name="array_language_german">Deutsch</string>
+    <string name="array_language_italian">italiano</string>
+    <string name="array_language_simch">简体中文</string>
+    <string name="array_language_trach">繁體中文</string>
+    <string name="array_unit_auto">Auto</string>
+    <string name="array_unit_bar">Bar</string>
+    <string name="array_unit_c">C</string>
+    <string name="array_unit_dec">Dec</string>
+    <string name="array_unit_f">F</string>
+    <string name="array_unit_hex">Hex</string>
+    <string name="array_unit_kpa">Kpa</string>
+    <string name="array_unit_psi">Psi</string>
+    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="be_register">Gerät wurde registriert</string>
+    <string name="cancel">löschen</string>
+    <string name="checkscan">Vergewissern Sie sich, dass der Sensor am USB-PAD angeschlossen ist, und wählen Sie dann die Reifenposition aus, um den Scanvorgang zu starten</string>
+    <string name="confirm_password">Bitte bestätigen Sie das Passwort</string>
+    <string name="dayago">Vor 1 Tag</string>
+    <string name="enginer">Engineering-Modus</string>
+    <string name="error">Error</string>
+    <string name="errorpass">Zeitüberschreitung der Internetverbindung</string>
+    <string name="hourago">Vor 1 einer Stunde</string>
+    <string name="idcopyobd">ID kopieren per OBD</string>
+    <string name="idusbpad">ID kopieren (USB PAD)</string>
+    <string name="infomation_data_version">Data Version</string>
+    <string name="infomation_module">Module</string>
+    <string name="infomation_name">Name</string>
+    <string name="infomation_serial_number">Serien-Nummer</string>
+    <string name="infomation_software_version">Software Version</string>
+    <string name="infomation_version">Version</string>
+    <string name="is_latest">Um auf die neueste Version zu aktualisieren</string>
+    <string name="keyin">Geben Sie ein</string>
+    <string name="maxsize">max size is 12</string>
+    <string name="minuteago">Vor 1 Minute</string>
+    <string name="monthago">Vor 1 Monat</string>
+    <string name="need_upadte">Bitte aktualisieren Sie auf die neueste Version</string>
+    <string name="new_way">Enter new sensor ID code</string>
+    <string name="nointer">Zeitüberschreitung der Internetverbindung</string>
+    <string name="nointernet">Zeitüberschreitung der Internetverbindung </string>
+    <string name="norelarm">Im Bau</string>
+    <string name="notempty">Die Nachricht darf nicht leer sein</string>
+    <string name="original_way">Enter original sensor ID code</string>
+    <string name="paired_with_your_device">mit Ihrem Gerät gepaart</string>
+    <string name="prusbpad">Programmier (USB PAD)</string>
+    <string name="secago">Kundendienstspezialist</string>
+    <string name="sendfalse">Übertragung fehlgeschlagen</string>
+    <string name="sendsuccess">Erfolgreicher Transfer</string>
+    <string name="signfall">Anmeldung fehlgeschlagen</string>
+    <string name="step1_1">Schritt 1.\nBitte verbinden sie das USB RDKS Progammierkabel mit dem Mobiltelefon und dem Sensor
+    </string>
+    <string name="step1_2">Schritt 2.\nKlicken sie programmieren (USB RDKS)
+    </string>
+    <string name="step1_3">Schritt 3.\n
+        1. bestätigen sie, das das Programmierkabel angeschlossen ist\n
+        2. Bestätigen sie den Programmier-Modus\n
+        3. Wählen sie um die Fahrzeug-Informations-Methode zu bestätigen</string>
+    <string name="step1_4">Schritt 4-1.\ndrücken sie den Scan-Knopf, scannen sie den QR Code der Fahrzeug-Information, die sie benötigen aus dem Katalog und gehen sie zu Schritt 6</string>
+    <string name="step1_5">Schritt 4-2.\ndrücken sie den Fahrzeug-Information-Knopf, wählen sie machen  - Modell - Jahr
+    </string>
+    <string name="step1_6">Schritt 5.\nBestätigen sie, dass die Fahrzeug-Informationin der Eingabeleiste richtig ist und drücken sie "Start" um zu programmieren</string>
+    <string name="step1_7">Schritt 6.\nNachdem die Programmierung vollständig ist und sie mit dem programmieren eines identischen Sensors fortfahren wollen, tauschen sie den Sensor aus und drücken PROG.Sensor
+    </string>
+    <string name="step1_8">Schritt 7.\nBei Programmier-Fehler drücken sie den RE-PROGRAM Knopf um das Programm erneut auszuführen
+    </string>
+    <string name="step2_1">Schritt 1.\nBitte verbinden sie das USB RDKS Progammierkabel mit dem Mobiltelefon und dem Sensor
+    </string>
+    <string name="step2_2">Schritt 2.\nKlicken sie programmieren (USB RDKS)
+    </string>
+    <string name="step2_3">Schritt 3.\n1. bestätigen sie, das das Programmierkabel angeschlossen ist\n2. Bestätigen sie den Programmier-Modus\n3. Wählen sie um die Fahrzeug-Informations-Methode zu bestätigen</string>
+    <string name="step2_4">Schritt 4-1.\ndrücken sie den Scan-Knopf, scannen sie den QR Code der Fahrzeug-Information, die sie benötigen aus dem Katalog und gehen sie zu Schritt 6</string>
+    <string name="step2_5">Schritt 4-2.\ndrücken sie den Fahrzeug-Information-Knopf, wählen sie machen  - Modell - Jahr
+    </string>
+    <string name="step2_6">Schritt 5.\nWählen sie die Original Sensor ID Methode aus</string>
+    <string name="step2_7">Schritt 6.\n
+        1. Geben sie die Original-ID-Nummer ein\n
+        2. Drücken sie "PROGRAM" um mit dem Programm fortzufahren
+    </string>
+    <string name="step2_8">Schritt 7.\nNachdem die Programmierung vollständig ist und sie mit dem programmieren eines identischen Sensors fortfahren wollen, tauschen sie den Sensor aus und drücken PROG.Sensor
+    </string>
+    <string name="step2_9">Schritt 8.\nBei Programmier-Fehler drücken sie den RE-PROGRAM Knopf um das Programm erneut auszuführen</string>
+    <string name="step3_1">Schritt 1.\nBitte schliessen sie das Stromkabel zuerst an, prüfen sie, dass das USB-PAD genug Strom hat (das grüne Licht am Boden leuchtet) dann stekcen sie die Sensoren ein
+    </string>
+    <string name="step3_2">Schritt 2.\nKlicken sie Program (USB PAD)
+    </string>
+    <string name="step3_3">Schritt 3.\nUSB PAD verbindet sich mit ihrem Mobiltelefon über bluetooth (bitte prüfen sie, dass bei ihrem Mobiltelefon die Funktion aktiviert ist)
+    </string>
+    <string name="step3_4">Schritt 4.\n
+        1. Prüfen sie, dass das USB Pad angeschlossen ist\n
+        2. Prüfen sie den Programmier-Modus\n
+        3. Wählen sie die Fahrzeug-Informations-Methode</string>
+    <string name="step3_5">Schritt 5-1.\ndrücken sie den Scan-Knopf, scannen sie den QR Code der Fahrzeug-Information, die sie benötigen aus dem Katalog und gehen sie zu Schritt 6</string>
+    <string name="step3_6">Schritt 5-2.\ndrücken sie den Fahrzeug-Information-Knopf, wählen sie machen    -   Modell   -   Jahr
+    </string>
+    <string name="step3_7">Schritt 6.\nNach der Auswahl der Fahrzeug-Information wird der Sensor im PAD automatisch die Sequenz lesen. Nachdem das Lesen beendet ist drücken sie bitte PROGRAM SENSOR
+    </string>
+    <string name="step3_8">Schritt 7. \n Nachdem die Programmierung vollständig ist und sie mit dem programmieren eines identischen Sensors fortfahren wollen, tauschen sie den Sensor im USB PAD aus und drücken PROG.Sensor
+    </string>
+    <string name="step3_9">Schritt 8.\nBei Programmier-Fehler drücken sie den RE-PROGRAM Knopf um das Programm erneut auszuführen
+    </string>
+    <string name="step4_1">Schritt 1.\nBitte schliessen sie das Stromkabel zuerst an, prüfen sie, dass das USB-PAD genug Strom hat (das grüne Licht am Boden leuchtet) dann stekcen sie die Sensoren ein
+    </string>
+    <string name="step4_10">Schritt 7.\nNachdem die Programmierung vollständig ist und sie mit dem programmieren eines identischen Sensors fortfahren wollen, tauschen sie den Sensor im USB PAD aus und drücken PROG.Sensor
+    </string>
+    <string name="step4_11">Schritt 10.\nBei Programmier-Fehler drücken sie den RE-PROGRAM Knopf um das Programm erneut auszuführen</string>
+    <string name="step4_2">Schritt 2.\nKlicken sie Program (USB PAD)
+    </string>
+    <string name="step4_3">Schritt 3.\nUSB PAD verbindet sich mit ihrem Mobiltelefon über bluetooth (bitte prüfen sie, dass bei ihrem Mobiltelefon die Funktion aktiviert ist)
+    </string>
+    <string name="step4_4">Schritt 4.\n
+        1. Prüfen sie, dass das USB Pad angeschlossen ist\n
+        2. Prüfen sie den Programmier-Modus\n
+        3. Wählen sie die Fahrzeug-Informations-Methode</string>
+    <string name="step4_5">Schritt 5-1.\ndrücken sie den Scan-Knopf, scannen sie den QR Code der Fahrzeug-Information, die sie benötigen aus dem Katalog und gehen sie zu Schritt 6</string>
+    <string name="step4_6">Schritt 5-2.\ndrücken sie den Fahrzeug-Information-Knopf, wählen sie machen    -   Modell   -   Jahr
+    </string>
+    <string name="step4_7">Schritt 6.\nWählen sie die Original Sensor ID Methode aus</string>
+    <string name="step4_8">Schritt 7.\nBitte stecken sie die Original-Sensoren nach der Reihenfolge der Räder ein. Danach drücken sie bitte den nächsten Schritt
+    </string>
+    <string name="step4_9">Schritt 8. \nDas USB RDKS wird automatisch die Sequenz der Sensoren lesen. Nachdem das Lesen beendet ist, drücken sie bitte PROGRAM SENSOR</string>
+    <string name="store_type">Speichertyp</string>
+    <string name="to_give">Die App überprfüt möglicherweise ihren Standort um ihnen lokale Inhalte zu liefern</string>
+    <string name="update">Updates</string>
+    <string name="update_success">Erfolgreich aktualisiert</string>
+    <string name="updatefault">update false,Please reconnect wifi and try again!</string>
+    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="would_like_to_with_pair">"USB PDA" möchte sich mit Ihrem Smartphone verbinden</string>
+    <string name="yeargo">Vor 1 Jahr</string>
+</resources>

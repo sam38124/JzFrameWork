@@ -1,0 +1,634 @@
+<resources>
+
+    <!--等待翻译的部分-->
+
+    <!--test string begin-->
+
+    <string name="app_connected_failed">Connect failed</string>
+    <string name="app_wifi_connected">Wifi Connected</string>
+    <string name="app_connecting">Connecting…</string>
+    <string name="app_content_empty">Content cannot be empty</string>
+    <!--test string end-->
+
+    <!--提示报错是因为多国语言的其他文件没有这些字段，先不用管-->
+
+    <!-- 调整部分 begin-->
+    <string name="app_o_genius" translatable="false">O-GENIUS</string>
+    <string name="app_scan_tips">Please scan the QR Code on the catalog or poster</string>
+    <string name="app_sensor_info_read">Read Sensor</string>
+    <string name="app_press">Press</string>
+    <string name="app_to_trigger_sensor">Press the Trigger sensor</string>
+    <string name="app_sensor_info_position">Check Sensor Installation Location</string>
+    <string name="app_show_last_information" translatable="false">Show the last time information on the use.</string>
+    <string name="app_default">Default</string>
+    <string name="app_manual_operation" translatable="false">Manual operation</string>
+    <string name="app_reset">Reset</string>
+    <string name="app_tips_notifications" translatable="false">Tips notifications</string>
+    <string name="app_device_information">Device information</string>
+    <string name="app_sounds_vibration">Sounds &#038; Vibration</string>
+    <string name="app_sleep">Sleep</string>
+    <string name="app_sensor_quantity">Sensor Quantity</string>
+    <!-- 调整部分 end-->
+    <string name="app_wifi_setting">Wifi</string>
+    <string name="app_blue_bud">Bluetooth</string>
+    <string name="app_blue_bud_open">Open</string>
+    <string name="app_bat">BAT:</string>
+    <string name="app_voltage">Voltage:</string>
+
+    <!--unite array end-->
+
+    <!--language array begin-->
+    <string name="array_language_english">English</string>
+    <string name="array_language_simch">简体中文</string>
+    <string name="array_language_trach">繁體中文</string>
+    <string name="array_language_italian">italiano</string>
+    <string name="array_language_german">Deutsch</string>
+    <!--翻译完成部分-->
+    <string name="app_disagree">Disagree</string>
+    <string name="app_cancel">Cancel</string>
+    <string name="app_connection">Connection</string>
+    <string name="app_sign_in">Sign in</string>
+    <string name="app_registration">Registration</string>
+    <string name="app_forgot_password">Forgot password</string>
+    <string name="app_menue">Menue</string>
+    <string name="app_home_check_sensor">CHECK SENSOR</string>
+    <string name="app_trigger">trigger</string>
+    <string name="app_home_program_sensor_phone">PROGRAM SENSOR</string>
+    <string name="app_home_id_copy">ID COPY</string>
+    <string name="app_setup">Setup</string>
+    <string name="app_home_obdii_relearn">OBDII RELEARN</string>
+    <string name="app_home_cloud_information">Cloud Information</string>
+    <string name="app_home_online_shopping">Online Shopping</string>
+    <string name="app_user_manual">User`s manual</string>
+    <string name="app_scan_2d_code">Scan 2D code</string>
+    <string name="app_number_choice">Number of choices</string>
+    <string name="app_start">Start</string>
+    <string name="app_key_in">Key in</string>
+    <string name="app_scan_and_packing">"Please scan the code on the sensor case or packing box."</string>
+    <string name="app_program">Program</string>
+    <string name="app_copy_original">COPY ORIGINAL SENSOR</string>
+    <string name="app_original_sensor">ORIGINAL SENSOR</string>
+    <string name="app_original_id">Original ID</string>
+    <string name="app_new_sensor">NEW SENSOR</string>
+    <string name="app_new_sensor_list">NEW sensor List</string>
+    <string name="app_scan">Scan</string>
+    <string name="app_setting">Setting</string>
+    <string name="app_setting_my_favorite">Setting/My Favorite</string>
+    <string name="app_my_favorite_setting">My Favorite Setting</string>
+    <string name="app_setting_wifi">Setting/WIFI</string>
+    <string name="app_wifi">WIFI</string>
+    <string name="app_setting_bluetooth">Setting/Bluetooth</string>
+    <string name="app_bluetooth">Bluetooth</string>
+    <string name="app_my_device">My Device</string>
+    <string name="app_bluebud_other_device">Other Device</string>
+    <string name="app_setting_unit">Setting/Unit</string>
+    <string name="app_units_tire">Tire pressure</string>
+    <string name="app_temp_title">Temp.</string>
+    <string name="app_id_dec_hex">ID(Dec/Hex)</string>
+    <string name="app_auto">Auto</string>
+    <string name="app_minutes">minutes</string>
+    <string name="app_never">Never</string>
+    <string name="app_setting_language">Setting/Language</string>
+    <string name="app_setting_device_information">Setting/Device information</string>
+    <string name="app_device_name">Device Name</string>
+    <string name="app_model">Model</string>
+    <string name="infomation_serial_number">Serial Number</string>
+    <string name="infomation_software_version">Software version</string>
+    <string name="app_hardware_version">Hardware Version</string>
+    <string name="app_database_version">Database version</string>
+    <string name="app_check_for_updates">Check for updates</string>
+    <string name="app_system_update_auto">Automatic Update</string>
+    <string name="app_setting_privacy_policy">Setting/privacy policy</string>
+
+    <!--需要修改部分-->
+    <string name="app_agree">I Agree</string>
+    <string name="app_mmy">Vehicle selection</string>
+    <string name="app_my_favorite">My favorite</string>
+    <string name="app_select_car_makes">Vehicle Selection</string>
+    <string name="app_select_car_model">Select Model</string>
+    <string name="app_select_year">Select Year</string>
+    <string name="app_reset_all_settings">Reset all settings</string>
+    <string name="Programming">Programming</string>
+    <string name="Setting">Setting</string>
+    <string name="Area">Area</string>
+    <string name="to_give">The application might use your area to give you local content</string>
+    <string name="Select">Select</string>
+    <string name="Languages">Languages</string>
+    <string name="Languages_info">An application will appear in the first language in the list that they support.
+    </string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="Welcome">Welcome to use our platform and our service, when you use this platform, you trust us with
+        your information. This Privacy Policy is meant to help you understand what data we collect, why we collect it,
+        what we do with it and how you can update, manage, export, and delete your information. Please read the
+        following and if you have any questions, please contact us: mailto:sales@orange-electronic.com
+
+        1. When this Privacy Policy applies
+        Our Privacy Policy applies to all of the services offered by this platform, our Privacy Policy does not apply to
+        services offered by other companies or individuals, or other sites linked from our services.
+
+        2. The information we collect
+        We provide this platform and services to help you purchase our products easily and enhance our services
+        functionality. When you visit this platform or use the service provided by this platform, we will ask for
+        necessary personal information, or collect some information within specific purpose according to the GDPR
+        (General Data Protection Regulation) regulation. We use collected information to enhance our platform and
+        services, and to provide better support. We will share personal information with companies, organizations or
+        individuals outside of our company, when we have your consent to do so.
+        We collect information in the following ways:
+        (1). Information you give us: may including but not limited to your name, contact email, contact number, back
+        account information, transaction information, product serial number, car types, car production information, date
+        of purchase order, company name, major brand, address, or location. You may be required to provide such
+        information in the situation of setting up of a user account or registration of this platform, purchasing
+        products on this platform, requesting product support or other services, requesting information about the
+        product, services or this platform, or participating in a survey.
+        (2). Information we get from your use of this platform and our services: We collect information about the
+        product you purchased and services that you use and how you use them, it may include:
+         Device information: We collect device-specific information such as device ID number (including machine ID,
+        IMEI and / or MEID), product authorization, identification number, mobile network information including phone
+        number and other related information.
+         Log information: When you use our services or view content provided through our platform, we automatically
+        collect and store certain information in server logs. This includes: internet protocol (IP) address, username,
+        account name, system activity, settings, browsing history and times, searching records and times, the date and
+        time of your requests, voice and audio information when you use audio features and other related information.
+         Location information: we collect and process information about your actual location, including IP address, GPS
+        / Wi-Fi / Local information to determine the location, and other related information. The types of location data
+        we collect depend in part on your device and account settings, you can turn device’s location on or off.
+         Cookies and similar technologies: A cookie is a small file containing a string of characters that is sent to
+        your device when you use our product. In order to provide the best service to you, we will use various
+        technologies to collect and store information when you use our platform, and this may include using cookies or
+        similar technologies to identify your device. We use cookies for many purposes. We use them, for example,
+        remember your preferred language and other settings so that can make your next visit easier and this platform
+        would be more useful to you. We will use cookies to store certain activities on the platform when you use or
+        browse our platform. You may close the internet connection of the product to stop all cookies in the product.
+        However, it’s important to remember that many of our services may not function properly if your cookies are
+        disabled.
+
+        3. The information how we use
+        We use the information we collect from the platform in order to provide, maintain, protect and improve them, to
+        develop new ones, and to protect our company and our users. We may use your personal information for various
+        purposes, including:
+        (1). To respond to your request for information and provide you with more effective and efficient customer
+        service
+        (2). To provide you with product updates and information about products you have purchased from us
+        (3). For analysis, marketing research and reports and to manage our business
+        (4). As permitted or required by applicable law
+        (5). We may also use your personal information to contact you by email regarding Orange products, services,
+        promotions and special events.
+        We use various technologies to collect and store information, and combine the information we collect among our
+        platform and across your devices for the purposes described above.
+        We’ll ask for your consent before using your information for a purpose that isn’t covered in this Privacy
+        Policy.
+
+        4. Your choice right
+        People have different privacy concerns. Our goal is to be clear about what information we collect, so that you
+        can make meaningful choices about how it is used. For example, you can:
+         Delete the information: You can delete cookies in the device by your own or contact us to delete related
+        information of your account. We try to ensure that our services protect information from accidental or malicious
+        deletion. Because of this, there may be delays between when you delete something or when it needs to be kept for
+        legitimate business or legal purposes and when copies are deleted from our active and backup systems.
+         Edit or Adjust the information: You can edit your partial personal information via the account of our
+        platform. Under some circumstances, especially wrongful information, you may also ask us to edit, update or
+        correct your information.
+         Objection or restriction of using the information: you can ask us to cease using all or partial of your
+        personal information (for example, we do not have the statutory right to use the information continuously); or
+        you can restrict us from using your personal information (for example, your personal information is incorrect or
+        obtained illegally).
+         Read and/or obtain the information: You can ask us to provide your personal information in duplicate.
+
+        5. Information security
+        We work hard to protect us and our users from unauthorized access to or unauthorized alteration, disclosure or
+        destruction of information we hold. The insights we gain from maintaining our services help us detect and
+        automatically block security threats from ever reaching you. In particular:
+         We review our information collection, storage and processing practices, including physical security measures,
+        to guard against unauthorized access to systems.
+         We restrict access to personal information to our employees, contractors and agents who need to know that
+        information in order to process it for us, and who are subject to strict contractual confidentiality obligations
+        and may be disciplined or terminated if they fail to meet these obligations.
+         We regularly review our platform or service whether is compliance with our Privacy Policy. When we receive
+        formal written complaints, we will contact the person who made the complaint to follow up. We work with the
+        appropriate regulatory authorities, including local data protection authorities, to resolve any complaints
+        regarding the transfer of personal data that we cannot resolve with our users directly.
+
+        6. External links
+        The web page of this platform provides links to other websites. You may also click the links provided by this
+        platform to access other websites. However, the linked website does not apply to the privacy policy of this
+        platform. You must refer to the privacy policy in the linked website.
+
+        7. Information we share
+        We do not share personal information with companies, organizations and individuals outside of our company unless
+        one of the following circumstances applies:
+         With your consent
+        We will share personal information with companies, organizations or individuals outside of our company, when we
+        have your consent to do so. We’ll ask for your explicit consent to share any sensitive personal information.
+         For external processing
+        We provide personal information to our affiliates or other trusted businesses or persons to process it for us,
+        based on our instructions and in compliance with our Privacy Policy and any other appropriate confidentiality
+        and security measures.
+         For legal reasons
+        We will share personal information outside of us if we have a good-faith belief that access, use, preservation,
+        or disclosure of the information is reasonably necessary to:
+        (1). Meet any applicable law, regulation, legal process, or enforceable governmental request.
+        (2). Enforce applicable Terms of Service, including investigation of potential violations.
+        (3). Detect, prevent, or otherwise address fraud, security or technical issues.
+        (4). Protect against harm to the rights, property or safety of our company, our users or the public as required
+        or permitted by law.
+        We may share non-personally identifiable information publicly and with our partners – like publishers,
+        advertisers or connected sites. For example, we may share information publicly to show trends about the general
+        use of our services.
+        If our company is involved in a merger, acquisition or asset sale, we will continue to ensure the
+        confidentiality of any personal information and give affected users notice before personal information is
+        transferred or becomes subject to a different privacy policy.
+
+        8. Changes
+        Our Privacy Policy may change from time to time. We will not reduce your rights under this Privacy Policy
+        without your explicit consent. We will post any privacy policy changes and indicate the date the last changes on
+        this platform and, if the changes are significant, we will provide a more prominent notice to you for the
+        opportunity to review the revised policy.
+    </string>
+    <string name="Agree">Agree</string>
+    <string name="Disagree">Disagree</string>
+    <string name="Sign_in">Sign in</string>
+    <string name="E_mail">E-mail</string>
+    <string name="Registration">Registration</string>
+    <string name="Password">Password</string>
+    <string name="Forgot_password">Forgot password</string>
+    <string name="Reset_Password">Reset Password</string>
+    <string name="Og_email">Please provide the email address that you used when you signed up for O-GENIUS account.
+    </string>
+    <string name="Submit">Submit</string>
+    <string name="Go_email">Go to your email inbox and find an email from us with the subject “Reset your password”.
+    </string>
+    <string name="Account_creation">Account creation</string>
+    <string name="Create_your_email_account">Create your email account</string>
+    <string name="Account_Number">Account Number</string>
+    <string name="Choose_a_password">Choose a password</string>
+    <string name="At_least_8_characters">At least 8 characters</string>
+    <string name="Repeat_password">Repeat password</string>
+    <string name="Product_serial_number">Product serial number</string>
+    <string name="Personal_details">Personal details</string>
+    <string name="First_Name">First Name</string>
+    <string name="Last_Name">Last Name</string>
+    <string name="Company">Company</string>
+    <string name="Contact_Phone_Number">Contact Phone Number</string>
+    <string name="Physical_address_Mailing_address">Physical address / Mailing address</string>
+    <string name="Country">Country</string>
+    <string name="Street">Street</string>
+    <string name="City">City</string>
+    <string name="State">State</string>
+    <string name="ZP_Code">ZP_Code</string>
+    <string name="Registration_success">Registration success</string>
+    <string name="Orange_USB_TPMS">Orange USB TPMS</string>
+    <string name="Data_Loading">Data Loading</string>
+    <string name="Orange_USB_TPMS_Application">Orange USB TPMS Application</string>
+    <string name="Program_USB_TPMS">USB CABLE</string>
+    <string name="Program_USB_PAD">USB PAD</string>
+    <string name="Cloud_information">Cloud information</string>
+    <string name="Online_shopping">Online shopping</string>
+    <string name="Users_manual">User\'s manual</string>
+    <string name="Log_out">Log out</string>
+    <string name="Are_you_sure_you_want_to_log_out">Are you sure you want to log out ?</string>
+    <string name="Yes">Yes</string>
+    <string name="cancel">cancel</string>
+    <string name="ProgramUSB_TPMS">Program (USB TPMS)</string>
+    <string name="Download_MYY_data">Download MYY data</string>
+    <string name="ID_COPY">ID COPY</string>
+    <string name="Program">Program</string>
+    <string name="Methods_of_vehicle_data_selection">Methods of vehicle data selection</string>
+    <string name="Scan_Code">Scan Code</string>
+    <string name="Vehicle_data_selection">Vehicle data selection</string>
+    <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">Please scan on sensor or ID QR code on package
+    </string>
+    <string name="Select_CAR_Make">Select CAR Make</string>
+    <string name="Select_CAR_Model">Select CAR Model</string>
+    <string name="Select_Year">Select Year</string>
+    <string name="Please_insert_the_sensor_into_the_USB_PAD">Please insert the sensor into the USB PAD.</string>
+    <string name="Unlinked">Unlinked</string>
+    <string name="START">START</string>
+    <string name="MENU">MENU</string>
+    <string name="Programming_completed">Programming completed.</string>
+    <string name="Please_remove_the_sensor">Please remove the sensor.</string>
+    <string name="Programming_failed">Programming failed.</string>
+    <string name="Please_press_RE_PROGRAM">Please press RE-PROGRAM.</string>
+    <string name="RE_PROGRAM">RE-PROGRAM</string>
+    <string name="Relearn_Procedure">Relearn Procedure</string>
+    <string name="Key_in_the_original_sensor_ID_number">Key in the original sensor ID number</string>
+    <string name="ID_code_should_be_8_characters">ID code should be 8 characters</string>
+    <string name="Bluetooth_pairing_requirements">Bluetooth pairing requirements</string>
+    <string name="would_like_to_with_pair">" USB PDA " would like to with pair your smartphone.</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Pair">Pair</string>
+    <string name="Program_sensor">Program sensor</string>
+    <string name="Programming_do_not_move_sensors">Programming, do not move sensors.</string>
+    <string name="Next">Next</string>
+    <string name="error">error</string>
+    <string name="Programming_failed_where">Program fail</string>
+    <string name="Get_location">The location function must be turned on to start the Bluetooth service.</string>
+    <string name="Prog_Sensor">Prog.Sensor</string>
+    <string name="Sound">Sound</string>
+    <string name="AreaLanguage">Area &amp; Language</string>
+    <string name="Version_update">Version update</string>
+    <string name="Please_Confirm_That_The_Sensor_Is_Connect">Please confirm that the sensor is connect</string>
+    <string name="ProvideUsbTpmsApp">Provide USB TPMS APP \n Programming description</string>
+    <string name="step1_1">Step 1.\n
+        Please connect the USB TPMS programming cable to cell phone and sensor
+    </string>
+    <string name="step1_2">Step 2.\nClik Program ( USB TPMS )
+    </string>
+    <string name="step1_3">Step 3.\n 1. Confirm programming cable is connected\n
+        2. Confirm programming mode\n
+        3. Select to confirm the vehicle information method
+    </string>
+    <string name="step1_4">Step 4-1.\n press the scan button, scan the QR code of the vehicle information you need in
+        the catalog and skip to step 6.
+    </string>
+    <string name="step1_5">Step 4-2.\n press the vehicle information button, select the make → model → year
+    </string>
+    <string name="step1_6">Step 5.\n Confirm the vehicle information in prompt bar is correct and press "START" to
+        program
+    </string>
+    <string name="step1_7">Step 6.\n After the program is completed, if you need to continue program the same data
+        sensor, please replace the next sensor and press PROG.SENSOR
+    </string>
+    <string name="step1_8">Step 7.\n Program fail , please press RE-PROGRAM button to re-execute program.
+    </string>
+    <string name="step2_1">Step 1.
+        Please connect the USB TPMS programming cable to cell phone and sensor
+    </string>
+    <string name="step2_2">Step 2.
+        Clik Program ( USB TPMS )
+    </string>
+    <string name="step2_3">Step 3.\n1. Confirm programming cable is connected\n
+        2. Confirm programming mode\n
+        3. Select to confirm the vehicle information method
+    </string>
+    <string name="step2_4">Step 4-1.\n press the scan button, scan the QR code of the vehicle information you need in
+        the catalog and skip to step 6.
+    </string>
+    <string name="step2_5">Step 4-2.\n press the vehicle information button, select the make → model → year
+    </string>
+    <string name="step2_6">Step 5.\n Select original sensor ID input method</string>
+    <string name="step2_7">Step 6.\n 1. input original ID number
+        2. press "PROGRAM " to proceed program
+    </string>
+    <string name="step2_8">Step 7.\n After the program is completed, if you need to continue to copy other sensors,
+        please replace the next sensor and press PROG.SENSOR
+    </string>
+    <string name="step2_9">Step 8.\n Program fail , please press RE-PROGRAM button to re-execute program.</string>
+    <string name="step3_1">Step 1.\n Please connect the power cable first, confirm if the USB PAD is over-current ( the
+        bottom green light is on) then put the pre-program sensor into
+    </string>
+    <string name="step3_2">Step 2.\n Clik Program ( USB PAD )
+    </string>
+    <string name="step3_3">Step 3.\n USB PAD will pair with your phone for Bluetooth
+        (Please make sure the phone location function is turned on)
+    </string>
+    <string name="step3_4">Step 4.\n 1. Confirm USB PAD is connected\n
+        2. Confirm programming mode\n
+        3. Select to confirm the vehicle information method
+    </string>
+    <string name="step3_5">Step 5-1.\n press the scan button, scan the QR code of the vehicle information you need in
+        the catalog and skip to step 6.
+    </string>
+    <string name="step3_6">Step 5-2.\n press the vehicle information button, select the make → model → year
+    </string>
+    <string name="step3_7">Step 6.\n After selecting the vehicle information, the sensor in the PAD will be
+        automatically read in sequence. After reading is completed, please press PROGRAM SENSOR.
+    </string>
+    <string name="step3_8">Step 7.\n After the program is completed, if you need to program the same data sensor, please
+        replace sensor in the USB PAD and press PROG.SENSOR
+    </string>
+    <string name="step3_9">Step 8.\n Program fail , please press RE-PROGRAM button to re-execute program.
+    </string>
+    <string name="step4_1">Step 1.\n Please connect the power cable first, confirm if the USB PAD is over-current ( the
+        bottom green light is on) then put the pre-program sensor into
+    </string>
+    <string name="step4_2">Step 2.\n Clik Program ( USB PAD )
+    </string>
+    <string name="step4_3">Step 3.\n USB PAD will pair with your phone for Bluetooth
+        (Please make sure the phone location function is turned on)
+    </string>
+    <string name="step4_4">Step 4.\n 1. Confirm USB PAD is connected
+        2. Confirm programming mode
+        3. Select to confirm the vehicle information method
+
+
+    </string>
+    <string name="step4_5">Step 5-1.\n press the scan button, scan the QR code of the vehicle information you need in
+        the catalog and skip to step 6.
+    </string>
+    <string name="step4_6">Step 5-2.\n press the vehicle information button, select the make → model → year
+    </string>
+    <string name="step4_7">Step 6.\n Select original sensor ID input method</string>
+    <string name="step4_8">Step 7.\n Please input the original sensor ID according to the order of the wheels. After
+        inputting, please press the next step.
+    </string>
+    <string name="step4_9">Step 8.\n The USB TPMS will automatically read the sensors in the PAD in sequence.
+        After reading is completed, please press PROGRAM SENSOR
+    </string>
+    <string name="step4_10">Step 9.\n After the program is completed, if you need to copy other sensor, please replace
+        the sensor in USB PAD then press PROG.SENSOR
+    </string>
+    <string name="step4_11">Step 10.\n Program fail , please press RE-PROGRAM button to re-execute program.</string>
+
+    <string name="Set_up">Set up</string>
+    <string name="Check_for_updates">Check for updates</string>
+    <string name="update">update</string>
+    <string name="Automatic_update">Automatic update</string>
+    <string name="USB_TPMS_APP_will_automatically_install_updates">USB TPMS APP will automatically install updates.
+    </string>
+    <string name="paired_with_your_device">paired with your device</string>
+    <string name="SelectDevice">Select Device</string>
+    <string name="For_developer_information">For developer information, please visit this website:
+        www.orange-electronic.com
+    </string>
+    <string name="Updating">Updating</string>
+    <string name="Please_scan_the_correct_QR_code">Please scan the correct QR code</string>
+    <string name="norelarm">Under construction</string>
+    <string name="confirm_password">Please confirm your password</string>
+    <string name="be_register">Device has been registered</string>
+    <string name="signfall">Login failed</string>
+    <string name="nointernet">Internet connection timeout</string>
+    <string name="store_type">Store type</string>
+    <string name="Distributor">Distributor</string>
+    <string name="Retailer">Retailer</string>
+    <string name="nointer">Internet connection timeout</string>
+    <string name="errorpass">account or password incorrect</string>
+    <string name="update_success">update completed</string>
+    <string name="need_upadte">Please update to the latest version</string>
+    <string name="is_latest">To update to the latest version</string>
+    <string name="SayQusition">Hello, please elaborate on the product issue</string>
+    <string name="PleaseMessage">Please enter the content of the letter</string>
+    <string name="notempty">Message cannot be empty</string>
+    <string name="sendsuccess">Successful transfer</string>
+    <string name="sendfalse">Transfer failed</string>
+    <string name="minuteago">1 minute ago</string>
+    <string name="dayago">1 day ago</string>
+    <string name="secago">just</string>
+    <string name="Online_customer_service">Online customer service</string>
+    <string name="Customer_service_specialist">Customer service specialist</string>
+    <string name="hourago">1 hour ago</string>
+    <string name="monthago">1 month ago</string>
+    <string name="yeargo">1 year ago</string>
+    <string name="checkscan">Please make sure sensor is on USB PAD, and then choose tire position to start scanning</string>
+    <string name="Scan_Two">Please scan the QR Code on the catalog or poster.</string>
+    <string name="keyin">key in</string>
+    <string name="Notall">Not all of the OE sensor contains the temperature, Battery and Voltage status</string>
+
+    <string name="app_wifi_disconnected">Wifi Disconnected</string>
+    <string name="app_permission">Permission</string>
+    <string name="app_permission_requre">Our function requires you to open relevant permissions</string>
+    <string name="app_permission_reject">You have denied the relevant permission. The function is abnormal. Please go to
+        settings to open the relevant permission
+    </string>
+    <string name="app_email_send">E-mail has bean send</string>
+    <string name="app_wifi_connecting">Wifi Connection…</string>
+    <string name="app_sign_ing">Sign in…</string>
+    <string name="app_registrating">Registration…</string>
+    <string name="app_updating">Updating…</string>
+    <string name="app_update_completed">Update completed</string>
+    <string name="app_data_uploading">Data uploading…</string>
+    <string name="app_data_reading">Data reading…</string>
+    <string name="app_loading_data">Loading data…</string>
+    <string name="app_scaning">Scaning…</string>
+    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_bootaloader_mode">Currently in bootaloader mode, unable to operate, please burn flash.</string>
+    <string name="app_burning_module_firmware">Burning module firmware</string>
+    <string name="app_updating_model_database">Updating model database</string>
+    <string name="app_burning_succeeded">Burning succeeded!</string>
+    <string name="app_module_firmware_updated">Module firmware has been updated. Do you want to update?</string>
+    <string name="app_vehicle_payment_updated">There is an update to the vehicle payment database. Do you want to update
+        it?
+    </string>
+    <string name="app_sendor_firmware_updated">Sensor firmware has been updated. Do you want to update it?</string>
+    <string name="app_model_database_finished">Model database update finished!</string>
+    <string name="app_writing_model_database">Writing to model database</string>
+    <string name="app_wiFi_scan_failed">WiFi scan failed</string>
+    <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
+    <string name="app_invalid_mmy_qrcode">Invalid mmy QR code</string>
+    <string name="app_invalid_sensor_qrcode">Invalid sensor ID QR code</string>
+    <string name="app_account_password_empty">Account or password cannot be empty</string>
+    <string name="app_regist_success">Register was successful</string>
+    <string name="app_wrong_format">Wrong format</string>
+    <string name="app_re_program">Re-Program</string>
+    <string name="app_sensor_repeated">Sensor repeated</string>
+    <string name="app_checking">Checking…</string>
+    <string name="app_scan_code_timeout">Scan code timeout</string>
+    <string name="app_duplicate_items">There are duplicate items. Please delete them and try again</string>
+    <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
+    <string name="app_login_failed">Login failed</string>
+    <string name="app_no_sensor_set">No sensor is set, please add it first</string>
+    <string name="app_sensor_copy_different">The number of sensor IDs to be copied is different</string>
+    <string name="app_no_data_to_copy">No data to copy</string>
+    <string name="app_module_is_empty">Module is empty!</string>
+    <string name="app_year_is_empty">Year is empty!</string>
+    <string name="app_read_failed">Read failed,please read again!</string>
+    <string name="app_name">TPMS</string>
+    <string name="app_sure">Sure</string>
+    <string name="app_ok">OK</string>
+    <string name="app_ssid">SSID</string>
+    <string name="app_tigger">Trigger</string>
+    <string name="app_back">Back</string>
+    <string name="app_check">Check</string>
+    <string name="app_id_clear">ID</string>
+    <string name="app_fr">FR</string>
+    <string name="app_rr">RR</string>
+    <string name="app_rl">LR</string>
+    <string name="app_fl">LF</string>
+    <string name="app_pcs">pcs</string>
+    <string name="app_orange_sensor">(Orange sensor)</string>
+    <string name="app_copy_new">CREATE NEW SENSOR</string>
+    <string name="app_psi">PSI</string>
+    <string name="app_temp">°C</string>
+    <string name="app_bat_clear">BAT</string>
+    <string name="app_check_up">CHECK</string>
+    <string name="app_wifi_choose">CHOOSE A NETWORK</string>
+    <string name="app_wifi_ask">Ask to join Networks</string>
+    <string name="app_wifi_auto_tips">Known networks will be automatically. If no known networks are avalible ,you will
+        be have to manualy select a networks.
+    </string>
+    <string name="app_connected">Connected</string>
+    <string name="app_disconnected">Disconnected</string>
+    <string name="app_bluebud_my_device">My Device</string>
+    <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
+    <string name="app_bluebud_other_devicename">ORANGE FNNB01</string>
+    <string name="app_units_temp">Temperature</string>
+    <string name="app_units_numeral">Numeral system</string>
+    <string name="app_sounds_vibrate">Vibrae</string>
+    <string name="app_sounds_ranger_alerts">Ranger and Alerts</string>
+    <string name="app_sounds_shocl">Shock</string>
+    <string name="app_system_update">System Update</string>
+    <string name="app_system_reset">System Reset</string>
+    <string name="app_system_on">On</string>
+    <string name="app_system_password_tips">Please enter your password</string>
+    <string name="app_version">OG 1.0.1</string>
+    <string name="app_app_name">Orange Electronic</string>
+    <string name="app_size">822.1MB</string>
+    <string name="app_tips">For develop information, please visite the website:www.orange-electronic.com</string>
+    <string name="app_reset_password">Reset Password</string>
+    <string name="app_reset_tips">Please provide the email address that you used when you signed up for O-GENIUS
+        account.
+    </string>
+    <string name="app_reset_email">Go to your email inbox and find an email from us with the subject “Reset your
+        password”.
+    </string>
+    <string name="app_submit">Submit</string>
+    <string name="app_register_title">Account Setup</string>
+    <string name="app_register_account_title">Create your email account</string>
+    <string name="app_register_account_number">Account Number</string>
+    <string name="app_register_password">Password</string>
+    <string name="app_register_password_hint">At least 8 characters</string>
+    <string name="app_register_password_repeat">Repeat password</string>
+    <string name="app_register_choose_password">Choose a password</string>
+    <string name="app_register_product">Product serial number</string>
+    <string name="app_register_personal">Personal details</string>
+    <string name="app_register_firstname">First Name</string>
+    <string name="app_register_lastname">Last Name</string>
+    <string name="app_register_company">Company</string>
+    <string name="app_register_contact">Contact Phone Number</string>
+    <string name="app_register_address_title">Physical address / Mailing address</string>
+    <string name="app_register_country">Country</string>
+    <string name="app_register_street">Street</string>
+    <string name="app_register_city">City</string>
+    <string name="app_register_state">State</string>
+    <string name="app_register_zpcode">ZP Code</string>
+    <string name="app_register_sign">Sign up</string>
+    <string name="app_orange_co">Orange Electronic Co., Ltd</string>
+    <string name="array_autolock_1">1 minute</string>
+    <string name="array_autolock_3">3 minutes</string>
+    <string name="array_autolock_5">5 minutes</string>
+    <string name="array_autolock_ten">10 minutes</string>
+    <string name="array_autolock_thirty">30 minutes</string>
+    <string name="array_autolock_never">Never</string>
+    <string name="array_area_europe">Europe</string>
+    <string name="array_area_north_america">North America</string>
+    <string name="array_area_asia">Asia</string>
+    <string name="array_unit_c">C</string>
+    <string name="array_unit_f">F</string>
+    <string name="array_unit_psi">Psi</string>
+    <string name="array_unit_bar">Bar</string>
+    <string name="array_unit_kpa">Kpa</string>
+    <string name="array_unit_auto">Auto</string>
+    <string name="array_unit_dec">Dec</string>
+    <string name="array_unit_hex">Hex</string>
+    <string name="original_way">Enter original sensor ID code</string>
+    <string name="new_way">Enter new sensor ID code</string>
+    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="updatefault">update false,Please reconnect wifi and try again!</string>
+    <string name="enginer">Engineering mode</string>
+    <string name="maxsize">max size is 12</string>
+    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="app_to_program_sensor">Press the trigger button</string>
+    <string name="app_blue_bud_close">Close</string>
+    <string name="app_unit">Unit</string>
+    <string name="app_language_setting">Language</string>
+    <string name="app_sensor_info">SENSOR INFORMATION</string>
+    <string name="app_id">ID:</string>
+    <string name="app_kpa">Kpa:</string>
+    <string name="app_c">°C:</string>
+    <string name="infomation_name">Name</string>
+    <string name="infomation_module">Module</string>
+    <string name="infomation_version">Version</string>
+    <string name="infomation_data_version">Data Version</string>
+    <string name="idcopyobd">ID Copy by OBD</string>
+    <string name="prusbpad">Program (USB PAD)</string>
+    <string name="idusbpad">ID Copy (USB PAD)</string>
+</resources>

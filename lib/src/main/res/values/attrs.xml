@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PieChart">
+        <attr name="aspet_ratio" format="float" />
+    </declare-styleable>
+    <!--CustomTitleView-->
+    <declare-styleable name="CustomTitleView">
+        <attr name="TextSizeRatio" format="string" />
+    </declare-styleable>
+</resources>
