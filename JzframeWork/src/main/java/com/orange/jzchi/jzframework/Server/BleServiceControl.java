@@ -109,7 +109,6 @@ public class BleServiceControl {
     }
 
     public boolean WriteCmd(byte[] write,int check){
-        bleCallbackC.setRXDATA("");
         for(BluetoothGattCharacteristic a:mGattCharacteristics){
             if(TXUUID.equals(a.getUuid())){
                 mBluetoothLeService.check=check;
@@ -123,7 +122,6 @@ public class BleServiceControl {
         return false;
     }
     public boolean WriteCmd(String write,int check){
-        bleCallbackC.setRXDATA("");
 for(BluetoothGattCharacteristic a:mGattCharacteristics){
     if(TXUUID.equals(a.getUuid())){
         mBluetoothLeService.check=check;

@@ -12,18 +12,17 @@ import com.orange.jzchi.jzframework.Server.ScanDevice
 
  class Ble_Helper(val caller:Ble_CallBack,val context: Context) {
     var handler= Handler()
-    var ConnectDelay=0
     var bleServiceControl=BleServiceControl()
     var scan = ScanDevice(this,context)
     fun ConnectSituation(boolean: Boolean) {}
-    fun Connect(a: String) {
+    fun Connect(a: String,time:Int) {
         caller.Connecting()
         bleServiceControl.bleCallbackC=this
         bleServiceControl.connect(a)
         Thread {
             var fal = 0
             while (true) {
-                if (bleServiceControl.isconnect || fal == ConnectDelay) {
+                if (bleServiceControl.isconnect || fal == time) {
                     break
                 }
                 Thread.sleep(1000)
