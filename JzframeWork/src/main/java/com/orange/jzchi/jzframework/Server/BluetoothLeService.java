@@ -69,7 +69,7 @@ public class BluetoothLeService extends Service {
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             String intentAction;
             if (newState == BluetoothProfile.STATE_CONNECTED) {
-                bleCallbackC.ConnectSituation(true);
+                bleCallbackC.getCaller().ConnectSuccess();
                 bleCallbackC.getBleServiceControl().isconnect=true;
                 Log.w("s","連線");;
                 mConnectionState = STATE_CONNECTED;
@@ -79,7 +79,7 @@ public class BluetoothLeService extends Service {
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                 mConnectionState = STATE_DISCONNECTED;
                 Log.i(TAG, "Disconnected from GATT server.");
-                bleCallbackC.ConnectSituation(false);
+                bleCallbackC.getCaller().ConnectFalse();
                 bleCallbackC.getBleServiceControl().isconnect=false;
                 Log.w("s","斷線");;
             }

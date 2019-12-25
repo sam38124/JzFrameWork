@@ -14,7 +14,6 @@ import com.orange.jzchi.jzframework.Server.ScanDevice
     var handler= Handler()
     var bleServiceControl=BleServiceControl()
     var scan = ScanDevice(this,context)
-    fun ConnectSituation(boolean: Boolean) {}
     fun Connect(a: String,time:Int) {
         caller.Connecting()
         bleServiceControl.bleCallbackC=this
