@@ -10,7 +10,7 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.orange.jzchi.jzframework.CallBack.Ble_Callback_C;
+import com.orange.jzchi.jzframework.CallBack.Ble_Helper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +33,7 @@ public class BleServiceControl {
     private BluetoothGattCharacteristic mNotifyCharacteristic;
     private String mDeviceAddress;
     public byte[] getData=new byte[10];
-    public Ble_Callback_C bleCallbackC;
+    public Ble_Helper bleCallbackC;
     public  ServiceConnection   mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder service) {
@@ -54,8 +54,8 @@ public class BleServiceControl {
         try{
                 this.mDeviceAddress=mDeviceAddress;
                if(mBluetoothLeService!=null){ mBluetoothLeService.connect(mDeviceAddress);}
-                Intent gattServiceIntent = new Intent(bleCallbackC.bleact(), BluetoothLeService.class);
-                bleCallbackC.bleact().bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
+                Intent gattServiceIntent = new Intent(bleCallbackC.getContext(), BluetoothLeService.class);
+                bleCallbackC.getContext().bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
                 this.mDeviceAddress=mDeviceAddress;
         }catch (Exception e){e.printStackTrace();}
     }

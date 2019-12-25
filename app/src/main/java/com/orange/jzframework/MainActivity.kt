@@ -2,9 +2,10 @@ package com.orange.jzframework
 import android.view.KeyEvent
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.orange.jzchi.jzframework.CallBack.Ble_Helper
 import com.orange.jzchi.jzframework.RootActivity
 import com.orange.jzframework.Frag.Frag_Home
-class MainActivity : RootActivity() {
+class MainActivity : RootActivity(){
     /*初次載入的代碼處理*/
     override fun ViewInit(rootview: View) {
         //設定首頁

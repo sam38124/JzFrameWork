@@ -5,26 +5,22 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.content.Context
+import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.os.Build
 import android.util.Log
 import android.widget.Toast
-import com.orange.jzchi.R
-
-import com.orange.jzchi.jzframework.Ble.ScanBle
-import com.orange.jzchi.jzframework.CallBack.Permission_C
-import com.orange.jzchi.jzframework.RootActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.orange.jzchi.jzframework.CallBack.Ble_Helper
 
 import java.util.ArrayList
 
-class ScanDevice {
+class ScanDevice(var scanBle: Ble_Helper,var context: Context){
     private var mBluetoothAdapter: BluetoothAdapter? = null
-    private var activity: RootActivity? = null
-    var scanBle: ScanBle? = null
     private val mLeDevices = ArrayList<BluetoothDevice>()
     private val mLeScanCallback = BluetoothAdapter.LeScanCallback { device, rssi, scanRecord ->
         if (!mLeDevices.contains(device)) {
-            scanBle!!.DataRefresh(device)
+            scanBle.caller.ScanBack(device)
         }
         val stringBuilder = StringBuilder()
         for (a in scanRecord) {
@@ -39,30 +35,26 @@ class ScanDevice {
         }
     }
 
-    fun setmBluetoothAdapter(setting: RootActivity) {
-        this.activity = setting
-        initPermission(setting)
-        val bluetoothManager = setting.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
+    fun setmBluetoothAdapter() {
+        initPermission()
+        val bluetoothManager = context.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         mBluetoothAdapter = bluetoothManager.adapter
         if (mBluetoothAdapter == null) {
-            Toast.makeText(setting, "notsupport", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "notsupport", Toast.LENGTH_SHORT).show()
         }
     }
 
     //-----------------------method1檢查權限------------------------------------------
-    fun initPermission(context: RootActivity) {
+    fun initPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            context.GetPermission(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION), object :Permission_C{
-                var agrant=ArrayList<String>();
-                override fun RequestSuccess(a: String) {
-                    agrant.add(a)
-                    if(agrant.size==2){RequestPermission()}
-                }
-
-                override fun RequestFalse(a: String) {
-                    context.Toast(R.string.app_permission_requre)
-                }
-            },20);
+            val a=ArrayList<String>();
+            if(context.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)==PackageManager.PERMISSION_DENIED){
+                a.add(Manifest.permission.ACCESS_COARSE_LOCATION)
+            }
+            if(context.checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_DENIED){
+                a.add(Manifest.permission.ACCESS_FINE_LOCATION)
+            }
+            scanBle.caller.RequestPermission(a)
         } else {
             RequestPermission()
         }
@@ -70,8 +62,8 @@ class ScanDevice {
 
     fun RequestPermission() {
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
-        if (!isLocServiceEnable(activity!!)) {
-            Toast.makeText(activity, "Please enable GPS", Toast.LENGTH_SHORT).show()
+        if (!isLocServiceEnable(context)) {
+            Toast.makeText(context, "Please enable GPS", Toast.LENGTH_SHORT).show()
         }
         val originalBluetooth = mBluetoothAdapter != null && mBluetoothAdapter!!.isEnabled
         if (originalBluetooth) {

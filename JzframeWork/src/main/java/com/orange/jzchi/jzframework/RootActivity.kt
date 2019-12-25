@@ -193,7 +193,7 @@ abstract class RootActivity : AppCompatActivity(),
         }
     }
 
-    fun findFragmentByTag(a: String): Fragment? {
+    fun FindfragByTag(a: String): Fragment? {
         val a = supportFragmentManager.findFragmentByTag(a)
         return a
     }

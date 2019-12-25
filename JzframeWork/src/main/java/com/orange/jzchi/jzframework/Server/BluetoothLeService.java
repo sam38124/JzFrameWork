@@ -32,7 +32,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.orange.jzchi.jzframework.CallBack.Ble_Callback_C;
+import com.orange.jzchi.jzframework.CallBack.Ble_Helper;
 
 import java.util.List;
 import java.util.UUID;
@@ -47,7 +47,7 @@ import static com.orange.jzchi.jzframework.tool.FormatConvert.bytesToHex;
 public class BluetoothLeService extends Service {
     private final static String TAG = BluetoothLeService.class.getSimpleName();
     boolean writesuccess=true;
-    public Ble_Callback_C bleCallbackC;
+    public Ble_Helper bleCallbackC;
     private BluetoothManager mBluetoothManager;
     private BluetoothAdapter mBluetoothAdapter;
     private String mBluetoothDeviceAddress;
@@ -99,24 +99,22 @@ public class BluetoothLeService extends Service {
                                          BluetoothGattCharacteristic characteristic,
                                          int status) {
             tmp=tmp+bytesToHex(characteristic.getValue());
-            bleCallbackC.RX(tmp);
             if(tmp.length()==check||check==0){
-                bleCallbackC.setRXDATA(tmp);
+                bleCallbackC.getCaller().RX(tmp);
                 Log.d("WriteReback",(tmp));
             }
         }
 
 @Override
 public void onCharacteristicWrite(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic,int status){
-    bleCallbackC.TX(bytesToHex(characteristic.getValue()));
+    bleCallbackC.getCaller().TX(bytesToHex(characteristic.getValue()));
 }
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt,
                                             BluetoothGattCharacteristic characteristic) {
             tmp=tmp+bytesToHex(characteristic.getValue());
-            bleCallbackC.RX(tmp);
             if(tmp.length()==check||check==0){
-                bleCallbackC.setRXDATA(tmp);
+                bleCallbackC.getCaller().RX(tmp);
                 Log.d("WriteReback",(tmp));
             }
 

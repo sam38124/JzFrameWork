@@ -17,12 +17,13 @@ class Frag_Home : RootFragement(R.layout.activity_main) {
         */
         Refresh = true
         //使用下面其中一種方式取得layout元件
-        rootview.findViewById<TextView>(R.id.sampletext).text = "method1"
+        rootview.findViewById<TextView>(R.id.sampletext).text = "Go next page"
         //或者
-        rootview.sampletext.text = "method2"
+        rootview.sampletext.text = "Go next page"
         //true會將現在顯示的fragment加入可返回的推棧，按下返回鍵則會返回現在的頁面，反之false則不能返回現在的頁面
 //使用SetHome的Function進行首頁的設定和更改
-        act.SetHome(Frag_Home(), "Frag_Home")
+        rootview.sampletext.setOnClickListener {
+            act.ChangePage(Frag_Sec(),"Frag_Sec",true)
+        }
     }
-
 }
