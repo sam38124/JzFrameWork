@@ -3,7 +3,8 @@
 ## 目錄
 * [如何導入到專案](#Import)
 * [快速使用](#Use)
-* [Dialog](#Dialog)
+* [Dialog的使用](#Dialog)
+* [Fragment的管理](#Frag)
 * [關於我](#About)
 
 <a name="Import"></a>
@@ -30,7 +31,13 @@ implementation 'com.github.sam38124:JzFrameWork:v2.0'
 <a name="Use"></a>
 ## 如何使用
 
-### 第一步：創建一個Activity並且繼承RootActivity
+### 第一步：創建一個Activity並且繼承RootActivity，並且於Mainfest中做初次設定
+#### 1.在Manifest中添加
+```kotlin
+android:theme="@style/SwipTheme" //添加在Application
+android:configChanges="keyboardHidden|orientation|screenSize"//添加在Activity
+```
+#### 2.創建Activity
 
 ```kotlin
 class MainActivity : RootActivity() {
@@ -52,6 +59,7 @@ class MainActivity : RootActivity() {
 }
 
 ```
+
 ### 第二步：創建要成為首頁的Fragment，並且於Activty中的ViewInit設定首頁
 ```kotlin
 /*R.layout.activity_main替換為你的layout id*/
@@ -130,7 +138,43 @@ object : Dailog_SetUp_C() {
                 }
             })
 ```
+##### 4.或者新增一個class並且繼承Dailog_SetUp_C
+```kotlin
+class Dia_Sample : Dailog_SetUp_C(){
+    override fun SetUP(root: Dialog, act: RootActivity) {
+        root.findViewById<Button>(R.id.button)
+        root.button.setOnClickListener {
+            act.Toast("click_button")
+            act.DaiLogDismiss()
+        }
+    }
+}
 
+//於要使用的地方添加
+
+act.ShowDaiLog(R.layout.sampledialog,true,false,Dia_Sample())
+```
+<a name="Frag"></a>
+## Fragment的管理
+##### 1.使用FindfragByTag取得位於推棧中的Fragment
+```kotlin
+act.FindfragByTag("Tag")//tag為你切換頁面時所加入的標籤
+```
+##### 2.返回頁面
+```kotlin
+act.GoBack()//返回上一頁
+
+act.GoBack("Tag")//返回Tag所在的頁面
+
+act.GoMenu()//返回首頁
+```
+##### 3.頁面切換監聽
+```kotlin
+//每當頁面發生切換時皆會執行這個方法
+ override fun ChangePageListener(tag: String, frag: Fragment) {
+
+}
+```
 <a name="About"></a>
 ### 關於我
 現任橙的電子全端app開發工程師
