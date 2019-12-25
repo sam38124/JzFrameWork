@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/sam38124/JzFrameWork.svg)](https://jitpack.io/#sam38124/JzFrameWork)
 # JzFrameWork
 這是一套高效能的Android開發框架，實現了近乎零延遲的畫面轉場，採用一個Activity多個Fragment的架構，為了支持所有版本的android Project，框架採用kotlin以及androidx進行開發，幫助開發者在最短的時間內部署好你的應用．
 ## 目錄
