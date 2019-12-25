@@ -106,7 +106,7 @@ class Frag_Home : RootFragement(R.layout.activity_main) {
     R.layout.sampledialog 換成你的 layout id*/
    act.ShowDaiLog(R.layout.sampledialog,true,true, Dailog_SetUp_C())
 ```
-##### 2.事件監聽
+##### 2.內部事件處理
 ```kotlin
 //使用root.button或者root.findViewById<Button>(R.id.button)取得控制元件
  act.ShowDaiLog(R.layout.sampledialog,true,false,object:Dailog_SetUp_C() {
