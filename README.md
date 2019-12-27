@@ -93,7 +93,6 @@ class Frag_Home : RootFragement(R.layout.activity_main) {
 ```kotlin
     SetHome(Frag_Home(), "Frag_Home")
 ```
-<a name="About"></a>
 ### 第三步：在任何地方執行下方代碼進行頁面的切換
 
 ##### 1.於Fragment中做切換(必需繼承RootFragment)
