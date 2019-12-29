@@ -6,8 +6,7 @@
 ## 目錄
 * [如何導入到專案](#Import)
 * [快速使用](#Use)
-* [Dialog的使用](#Dialog)
-* [Fragment的管理](#Frag)
+* [所有對外暴露方法](#All)
 * [關於我](#About)
 
 <a name="Import"></a>
@@ -34,20 +33,22 @@ implementation 'com.github.sam38124:JzFrameWork:v4.0'
 <a name="Use"></a>
 ## 如何使用
 
-### 第一步：創建一個Activity並且繼承RootActivity，並且於Mainfest中做初次設定
+### 第一步：於Mainfest中做初次設定，之後創建Mainactivity和要成為首頁的Fragment，並且於Activty中的ViewInit設定首頁
 #### 1.在Manifest中添加
 ```kotlin
 android:theme="@style/SwipTheme" //添加在Application
 android:configChanges="keyboardHidden|orientation|screenSize"//添加在Activity
 ```
-#### 2.創建Activity
+#### 2.創建Activity並且繼承JzActivity(只能有一個Activity)
 
 ```kotlin
-class MainActivity : RootActivity() {
+class MainActivity : JzActivity() {
     /*初次載入的代碼處理*/
-    override fun ViewInit(rootview: View) {
+    override fun viewInit(rootview: View) {
         //設定首頁
-        SetHome(Frag_Home(), "Frag_Home")
+        JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
+        //設定抽屜(也可以不要)
+        JzActivity.getControlInstance().setDrawer(sampledrawer())
     }
 
     /*頁面切換監聽*/
@@ -56,26 +57,24 @@ class MainActivity : RootActivity() {
     }
 
     /*按鈕事件監聽*/
-    override fun KeyLinsten(event: KeyEvent) {
+    override fun keyEventListener(event: KeyEvent) {
 
     }
 }
-
 ```
-
-### 第二步：創建要成為首頁的Fragment，並且於Activty中的ViewInit設定首頁
+#### 3.創建Fragment並且繼承JzFragement(所有Fragement皆需繼承JzFragement)
 ```kotlin
 /*R.layout.activity_main替換為你的layout id*/
-class Frag_Home : RootFragement(R.layout.activity_main) {
+class Frag_Home : JzFragement(R.layout.activity_main) {
 
         /*初次載入的代碼處理*/
-    override fun ViewInit() {
+    override fun viewInit() {
         /*
         Refresh預設值為false
         當Refresh為true時，下次載入會重新刷新頁面，並且重跑ViewInit的方法
         當Refresh為false時，下次載入時會保留上次的操作動作和頁面
         */
-        Refresh=Boolean
+        refresh=Boolean
         //使用下面其中一種方式取得layout元件
         rootview.findViewById<TextView>(R.id.sampletext).text= "method1"
         //或者
@@ -84,99 +83,119 @@ class Frag_Home : RootFragement(R.layout.activity_main) {
     }
 }
 
-```
-##### 1.於Fragment中做切換(必需繼承RootFragment)
-```kotlin
-    act.SetHome(Frag_Home(), "Frag_Home")
-```
-##### 2.於Activity中做切換(必需繼承RootActivity)
-```kotlin
-    SetHome(Frag_Home(), "Frag_Home")
-```
-### 第三步：在任何地方執行下方代碼進行頁面的切換
 
-##### 1.於Fragment中做切換(必需繼承RootFragment)
-```kotlin
-//true會將現在顯示的fragment加入可返回的推棧，按下返回鍵則會返回現在的頁面，反之false則不能返回現在的頁面
-  act.ChangePage(Frag_Sec(),"Frag_Sec",Boolean)
 ```
-##### 2.於Activity中做切換(必需繼承RootActivity)
+### 第二步:在任何地方進行使用
+#### 頁面的切換
 ```kotlin
-//true會將現在顯示的fragment加入可返回的推棧，按下返回鍵則會返回現在的頁面，反之false則不能返回現在的頁面
-  ChangePage(Frag_Sec(),"Frag_Sec",Boolean)
+JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true)
 ```
-<a name="Dialog"></a>
-## Dialog的使用
-### 使用ShowDaiLog方法顯示客製化Dialog
-##### 1.簡單使用
+#### 返回上一頁
 ```kotlin
-  /*使用 ShowDaiLog 的方法顯示客製化Dialog
-    BooleanA:true的話Dialog可以被點擊消失反之無法點擊消失
-    BooleanB:true的話背景為透明反之背景為半透明 
-    R.layout.sampledialog 換成你的 layout id*/
-   act.ShowDaiLog(R.layout.sampledialog,true,true, Dailog_SetUp_C())
+ JzActivity.getControlInstance().goBack()
 ```
-##### 2.內部事件處理
+#### 設定測邊抽屜
 ```kotlin
-//使用root.button或者root.findViewById<Button>(R.id.button)取得控制元件
- act.ShowDaiLog(R.layout.sampledialog,true,false,object:Dailog_SetUp_C() {
-     override fun SetUP(root: Dialog, act: RootActivity) {
-     root.button.setOnClickListener {
-     act.Toast("click_button")
-     act.DaiLogDismiss()
- } } })
+//sampledrawer替換成要成為抽屜的Fragment
+JzActivity.getControlInstance().setDrawer(sampledrawer())
 ```
-##### 3.客製化Style
+#### 返回首頁
 ```kotlin
-//將 R.layout.sampledialog 改成你的style
-act.ShowDaiLog(R.layout.sampledialog,true, R.style.MyDisStyle, 
-object : Dailog_SetUp_C() {
-                override fun SetUP(root: Dialog, act: RootActivity) {
-                    root.findViewById<Button>(R.id.button)
-                    root.button.setOnClickListener {
-                        act.Toast("click_button")
-                        act.DaiLogDismiss()
+JzActivity.getControlInstance().goMenu()
+```
+#### 顯示客製化Dialog
+```kotlin
+ /*
+            使用 ShowDaiLog 的方法顯示客製化Dialog
+            cancelable 決定Dialog是否可以被點擊消失
+            swipe 決定Dialog背景是否透明反之為不透明
+            R.layout.sampledialog 換成你的Dialog layout
+            */
+ JzActivity.getControlInstance().showDiaLog(R.layout.sampledialog, true, false, object : SetupDialog {
+                override fun keyevent(event: KeyEvent): Boolean {
+                    //按鈕事件監聽
+                    // return true後會繼續執行父類別的dispathKeyevent方法，反之攔截按鈕事件
+                    return true
+                }
+
+                override fun setup(rootview: Dialog) {
+                    //Dialog的載入設定
+                    rootview.findViewById<Button>(R.id.button).setOnClickListener {
+                        rootview.dismiss()
                     }
+                }
+
+                override fun dismess() {
+                    //Dialog關閉的監聽
                 }
             })
 ```
-##### 4.或者新增一個class並且繼承Dailog_SetUp_C
+<a name="All"></a>
+### 所有對外暴露的方法
 ```kotlin
-class Dia_Sample : Dailog_SetUp_C(){
-    override fun SetUP(root: Dialog, act: RootActivity) {
-        root.findViewById<Button>(R.id.button)
-        root.button.setOnClickListener {
-            act.Toast("click_button")
-            act.DaiLogDismiss()
-        }
-    }
+
+interface control {
+    /*所有對外暴露的方法*/
+
+    //頁面切換
+    fun changePage(Translation: Fragment, tag: String, goback: Boolean)
+    //設定首頁
+    fun setHome(Translation: Fragment, tag: String)
+    //頁面中的fragment切換
+    fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
+    //透過tag取得推棧中的Fragement
+    fun findFragByTag(a:String):Fragment?
+    //返回首頁
+    fun goMenu()
+    //回上一頁
+    fun goBack()
+    //反回tag為輸入值的頁面
+    fun goBack(tag: String)
+    //反回某個位置的頁面
+    fun goBack(a: Int)
+    //要求存取權限
+    fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
+    //顯示客製化Dialog
+    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog)
+    //顯示客製化Dialog，並且自定義style
+    fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog)
+    //關閉Dialog
+    fun closeDiaLog()
+
+    //保存SharedPreferences紀錄
+    fun setPro(key: String, value: Boolean)
+    fun setPro(key: String, value: String)
+    fun setPro(key: String, value: Int)
+    fun getPro(key: String, value: String): String
+    fun getPro(key: String, value: Boolean): Boolean
+    fun getPro(key: String, value: Int): Int
+
+    //關閉整個app
+    fun closeApp()
+    //設定螢幕方向
+    fun setOrientation(a: Int)
+    //設定側邊抽屜
+    fun setDrawer(frag: JzFragement)
+    //打開側邊抽屜
+    fun openDrawer()
+    //關閉側邊抽屜
+    fun closeDrawer()
+    //刷新側邊抽屜(會重新跑一次Viewinit方法)
+    fun refreshDrawer()
+    //吐司的顯示
+    fun toast(a:String)
+    //吐司的顯示(R.string.a)
+    fun toast(a:Int)
+    //取得Activity
+    fun getRootActivity(): JzActivity
+    //多國語言設定 範例:setLanuage(Locale("en"))
+    fun setLanguage(local: Locale)
+    //鍵盤隱藏
+    fun hideKeyBoard()
+
 }
-
-//於要使用的地方添加
-
-act.ShowDaiLog(R.layout.sampledialog,true,false,Dia_Sample())
 ```
-<a name="Frag"></a>
-## Fragment的管理
-##### 1.使用FindfragByTag取得位於推棧中的Fragment
-```kotlin
-act.FindfragByTag("Tag")//tag為你切換頁面時所加入的標籤
-```
-##### 2.返回頁面
-```kotlin
-act.GoBack()//返回上一頁
 
-act.GoBack("Tag")//返回Tag所在的頁面
-
-act.GoMenu()//返回首頁
-```
-##### 3.頁面切換監聽
-```kotlin
-//每當頁面發生切換時皆會執行這個方法
- override fun ChangePageListener(tag: String, frag: Fragment) {
-
-}
-```
 <a name="About"></a>
 ### 關於我
 橙的電子android and ios developer
