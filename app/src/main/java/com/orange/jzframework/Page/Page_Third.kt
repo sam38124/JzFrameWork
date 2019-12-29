@@ -1,0 +1,22 @@
+package com.orange.jzframework.Page
+
+import android.util.Log
+import com.orange.jzchi.jzframework.JzActivity
+import com.orange.jzchi.jzframework.JzFragement
+import com.orange.jzframework.Frag.Frag_1
+import com.orange.jzframework.R
+import kotlinx.android.synthetic.main.third_page.view.*
+
+class Page_Third : JzFragement(R.layout.third_page) {
+    override fun viewInit() {
+        //頁面中的fragment切換
+        rootview.imageView.setOnClickListener {
+            JzActivity.getControlInstance().goBack()
+        }
+        JzActivity.getControlInstance().changeFrag(Frag_1(), R.id.frageplace, "Frag_1", false)
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+}

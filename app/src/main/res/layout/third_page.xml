@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@color/white">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp" android:background="@android:color/holo_orange_dark" android:id="@+id/toolbar">
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" app:srcCompat="@mipmap/back"
+                android:id="@+id/imageView" android:padding="5dp"/>
+        <TextView
+                android:text="Page鑲嵌Fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_centerInParent="true"
+                android:textColor="@color/white" android:textSize="21sp" android:textStyle="bold"/>
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_below="@id/toolbar" android:id="@+id/frageplace"/>
+</RelativeLayout>

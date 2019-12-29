@@ -6,12 +6,20 @@
 
     <TextView
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="Show Dialog"
+            android:layout_height="50dp"
+            android:text="點我顯示dialog"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" android:id="@+id/sampletext2" android:gravity="center"
             android:background="@color/buttoncolor" android:textColor="@color/white"
             android:layout_centerInParent="true"/>
+    <Button
+            android:text="上一頁"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2"/>
+    <Button
+            android:text="下一頁"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button3" android:layout_toEndOf="@id/button2"/>
 </RelativeLayout>
