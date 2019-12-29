@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/tit" android:visibility="visible" android:background="@color/backgroung">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/head"
+                android:layout_marginTop="10dp" android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@mipmap/ic_launcher_round"/>
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_below="@id/tit" android:background="@color/white"
+            android:visibility="visible" android:id="@+id/scr">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical" android:paddingLeft="10dp"
+                    android:id="@+id/bt_change_info">
+
+                <TextView
+                        android:text="更改資料"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView36"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp" android:id="@+id/bt_mypet">
+                <TextView
+                        android:text="我的追蹤"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView38"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp" android:id="@+id/bt_change_head">
+                <TextView
+                        android:text="更換頭貼"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView39"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp" android:id="@+id/bt_my_info">
+                <TextView
+                        android:text="個人檔案"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView40"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp" android:id="@+id/bt_advice">
+                <TextView
+                        android:text="消息"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView41"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical" android:paddingLeft="10dp"
+                    android:id="@+id/bt_envelope">
+                <TextView
+                        android:text="信件"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView43"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:gravity="left|center_vertical" android:paddingLeft="10dp"
+                    android:id="@+id/bt_sign_out">
+                <TextView
+                        android:text="登出"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView44"
+                        android:textColor="@color/buttoncolor" android:textSize="14sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

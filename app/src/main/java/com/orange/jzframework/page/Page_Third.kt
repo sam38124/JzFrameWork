@@ -1,9 +1,8 @@
-package com.orange.jzframework.Page
+package com.orange.jzframework.page
 
-import android.util.Log
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
-import com.orange.jzframework.Frag.Frag_1
+import com.orange.jzframework.frag.Frag_1
 import com.orange.jzframework.R
 import kotlinx.android.synthetic.main.third_page.view.*
 

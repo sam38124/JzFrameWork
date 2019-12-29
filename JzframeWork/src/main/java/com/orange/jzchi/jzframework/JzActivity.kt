@@ -54,7 +54,7 @@ abstract class JzActivity : AppCompatActivity(),
         Fraging = supportFragmentManager.fragments[supportFragmentManager.fragments.size - 1]
         if(Fraging!=null){
             FragName = Fraging!!.tag!!
-            ChangePageListener(FragName, Fraging!!)
+            changePageListener(FragName, Fraging!!)
         }
     }
 
@@ -182,8 +182,8 @@ abstract class JzActivity : AppCompatActivity(),
                 ChangeFrag(Translation, id, tag, goback)
             }
         })
-        ViewInit(rootview)
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+        viewInit(rootview)
     }
 
     fun SetOrientation(a: Int) {
@@ -309,7 +309,7 @@ abstract class JzActivity : AppCompatActivity(),
             Fraging = Translation
             FragName = tag
             Log.d("switch", tag)
-            ChangePageListener(tag, Translation)
+            changePageListener(tag, Translation)
             val transaction = supportFragmentManager!!.beginTransaction()
             transaction.replace(id, Translation, tag)
                 .commit()
@@ -336,7 +336,7 @@ abstract class JzActivity : AppCompatActivity(),
             Fraging = Translation
             FragName = tag
             Log.d("switch", tag)
-            ChangePageListener(tag, Translation)
+            changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(FragId, Translation, tag)
                 .commit()
@@ -533,7 +533,7 @@ abstract class JzActivity : AppCompatActivity(),
         if (Fraging != null) {
             (Fraging as DiapathKey).dispatchKeyEvent(event)
         }//按鍵分發
-        KeyLinsten(event)
+        keyEventListener(event)
         return super.dispatchKeyEvent(event)
     }
 
@@ -542,7 +542,7 @@ abstract class JzActivity : AppCompatActivity(),
         if (Fraging != null) {
             (Fraging as DiapathKey).dispatchKeyEvent(event)
         }//按鍵分發
-        KeyLinsten(event)
+        keyEventListener(event)
         return super.onKeyDown(keyCode, event)
     }
 
@@ -595,15 +595,15 @@ abstract class JzActivity : AppCompatActivity(),
     /**
      * 父頁面的載入
      */
-    abstract fun ViewInit(rootview: View)
+    abstract fun viewInit(rootview: View)
 
     /**
      * 頁面切換監聽
      */
-    abstract fun ChangePageListener(tag: String, frag: Fragment);
+    abstract fun changePageListener(tag: String, frag: Fragment);
 
     /**
      * 按鍵的監聽
      */
-    abstract fun KeyLinsten(event: KeyEvent)
+    abstract fun keyEventListener(event: KeyEvent)
 }

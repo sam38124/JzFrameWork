@@ -1,4 +1,4 @@
-package com.orange.jzframework.Frag
+package com.orange.jzframework.frag
 
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement

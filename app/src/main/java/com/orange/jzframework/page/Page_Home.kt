@@ -1,9 +1,10 @@
-package com.orange.jzframework.Page
+package com.orange.jzframework.page
 
 import android.widget.TextView
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
 import com.orange.jzframework.R
+import com.orange.jzframework.drawer.sampledrawer
 import kotlinx.android.synthetic.main.activity_main.view.*
 
 /*R.layout.activity_main替換為你的layout id*/
@@ -24,5 +25,6 @@ class Page_Home : JzFragement(R.layout.activity_main) {
         rootview.sampletext.setOnClickListener {
             JzActivity.getControlInstance().changePage(Page_Sec(), "Page_Sec", true)
         }
+
     }
 }

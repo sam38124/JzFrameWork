@@ -1,4 +1,4 @@
-package com.orange.jzframework.Dialog
+package com.orange.jzframework.dialog
 
 import android.app.Dialog
 import android.view.KeyEvent
