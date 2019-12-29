@@ -57,7 +57,7 @@ class MainActivity : JzActivity() {
     }
 
     /*按鈕事件監聽*/
-    override fun KeyLinsten(event: KeyEvent) {
+    override fun keyEventListener(event: KeyEvent) {
 
     }
 }
