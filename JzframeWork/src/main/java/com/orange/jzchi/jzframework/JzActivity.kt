@@ -122,8 +122,8 @@ abstract class JzActivity : AppCompatActivity(),
                 GetPermission(Permissions, caller, RequestCode)
             }
 
-            override fun showDiaLog(Layout: Int, touchCancel: Boolean, swip: Boolean, caller: SetupDialog) {
-                ShowDaiLog(Layout, touchCancel, swip, caller)
+            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog) {
+                ShowDaiLog(Layout, cancelable, swip, caller)
             }
 
             override fun closeDiaLog() {
@@ -154,8 +154,8 @@ abstract class JzActivity : AppCompatActivity(),
                 return rootshare.GetPro(key, value)
             }
 
-            override fun goBack(a: String) {
-                GoBack(a)
+            override fun goBack(tag: String) {
+                GoBack(tag)
             }
 
             override fun goBack(a: Int) {
@@ -310,15 +310,14 @@ abstract class JzActivity : AppCompatActivity(),
             FragName = tag
             Log.d("switch", tag)
             changePageListener(tag, Translation)
-            val transaction = supportFragmentManager!!.beginTransaction()
+            val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(id, Translation, tag)
                 .commit()
         }
     }
 
     private fun FindfragByTag(a: String): Fragment? {
-        val a = supportFragmentManager.findFragmentByTag(a)
-        return a
+        return supportFragmentManager.findFragmentByTag(a)
     }
 
     private fun SetHome(Translation: Fragment, tag: String) {
@@ -379,7 +378,7 @@ abstract class JzActivity : AppCompatActivity(),
                 mDialog!!.setCanceledOnTouchOutside(cancelable)
                 mDialog!!.show()
                 if (cancelable) {
-                    getAllChildViews(mDialog!!.getWindow().getDecorView())
+                    getAllChildViews(mDialog?.window!!.getDecorView())
                 }
             } else {
                 if (!mDialog!!.isShowing()) {
@@ -406,7 +405,7 @@ abstract class JzActivity : AppCompatActivity(),
                     mDialog!!.setCanceledOnTouchOutside(cancelable)
                     mDialog!!.show()
                     if (cancelable) {
-                        getAllChildViews(mDialog!!.getWindow().getDecorView())
+                        getAllChildViews(mDialog?.window!!.getDecorView())
                     }
                 }
             }
@@ -444,7 +443,7 @@ abstract class JzActivity : AppCompatActivity(),
                 mDialog!!.setCanceledOnTouchOutside(cancelable)
                 mDialog!!.show()
                 if (cancelable) {
-                    getAllChildViews(mDialog!!.getWindow().getDecorView())
+                    getAllChildViews(mDialog?.window!!.decorView)
                 }
             } else {
                 if (!mDialog!!.isShowing()) {
@@ -471,7 +470,7 @@ abstract class JzActivity : AppCompatActivity(),
                     mDialog!!.setCanceledOnTouchOutside(cancelable)
                     mDialog!!.show()
                     if (cancelable) {
-                        getAllChildViews(mDialog!!.window.decorView)
+                        getAllChildViews(mDialog?.window!!.decorView)
                     }
                 }
             }

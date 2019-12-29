@@ -10,7 +10,6 @@ abstract class JzScrollLinster: RecyclerView.OnScrollListener(){
     var focusPosition=0
     override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
         super.onScrollStateChanged(recyclerView, newState)
-        val b = recyclerView.canScrollVertically(1)
         when (newState) {
             RecyclerView.SCROLL_STATE_IDLE //滾動停止
             -> {
