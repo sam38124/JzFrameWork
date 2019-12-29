@@ -1,3 +1,6 @@
+[![](https://jitpack.io/v/sam38124/JzFrameWork.svg)](https://jitpack.io/#sam38124/JzFrameWork)
+[![Platform](https://img.shields.io/badge/平台-%20Android%20-brightgreen.svg)](https://github.com/sam38124)
+[![characteristic](https://img.shields.io/badge/特點-%20輕量級%20%7C%20簡單易用%20%20%7C%20穩定%20-brightgreen.svg)](https://github.com/sam38124)
 # JzFrameWork
 這是一套高效能的Android開發框架，實現了近乎零延遲的畫面轉場，採用一個Activity多個Fragment的架構，為了支持所有版本的android Project，框架採用kotlin以及androidx進行開發，幫助開發者在最短的時間內部署好你的應用．
 ## 目錄
@@ -25,7 +28,7 @@ allprojects {
 在需要用到這個庫的module中的build.gradle中的dependencies中加入
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:v2.0'
+implementation 'com.github.sam38124:JzFrameWork:v4.0'
 }
 ```
 <a name="Use"></a>
@@ -90,7 +93,6 @@ class Frag_Home : RootFragement(R.layout.activity_main) {
 ```kotlin
     SetHome(Frag_Home(), "Frag_Home")
 ```
-<a name="About"></a>
 ### 第三步：在任何地方執行下方代碼進行頁面的切換
 
 ##### 1.於Fragment中做切換(必需繼承RootFragment)
@@ -177,7 +179,7 @@ act.GoMenu()//返回首頁
 ```
 <a name="About"></a>
 ### 關於我
-現任橙的電子全端app開發工程師
+橙的電子android and ios developer
 
 *line:sam38124
 
