@@ -66,6 +66,14 @@ abstract class JzActivity : AppCompatActivity(),
         supportFragmentManager.addOnBackStackChangedListener(this)
         rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
+            override fun getNowPage(): Fragment? {
+                return Fraging
+            }
+
+            override fun getNowPageTag(): String {
+                return FragName
+            }
+
             override fun hideKeyBoard() {
                 HideKeyBoard()
             }
