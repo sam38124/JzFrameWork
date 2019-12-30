@@ -58,8 +58,9 @@ class MainActivity : JzActivity() {
     }
 
     /*按鈕事件監聽*/
-    override fun keyEventListener(event: KeyEvent) {
-
+    override fun keyEventListener(event: KeyEvent):Boolean {
+    //return true繼續執行父類別的dispathKeyEvent方法，反之攔截按鈕事件
+return true
     }
 }
 ```
