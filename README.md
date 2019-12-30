@@ -136,6 +136,7 @@ JzActivity.getControlInstance().goMenu()
 ### 所有對外暴露的方法
 ```kotlin
 
+
 interface control {
     /*所有對外暴露的方法*/
 
@@ -147,6 +148,10 @@ interface control {
     fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
     //透過tag取得推棧中的Fragement
     fun findFragByTag(a:String):Fragment?
+    //取得現在顯示的頁面
+    fun getNowPage():Fragment?
+    //取得現在顯示的頁面的Tag名稱
+    fun getNowPageTag():String
     //返回首頁
     fun goMenu()
     //回上一頁
