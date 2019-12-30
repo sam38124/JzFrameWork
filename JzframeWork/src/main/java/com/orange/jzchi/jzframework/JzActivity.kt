@@ -532,8 +532,11 @@ abstract class JzActivity : AppCompatActivity(),
         if (Fraging != null) {
             (Fraging as DiapathKey).dispatchKeyEvent(event)
         }//按鍵分發
-        keyEventListener(event)
-        return super.dispatchKeyEvent(event)
+        return if(keyEventListener(event)){
+            super.dispatchKeyEvent(event)
+        }else{
+            false
+        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
@@ -541,8 +544,11 @@ abstract class JzActivity : AppCompatActivity(),
         if (Fraging != null) {
             (Fraging as DiapathKey).dispatchKeyEvent(event)
         }//按鍵分發
-        keyEventListener(event)
-        return super.onKeyDown(keyCode, event)
+        return if(keyEventListener(event)){
+            super.dispatchKeyEvent(event)
+        }else{
+            false
+        }
     }
 
 
@@ -604,5 +610,5 @@ abstract class JzActivity : AppCompatActivity(),
     /**
      * 按鍵的監聽
      */
-    abstract fun keyEventListener(event: KeyEvent)
+    abstract fun keyEventListener(event: KeyEvent):Boolean
 }

@@ -20,11 +20,11 @@ class MainActivity : JzActivity() {
     /*頁面切換監聽*/
     override fun changePageListener(tag: String, frag: Fragment) {
         //SetHome完會返回"tag","Page_Home()"的值
-        Log.e("switch",tag)
+        Log.e("switch", tag)
     }
 
     /*按鈕事件監聽*/
-    override fun keyEventListener(event: KeyEvent) {
-
+    override fun keyEventListener(event: KeyEvent): Boolean {
+        return true
     }
 }
