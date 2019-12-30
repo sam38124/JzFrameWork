@@ -357,7 +357,7 @@ abstract class JzActivity : AppCompatActivity(),
     private fun Toast(id: Int) {
         handler.post { android.widget.Toast.makeText(this, getString(id), android.widget.Toast.LENGTH_SHORT).show() }
     }
-
+    var lastdiaid=0
     var mDialog: Dialog? = null
     lateinit var DiaCaller: SetupDialog
     private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog) {
