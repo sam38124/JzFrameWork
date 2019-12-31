@@ -509,7 +509,6 @@ abstract class JzActivity : AppCompatActivity(),
 
     private fun DaiLogDismiss() {
         try {
-            DiaCaller.dismess()
             mDialog!!.dismiss()
         } catch (e: Exception) {
             e.printStackTrace()
