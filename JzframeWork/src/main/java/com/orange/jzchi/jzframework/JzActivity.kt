@@ -547,17 +547,17 @@ abstract class JzActivity : AppCompatActivity(),
         }
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        Log.e("event", "" + event)
-        if (Fraging != null) {
-            (Fraging as DiapathKey).dispatchKeyEvent(event)
-        }//按鍵分發
-        return if(keyEventListener(event)){
-            super.dispatchKeyEvent(event)
-        }else{
-            false
-        }
-    }
+//    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+//        Log.e("event", "" + event)
+//        if (Fraging != null) {
+//            (Fraging as DiapathKey).dispatchKeyEvent(event)
+//        }//按鍵分發
+//        return if(keyEventListener(event)){
+//            super.dispatchKeyEvent(event)
+//        }else{
+//            false
+//        }
+//    }
 
 
     /**
