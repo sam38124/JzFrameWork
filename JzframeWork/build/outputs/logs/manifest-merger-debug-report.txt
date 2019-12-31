@@ -1,23 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
-INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
-INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
-INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
-INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
-INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
-INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
+ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
 	package
 		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:3:11-37
 		INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
 		INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
-		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
+		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
 		INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
-		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-20:12
+		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:1-15:12
 		INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:2:11-69
@@ -65,14 +65,6 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:14:5-79
 	android:name
 		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:14:22-76
-application
-ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:15:5-18:19
-service#com.orange.jzchi.jzframework.Server.BluetoothLeService
-ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:16:9-17:37
-	android:enabled
-		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:17:13-35
-	android:name
-		ADDED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml:16:18-87
 uses-sdk
 INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/wangjianzhi/Desktop/JzFrameWork/JzframeWork/src/main/AndroidManifest.xml
