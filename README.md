@@ -28,7 +28,7 @@ allprojects {
 在需要用到這個庫的module中的build.gradle中的dependencies中加入
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:v4.6'
+implementation 'com.github.sam38124:JzFrameWork:v4.8'
 }
 ```
 <a name="Use"></a>
@@ -136,7 +136,6 @@ JzActivity.getControlInstance().goMenu()
 ### 所有對外暴露的方法
 ```kotlin
 
-
 interface control {
     /*所有對外暴露的方法*/
 
@@ -162,6 +161,8 @@ interface control {
     fun goBack(a: Int)
     //要求存取權限
     fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
+    //顯示客製化Dialog
+    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean)
     //顯示客製化Dialog
     fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog)
     //顯示客製化Dialog，並且自定義style
@@ -199,7 +200,10 @@ interface control {
     fun setLanguage(local: Locale)
     //鍵盤隱藏
     fun hideKeyBoard()
-
+    //下載apk
+    fun apkDownload(url:String,callback:DownloadCallback)
+    //打開apk
+    fun openAPK()
 }
 ```
 
