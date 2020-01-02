@@ -436,6 +436,9 @@ abstract class JzActivity : AppCompatActivity(),
                     getAllChildViews(mDialog?.window!!.getDecorView())
                 }
             } else {
+                if(lastdiaid!=LayoutId){
+                    JzActivity.getControlInstance().closeDiaLog()
+                }
                 if (!mDialog!!.isShowing()) {
                     mDialog = object : Dialog(this, style) {
                         override fun dispatchKeyEvent(event: KeyEvent): Boolean {
@@ -464,6 +467,7 @@ abstract class JzActivity : AppCompatActivity(),
                     }
                 }
             }
+            lastdiaid==LayoutId
             caller.setup(mDialog!!)
             DiaCaller = caller
         } catch (e: Exception) {
@@ -501,6 +505,9 @@ abstract class JzActivity : AppCompatActivity(),
                     getAllChildViews(mDialog?.window!!.decorView)
                 }
             } else {
+                if(lastdiaid!=LayoutId){
+                    JzActivity.getControlInstance().closeDiaLog()
+                }
                 if (!mDialog!!.isShowing()) {
                     mDialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
                         override fun dispatchKeyEvent(event: KeyEvent): Boolean {
@@ -529,6 +536,7 @@ abstract class JzActivity : AppCompatActivity(),
                     }
                 }
             }
+            lastdiaid==LayoutId
             caller.setup(mDialog!!)
             DiaCaller = caller
         } catch (e: Exception) {
