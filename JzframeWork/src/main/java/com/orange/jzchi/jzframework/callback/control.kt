@@ -31,6 +31,8 @@ interface control {
     //要求存取權限
     fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
     //顯示客製化Dialog
+    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean)
+    //顯示客製化Dialog
     fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog)
     //顯示客製化Dialog，並且自定義style
     fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog)

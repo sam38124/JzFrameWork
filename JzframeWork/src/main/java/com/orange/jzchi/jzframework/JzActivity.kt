@@ -72,6 +72,22 @@ abstract class JzActivity : AppCompatActivity(),
         supportFragmentManager.addOnBackStackChangedListener(this)
         rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
+            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean) {
+                ShowDaiLog(Layout,cancelable,swip,object:SetupDialog{
+                    override fun setup(rootview: Dialog) {
+
+                    }
+
+                    override fun dismess() {
+
+                    }
+
+                    override fun keyevent(event: KeyEvent): Boolean {
+                        return cancelable
+                    }
+                })
+            }
+
             override fun openAPK() {
                 handler.post {
                     val file =  File("/sdcard/update/beta.apk");
