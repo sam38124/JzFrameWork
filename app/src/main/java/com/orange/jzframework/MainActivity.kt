@@ -5,8 +5,11 @@ import android.view.KeyEvent
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.orange.jzchi.jzframework.JzActivity
+import com.orange.jzchi.jzframework.callback.DownloadCallback
+import com.orange.jzchi.jzframework.callback.permission_C
 import com.orange.jzframework.drawer.sampledrawer
 import com.orange.jzframework.page.Page_Home
+import java.util.jar.Manifest
 
 class MainActivity : JzActivity() {
     /*初次載入的代碼處理*/
@@ -14,7 +17,6 @@ class MainActivity : JzActivity() {
         //設定首頁
         JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
         JzActivity.getControlInstance().setDrawer(sampledrawer())
-
     }
 
     /*頁面切換監聽*/

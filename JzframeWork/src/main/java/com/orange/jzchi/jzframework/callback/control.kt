@@ -67,5 +67,8 @@ interface control {
     fun setLanguage(local: Locale)
     //鍵盤隱藏
     fun hideKeyBoard()
-
+    //下載apk
+    fun apkDownload(url:String,callback:DownloadCallback)
+    //打開apk
+    fun openAPK()
 }

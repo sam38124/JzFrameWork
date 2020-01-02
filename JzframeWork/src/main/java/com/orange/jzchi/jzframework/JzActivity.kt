@@ -2,9 +2,12 @@ package com.orange.jzchi.jzframework
 
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.hardware.SensorManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -13,6 +16,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -20,6 +24,8 @@ import androidx.fragment.app.FragmentManager
 import com.orange.jzchi.R
 import com.orange.jzchi.jzframework.callback.*
 import com.orange.jzchi.jzframework.tool.LanguageUtil
+import com.orange.jzchi.jzframework.util.Download
+import java.io.File
 import java.util.*
 
 abstract class JzActivity : AppCompatActivity(),
@@ -52,7 +58,7 @@ abstract class JzActivity : AppCompatActivity(),
     lateinit var NavaGationFrag: JzFragement
     override fun onBackStackChanged() {
         Fraging = supportFragmentManager.fragments[supportFragmentManager.fragments.size - 1]
-        if(Fraging!=null){
+        if (Fraging != null) {
             FragName = Fraging!!.tag!!
             changePageListener(FragName, Fraging!!)
         }
@@ -66,6 +72,26 @@ abstract class JzActivity : AppCompatActivity(),
         supportFragmentManager.addOnBackStackChangedListener(this)
         rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
+            override fun openAPK() {
+                handler.post {
+                    val file =  File("/sdcard/update/beta.apk");
+                    val intent =  Intent(Intent.ACTION_VIEW);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    var data:Uri?=null;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {//判断版本大于等于7.0
+                        // "sven.com.fileprovider.fileprovider"即是在清单文件中配置的authorities
+                        // 通过FileProvider创建一个content类型的Uri
+                        data = FileProvider.getUriForFile(this@JzActivity, "abc.fileprovider", file);
+                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);// 给目标应用一个临时授权
+                    } else {
+                        data = Uri.fromFile(file);
+                    }
+                    intent.setDataAndType(data, "application/vnd.android.package-archive");
+                    startActivity(intent);
+                    closeApp()
+                }
+            }
+
             override fun getNowPage(): Fragment? {
                 return Fraging
             }
@@ -188,6 +214,10 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
                 ChangeFrag(Translation, id, tag, goback)
+            }
+
+            override fun apkDownload(url: String, callback: DownloadCallback) {
+                Download.apkDownload(url, callback)
             }
         })
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
@@ -357,7 +387,8 @@ abstract class JzActivity : AppCompatActivity(),
     private fun Toast(id: Int) {
         handler.post { android.widget.Toast.makeText(this, getString(id), android.widget.Toast.LENGTH_SHORT).show() }
     }
-    var lastdiaid=0
+
+    var lastdiaid = 0
     var mDialog: Dialog? = null
     lateinit var DiaCaller: SetupDialog
     private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog) {
@@ -539,9 +570,9 @@ abstract class JzActivity : AppCompatActivity(),
         if (Fraging != null) {
             (Fraging as DiapathKey).dispatchKeyEvent(event)
         }//按鍵分發
-        return if(keyEventListener(event)){
+        return if (keyEventListener(event)) {
             super.dispatchKeyEvent(event)
-        }else{
+        } else {
             false
         }
     }
@@ -617,5 +648,5 @@ abstract class JzActivity : AppCompatActivity(),
     /**
      * 按鍵的監聽
      */
-    abstract fun keyEventListener(event: KeyEvent):Boolean
+    abstract fun keyEventListener(event: KeyEvent): Boolean
 }
