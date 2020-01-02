@@ -467,7 +467,7 @@ abstract class JzActivity : AppCompatActivity(),
                     }
                 }
             }
-            lastdiaid==LayoutId
+            lastdiaid=LayoutId
             caller.setup(mDialog!!)
             DiaCaller = caller
         } catch (e: Exception) {
@@ -536,7 +536,7 @@ abstract class JzActivity : AppCompatActivity(),
                     }
                 }
             }
-            lastdiaid==LayoutId
+            lastdiaid=LayoutId
             caller.setup(mDialog!!)
             DiaCaller = caller
         } catch (e: Exception) {
