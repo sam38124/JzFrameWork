@@ -436,9 +436,6 @@ abstract class JzActivity : AppCompatActivity(),
                     getAllChildViews(mDialog?.window!!.getDecorView())
                 }
             } else {
-                if(lastdiaid!=LayoutId){
-                    JzActivity.getControlInstance().closeDiaLog()
-                }
                 if (!mDialog!!.isShowing()) {
                     mDialog = object : Dialog(this, style) {
                         override fun dispatchKeyEvent(event: KeyEvent): Boolean {
@@ -464,6 +461,35 @@ abstract class JzActivity : AppCompatActivity(),
                     mDialog!!.show()
                     if (cancelable) {
                         getAllChildViews(mDialog?.window!!.getDecorView())
+                    }
+                }else{
+                    if(lastdiaid!=LayoutId){
+                        JzActivity.getControlInstance().closeDiaLog()
+                        mDialog = object : Dialog(this, style) {
+                            override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+                                if (caller.keyevent(event)) {
+                                    return super.dispatchKeyEvent(event)
+                                } else {
+                                    return false
+                                }
+                            }
+
+                            override fun dismiss() {
+                                super.dismiss()
+                                caller.dismess()
+                            }
+                        }
+                        mDialog!!.setContentView(Layout)
+                        mDialog!!.getWindow()!!.setLayout(
+                            WindowManager.LayoutParams.WRAP_CONTENT,
+                            WindowManager.LayoutParams.WRAP_CONTENT
+                        )
+                        mDialog!!.setCancelable(true)
+                        mDialog!!.setCanceledOnTouchOutside(cancelable)
+                        mDialog!!.show()
+                        if (cancelable) {
+                            getAllChildViews(mDialog?.window!!.getDecorView())
+                        }
                     }
                 }
             }
@@ -505,9 +531,7 @@ abstract class JzActivity : AppCompatActivity(),
                     getAllChildViews(mDialog?.window!!.decorView)
                 }
             } else {
-                if(lastdiaid!=LayoutId){
-                    JzActivity.getControlInstance().closeDiaLog()
-                }
+
                 if (!mDialog!!.isShowing()) {
                     mDialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
                         override fun dispatchKeyEvent(event: KeyEvent): Boolean {
@@ -533,6 +557,35 @@ abstract class JzActivity : AppCompatActivity(),
                     mDialog!!.show()
                     if (cancelable) {
                         getAllChildViews(mDialog?.window!!.decorView)
+                    }
+                }else{
+                    if(lastdiaid!=LayoutId){
+                        JzActivity.getControlInstance().closeDiaLog()
+                        mDialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
+                            override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+                                if (caller.keyevent(event)) {
+                                    return super.dispatchKeyEvent(event)
+                                } else {
+                                    return false
+                                }
+                            }
+
+                            override fun dismiss() {
+                                super.dismiss()
+                                caller.dismess()
+                            }
+                        }
+                        mDialog!!.setContentView(Layout)
+                        mDialog!!.getWindow()!!.setLayout(
+                            WindowManager.LayoutParams.WRAP_CONTENT,
+                            WindowManager.LayoutParams.WRAP_CONTENT
+                        )
+                        mDialog!!.setCancelable(true)
+                        mDialog!!.setCanceledOnTouchOutside(cancelable)
+                        mDialog!!.show()
+                        if (cancelable) {
+                            getAllChildViews(mDialog?.window!!.decorView)
+                        }
                     }
                 }
             }
