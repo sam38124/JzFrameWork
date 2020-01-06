@@ -73,4 +73,6 @@ interface control {
     fun apkDownload(url:String,callback:DownloadCallback)
     //打開apk
     fun openAPK()
+    //app是否處於前台
+    fun isFrontDesk():Boolean
 }

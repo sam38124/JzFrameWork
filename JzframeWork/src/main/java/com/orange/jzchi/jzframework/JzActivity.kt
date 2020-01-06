@@ -1,5 +1,6 @@
 package com.orange.jzchi.jzframework
 
+import android.app.ActivityManager
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
@@ -106,6 +107,10 @@ abstract class JzActivity : AppCompatActivity(),
                     startActivity(intent);
                     closeApp()
                 }
+            }
+
+            override fun isFrontDesk():Boolean {
+               return appOnForeground()
             }
 
             override fun getNowPage(): Fragment? {
@@ -710,7 +715,15 @@ abstract class JzActivity : AppCompatActivity(),
             ActivityCompat.requestPermissions(this, deniedPermissions, permissionRequestCode)
         }
     }
-
+     open fun appOnForeground(): Boolean {
+        val appProcesses: List<ActivityManager.RunningAppProcessInfo> =(getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager).runningAppProcesses
+        for (appProcess in appProcesses) {
+            if (appProcess.processName.equals(packageName) && appProcess.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                return true
+            }
+        }
+        return false
+    }
     //===============================Abstract Function===============================
     /**
      * 父頁面的載入
