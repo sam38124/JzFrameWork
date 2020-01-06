@@ -339,7 +339,7 @@ abstract class JzActivity : AppCompatActivity(),
         NavaGationFrag = frag
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.navigation_view, frag)
-            .commit()
+            .commitAllowingStateLoss()
     }
 
     private fun RefreshNavaGation() {
@@ -358,7 +358,7 @@ abstract class JzActivity : AppCompatActivity(),
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(id, Translation, tag)
                 .addToBackStack(FragName)
-                .commit()
+                .commitAllowingStateLoss()
         } else {
             Fraging = Translation
             FragName = tag
@@ -366,7 +366,7 @@ abstract class JzActivity : AppCompatActivity(),
             changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(id, Translation, tag)
-                .commit()
+                .commitAllowingStateLoss()
         }
     }
 
@@ -384,7 +384,7 @@ abstract class JzActivity : AppCompatActivity(),
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(FragId, Translation, tag)
                 .addToBackStack(FragName)
-                .commit()
+                .commitAllowingStateLoss()
         } else {
             Fraging = Translation
             FragName = tag
@@ -392,7 +392,7 @@ abstract class JzActivity : AppCompatActivity(),
             changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(FragId, Translation, tag)
-                .commit()
+                .commitAllowingStateLoss()
         }
     }
 
