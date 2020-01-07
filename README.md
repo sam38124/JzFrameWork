@@ -28,7 +28,7 @@ allprojects {
 在需要用到這個庫的module中的build.gradle中的dependencies中加入
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:v5.3'
+implementation 'com.github.sam38124:JzFrameWork:v5.4'
 }
 ```
 <a name="Use"></a>
@@ -206,6 +206,10 @@ interface control {
     fun openAPK()
     //app是否處於前台
     fun isFrontDesk():Boolean
+    //螢幕常亮
+    fun screenAlawaysOn()
+    //關閉螢幕常亮
+    fun closescreenAlawaysOn()
 }
 ```
 
