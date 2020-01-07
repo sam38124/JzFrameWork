@@ -513,6 +513,7 @@ abstract class JzActivity : AppCompatActivity(),
             lastdiaid=LayoutId
             caller.setup(mDialog!!)
             DiaCaller = caller
+            mDialog!!.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         } catch (e: Exception) {
             Thread.sleep(1000)
             e.printStackTrace()
@@ -609,6 +610,7 @@ abstract class JzActivity : AppCompatActivity(),
             lastdiaid=LayoutId
             caller.setup(mDialog!!)
             DiaCaller = caller
+            mDialog!!.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         } catch (e: Exception) {
             Thread.sleep(1000)
             e.printStackTrace()
