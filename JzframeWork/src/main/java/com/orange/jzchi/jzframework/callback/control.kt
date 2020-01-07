@@ -75,4 +75,8 @@ interface control {
     fun openAPK()
     //app是否處於前台
     fun isFrontDesk():Boolean
+    //螢幕常亮
+    fun screenAlawaysOn()
+    //關閉螢幕常亮
+    fun closescreenAlawaysOn()
 }

@@ -74,6 +74,7 @@ abstract class JzActivity : AppCompatActivity(),
         rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean) {
+                screenAlawaysOn()
                 ShowDaiLog(Layout,cancelable,swip,object:SetupDialog{
                     override fun setup(rootview: Dialog) {
 
@@ -113,6 +114,14 @@ abstract class JzActivity : AppCompatActivity(),
                return appOnForeground()
             }
 
+            override fun screenAlawaysOn() {
+                window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            }
+
+            override fun closescreenAlawaysOn() {
+                window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            }
+
             override fun getNowPage(): Fragment? {
                 return Fraging
             }
@@ -138,6 +147,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog) {
+                screenAlawaysOn()
                 ShowDaiLog(Layout, cancelable, style, caller)
             }
 
@@ -178,10 +188,12 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog) {
+                screenAlawaysOn()
                 ShowDaiLog(Layout, cancelable, swip, caller)
             }
 
             override fun closeDiaLog() {
+                closescreenAlawaysOn()
                 DaiLogDismiss()
             }
 

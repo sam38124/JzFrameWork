@@ -29,7 +29,7 @@ abstract class JzAdapter(val layout: Int) : RecyclerView.Adapter<JzAdapter.ViewH
         }
     }
 
-    abstract fun sizeInit(): Int;
+    abstract fun sizeInit(): Int
     abstract override fun onBindViewHolder(holder: ViewHolder, position: Int);
     open fun viewInit(mView: View, holder: ViewHolder) {};
 
