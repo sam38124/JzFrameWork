@@ -3,8 +3,8 @@
 [![characteristic](https://img.shields.io/badge/特點-%20輕量級%20%7C%20簡單易用%20%20%7C%20穩定%20-brightgreen.svg)](https://github.com/sam38124)
 # JzFrameWork
 這是一套高效能的Android開發框架，實現了近乎零延遲的畫面轉場，採用一個Activity多個Fragment的架構，為了支持所有版本的android Project，框架採用kotlin以及androidx進行開發，幫助開發者在最短的時間內部署好你的應用．
-此框架會不斷進行更新但也只能剛好滿足自身開發需求，如有其他客製化要求，歡迎克隆下來去修改!
-[ios版本](https://github.com/sam38124/JzOsFrameWork)
+此框架會不斷進行更新但也只能剛好滿足自身開發需求，如有其他客製化要求，歡迎克隆下來去修改!<br><br>
+另外支持ios版本:[點我查看](https://github.com/sam38124/JzOsFrameWork)
 ## 目錄
 * [如何導入到專案](#Import)
 * [快速使用](#Use)
