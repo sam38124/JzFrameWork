@@ -551,11 +551,14 @@ abstract class JzActivity : AppCompatActivity(),
 
     private fun DaiLogDismiss(tag:String) {
         try {
+            val a=ArrayList<DiaClass>()
             for(i in mDialog){
                 if(i.tag==tag){
-                    mDialog.remove(i)
-                    i.dialog.dismiss()}
+                    i.dialog.dismiss()}else{
+                    a.add(i)
+                }
             }
+            mDialog=a
         } catch (e: Exception) {
             e.printStackTrace()
         }
