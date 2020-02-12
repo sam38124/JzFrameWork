@@ -37,7 +37,7 @@ interface control {
     fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
     //顯示客製化Dialog，並且自定義style
     fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
-    //關閉Dialog
+    //關閉tag為輸入值的Dialog
     fun closeDiaLog(tag:String)
     //關閉所有Dialog
     fun closeDiaLog()

@@ -27,6 +27,7 @@ import com.orange.jzchi.jzframework.callback.*
 import com.orange.jzchi.jzframework.tool.LanguageUtil
 import com.orange.jzchi.jzframework.util.Download
 import com.orange.jzchi.jzframework.util.PackageInformation
+import kotlinx.android.synthetic.main.activity_scan_ble.*
 import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
@@ -214,7 +215,11 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun closeDiaLog() {
-
+                try {
+                    for(i in mDialog){
+                        i.dialog.dismiss()
+                    }
+                }catch (e:java.lang.Exception){e.printStackTrace()}
             }
 
             override fun setPro(key: String, value: Boolean) {
