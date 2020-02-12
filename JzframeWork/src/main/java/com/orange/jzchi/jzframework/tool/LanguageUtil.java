@@ -71,6 +71,7 @@ public class LanguageUtil {
         return false;
     }
 
+
     public static boolean needUpdateLocale(Context pContext, Locale newUserLocale) {
         return newUserLocale != null && !getCurrentLocale(pContext).equals(newUserLocale);
     }

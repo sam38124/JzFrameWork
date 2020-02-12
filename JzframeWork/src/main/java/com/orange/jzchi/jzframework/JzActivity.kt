@@ -26,16 +26,18 @@ import com.orange.jzchi.R
 import com.orange.jzchi.jzframework.callback.*
 import com.orange.jzchi.jzframework.tool.LanguageUtil
 import com.orange.jzchi.jzframework.util.Download
+import com.orange.jzchi.jzframework.util.PackageInformation
 import java.io.File
 import java.util.*
+import kotlin.collections.ArrayList
 
 abstract class JzActivity : AppCompatActivity(),
     FragmentManager.OnBackStackChangedListener {
     companion object {
         private lateinit var Switch_Instance: control
-        val Orientation_Vertical = 0;
-        val Orientation_Horizontal = 1;
-        val Orientation_Default = 2;
+        const val Orientation_Vertical = 0;
+        const val Orientation_Horizontal = 1;
+        const val Orientation_Default = 2;
         private fun setSwitchInstance(instance: control) {
             Switch_Instance = instance
         }
@@ -53,6 +55,7 @@ abstract class JzActivity : AppCompatActivity(),
     private var permissionRequestCode = 10
     var Fraging: Fragment? = null
     var FragName = ""
+    var mDialog= ArrayList<DiaClass>()
     lateinit var permissionCaller: permission_C
     lateinit var rootview: View
     lateinit var NavagationRoot: DrawerLayout
@@ -73,8 +76,8 @@ abstract class JzActivity : AppCompatActivity(),
         supportFragmentManager.addOnBackStackChangedListener(this)
         rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
-            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean) {
-                screenAlawaysOn()
+            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean,tag: String) {
+                screenAlwaysOn()
                 ShowDaiLog(Layout,cancelable,swip,object:SetupDialog{
                     override fun setup(rootview: Dialog) {
 
@@ -87,7 +90,7 @@ abstract class JzActivity : AppCompatActivity(),
                     override fun keyevent(event: KeyEvent): Boolean {
                         return cancelable
                     }
-                })
+                },tag)
             }
 
             override fun openAPK() {
@@ -114,12 +117,24 @@ abstract class JzActivity : AppCompatActivity(),
                return appOnForeground()
             }
 
-            override fun screenAlawaysOn() {
+            override fun screenAlwaysOn() {
                 window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             }
 
-            override fun closescreenAlawaysOn() {
+            override fun cancelAlwaysOn() {
                 window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            }
+
+            override fun getAppInformation(): PackageInformation {
+                return PackageInformation()
+            }
+
+            override fun restart() {
+                getControlInstance().closeDiaLog()
+                val intent=Intent(applicationContext,JzActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                this@JzActivity.startActivity(intent)
+                android.os.Process.killProcess(android.os.Process.myPid())
             }
 
             override fun getNowPage(): Fragment? {
@@ -146,9 +161,9 @@ abstract class JzActivity : AppCompatActivity(),
                 return this@JzActivity
             }
 
-            override fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog) {
-                screenAlawaysOn()
-                ShowDaiLog(Layout, cancelable, style, caller)
+            override fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String) {
+                screenAlwaysOn()
+                ShowDaiLog(Layout, cancelable, style, caller,tag)
             }
 
             override fun toast(a: String) {
@@ -187,14 +202,19 @@ abstract class JzActivity : AppCompatActivity(),
                 GetPermission(Permissions, caller, RequestCode)
             }
 
-            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog) {
-                screenAlawaysOn()
-                ShowDaiLog(Layout, cancelable, swip, caller)
+
+            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String) {
+                screenAlwaysOn()
+                ShowDaiLog(Layout, cancelable, swip, caller,tag)
+            }
+
+            override fun closeDiaLog(tag:String) {
+                cancelAlwaysOn()
+                DaiLogDismiss(tag)
             }
 
             override fun closeDiaLog() {
-                closescreenAlawaysOn()
-                DaiLogDismiss()
+
             }
 
             override fun setPro(key: String, value: Boolean) {
@@ -219,6 +239,10 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun getPro(key: String, value: Int): Int {
                 return rootshare.GetPro(key, value)
+            }
+
+            override fun clearPro() {
+               getSharedPreferences("Setting", Context.MODE_PRIVATE).edit().clear().commit()
             }
 
             override fun goBack(tag: String) {
@@ -421,13 +445,50 @@ abstract class JzActivity : AppCompatActivity(),
         handler.post { android.widget.Toast.makeText(this, getString(id), android.widget.Toast.LENGTH_SHORT).show() }
     }
 
-    var lastdiaid = 0
-    var mDialog: Dialog? = null
-    lateinit var DiaCaller: SetupDialog
-    private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog) {
+     var DiaCaller=ArrayList<SetupDialog>()
+    private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String) {
         try {
-            if (mDialog == null) {
-                mDialog = object : Dialog(this, style) {
+            val dialog=object : Dialog(this, style) {
+                override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+                    if (caller.keyevent(event)) {
+                        return super.dispatchKeyEvent(event)
+                    } else {
+                        return false
+                    }
+                }
+
+                override fun dismiss() {
+                    super.dismiss()
+                    caller.dismess()
+                }
+            }
+            dialog.setContentView(Layout)
+            dialog.window!!.setLayout(
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.WRAP_CONTENT
+            )
+            dialog.setCancelable(true)
+            dialog.setCanceledOnTouchOutside(cancelable)
+            dialog.show()
+            if (cancelable) {
+                getAllChildViews(dialog.window!!.getDecorView(),dialog)
+            }
+            caller.setup(dialog)
+            DiaCaller.add(caller)
+            dialog.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            val addclass=DiaClass()
+            addclass.dialog=dialog
+            addclass.tag=tag
+            mDialog.add(addclass)
+        } catch (e: Exception) {
+            Thread.sleep(1000)
+            e.printStackTrace()
+        }
+    }
+
+    private fun ShowDaiLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String) {
+        try {
+                val dialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
                     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                         if (caller.keyevent(event)) {
                             return super.dispatchKeyEvent(event)
@@ -441,192 +502,40 @@ abstract class JzActivity : AppCompatActivity(),
                         caller.dismess()
                     }
                 }
-                mDialog!!.setContentView(Layout)
-                mDialog!!.window!!.setLayout(
+            dialog.setContentView(Layout)
+            dialog.getWindow()!!.setLayout(
                     WindowManager.LayoutParams.WRAP_CONTENT,
                     WindowManager.LayoutParams.WRAP_CONTENT
                 )
-                mDialog!!.setCancelable(true)
-                mDialog!!.setCanceledOnTouchOutside(cancelable)
-                mDialog!!.show()
+            dialog.setCancelable(true)
+            dialog.setCanceledOnTouchOutside(cancelable)
+            dialog.show()
                 if (cancelable) {
-                    getAllChildViews(mDialog?.window!!.getDecorView())
+                    getAllChildViews(dialog.window!!.decorView,dialog)
                 }
-            } else {
-                if (!mDialog!!.isShowing()) {
-                    mDialog = object : Dialog(this, style) {
-                        override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-                            if (caller.keyevent(event)) {
-                                return super.dispatchKeyEvent(event)
-                            } else {
-                                return false
-                            }
-                        }
-
-                        override fun dismiss() {
-                            super.dismiss()
-                            caller.dismess()
-                        }
-                    }
-                    mDialog!!.setContentView(Layout)
-                    mDialog!!.getWindow()!!.setLayout(
-                        WindowManager.LayoutParams.WRAP_CONTENT,
-                        WindowManager.LayoutParams.WRAP_CONTENT
-                    )
-                    mDialog!!.setCancelable(true)
-                    mDialog!!.setCanceledOnTouchOutside(cancelable)
-                    mDialog!!.show()
-                    if (cancelable) {
-                        getAllChildViews(mDialog?.window!!.getDecorView())
-                    }
-                }else{
-                    if(lastdiaid!=LayoutId){
-                        JzActivity.getControlInstance().closeDiaLog()
-                        mDialog = object : Dialog(this, style) {
-                            override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-                                if (caller.keyevent(event)) {
-                                    return super.dispatchKeyEvent(event)
-                                } else {
-                                    return false
-                                }
-                            }
-
-                            override fun dismiss() {
-                                super.dismiss()
-                                caller.dismess()
-                            }
-                        }
-                        mDialog!!.setContentView(Layout)
-                        mDialog!!.getWindow()!!.setLayout(
-                            WindowManager.LayoutParams.WRAP_CONTENT,
-                            WindowManager.LayoutParams.WRAP_CONTENT
-                        )
-                        mDialog!!.setCancelable(true)
-                        mDialog!!.setCanceledOnTouchOutside(cancelable)
-                        mDialog!!.show()
-                        if (cancelable) {
-                            getAllChildViews(mDialog?.window!!.getDecorView())
-                        }
-                    }
-                }
-            }
-            lastdiaid=LayoutId
-            caller.setup(mDialog!!)
-            DiaCaller = caller
-            mDialog!!.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            caller.setup(dialog)
+            DiaCaller.add(caller)
+            dialog.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            val addclass=DiaClass()
+            addclass.dialog=dialog
+            addclass.tag=tag
+            mDialog.add(addclass)
         } catch (e: Exception) {
             Thread.sleep(1000)
             e.printStackTrace()
         }
     }
 
-    private fun ShowDaiLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog) {
-        try {
-            if (mDialog == null) {
-                mDialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
-                    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-                        if (caller.keyevent(event)) {
-                            return super.dispatchKeyEvent(event)
-                        } else {
-                            return false
-                        }
-                    }
-
-                    override fun dismiss() {
-                        super.dismiss()
-                        caller.dismess()
-                    }
-                }
-                mDialog!!.setContentView(Layout)
-                mDialog!!.getWindow()!!.setLayout(
-                    WindowManager.LayoutParams.WRAP_CONTENT,
-                    WindowManager.LayoutParams.WRAP_CONTENT
-                )
-                mDialog!!.setCancelable(true)
-                mDialog!!.setCanceledOnTouchOutside(cancelable)
-                mDialog!!.show()
-                if (cancelable) {
-                    getAllChildViews(mDialog?.window!!.decorView)
-                }
-            } else {
-
-                if (!mDialog!!.isShowing()) {
-                    mDialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
-                        override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-                            if (caller.keyevent(event)) {
-                                return super.dispatchKeyEvent(event)
-                            } else {
-                                return false
-                            }
-                        }
-
-                        override fun dismiss() {
-                            super.dismiss()
-                            caller.dismess()
-                        }
-                    }
-                    mDialog!!.setContentView(Layout)
-                    mDialog!!.getWindow()!!.setLayout(
-                        WindowManager.LayoutParams.WRAP_CONTENT,
-                        WindowManager.LayoutParams.WRAP_CONTENT
-                    )
-                    mDialog!!.setCancelable(true)
-                    mDialog!!.setCanceledOnTouchOutside(cancelable)
-                    mDialog!!.show()
-                    if (cancelable) {
-                        getAllChildViews(mDialog?.window!!.decorView)
-                    }
-                }else{
-                    if(lastdiaid!=LayoutId){
-                        JzActivity.getControlInstance().closeDiaLog()
-                        mDialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
-                            override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-                                if (caller.keyevent(event)) {
-                                    return super.dispatchKeyEvent(event)
-                                } else {
-                                    return false
-                                }
-                            }
-
-                            override fun dismiss() {
-                                super.dismiss()
-                                caller.dismess()
-                            }
-                        }
-                        mDialog!!.setContentView(Layout)
-                        mDialog!!.getWindow()!!.setLayout(
-                            WindowManager.LayoutParams.WRAP_CONTENT,
-                            WindowManager.LayoutParams.WRAP_CONTENT
-                        )
-                        mDialog!!.setCancelable(true)
-                        mDialog!!.setCanceledOnTouchOutside(cancelable)
-                        mDialog!!.show()
-                        if (cancelable) {
-                            getAllChildViews(mDialog?.window!!.decorView)
-                        }
-                    }
-                }
-            }
-            lastdiaid=LayoutId
-            caller.setup(mDialog!!)
-            DiaCaller = caller
-            mDialog!!.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        } catch (e: Exception) {
-            Thread.sleep(1000)
-            e.printStackTrace()
-        }
-    }
-
-    private fun getAllChildViews(view: View): List<View> {
+    private fun getAllChildViews(view: View,dia:Dialog): List<View> {
         val allchildren = ArrayList<View>()
         if (view is ViewGroup) {
             for (i in 0 until view.childCount) {
                 val viewchild = view.getChildAt(i)
                 allchildren.add(viewchild)
                 Log.d("ChildView", "$viewchild")
-                allchildren.addAll(getAllChildViews(viewchild))
+                allchildren.addAll(getAllChildViews(viewchild,dia))
                 if ("$viewchild".contains("RelativeLayout")) {
-                    viewchild.setOnClickListener { mDialog!!.dismiss() }
+                    viewchild.setOnClickListener { dia.dismiss() }
                     return allchildren
                 }
             }
@@ -634,9 +543,11 @@ abstract class JzActivity : AppCompatActivity(),
         return allchildren
     }
 
-    private fun DaiLogDismiss() {
+    private fun DaiLogDismiss(tag:String) {
         try {
-            mDialog!!.dismiss()
+            for(i in mDialog){
+                if(i.tag==tag){i.dialog.dismiss()}
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -738,6 +649,7 @@ abstract class JzActivity : AppCompatActivity(),
         }
         return false
     }
+
     //===============================Abstract Function===============================
     /**
      * 父頁面的載入
@@ -753,4 +665,8 @@ abstract class JzActivity : AppCompatActivity(),
      * 按鍵的監聽
      */
     abstract fun keyEventListener(event: KeyEvent): Boolean
+}
+class DiaClass{
+    var tag=""
+    lateinit var dialog:Dialog
 }
