@@ -131,7 +131,7 @@ JzActivity.getControlInstance().goMenu()
                 override fun dismess() {
                     //Dialog關閉的監聽
                 }
-            })
+            },"sampledialog")
 ```
 <a name="All"></a>
 ### 所有對外暴露的方法
@@ -163,14 +163,15 @@ interface control {
     //要求存取權限
     fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
     //顯示客製化Dialog
-    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean)
+    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean,tag:String)
     //顯示客製化Dialog
-    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog)
+    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
     //顯示客製化Dialog，並且自定義style
-    fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog)
-    //關閉Dialog
+    fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
+    //關閉tag為輸入值的Dialog
+    fun closeDiaLog(tag:String)
+    //關閉所有Dialog
     fun closeDiaLog()
-
     //保存SharedPreferences紀錄
     fun setPro(key: String, value: Boolean)
     fun setPro(key: String, value: String)
@@ -178,6 +179,8 @@ interface control {
     fun getPro(key: String, value: String): String
     fun getPro(key: String, value: Boolean): Boolean
     fun getPro(key: String, value: Int): Int
+    //清除記錄
+    fun clearPro()
 
     //關閉整個app
     fun closeApp()
@@ -189,7 +192,7 @@ interface control {
     fun openDrawer()
     //關閉側邊抽屜
     fun closeDrawer()
-    //刷新側邊抽屜(會重新跑一次Viewinit方法)
+    //刷新側邊抽屜(會重新跑一次viewInit方法)
     fun refreshDrawer()
     //吐司的顯示
     fun toast(a:String)
@@ -208,9 +211,13 @@ interface control {
     //app是否處於前台
     fun isFrontDesk():Boolean
     //螢幕常亮
-    fun screenAlawaysOn()
+    fun screenAlwaysOn()
     //關閉螢幕常亮
-    fun closescreenAlawaysOn()
+    fun cancelAlwaysOn()
+    //取得app資訊
+    fun getAppInformation():PackageInformation
+    //重啟app
+    fun restart()
 }
 ```
 
