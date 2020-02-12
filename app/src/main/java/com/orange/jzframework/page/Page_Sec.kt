@@ -42,7 +42,7 @@ class Page_Sec : JzFragement(R.layout.sec) {
                 override fun dismess() {
                     //關閉事件的監聽
                 }
-            })
+            },"")
         }
         rootview.button2.setOnClickListener {
             JzActivity.getControlInstance().goBack()
