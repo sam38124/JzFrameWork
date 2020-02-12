@@ -219,6 +219,7 @@ abstract class JzActivity : AppCompatActivity(),
                     for(i in mDialog){
                         i.dialog.dismiss()
                     }
+                    mDialog.clear()
                 }catch (e:java.lang.Exception){e.printStackTrace()}
             }
 
@@ -551,7 +552,9 @@ abstract class JzActivity : AppCompatActivity(),
     private fun DaiLogDismiss(tag:String) {
         try {
             for(i in mDialog){
-                if(i.tag==tag){i.dialog.dismiss()}
+                if(i.tag==tag){
+                    mDialog.remove(i)
+                    i.dialog.dismiss()}
             }
         } catch (e: Exception) {
             e.printStackTrace()
