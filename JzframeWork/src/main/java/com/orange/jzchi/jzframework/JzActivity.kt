@@ -464,6 +464,8 @@ abstract class JzActivity : AppCompatActivity(),
         try {
             val showing=getShowing(tag)
             if(showing!=null){
+                caller.dialog=showing.callback.dialog
+                showing.callback=caller
                 showing.callback.setup(showing.dialog)
                 return
             }
@@ -510,6 +512,8 @@ abstract class JzActivity : AppCompatActivity(),
         try {
             val showing=getShowing(tag)
             if(showing!=null){
+                caller.dialog=showing.callback.dialog
+                showing.callback=caller
                 showing.callback.setup(showing.dialog)
                 return
             }
