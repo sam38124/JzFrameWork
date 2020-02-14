@@ -460,7 +460,6 @@ abstract class JzActivity : AppCompatActivity(),
         handler.post { android.widget.Toast.makeText(this, getString(id), android.widget.Toast.LENGTH_SHORT).show() }
     }
 
-     var DiaCaller=ArrayList<SetupDialog>()
     private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String) {
         try {
             val showing=getShowing(tag)
@@ -495,11 +494,11 @@ abstract class JzActivity : AppCompatActivity(),
                 getAllChildViews(dialog.window!!.getDecorView(),dialog)
             }
             caller.setup(dialog)
-            DiaCaller.add(caller)
             dialog.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             val addclass=DiaClass()
             addclass.dialog=dialog
             addclass.tag=tag
+            addclass.callback=caller
             mDialog.add(addclass)
         } catch (e: Exception) {
             Thread.sleep(1000)
@@ -541,11 +540,11 @@ abstract class JzActivity : AppCompatActivity(),
                     getAllChildViews(dialog.window!!.decorView,dialog)
                 }
             caller.setup(dialog)
-            DiaCaller.add(caller)
             dialog.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             val addclass=DiaClass()
             addclass.dialog=dialog
             addclass.tag=tag
+            addclass.callback=caller
             mDialog.add(addclass)
         } catch (e: Exception) {
             Thread.sleep(1000)
