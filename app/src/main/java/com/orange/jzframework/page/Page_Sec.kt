@@ -25,7 +25,7 @@ class Page_Sec : JzFragement(R.layout.sec) {
             swipe 決定Dialog背景是否透明反之為不透明
             R.layout.sampledialog 換成你的Dialog layout
             */
-            JzActivity.getControlInstance().showDiaLog(R.layout.sampledialog, true, false, object : SetupDialog {
+            JzActivity.getControlInstance().showDiaLog(R.layout.sampledialog, true, false, object : SetupDialog() {
                 override fun keyevent(event: KeyEvent): Boolean {
                     //按鈕事件監聽
                     // return true後會繼續執行父類別的dispathKeyevent方法，反之攔截按鈕事件

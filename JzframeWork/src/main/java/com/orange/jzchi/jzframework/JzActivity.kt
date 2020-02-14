@@ -79,7 +79,7 @@ abstract class JzActivity : AppCompatActivity(),
         setSwitchInstance(object : control {
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean,tag: String) {
                 screenAlwaysOn()
-                ShowDaiLog(Layout,cancelable,swip,object:SetupDialog{
+                ShowDaiLog(Layout,cancelable,swip,object: SetupDialog() {
                     override fun setup(rootview: Dialog) {
 
                     }
@@ -477,6 +477,7 @@ abstract class JzActivity : AppCompatActivity(),
                     caller.dismess()
                 }
             }
+            caller.dialog=dialog
             dialog.setContentView(Layout)
             dialog.window!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
@@ -517,6 +518,7 @@ abstract class JzActivity : AppCompatActivity(),
                         caller.dismess()
                     }
                 }
+            caller.dialog=dialog
             dialog.setContentView(Layout)
             dialog.getWindow()!!.setLayout(
                     WindowManager.LayoutParams.WRAP_CONTENT,
