@@ -1,6 +1,8 @@
 package com.orange.jzchi.jzframework.callback
 
+import android.app.Dialog
 import androidx.fragment.app.Fragment
+import com.orange.jzchi.jzframework.DiaClass
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
 import com.orange.jzchi.jzframework.util.PackageInformation
@@ -37,6 +39,8 @@ interface control {
     fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
     //顯示客製化Dialog，並且自定義style
     fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
+    //取得tag為輸入值的Dialog
+    fun getDialog(tag:String): Dialog?
     //關閉tag為輸入值的Dialog
     fun closeDiaLog(tag:String)
     //關閉所有Dialog

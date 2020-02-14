@@ -167,6 +167,15 @@ abstract class JzActivity : AppCompatActivity(),
                 ShowDaiLog(Layout, cancelable, style, caller,tag)
             }
 
+            override fun getDialog(tag: String):Dialog? {
+                for(i in mDialog){
+                    if(i.tag==tag){
+                        return  i.dialog
+                    }
+                }
+                return null
+            }
+
             override fun toast(a: String) {
                 Toast(a)
             }
