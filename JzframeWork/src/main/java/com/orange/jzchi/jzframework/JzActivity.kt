@@ -463,6 +463,11 @@ abstract class JzActivity : AppCompatActivity(),
      var DiaCaller=ArrayList<SetupDialog>()
     private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String) {
         try {
+            val showing=getShowing(tag)
+            if(showing!=null){
+                showing.callback.setup(showing.dialog)
+                return
+            }
             val dialog=object : Dialog(this, style) {
                 override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                     if (caller.keyevent(event)) {
@@ -504,6 +509,11 @@ abstract class JzActivity : AppCompatActivity(),
 
     private fun ShowDaiLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String) {
         try {
+            val showing=getShowing(tag)
+            if(showing!=null){
+                showing.callback.setup(showing.dialog)
+                return
+            }
                 val dialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
                     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                         if (caller.keyevent(event)) {
@@ -605,7 +615,12 @@ abstract class JzActivity : AppCompatActivity(),
             false
         }
     }
-
+   fun getShowing(tag:String):DiaClass?{
+      for(i in mDialog){
+          if(i.tag==tag){return i}
+      }
+       return null
+   }
 //    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
 //        Log.e("event", "" + event)
 //        if (Fraging != null) {
@@ -617,8 +632,6 @@ abstract class JzActivity : AppCompatActivity(),
 //            false
 //        }
 //    }
-
-
     /**
      * 請求成功
      */
@@ -691,4 +704,5 @@ abstract class JzActivity : AppCompatActivity(),
 class DiaClass{
     var tag=""
     lateinit var dialog:Dialog
+    lateinit var callback:SetupDialog
 }
