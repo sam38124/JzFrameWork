@@ -22,9 +22,11 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.orange.jzchi.BuildConfig
 import com.orange.jzchi.R
 import com.orange.jzchi.jzframework.callback.*
 import com.orange.jzchi.jzframework.tool.LanguageUtil
+import com.orange.jzchi.jzframework.tool.VersionCheck
 import com.orange.jzchi.jzframework.util.Download
 import com.orange.jzchi.jzframework.util.PackageInformation
 import kotlinx.android.synthetic.main.activity_scan_ble.*
@@ -136,6 +138,28 @@ abstract class JzActivity : AppCompatActivity(),
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 this@JzActivity.startActivity(intent)
                 android.os.Process.killProcess(android.os.Process.myPid())
+            }
+
+            override fun checkUpdate(a:Boolean):String?{
+                val versionChecker = VersionCheck()
+                try {
+                    if(!a){return versionChecker.execute().get()}
+                    val mLatestVersionName = versionChecker.execute().get()
+                    if (java.lang.Double.parseDouble(BuildConfig.VERSION_NAME) != java.lang.Double.parseDouble(
+                            mLatestVersionName
+                        )
+                    ) {
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.data =
+                            Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
+                        startActivity(intent)
+
+                    }
+                    return mLatestVersionName
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    return null
+                }
             }
 
             override fun getNowPage(): Fragment? {
