@@ -82,7 +82,6 @@ attr alphabeticModifiers
 attr argType
 attr arrowHeadLength
 attr arrowShaftLength
-attr aspet_ratio
 attr autoCompleteTextViewStyle
 attr autoSizeMaxTextSize
 attr autoSizeMinTextSize
@@ -455,6 +454,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr ratio
 attr recyclerViewStyle
 attr reverseLayout
 attr rippleColor
@@ -2410,7 +2410,7 @@ styleable NavHostFragment defaultNavHost
 styleable NavInclude graph
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconTint itemTextAppearance itemTextColor menu
 styleable Navigator android_id android_label
-styleable PieChart aspet_ratio
+styleable PieChart ratio
 styleable PopupWindow android_popupAnimationStyle android_popupBackground overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle

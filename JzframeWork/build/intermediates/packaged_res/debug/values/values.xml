@@ -661,6 +661,6 @@
         <attr format="string" name="TextSizeRatio"/>
     </declare-styleable>
     <declare-styleable name="PieChart">
-        <attr format="float" name="aspet_ratio"/>
+        <attr format="float" name="ratio"/>
     </declare-styleable>
 </resources>

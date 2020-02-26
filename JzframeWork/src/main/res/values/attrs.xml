@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="PieChart">
-        <attr name="aspet_ratio" format="float" />
+        <attr name="ratio" format="float" />
     </declare-styleable>
     <!--CustomTitleView-->
     <declare-styleable name="CustomTitleView">

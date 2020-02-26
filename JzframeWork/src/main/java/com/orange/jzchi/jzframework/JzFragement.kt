@@ -25,13 +25,15 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.e("rootfrag", "create${this}")
-        if (::rootview.isInitialized && !refresh) {
-            return rootview
-        }
-        rootview = inflater.inflate(layout, container, false)
-        rootview.setOnClickListener { act.HideKeyBoard() }
-        viewInit()
+            Log.e("rootfrag", "create${this}")
+            if (::rootview.isInitialized && !refresh) {
+                return rootview
+            }
+            rootview = inflater.inflate(layout, container, false)
+            rootview.setOnClickListener { act.HideKeyBoard() }
+            viewInit()
+
+
         return rootview
     }
 

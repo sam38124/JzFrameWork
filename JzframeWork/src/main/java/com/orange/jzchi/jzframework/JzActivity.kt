@@ -602,6 +602,7 @@ abstract class JzActivity : AppCompatActivity(),
             val a=ArrayList<DiaClass>()
             for(i in mDialog){
                 if(i.tag==tag){
+                    i.callback.dismess()
                     i.dialog.dismiss()}else{
                     a.add(i)
                 }
