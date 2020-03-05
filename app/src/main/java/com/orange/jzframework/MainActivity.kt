@@ -29,4 +29,8 @@ class MainActivity : JzActivity() {
     override fun keyEventListener(event: KeyEvent): Boolean {
         return true
     }
+
+    override fun savedInstanceAble(): Boolean {
+        return true
+    }
 }

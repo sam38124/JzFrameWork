@@ -72,7 +72,9 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        if(savedInstanceAble()){ super.onCreate(savedInstanceState)}else{
+            super.onCreate(null)
+        }
         setContentView(LayoutId)
         rootshare = RootShare(this)
         NavagationRoot = findViewById(R.id.drawer)
@@ -728,6 +730,10 @@ abstract class JzActivity : AppCompatActivity(),
      * 按鍵的監聽
      */
     abstract fun keyEventListener(event: KeyEvent): Boolean
+    /**
+     * 是否saveinstance
+     */
+    abstract fun savedInstanceAble(): Boolean
 }
 class DiaClass{
     var tag=""
