@@ -30,7 +30,7 @@ allprojects {
 在需要用到這個庫的module中的build.gradle中的dependencies中加入
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:v6.2'
+implementation 'com.github.sam38124:JzFrameWork:v6.5'
 ```
 <a name="Use"></a>
 ## 如何使用
@@ -138,7 +138,7 @@ JzActivity.getControlInstance().goMenu()
 ```kotlin
 
 interface control {
-     /*所有對外暴露的方法*/
+        /*所有對外暴露的方法*/
 
     //頁面切換
     fun changePage(Translation: Fragment, tag: String, goback: Boolean)
@@ -220,6 +220,8 @@ interface control {
     fun getAppInformation():PackageInformation
     //重啟app
     fun restart()
+    //檢查更新並返回版本號true跳轉至商店反之不跳轉，
+    fun checkUpdate(a:Boolean):String?
 }
 ```
 
