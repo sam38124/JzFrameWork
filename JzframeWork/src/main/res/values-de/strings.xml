@@ -16,7 +16,7 @@
     <string name="app_home_program_sensor_phone">Sensor programmieren</string>
     <string name="app_home_id_copy">ID kopieren</string>
     <string name="app_setup">Setup</string>
-    <string name="app_home_obdii_relearn">OPBDII anlernen</string>
+    <string name="app_home_obdii_relearna">OBDII anlernen</string>
     <string name="app_home_cloud_information">Cloud Informationen</string>
     <string name="app_home_online_shopping">online shopping</string>
     <string name="app_user_manual">Benutzer-Handbuch</string>
@@ -32,9 +32,9 @@
     <string name="app_scan_and_packing">Bitte scannen sie den Code auf dem Sensor oder der Verpackung</string>
     <string name="app_program">programmieren</string>
     <string name="app_copy_original">Original-Sensor kopieren</string>
-    <string name="app_original_sensor">Original-Sensor </string>
+    <string name="app_original_sensor">Lesen Original-Sensor </string>
     <string name="app_original_id">Original ID</string>
-    <string name="app_new_sensor">neuer Sensor</string>
+    <string name="app_new_sensor">Neue Sensor ID</string>
     <string name="app_new_sensor_list">neue Sensorliste</string>
     <string name="app_my_favorite">mein Favorit</string>
     <string name="app_scan">scannen</string>
@@ -180,6 +180,7 @@
     <string name="RE_PROGRAM">neu programmieren</string>
     <string name="Relearn_Procedure">Anlern-Prozedur</string>
     <string name="Key_in_the_original_sensor_ID_number">Bitte geben sie die Sensor ID Nummer gemäß der Position ein </string>
+    <string name="sensor_ID_number">Sensor ID Nummer</string>
     <string name="ID_code_should_be_8_characters">ID Code soll aus 8 Buchstaben bestehen</string>
     <string name="Bluetooth_pairing_requirements">Bluetooth-Verbindung erforderlich</string>
     <string name="would_like_to_with_pair">"USB PDA" möchte sich mit Ihrem Smartphone verbinden</string>
@@ -367,7 +368,7 @@
     <string name="app_data_reading">Daten herunterladen…</string>
     <string name="app_loading_data">Daten herunterladen…</string>
     <string name="app_scaning">Scannen…</string>
-    <string name="app_new_version_detect">Neue Version erkannt, Wetter aktualisiert?</string>
+    <string name="app_new_version_detect">Neue Version erkannt, ob Update?</string>
     <string name="app_bootaloader_mode">Derzeit im Boot-Loader-Modus, kann nicht ausgeführt werden. Bitte brennen Sie den Flash.</string>
     <string name="app_burning_module_firmware">Brennen der Modul-Firmware</string>
     <string name="app_updating_model_database">Modelldatenbank wird aktualisiert</string>
@@ -407,7 +408,7 @@
     <string name="app_back">Back</string>
     <string name="app_check">Check</string>
     <string name="app_id_clear">ID</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_rr">RR</string>
     <string name="app_rl">LR</string>
     <string name="app_fl">LF</string>
@@ -489,23 +490,31 @@
     <string name="array_unit_hex">Hex</string>
     <string name="original_way">Enter original sensor ID code</string>
     <string name="new_way">Enter new sensor ID code</string>
-    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="autolock">Ändern der Sleep-Timer-Einstellungen</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
     <string name="enginer">Engineering-Modus</string>
-    <string name="maxsize">max size is 12</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="maxsize">max size is 4</string>
+    <string name="wantreprogram">Möchten Sie neu laden?</string>
+    <string name="app_blue_bud_close">Schliessen</string>
     <string name="app_unit">Einheit</string>
     <string name="app_language_setting">Language</string>
     <string name="app_sensor_info">SENSOR INFORMATION</string>
     <string name="app_id">ID:</string>
     <string name="app_kpa">Kpa:</string>
     <string name="app_c">°C:</string>
-    <string name="infomation_name">Name</string>
+    <string name="infomation_name">Geräte-Name</string>
     <string name="infomation_module">Module</string>
     <string name="infomation_version">Version</string>
     <string name="infomation_data_version">Data Version</string>
     <string name="idcopyobd">ID kopieren per OBD</string>
     <string name="prusbpad">Programmier (USB PAD)</string>
     <string name="idusbpad">ID kopieren (USB PAD)</string>
+    <string name="Read">lesen</string>
+    <string name="wait">warten…</string>
+    <string name="transfer">Starten Sie die Übertragung</string>
+    <string name="wrongmmy">Falscher MMY</string>
+
+    <string name="Write_completed">Schreiben Sie abgeschlossen</string>
+    <string name="Please_remove_OBD">Bitte entfernen Sie OBD</string>
+
 </resources>

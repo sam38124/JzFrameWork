@@ -16,7 +16,7 @@
     <string name="app_home_program_sensor_phone">Programma sensore</string>
     <string name="app_home_id_copy">Copia ID</string>
     <string name="app_setup">Impostazioni</string>
-    <string name="app_home_obdii_relearn">Riapprendimento OBDII</string>
+    <string name="app_home_obdii_relearna">Riapprendimento OBDII</string>
     <string name="app_home_cloud_information">Apprendimento Vettura</string>
     <string name="app_home_online_shopping">Shopping Online</string>
     <string name="app_user_manual">Istruzioni per l`uso</string>
@@ -32,9 +32,9 @@
     <string name="app_scan_and_packing">Scansiona il codice sul sensore o sulla scatola</string>
     <string name="app_program">Programma</string>
     <string name="app_copy_original">Copia sensore originale</string>
-    <string name="app_original_sensor">Sensore originale</string>
+    <string name="app_original_sensor">Leggi Sensore originale</string>
     <string name="app_original_id">ID originale</string>
-    <string name="app_new_sensor">Nuovo sensore</string>
+    <string name="app_new_sensor">Lista nuovo sensore</string>
     <string name="app_new_sensor_list">Lista nuovo sensore</string>
     <string name="app_my_favorite">Preferiti</string>
     <string name="app_scan">Scansione  </string>
@@ -209,6 +209,7 @@
     <string name="RE_PROGRAM">Riprogrammare</string>
     <string name="Relearn_Procedure">Porcedura di riapprendimento</string>
     <string name="Key_in_the_original_sensor_ID_number">Inserire il numero ID in base alla posizione</string>
+    <string name="sensor_ID_number">numero ID</string>
     <string name="ID_code_should_be_8_characters">Il codice ID dovrebbe essere di 8 caratteri</string>
     <string name="Bluetooth_pairing_requirements">Requisiti per collegamento Bluetooth</string>
     <string name="would_like_to_with_pair">"USB PAD" vorrebbe abbinarsi al tuo Smartphone</string>
@@ -424,13 +425,13 @@
     <string name="app_wifi_connecting">Wifi Connection…</string>
     <string name="app_sign_ing">Sign in…</string>
     <string name="app_registrating">Registration…</string>
-    <string name="app_updating">Updating…</string>
+    <string name="app_updating">aggiornare…</string>
     <string name="app_update_completed">Update completed</string>
     <string name="app_data_uploading">Data uploading…</string>
     <string name="app_data_reading">Data reading…</string>
     <string name="app_loading_data">Loading data…</string>
     <string name="app_scaning">Scaning…</string>
-    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_new_version_detect">Modifica delle impostazioni del timer di spegnimento</string>
     <string name="app_bootaloader_mode">Currently in bootaloader mode, unable to operate, please burn flash.</string>
     <string name="app_burning_module_firmware">Burning module firmware</string>
     <string name="app_updating_model_database">Updating model database</string>
@@ -470,7 +471,7 @@
     <string name="app_back">Back</string>
     <string name="app_check">Check</string>
     <string name="app_id_clear">ID</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_rr">RR</string>
     <string name="app_rl">LR</string>
     <string name="app_fl">LF</string>
@@ -555,9 +556,9 @@
     <string name="autolock">Changing the Sleep Timer Settings</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
     <string name="enginer">Modalità di ingegneria</string>
-    <string name="maxsize">max size is 12</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="maxsize">max size is 4</string>
+    <string name="wantreprogram">Vuoi ricaricare?</string>
+    <string name="app_blue_bud_close">vicino</string>
     <string name="app_unit">Unità</string>
     <string name="app_language_setting">Language</string>
     <string name="app_sensor_info">SENSOR INFORMATION</string>
@@ -571,4 +572,12 @@
     <string name="idcopyobd">Copia ID di OBD</string>
     <string name="prusbpad">Program (USB PAD)</string>
     <string name="idusbpad">ID Copy (USB PAD)</string>
+    <string name="Read">Leggi</string>
+    <string name="wait">inatteso…</string>
+    <string name="transfer">Inizia il trasferimento</string>
+    <string name="wrongmmy">MMY sbagliato</string>
+
+    <string name="Write_completed">Trasferimento completato.</string>
+    <string name="Please_remove_OBD">Si prega di rimuovere OBD</string>
+
 </resources>

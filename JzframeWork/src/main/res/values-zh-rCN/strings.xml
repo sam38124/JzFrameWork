@@ -16,7 +16,7 @@
     <string name="app_home_program_sensor_phone">烧录感测器</string>
     <string name="app_home_id_copy">复制感测器ID</string>
     <string name="app_setup">系统设定</string>
-    <string name="app_home_obdii_relearn">车辆OBDII学码</string>
+    <string name="app_home_obdii_relearna">车辆OBDII学码</string>
     <string name="app_home_cloud_information">云端资讯</string>
     <string name="app_home_online_shopping">线上订购</string>
     <string name="app_user_manual">使用说明</string>
@@ -32,9 +32,9 @@
     <string name="app_scan_and_packing">请扫描感测器外壳或包装盒上的二维码</string>
     <string name="app_program">烧录</string>
     <string name="app_copy_original">复制原感测器ID</string>
-    <string name="app_original_sensor">原感测器</string>
+    <string name="app_original_sensor">读取原感测器</string>
     <string name="app_original_id">原感测器ID</string>
-    <string name="app_new_sensor">新感测器</string>
+    <string name="app_new_sensor">新传感器ID码</string>
     <string name="app_new_sensor_list">新感测器列表</string>
     <string name="app_my_favorite">我的最爱</string>
     <string name="app_scan">扫描</string>
@@ -197,6 +197,7 @@
     <string name="RE_PROGRAM">重新烧录</string>
     <string name="Relearn_Procedure">学码步骤</string>
     <string name="Key_in_the_original_sensor_ID_number">输入原传感器ID号码</string>
+    <string name="sensor_ID_number">传感器ID号码</string>
     <string name="ID_code_should_be_8_characters">ID码需为8个字符</string>
     <string name="Bluetooth_pairing_requirements">蓝牙配对要求</string>
     <string name="would_like_to_with_pair">USB PAD将与您手机进行配对</string>
@@ -418,13 +419,13 @@
     <string name="app_wifi_connecting">Wifi Connection…</string>
     <string name="app_sign_ing">Sign in…</string>
     <string name="app_registrating">Registration…</string>
-    <string name="app_updating">Updating…</string>
+    <string name="app_updating">更新中…</string>
     <string name="app_update_completed">Update completed</string>
     <string name="app_data_uploading">Data uploading…</string>
     <string name="app_data_reading">Data reading…</string>
     <string name="app_loading_data">Loading data…</string>
     <string name="app_scaning">Scaning…</string>
-    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_new_version_detect">检测到新版本，是否要更新？</string>
     <string name="app_bootaloader_mode">Currently in bootaloader mode, unable to operate, please burn flash.</string>
     <string name="app_burning_module_firmware">Burning module firmware</string>
     <string name="app_updating_model_database">Updating model database</string>
@@ -464,7 +465,7 @@
     <string name="app_back">Back</string>
     <string name="app_check">Check</string>
     <string name="app_id_clear">ID</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_rr">RR</string>
     <string name="app_rl">LR</string>
     <string name="app_fl">LF</string>
@@ -546,12 +547,12 @@
     <string name="array_unit_hex">Hex</string>
     <string name="original_way">Enter original sensor ID code</string>
     <string name="new_way">Enter new sensor ID code</string>
-    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="autolock">更改睡眠定时器设置</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
     <string name="enginer">工程模式</string>
-    <string name="maxsize">max size is 12</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="maxsize">max size is 4</string>
+    <string name="wantreprogram">您要重新加载吗？</string>
+    <string name="app_blue_bud_close">关闭</string>
     <string name="app_unit">显示单位</string>
     <string name="app_language_setting">Language</string>
     <string name="app_sensor_info">SENSOR INFORMATION</string>
@@ -565,4 +566,12 @@
     <string name="idcopyobd">复制ID（OBD）</string>
     <string name="prusbpad">烧录传感器（USB PAD）</string>
     <string name="idusbpad">复制ID（USB PAD）</string>
+    <string name="Read">读取</string>
+    <string name="wait">請稍後…</string>
+    <string name="transfer">传送</string>
+    <string name="wrongmmy">车辆(MMY)选择错误</string>
+
+    <string name="Write_completed">写入完成</string>
+    <string name="Please_remove_OBD">请取下OBD</string>
+
 </resources>
