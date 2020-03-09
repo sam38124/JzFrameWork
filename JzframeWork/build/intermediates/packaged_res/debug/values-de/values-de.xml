@@ -54,6 +54,7 @@
     <string name="Please_Confirm_That_The_Sensor_Is_Connect">Bitte bestätigen Sie, dass der Sensor verbunden ist</string>
     <string name="Please_insert_the_sensor_into_the_USB_PAD">Bitte scannen Sie den QR Code vom Katalog oder Poster</string>
     <string name="Please_press_RE_PROGRAM">Bitte drücken Sie RE-PROGRAM</string>
+    <string name="Please_remove_OBD">Bitte entfernen Sie OBD</string>
     <string name="Please_remove_the_sensor">Bitte entfernen Sie den Sensor</string>
     <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">Bitte scannen Sie den ID QR Code auf dem Sender oder der Box.</string>
     <string name="Please_scan_the_correct_QR_code">Bitte scannen Sie den richtigen QR-Code</string>
@@ -72,6 +73,7 @@
     <string name="Programming_failed_where">Fehler</string>
     <string name="ProvideUsbTpmsApp">Unterstützt USB RDKS App\nProgrammier-Beschreibung</string>
     <string name="RE_PROGRAM">neu programmieren</string>
+    <string name="Read">lesen</string>
     <string name="Registration">Registration</string>
     <string name="Registration_success">Registrierung erfolgreich</string>
     <string name="Relearn_Procedure">Anlern-Prozedur</string>
@@ -141,6 +143,7 @@
         Vii. Änderungen der Datenschutzrichtlinie
         Die Datenschutzbestimmungen dieser Anwendung werden zu jeder Zeit als Reaktion auf die Nachfrage geändert und die geänderten Bedingungen werden auf der Website veröffentlicht.
     </string>
+    <string name="Write_completed">Schreiben Sie abgeschlossen</string>
     <string name="Yes">Ja</string>
     <string name="ZP_Code">Postleitzahl</string>
     <string name="app_account_password_empty">Account or password cannot be empty</string>
@@ -151,7 +154,7 @@
     <string name="app_bat">BAT:</string>
     <string name="app_bat_clear">BAT</string>
     <string name="app_blue_bud">Bluetooth</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="app_blue_bud_close">Schliessen</string>
     <string name="app_blue_bud_open">Open</string>
     <string name="app_bluebud_my_device">My Device</string>
     <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
@@ -187,12 +190,12 @@
     <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
     <string name="app_fl">LF</string>
     <string name="app_forgot_password">Passwort vergessen</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_hardware_version">Hardware Version</string>
     <string name="app_home_check_sensor">Sensor prüfen</string>
     <string name="app_home_cloud_information">Cloud Informationen</string>
     <string name="app_home_id_copy">ID kopieren</string>
-    <string name="app_home_obdii_relearn">OPBDII anlernen</string>
+    <string name="app_home_obdii_relearna">OBDII anlernen</string>
     <string name="app_home_online_shopping">online shopping</string>
     <string name="app_home_program_sensor_phone">Sensor programmieren</string>
     <string name="app_id">ID:</string>
@@ -218,9 +221,9 @@
     <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
     <string name="app_name">TPMS</string>
     <string name="app_never">nie</string>
-    <string name="app_new_sensor">neuer Sensor</string>
+    <string name="app_new_sensor">Neue Sensor ID</string>
     <string name="app_new_sensor_list">neue Sensorliste</string>
-    <string name="app_new_version_detect">Neue Version erkannt, Wetter aktualisiert?</string>
+    <string name="app_new_version_detect">Neue Version erkannt, ob Update?</string>
     <string name="app_no_data_to_copy">No data to copy</string>
     <string name="app_no_sensor_set">No sensor is set, please add it first</string>
     <string name="app_number_choice">Auswahlmöglichkeiten</string>
@@ -228,7 +231,7 @@
     <string name="app_orange_co">Orange Electronic Co., Ltd</string>
     <string name="app_orange_sensor">(Orange sensor)</string>
     <string name="app_original_id">Original ID</string>
-    <string name="app_original_sensor">Original-Sensor </string>
+    <string name="app_original_sensor">Lesen Original-Sensor </string>
     <string name="app_pcs">pcs</string>
     <string name="app_permission">Genehmigung</string>
     <string name="app_permission_reject">Sie haben die entsprechende Erlaubnis verweigert. Die Funktion ist abnormal. Bitte gehe zu
@@ -372,7 +375,7 @@
     <string name="array_unit_hex">Hex</string>
     <string name="array_unit_kpa">Kpa</string>
     <string name="array_unit_psi">Psi</string>
-    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="autolock">Ändern der Sleep-Timer-Einstellungen</string>
     <string name="be_register">Gerät wurde registriert</string>
     <string name="cancel">löschen</string>
     <string name="checkscan">Vergewissern Sie sich, dass der Sensor am USB-PAD angeschlossen ist, und wählen Sie dann die Reifenposition aus, um den Scanvorgang zu starten</string>
@@ -386,13 +389,13 @@
     <string name="idusbpad">ID kopieren (USB PAD)</string>
     <string name="infomation_data_version">Data Version</string>
     <string name="infomation_module">Module</string>
-    <string name="infomation_name">Name</string>
+    <string name="infomation_name">Geräte-Name</string>
     <string name="infomation_serial_number">Serien-Nummer</string>
     <string name="infomation_software_version">Software Version</string>
     <string name="infomation_version">Version</string>
     <string name="is_latest">Um auf die neueste Version zu aktualisieren</string>
     <string name="keyin">Geben Sie ein</string>
-    <string name="maxsize">max size is 12</string>
+    <string name="maxsize">max size is 4</string>
     <string name="minuteago">Vor 1 Minute</string>
     <string name="monthago">Vor 1 Monat</string>
     <string name="need_upadte">Bitte aktualisieren Sie auf die neueste Version</string>
@@ -407,6 +410,7 @@
     <string name="secago">Kundendienstspezialist</string>
     <string name="sendfalse">Übertragung fehlgeschlagen</string>
     <string name="sendsuccess">Erfolgreicher Transfer</string>
+    <string name="sensor_ID_number">Sensor ID Nummer</string>
     <string name="signfall">Anmeldung fehlgeschlagen</string>
     <string name="step1_1">Schritt 1.\nBitte verbinden sie das USB RDKS Progammierkabel mit dem Mobiltelefon und dem Sensor
     </string>
@@ -481,10 +485,13 @@
     <string name="step4_9">Schritt 8. \nDas USB RDKS wird automatisch die Sequenz der Sensoren lesen. Nachdem das Lesen beendet ist, drücken sie bitte PROGRAM SENSOR</string>
     <string name="store_type">Speichertyp</string>
     <string name="to_give">Die App überprfüt möglicherweise ihren Standort um ihnen lokale Inhalte zu liefern</string>
+    <string name="transfer">Starten Sie die Übertragung</string>
     <string name="update">Updates</string>
     <string name="update_success">Erfolgreich aktualisiert</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="wait">warten…</string>
+    <string name="wantreprogram">Möchten Sie neu laden?</string>
     <string name="would_like_to_with_pair">"USB PDA" möchte sich mit Ihrem Smartphone verbinden</string>
+    <string name="wrongmmy">Falscher MMY</string>
     <string name="yeargo">Vor 1 Jahr</string>
 </resources>

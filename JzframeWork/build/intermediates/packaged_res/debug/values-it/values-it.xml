@@ -57,6 +57,7 @@
     <string name="Please_Confirm_That_The_Sensor_Is_Connect">Please confirm that the sensor is connect</string>
     <string name="Please_insert_the_sensor_into_the_USB_PAD">Inserire i sensorei nell\' USB PAD</string>
     <string name="Please_press_RE_PROGRAM">Premere riprogramma</string>
+    <string name="Please_remove_OBD">Si prega di rimuovere OBD</string>
     <string name="Please_remove_the_sensor">Si prega di rimuovere il sensore</string>
     <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">Si prega di scansionare il codice QR ID sul trasmettitore o sulla scatola.</string>
     <string name="Please_scan_the_correct_QR_code">Si prega di scansionare il codice QR corretto</string>
@@ -76,6 +77,7 @@
     <string name="ProvideUsbTpmsApp">Descrizione programmazione tramite
         APP TPMS USB </string>
     <string name="RE_PROGRAM">Riprogrammare</string>
+    <string name="Read">Leggi</string>
     <string name="Registration">Registrati</string>
     <string name="Registration_success">Registrazione avvenuta con successo</string>
     <string name="Relearn_Procedure">Porcedura di riapprendimento</string>
@@ -171,6 +173,7 @@
         La nostra politica sulla privacy può cambiare di volta in volta. Non ridurremo i tuoi diritti ai sensi della presente Informativa sulla privacy senza il tuo esplicito consenso. Pubblicheremo eventuali modifiche alla privacy policy e indicheremo la data delle ultime modifiche su questa piattaforma e, se le modifiche sono significative, ti forniremo un avviso più evidente per l\'opportunità di rivedere la politica rivista.
 
     </string>
+    <string name="Write_completed">Trasferimento completato.</string>
     <string name="Yes">sì</string>
     <string name="ZP_Code">Codice postale</string>
     <string name="app_account_password_empty">Account or password cannot be empty</string>
@@ -181,7 +184,7 @@
     <string name="app_bat">BAT:</string>
     <string name="app_bat_clear">BAT</string>
     <string name="app_blue_bud">Bluetooth</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="app_blue_bud_close">vicino</string>
     <string name="app_blue_bud_open">Aperto</string>
     <string name="app_bluebud_my_device">My Device</string>
     <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
@@ -217,12 +220,12 @@
     <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
     <string name="app_fl">LF</string>
     <string name="app_forgot_password">Hai dimenticato la password?</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_hardware_version">Versione Hardware</string>
     <string name="app_home_check_sensor">Controllo sensore</string>
     <string name="app_home_cloud_information">Apprendimento Vettura</string>
     <string name="app_home_id_copy">Copia ID</string>
-    <string name="app_home_obdii_relearn">Riapprendimento OBDII</string>
+    <string name="app_home_obdii_relearna">Riapprendimento OBDII</string>
     <string name="app_home_online_shopping">Shopping Online</string>
     <string name="app_home_program_sensor_phone">Programma sensore</string>
     <string name="app_id">ID:</string>
@@ -248,9 +251,9 @@
     <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
     <string name="app_name">TPMS</string>
     <string name="app_never">Mai</string>
-    <string name="app_new_sensor">Nuovo sensore</string>
+    <string name="app_new_sensor">Lista nuovo sensore</string>
     <string name="app_new_sensor_list">Lista nuovo sensore</string>
-    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_new_version_detect">Modifica delle impostazioni del timer di spegnimento</string>
     <string name="app_no_data_to_copy">No data to copy</string>
     <string name="app_no_sensor_set">No sensor is set, please add it first</string>
     <string name="app_number_choice">Opzioni</string>
@@ -258,7 +261,7 @@
     <string name="app_orange_co">Orange Electronic Co., Ltd</string>
     <string name="app_orange_sensor">(Orange sensor)</string>
     <string name="app_original_id">ID originale</string>
-    <string name="app_original_sensor">Sensore originale</string>
+    <string name="app_original_sensor">Leggi Sensore originale</string>
     <string name="app_pcs">pcs</string>
     <string name="app_permission">Permission</string>
     <string name="app_permission_reject">You have denied the relevant permission. The function is abnormal. Please go to
@@ -358,7 +361,7 @@
     <string name="app_units_temp">Temperature</string>
     <string name="app_units_tire">Pressione pneumatici</string>
     <string name="app_update_completed">Update completed</string>
-    <string name="app_updating">Updating…</string>
+    <string name="app_updating">aggiornare…</string>
     <string name="app_updating_model_database">Updating model database</string>
     <string name="app_user_manual">Istruzioni per l`uso</string>
     <string name="app_vehicle_payment_updated">There is an update to the vehicle payment database. Do you want to update
@@ -422,7 +425,7 @@
     <string name="infomation_version">Version</string>
     <string name="is_latest">Per aggiornare all\'ultima versione</string>
     <string name="keyin">Inserisci l\'ID</string>
-    <string name="maxsize">max size is 12</string>
+    <string name="maxsize">max size is 4</string>
     <string name="minuteago">1 minuto fa</string>
     <string name="monthago">1 mese fa</string>
     <string name="need_upadte">Si prega di aggiornare all\'ultima versione</string>
@@ -437,6 +440,7 @@
     <string name="secago">solo</string>
     <string name="sendfalse">Trasferimento fallito</string>
     <string name="sendsuccess">Trasferimento riuscito</string>
+    <string name="sensor_ID_number">numero ID</string>
     <string name="signfall">Accesso fallito</string>
     <string name="step1_1">Step 1.\n
         Collegare il cavo TPMS USB al cellulare e al sensore
@@ -552,10 +556,13 @@
         Una volta letti cliccare su PROGRAMMA SENSORI</string>
     <string name="store_type">Tipo di negozio</string>
     <string name="to_give">L\'applicazione potrebbe utilizzare la tua posizione</string>
+    <string name="transfer">Inizia il trasferimento</string>
     <string name="update">aggiornare</string>
     <string name="update_success">Aggiornato con successo</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="wait">inatteso…</string>
+    <string name="wantreprogram">Vuoi ricaricare?</string>
     <string name="would_like_to_with_pair">"USB PAD" vorrebbe abbinarsi al tuo Smartphone</string>
+    <string name="wrongmmy">MMY sbagliato</string>
     <string name="yeargo">1 anno fa</string>
 </resources>

@@ -142,7 +142,7 @@ abstract class JzActivity : AppCompatActivity(),
                 android.os.Process.killProcess(android.os.Process.myPid())
             }
 
-            override fun checkUpdate(a:Boolean):String?{
+            override fun checkUpdate(bun:String,a:Boolean):String?{
                 val versionChecker = VersionCheck()
                 try {
                     if(!a){return versionChecker.execute().get()}
@@ -153,7 +153,7 @@ abstract class JzActivity : AppCompatActivity(),
                     ) {
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.data =
-                            Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
+                            Uri.parse("https://play.google.com/store/apps/details?id=$bun")
                         startActivity(intent)
 
                     }

@@ -1432,6 +1432,7 @@ string PleaseMessage
 string Please_Confirm_That_The_Sensor_Is_Connect
 string Please_insert_the_sensor_into_the_USB_PAD
 string Please_press_RE_PROGRAM
+string Please_remove_OBD
 string Please_remove_the_sensor
 string Please_scan_the_QR_Code_on_the_catalog_or_poster
 string Please_scan_the_correct_QR_code
@@ -1450,6 +1451,7 @@ string Programming_failed
 string Programming_failed_where
 string ProvideUsbTpmsApp
 string RE_PROGRAM
+string Read
 string Registration
 string Registration_success
 string Relearn_Procedure
@@ -1479,6 +1481,7 @@ string Users_manual
 string Vehicle_data_selection
 string Version_update
 string Welcome
+string Write_completed
 string Yes
 string ZP_Code
 string abc_action_bar_home_description
@@ -1570,6 +1573,7 @@ string app_home_check_sensor
 string app_home_cloud_information
 string app_home_id_copy
 string app_home_obdii_relearn
+string app_home_obdii_relearna
 string app_home_online_shopping
 string app_home_program_sensor_phone
 string app_id
@@ -1794,6 +1798,7 @@ string search_menu_title
 string secago
 string sendfalse
 string sendsuccess
+string sensor_ID_number
 string signfall
 string status_bar_notification_info_overflow
 string step1_1
@@ -1835,11 +1840,14 @@ string step4_8
 string step4_9
 string store_type
 string to_give
+string transfer
 string update
 string update_success
 string updatefault
+string wait
 string wantreprogram
 string would_like_to_with_pair
+string wrongmmy
 string yeargo
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

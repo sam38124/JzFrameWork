@@ -59,6 +59,7 @@
     <string name="Please_Confirm_That_The_Sensor_Is_Connect">Please confirm that the sensor is connect</string>
     <string name="Please_insert_the_sensor_into_the_USB_PAD">將傳感器插入USB PAD</string>
     <string name="Please_press_RE_PROGRAM">请按重新烧录</string>
+    <string name="Please_remove_OBD">请取下OBD</string>
     <string name="Please_remove_the_sensor">请取下传感器</string>
     <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">请扫描发射器或包装盒上的ID QR码
     </string>
@@ -78,6 +79,7 @@
     <string name="Programming_failed_where">刻录失败</string>
     <string name="ProvideUsbTpmsApp">提供USB TPMS APP\n烧录模式说明</string>
     <string name="RE_PROGRAM">重新烧录</string>
+    <string name="Read">读取</string>
     <string name="Registration">注册</string>
     <string name="Registration_success">注册成功</string>
     <string name="Relearn_Procedure">学码步骤</string>
@@ -157,6 +159,7 @@
         我们的《隐私权政策》会不时变更。我们不会在未经您明确同意的情况下，即缩减本《隐私权政策》赋予您的权利。隐私权政策变更时一律会在本产品APP上发布；如果属于重大变更，我们会提供更明显的通知，让您在选择继续使用我们的产品前，有机会审阅修订后的政策。
 
     </string>
+    <string name="Write_completed">写入完成</string>
     <string name="Yes">是</string>
     <string name="ZP_Code">邮政编码</string>
     <string name="app_account_password_empty">Account or password cannot be empty</string>
@@ -167,7 +170,7 @@
     <string name="app_bat">电池</string>
     <string name="app_bat_clear">BAT</string>
     <string name="app_blue_bud">蓝牙</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="app_blue_bud_close">关闭</string>
     <string name="app_blue_bud_open">打开</string>
     <string name="app_bluebud_my_device">My Device</string>
     <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
@@ -203,12 +206,12 @@
     <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
     <string name="app_fl">LF</string>
     <string name="app_forgot_password">忘记密码</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_hardware_version">硬体版本</string>
     <string name="app_home_check_sensor">检查感测器</string>
     <string name="app_home_cloud_information">云端资讯</string>
     <string name="app_home_id_copy">复制感测器ID</string>
-    <string name="app_home_obdii_relearn">车辆OBDII学码</string>
+    <string name="app_home_obdii_relearna">车辆OBDII学码</string>
     <string name="app_home_online_shopping">线上订购</string>
     <string name="app_home_program_sensor_phone">烧录感测器</string>
     <string name="app_id">ID:</string>
@@ -234,9 +237,9 @@
     <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
     <string name="app_name">TPMS</string>
     <string name="app_never">不使用</string>
-    <string name="app_new_sensor">新感测器</string>
+    <string name="app_new_sensor">新传感器ID码</string>
     <string name="app_new_sensor_list">新感测器列表</string>
-    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_new_version_detect">检测到新版本，是否要更新？</string>
     <string name="app_no_data_to_copy">No data to copy</string>
     <string name="app_no_sensor_set">No sensor is set, please add it first</string>
     <string name="app_number_choice">选择烧录数量</string>
@@ -244,7 +247,7 @@
     <string name="app_orange_co">Orange Electronic Co., Ltd</string>
     <string name="app_orange_sensor">(Orange sensor)</string>
     <string name="app_original_id">原感测器ID</string>
-    <string name="app_original_sensor">原感测器</string>
+    <string name="app_original_sensor">读取原感测器</string>
     <string name="app_pcs">pcs</string>
     <string name="app_permission">Permission</string>
     <string name="app_permission_reject">You have denied the relevant permission. The function is abnormal. Please go to
@@ -344,7 +347,7 @@
     <string name="app_units_temp">Temperature</string>
     <string name="app_units_tire">胎压</string>
     <string name="app_update_completed">Update completed</string>
-    <string name="app_updating">Updating…</string>
+    <string name="app_updating">更新中…</string>
     <string name="app_updating_model_database">Updating model database</string>
     <string name="app_user_manual">使用说明</string>
     <string name="app_vehicle_payment_updated">There is an update to the vehicle payment database. Do you want to update
@@ -388,7 +391,7 @@
     <string name="array_unit_hex">Hex</string>
     <string name="array_unit_kpa">Kpa</string>
     <string name="array_unit_psi">Psi</string>
-    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="autolock">更改睡眠定时器设置</string>
     <string name="be_register">装置已被注册</string>
     <string name="cancel">取消</string>
     <string name="checkscan">请确认要烧录的发射器以加入USB PAD， 再点选轮位进行扫描</string>
@@ -408,7 +411,7 @@
     <string name="infomation_version">Version</string>
     <string name="is_latest">以更新至最新版本</string>
     <string name="keyin">手动输入</string>
-    <string name="maxsize">max size is 12</string>
+    <string name="maxsize">max size is 4</string>
     <string name="minuteago">1分钟前</string>
     <string name="monthago">1个月前</string>
     <string name="need_upadte">请更新至最新版本</string>
@@ -423,6 +426,7 @@
     <string name="secago">刚刚</string>
     <string name="sendfalse">传送失败</string>
     <string name="sendsuccess">传送成功</string>
+    <string name="sensor_ID_number">传感器ID号码</string>
     <string name="signfall">登入失败</string>
     <string name="step1_1">步骤1.\n
         请将USB TPMS烧录线连接手机与传感器
@@ -535,10 +539,13 @@
         读取完成后请按下 PROGRAM SENSOR </string>
     <string name="store_type">商店类型</string>
     <string name="to_give">应用程序可能会根据您的所在地区为您提供当地内容</string>
+    <string name="transfer">传送</string>
     <string name="update">更新</string>
     <string name="update_success">更新成功</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="wait">請稍後…</string>
+    <string name="wantreprogram">您要重新加载吗？</string>
     <string name="would_like_to_with_pair">USB PAD将与您手机进行配对</string>
+    <string name="wrongmmy">车辆(MMY)选择错误</string>
     <string name="yeargo">1年前</string>
 </resources>

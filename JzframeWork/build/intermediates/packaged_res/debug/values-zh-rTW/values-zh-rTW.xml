@@ -53,6 +53,7 @@
     <string name="Please_Confirm_That_The_Sensor_Is_Connect">請確認傳感器已經連接</string>
     <string name="Please_insert_the_sensor_into_the_USB_PAD">將發射器插入USB PAD</string>
     <string name="Please_press_RE_PROGRAM">請按重新燒錄</string>
+    <string name="Please_remove_OBD">請取下OBD</string>
     <string name="Please_remove_the_sensor">請取下發射器</string>
     <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">請掃描發射器或包裝盒上的ID QR碼</string>
     <string name="Please_scan_the_correct_QR_code">請掃描正確的QR code</string>
@@ -71,6 +72,7 @@
     <string name="Programming_failed_where">燒錄失敗</string>
     <string name="ProvideUsbTpmsApp">提供USB TPMS APP\n燒錄模式说明</string>
     <string name="RE_PROGRAM">重新燒錄</string>
+    <string name="Read">讀取</string>
     <string name="Registration">註冊</string>
     <string name="Registration_success">註冊成功</string>
     <string name="Relearn_Procedure">學碼步驟</string>
@@ -150,6 +152,7 @@
         我們的《隱私權政策》會不時變更。我們不會在未經您明確同意的情況下，即縮減本《隱私權政策》賦予您的權利。隱私權政策變更時一律會在本產品APP上發佈；如果屬於重大變更，我們會提供更明顯的通知，讓您在選擇繼續使用我們的產品前，有機會審閱修訂後的政策。
 
     </string>
+    <string name="Write_completed">寫入完成</string>
     <string name="Yes">是</string>
     <string name="ZP_Code">郵遞區號</string>
     <string name="app_account_password_empty">Account or password cannot be empty</string>
@@ -160,7 +163,7 @@
     <string name="app_bat">電池</string>
     <string name="app_bat_clear">BAT</string>
     <string name="app_blue_bud">藍牙</string>
-    <string name="app_blue_bud_close">Close</string>
+    <string name="app_blue_bud_close">關閉</string>
     <string name="app_blue_bud_open">打開</string>
     <string name="app_bluebud_my_device">My Device</string>
     <string name="app_bluebud_my_devicename">ORANGE TPMS PAD</string>
@@ -196,12 +199,12 @@
     <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
     <string name="app_fl">LF</string>
     <string name="app_forgot_password">忘記密碼</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_hardware_version">硬體版本</string>
     <string name="app_home_check_sensor">檢查感測器</string>
     <string name="app_home_cloud_information">雲端資訊</string>
     <string name="app_home_id_copy">複製感測器ID</string>
-    <string name="app_home_obdii_relearn">車輛OBDII學碼</string>
+    <string name="app_home_obdii_relearna">車輛OBDII學碼</string>
     <string name="app_home_online_shopping">線上訂購</string>
     <string name="app_home_program_sensor_phone">燒錄感測器</string>
     <string name="app_id">ID:</string>
@@ -227,9 +230,9 @@
     <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
     <string name="app_name">TPMS</string>
     <string name="app_never">不使用</string>
-    <string name="app_new_sensor">新感測器</string>
+    <string name="app_new_sensor">新發射器ID碼</string>
     <string name="app_new_sensor_list">新感測器列表</string>
-    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_new_version_detect">檢測到新版本，是否要更新？</string>
     <string name="app_no_data_to_copy">No data to copy</string>
     <string name="app_no_sensor_set">No sensor is set, please add it first</string>
     <string name="app_number_choice">選擇燒錄數量</string>
@@ -237,7 +240,7 @@
     <string name="app_orange_co">Orange Electronic Co., Ltd</string>
     <string name="app_orange_sensor">(Orange sensor)</string>
     <string name="app_original_id">原感測器ID</string>
-    <string name="app_original_sensor">原感測器</string>
+    <string name="app_original_sensor">讀取原感測器</string>
     <string name="app_pcs">pcs</string>
     <string name="app_permission">Permission</string>
     <string name="app_permission_reject">You have denied the relevant permission. The function is abnormal. Please go to
@@ -337,7 +340,7 @@
     <string name="app_units_temp">Temperature</string>
     <string name="app_units_tire">胎壓</string>
     <string name="app_update_completed">Update completed</string>
-    <string name="app_updating">Updating…</string>
+    <string name="app_updating">更新中…</string>
     <string name="app_updating_model_database">Updating model database</string>
     <string name="app_user_manual">使用說明</string>
     <string name="app_vehicle_payment_updated">There is an update to the vehicle payment database. Do you want to update
@@ -381,7 +384,7 @@
     <string name="array_unit_hex">Hex</string>
     <string name="array_unit_kpa">Kpa</string>
     <string name="array_unit_psi">Psi</string>
-    <string name="autolock">Changing the Sleep Timer Settings</string>
+    <string name="autolock">更改睡眠定時器設置</string>
     <string name="be_register">裝置已被註冊</string>
     <string name="cancel">取消</string>
     <string name="checkscan">請確認要燒錄的發射器以放入USB PAD， 再點選輪位進行掃描</string>
@@ -401,7 +404,7 @@
     <string name="infomation_version">Version</string>
     <string name="is_latest">以更新至最新版本</string>
     <string name="keyin">手動輸入</string>
-    <string name="maxsize">max size is 12</string>
+    <string name="maxsize">max size is 4</string>
     <string name="minuteago">1分鐘前</string>
     <string name="monthago">1個月前</string>
     <string name="need_upadte">請更新至最新版本</string>
@@ -416,6 +419,7 @@
     <string name="secago">剛剛</string>
     <string name="sendfalse">傳送失敗</string>
     <string name="sendsuccess">傳送成功</string>
+    <string name="sensor_ID_number">發射器ID號碼</string>
     <string name="signfall">登入失敗</string>
     <string name="step1_1">步驟1.\n請將USB TPMS燒錄線連接手機與sensor
     </string>
@@ -477,10 +481,13 @@
         讀取完成後請按下 PROGRAM SENSOR</string>
     <string name="store_type">商店类型</string>
     <string name="to_give">應用程式可能會根據您的所在地區為您提供當地內容</string>
+    <string name="transfer">傳送</string>
     <string name="update">更新</string>
     <string name="update_success">更新成功</string>
     <string name="updatefault">update false,Please reconnect wifi and try again!</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
+    <string name="wait">請稍後…</string>
+    <string name="wantreprogram">您要重新加載嗎？</string>
     <string name="would_like_to_with_pair">USB PAD將與您手機進行配對</string>
+    <string name="wrongmmy">車輛(MMY)選擇錯誤</string>
     <string name="yeargo">1年前</string>
 </resources>

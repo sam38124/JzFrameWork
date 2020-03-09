@@ -8,7 +8,7 @@
     <string name="AreaLanguage">Area &amp; Language</string>
     <string name="At_least_8_characters">At least 8 characters</string>
     <string name="Automatic_update">Automatic update</string>
-    <string name="Bluetooth_pairing_requirements">Bluetooth pairing requirements</string>
+    <string name="Bluetooth_pairing_requirements">Bluetooth pairing requires</string>
     <string name="Cancel">Cancel</string>
     <string name="Check_for_updates">Check for updates</string>
     <string name="Choose_a_password">Choose a password</string>
@@ -27,22 +27,22 @@
     <string name="First_Name">First Name</string>
     <string name="For_developer_information">For developer information, please visit this website: www.orange-electronic.com</string>
     <string name="Forgot_password">Forgot password</string>
-    <string name="Get_location">The location function must be turned on to start the Bluetooth service.</string>
-    <string name="Go_email">Go to your email inbox and find an email from us with the subject “Reset your password”.
+    <string name="Get_location">The location/GPS service must be enabled for Bluetooth.</string>
+    <string name="Go_email">Go to your email inbox and find an email from us : “Reset your password”.
     </string>
     <string name="ID_COPY">ID COPY</string>
-    <string name="ID_code_should_be_8_characters">ID code should be 8 characters</string>
-    <string name="Key_in_the_original_sensor_ID_number">Key in the original sensor ID number</string>
+    <string name="ID_code_should_be_8_characters">ID should be 8 digits</string>
+    <string name="Key_in_the_original_sensor_ID_number">Key in the original sensor ID</string>
     <string name="Languages">Languages</string>
     <string name="Languages_info">An application will appear in the first language in the list that they support.
     </string>
     <string name="Last_Name">Last Name</string>
     <string name="Log_out">Log out</string>
     <string name="MENU">MENU</string>
-    <string name="Methods_of_vehicle_data_selection">Methods of vehicle data selection</string>
+    <string name="Methods_of_vehicle_data_selection">Select a vehicle</string>
     <string name="Next">Next</string>
-    <string name="Notall">Not all of the OE sensor contains the temperature, Battery and Voltage status</string>
-    <string name="Og_email">Please provide the email address that you used when you signed up for O-GENIUS account.
+    <string name="Notall">Not all of the OE sensor contains Temperature, Battery and Voltage status</string>
+    <string name="Og_email">Please provide the email address that you used for O-GENIUS account.
     </string>
     <string name="Online_customer_service">Online customer service</string>
     <string name="Online_shopping">Online shopping</string>
@@ -53,9 +53,10 @@
     <string name="Personal_details">Personal details</string>
     <string name="Physical_address_Mailing_address">Physical address / Mailing address</string>
     <string name="PleaseMessage">Please enter the content of the letter</string>
-    <string name="Please_Confirm_That_The_Sensor_Is_Connect">Please confirm that the sensor is connect</string>
+    <string name="Please_Confirm_That_The_Sensor_Is_Connect">Please confirm that the sensor is connected</string>
     <string name="Please_insert_the_sensor_into_the_USB_PAD">Please insert the sensor into the USB PAD.</string>
     <string name="Please_press_RE_PROGRAM">Please press RE-PROGRAM.</string>
+    <string name="Please_remove_OBD">Please remove OBD</string>
     <string name="Please_remove_the_sensor">Please remove the sensor.</string>
     <string name="Please_scan_the_QR_Code_on_the_catalog_or_poster">Please scan on sensor or ID QR code on package
     </string>
@@ -70,25 +71,26 @@
     <string name="Program_sensor">Program sensor</string>
     <string name="Programming">Programming</string>
     <string name="Programming_completed">Programming completed.</string>
-    <string name="Programming_do_not_move_sensors">Programming, do not move sensors.</string>
+    <string name="Programming_do_not_move_sensors">Programming, do not remove sensors.</string>
     <string name="Programming_failed">Programming failed.</string>
-    <string name="Programming_failed_where">Program fail</string>
+    <string name="Programming_failed_where">Program failed</string>
     <string name="ProvideUsbTpmsApp">Provide USB TPMS APP \n Programming description</string>
     <string name="RE_PROGRAM">RE-PROGRAM</string>
+    <string name="Read">Read</string>
     <string name="Registration">Registration</string>
-    <string name="Registration_success">Registration success</string>
+    <string name="Registration_success">Registration successful</string>
     <string name="Relearn_Procedure">Relearn Procedure</string>
-    <string name="Repeat_password">Repeat password</string>
+    <string name="Repeat_password">Repeated password</string>
     <string name="Reset_Password">Reset Password</string>
     <string name="Retailer">Retailer</string>
     <string name="START">START</string>
-    <string name="SayQusition">Hello, please elaborate on the product issue</string>
+    <string name="SayQusition">Hello, please elaborate on the issue</string>
     <string name="Scan_Code">Scan Code</string>
     <string name="Scan_Two">Please scan the QR Code on the catalog or poster.</string>
     <string name="Select">Select</string>
     <string name="SelectDevice">Select Device</string>
-    <string name="Select_CAR_Make">Select CAR Make</string>
-    <string name="Select_CAR_Model">Select CAR Model</string>
+    <string name="Select_CAR_Make">Select Car Make</string>
+    <string name="Select_CAR_Model">Select Car Model</string>
     <string name="Select_Year">Select Year</string>
     <string name="Set_up">Set up</string>
     <string name="Setting">Setting</string>
@@ -101,7 +103,7 @@
     <string name="Unlinked">Unlinked</string>
     <string name="Updating">Updating</string>
     <string name="Users_manual">User\'s manual</string>
-    <string name="Vehicle_data_selection">Vehicle data selection</string>
+    <string name="Vehicle_data_selection">Vehicle Selection</string>
     <string name="Version_update">Version update</string>
     <string name="Welcome">Welcome to use our platform and our service, when you use this platform, you trust us with
         your information. This Privacy Policy is meant to help you understand what data we collect, why we collect it,
@@ -230,6 +232,7 @@
         this platform and, if the changes are significant, we will provide a more prominent notice to you for the
         opportunity to review the revised policy.
     </string>
+    <string name="Write_completed">Write completed</string>
     <string name="Yes">Yes</string>
     <string name="ZP_Code">ZP_Code</string>
     <string name="app_account_password_empty">Account or password cannot be empty</string>
@@ -239,7 +242,7 @@
     <string name="app_back">Back</string>
     <string name="app_bat">BAT:</string>
     <string name="app_bat_clear">BAT</string>
-    <string name="app_blue_bud">Blue Bud</string>
+    <string name="app_blue_bud">Bluetooth</string>
     <string name="app_blue_bud_close">Close</string>
     <string name="app_blue_bud_open">Open</string>
     <string name="app_bluebud_my_device">My Device</string>
@@ -247,7 +250,7 @@
     <string name="app_bluebud_other_device">Other Device</string>
     <string name="app_bluebud_other_devicename">ORANGE FNNB01</string>
     <string name="app_bluetooth">Bluetooth</string>
-    <string name="app_bootaloader_mode">Currently in bootaloader mode, unable to operate, please burn flash.</string>
+    <string name="app_bootaloader_mode">In bootloader mode, cannot operate, please burn flash.</string>
     <string name="app_burning_module_firmware">Burning module firmware</string>
     <string name="app_burning_succeeded">Burning succeeded!</string>
     <string name="app_c">°C:</string>
@@ -271,36 +274,36 @@
     <string name="app_device_name">Device Name</string>
     <string name="app_disagree">Disagree</string>
     <string name="app_disconnected">Disconnected</string>
-    <string name="app_duplicate_items">There are duplicate items. Please delete them and try again</string>
-    <string name="app_email_send">E-mail has bean send</string>
-    <string name="app_fillin_all_sensor_id">Please fill in all sensor IDS</string>
+    <string name="app_duplicate_items">There are duplicate items. Please remove them and try again</string>
+    <string name="app_email_send">E-mail has been sent</string>
+    <string name="app_fillin_all_sensor_id">Please fill in all sensor IDs</string>
     <string name="app_fl">LF</string>
     <string name="app_forgot_password">Forgot password</string>
-    <string name="app_fr">FR</string>
+    <string name="app_fr">RF</string>
     <string name="app_hardware_version">Hardware Version</string>
-    <string name="app_home_check_sensor">CHECK SENSOR</string>
+    <string name="app_home_check_sensor">Check Sensor</string>
     <string name="app_home_cloud_information">Cloud Information</string>
     <string name="app_home_id_copy">ID COPY</string>
-    <string name="app_home_obdii_relearn">OBDII RELEARN</string>
+    <string name="app_home_obdii_relearna">OBDII Relearn</string>
     <string name="app_home_online_shopping">Online Shopping</string>
-    <string name="app_home_program_sensor_phone">PROGRAM SENSOR</string>
+    <string name="app_home_program_sensor_phone">Program Sensor</string>
     <string name="app_id">ID:</string>
     <string name="app_id_clear">ID</string>
     <string name="app_id_dec_hex">ID(Dec/Hex)</string>
-    <string name="app_invalid_mmy_qrcode">Invalid mmy QR code</string>
+    <string name="app_invalid_mmy_qrcode">Invalid MMY QR code</string>
     <string name="app_invalid_sensor_qrcode">Invalid sensor ID QR code</string>
     <string name="app_key_in">Key in</string>
     <string name="app_kpa">Kpa:</string>
     <string name="app_language_setting">Language</string>
-    <string name="app_loading_data">Loading data…</string>
+    <string name="app_loading_data">Data Loading…</string>
     <string name="app_login_failed">Login failed</string>
     <string name="app_manual_operation">Manual operation</string>
-    <string name="app_menue">Menue</string>
+    <string name="app_menue">Menu</string>
     <string name="app_minutes">minutes</string>
     <string name="app_mmy">Vehicle selection</string>
     <string name="app_model">Model</string>
-    <string name="app_model_database_finished">Model database update finished!</string>
-    <string name="app_module_firmware_updated">Module firmware has been updated. Do you want to update?</string>
+    <string name="app_model_database_finished">Database update finished!</string>
+    <string name="app_module_firmware_updated">Module firmware has been updated. Do you want to update again?</string>
     <string name="app_module_is_empty">Module is empty!</string>
     <string name="app_my_device">My Device</string>
     <string name="app_my_favorite">My favorite</string>
@@ -308,34 +311,34 @@
     <string name="app_myfavorite_is_empty">My favorite is empty now!</string>
     <string name="app_name">TPMS</string>
     <string name="app_never">Never</string>
-    <string name="app_new_sensor">NEW SENSOR</string>
+    <string name="app_new_sensor">New sensor ID number</string>
     <string name="app_new_sensor_list">NEW sensor List</string>
-    <string name="app_new_version_detect">New version detected,weather to update?</string>
+    <string name="app_new_version_detect">New version detected,would you like to update?</string>
     <string name="app_no_data_to_copy">No data to copy</string>
-    <string name="app_no_sensor_set">No sensor is set, please add it first</string>
-    <string name="app_number_choice">Number of choices</string>
+    <string name="app_no_sensor_set">No sensor detected, please fill in first</string>
+    <string name="app_number_choice">Quantity of sensor</string>
     <string name="app_o_genius">O-GENIUS</string>
     <string name="app_ok">OK</string>
-    <string name="app_orange_co">Orange Electronic Co., Ltd</string>
+    <string name="app_orange_co">Orange Electronic Co., Ltd.</string>
     <string name="app_orange_sensor">(Orange sensor)</string>
     <string name="app_original_id">Original ID</string>
-    <string name="app_original_sensor">ORIGINAL SENSOR</string>
+    <string name="app_original_sensor">Read Original-Sensor</string>
     <string name="app_pcs">pcs</string>
     <string name="app_permission">Permission</string>
     <string name="app_permission_reject">You have denied the relevant permission. The function is abnormal. Please go to
         settings to open the relevant permission
     </string>
-    <string name="app_permission_requre">Our function requires you to open relevant permissions</string>
+    <string name="app_permission_requre">This function requires your permission</string>
     <string name="app_press">Press</string>
     <string name="app_program">Program</string>
     <string name="app_psi">PSI</string>
     <string name="app_re_program">Re-Program</string>
-    <string name="app_read_failed">Read failed,please read again!</string>
+    <string name="app_read_failed">Reading failed,please read again!</string>
     <string name="app_regist_success">Register was successful</string>
     <string name="app_register_account_number">Account Number</string>
     <string name="app_register_account_title">Create your email account</string>
     <string name="app_register_address_title">Physical address / Mailing address</string>
-    <string name="app_register_choose_password">Choose a password</string>
+    <string name="app_register_choose_password">Enter password</string>
     <string name="app_register_city">City</string>
     <string name="app_register_company">Company</string>
     <string name="app_register_contact">Contact Phone Number</string>
@@ -344,8 +347,8 @@
     <string name="app_register_lastname">Last Name</string>
     <string name="app_register_password">Password</string>
     <string name="app_register_password_hint">At least 8 characters</string>
-    <string name="app_register_password_repeat">Repeat password</string>
-    <string name="app_register_personal">Personal details</string>
+    <string name="app_register_password_repeat">Verify password</string>
+    <string name="app_register_personal">Personal information</string>
     <string name="app_register_product">Product serial number</string>
     <string name="app_register_sign">Sign up</string>
     <string name="app_register_state">State</string>
@@ -356,31 +359,31 @@
     <string name="app_registration">Registration</string>
     <string name="app_reset">Reset</string>
     <string name="app_reset_all_settings">Reset all settings</string>
-    <string name="app_reset_email">Go to your email inbox and find an email from us with the subject “Reset your
+    <string name="app_reset_email">Go to your email inbox and find the email from us “Reset your
         password”.
     </string>
     <string name="app_reset_password">Reset Password</string>
-    <string name="app_reset_tips">Please provide the email address that you used when you signed up for O-GENIUS
+    <string name="app_reset_tips">Please provide the email address that you used for signing up for O-GENIUS
         account.
     </string>
     <string name="app_rl">LR</string>
     <string name="app_rr">RR</string>
     <string name="app_scan">Scan</string>
     <string name="app_scan_2d_code">Scan 2D code</string>
-    <string name="app_scan_and_packing">"Please scan the code on the sensor case or packing box."</string>
+    <string name="app_scan_and_packing">"Please scan the code on the sensor or packing box."</string>
     <string name="app_scan_code_timeout">Scan code timeout</string>
     <string name="app_scan_tips">Please scan the QR Code on the catalog or poster</string>
-    <string name="app_scaning">Scaning…</string>
+    <string name="app_scaning">Scanning…</string>
     <string name="app_select_car_makes">Vehicle Selection</string>
     <string name="app_select_car_model">Select Model</string>
     <string name="app_select_year">Select Year</string>
-    <string name="app_sendor_firmware_updated">Sensor firmware has been updated. Do you want to update it?</string>
-    <string name="app_sensor_copy_different">The number of sensor IDs to be copied is different</string>
+    <string name="app_sendor_firmware_updated">Sensor firmware has been updated. Do you want to update again?</string>
+    <string name="app_sensor_copy_different">Sensor quantity is not matching.</string>
     <string name="app_sensor_info">SENSOR INFORMATION</string>
-    <string name="app_sensor_info_position">Check Sensor Installation Location</string>
+    <string name="app_sensor_info_position">Check Sensor Installation Location</string>
     <string name="app_sensor_info_read">Read sensor</string>
     <string name="app_sensor_quantity">Sensor Quantity</string>
-    <string name="app_sensor_repeated">Sensor repeated</string>
+    <string name="app_sensor_repeated">Duplicated sensor</string>
     <string name="app_setting">Setting</string>
     <string name="app_setting_bluetooth">Setting/Bluetooth</string>
     <string name="app_setting_device_information">Setting/Device information</string>
@@ -390,54 +393,54 @@
     <string name="app_setting_unit">Setting/Unit</string>
     <string name="app_setting_wifi">Setting/WIFI</string>
     <string name="app_setup">Setup</string>
-    <string name="app_show_last_information">Show the last time information on the use.</string>
+    <string name="app_show_last_information">Show the last data.</string>
     <string name="app_sign_in">Sign in</string>
-    <string name="app_sign_ing">Sign in…</string>
+    <string name="app_sign_ing">Signing in…</string>
     <string name="app_size">822.1MB</string>
     <string name="app_sleep">Sleep</string>
     <string name="app_sounds_ranger_alerts">Ranger and Alerts</string>
     <string name="app_sounds_shocl">Shock</string>
-    <string name="app_sounds_vibrate">Vibrae</string>
+    <string name="app_sounds_vibrate">Vibrate</string>
     <string name="app_sounds_vibration">Sounds &amp; Vibration</string>
     <string name="app_ssid">SSID</string>
     <string name="app_start">Start</string>
     <string name="app_submit">Submit</string>
-    <string name="app_sure">Sure</string>
+    <string name="app_sure">Yes</string>
     <string name="app_system_on">On</string>
-    <string name="app_system_password_tips">Please enter your password</string>
+    <string name="app_system_password_tips">Please enter password</string>
     <string name="app_system_reset">System Reset</string>
     <string name="app_system_update">System Update</string>
     <string name="app_system_update_auto">Automatic Update</string>
     <string name="app_temp">°C</string>
     <string name="app_temp_title">Temp.</string>
     <string name="app_tigger">Trigger</string>
-    <string name="app_tips">For develop information, please visite the website:www.orange-electronic.com</string>
+    <string name="app_tips">For developer information, please visit the website:www.orange-electronic.com</string>
     <string name="app_tips_notifications">Tips notifications</string>
     <string name="app_to_program_sensor">to program sensor</string>
-    <string name="app_to_trigger_sensor">Press the Trigger sensor</string>
+    <string name="app_to_trigger_sensor">Press Trigger sensor</string>
     <string name="app_trigger">trigger</string>
     <string name="app_unit">Unit</string>
     <string name="app_units_numeral">Numeral system</string>
     <string name="app_units_temp">Temperature</string>
     <string name="app_units_tire">Tire pressure</string>
-    <string name="app_update_completed">Update completed</string>
+    <string name="app_update_completed">Updating completed</string>
     <string name="app_updating">Updating…</string>
     <string name="app_updating_model_database">Updating model database</string>
     <string name="app_user_manual">User`s manual</string>
     <string name="app_vehicle_payment_updated">There is an update to the vehicle payment database. Do you want to update
-        it?
+        it? There is a new update. Do you want to update?
     </string>
     <string name="app_version">OG 1.0.1</string>
     <string name="app_voltage">Voltage:</string>
     <string name="app_wiFi_scan_failed">WiFi scan failed</string>
     <string name="app_wifi">WIFI</string>
     <string name="app_wifi_ask">Ask to join Networks</string>
-    <string name="app_wifi_auto_tips">Known networks will be automatically. If no known networks are avalible ,you will
-        be have to manualy select a networks.
+    <string name="app_wifi_auto_tips">Known networks will be automatically. If no known networks are available ,you will
+        have to manually select a networks.
     </string>
     <string name="app_wifi_choose">CHOOSE A NETWORK</string>
     <string name="app_wifi_connected">Wifi Connected</string>
-    <string name="app_wifi_connecting">Wifi Connection…</string>
+    <string name="app_wifi_connecting">Wifi Connecting…</string>
     <string name="app_wifi_disconnected">Wifi Disconnected</string>
     <string name="app_wifi_setting">Wifi</string>
     <string name="app_writing_model_database">Writing to model database</string>
@@ -454,7 +457,7 @@
     <string name="array_autolock_thirty">30 minutes</string>
     <string name="array_language_english">English</string>
     <string name="array_language_german">Deutsch</string>
-    <string name="array_language_italian">italiano</string>
+    <string name="array_language_italian">Italiano</string>
     <string name="array_language_simch">简体中文</string>
     <string name="array_language_trach">繁體中文</string>
     <string name="array_unit_auto">Auto</string>
@@ -467,15 +470,15 @@
     <string name="array_unit_psi">Psi</string>
     <string name="autolock">Changing the Sleep Timer Settings</string>
     <string name="be_register">Device has been registered</string>
-    <string name="cancel">cancel</string>
-    <string name="checkscan">Please make sure sensor is on USB PAD, and then choose tire position to start scanning</string>
+    <string name="cancel">Cancel</string>
+    <string name="checkscan">Please make sure sensor is inserted in USB PAD, and then choose tire position to start scanning</string>
     <string name="confirm_password">Please confirm your password</string>
     <string name="dayago">1 day ago</string>
     <string name="enginer">Engineering mode</string>
-    <string name="error">error</string>
-    <string name="errorpass">account or password incorrect</string>
+    <string name="error">Error</string>
+    <string name="errorpass">Account or password incorrect</string>
     <string name="hourago">1 hour ago</string>
-    <string name="idcopyobd">ID Copy by OBD</string>
+    <string name="idcopyobd">ID Copy by OBDII</string>
     <string name="idusbpad">ID Copy (USB PAD)</string>
     <string name="infomation_data_version">Data Version</string>
     <string name="infomation_module">Module</string>
@@ -485,103 +488,105 @@
     <string name="infomation_version">Version</string>
     <string name="is_latest">To update to the latest version</string>
     <string name="keyin">key in</string>
-    <string name="maxsize">max size is 12</string>
+    <string name="maxsize">Max quantity is 4</string>
     <string name="minuteago">1 minute ago</string>
     <string name="monthago">1 month ago</string>
     <string name="need_upadte">Please update to the latest version</string>
-    <string name="new_way">Enter new sensor ID code</string>
+    <string name="new_way">Enter new sensor ID</string>
     <string name="nointer">Internet connection timeout</string>
     <string name="nointernet">Internet connection timeout  </string>
     <string name="norelarm">Under construction</string>
     <string name="notempty">Message cannot be empty</string>
-    <string name="original_way">Enter original sensor ID code</string>
+    <string name="original_way">Enter original sensor ID</string>
     <string name="paired_with_your_device">paired with your device</string>
     <string name="prusbpad">Program (USB PAD)</string>
     <string name="secago">just</string>
     <string name="sendfalse">Transfer failed</string>
     <string name="sendsuccess">Successful transfer</string>
+    <string name="sensor_ID_number">sensor ID number</string>
     <string name="signfall">Login failed</string>
     <string name="step1_1">Step 1.\n
-        Please connect the USB TPMS programming cable to cell phone and sensor
+        Please connect smart phone with sensor by the USB TPMS programming cable.
     </string>
-    <string name="step1_2">Step 2.\nClik Program ( USB TPMS )
+    <string name="step1_2">Step 2.\nClick Program ( USB TPMS )
     </string>
-    <string name="step1_3">Step 3.\n 1. Confirm programming cable is connected\n
-        2. Confirm programming mode\n
-        3. Select to confirm the vehicle information method</string>
-    <string name="step1_4">Step 4-1.\n press the scan button, scan the QR code of the vehicle information you need in the catalog and skip to step 6.</string>
-    <string name="step1_5">Step 4-2.\n press the vehicle information button, select the make →   model → year
+    <string name="step1_3">Step 3.\n 1. Make sure programming cable is well connected\n
+        2. Select Program or ID Copy\n
+        3. Select the way you would like to choose a vehicle</string>
+    <string name="step1_4">Step 4-1.\n Scan Code: Tap the scan button,to scan the QR code of the vehicle you need in the catalog and go to step 6.</string>
+    <string name="step1_5">Step 4-2.\n Vehicle Selection: Choose the make → model → year
     </string>
-    <string name="step1_6">Step 5.\n Confirm the vehicle information in prompt bar is correct and press "START" to program </string>
+    <string name="step1_6">Step 5.\n Check if the MMY is correct and press "START" to program </string>
     <string name="step1_7">Step 6.\n After the program is completed, if you need to continue program the same data sensor, please replace the next sensor and press PROG.SENSOR
     </string>
-    <string name="step1_8">Step 7.\n Program fail , please press RE-PROGRAM button to re-execute program.
+    <string name="step1_8">Step 7.\n Program failed, please press RE-PROGRAM button to re-program.
     </string>
     <string name="step2_1">Step 1.
-        Please connect the USB TPMS programming cable to cell phone and sensor
+        Please connect smart phone and sensor with the USB TPMS programming cable.
     </string>
     <string name="step2_2">Step 2.
-        Clik Program ( USB TPMS )
+        Click ID Copy ( USB TPMS )
     </string>
-    <string name="step2_3">Step 3.\n1. Confirm programming cable is connected\n
-        2. Confirm programming mode\n
-        3. Select to confirm the vehicle information method</string>
-    <string name="step2_4">Step 4-1.\n press the scan button, scan the QR code of the vehicle information you need in the catalog and skip to step 6.</string>
-    <string name="step2_5">Step 4-2.\n press the vehicle information button, select the make →   model → year
+    <string name="step2_3">Step 3.\n1. Make sure programming cable is well connected\n
+        2. Select Program or ID Copy\n
+        3. Select the way you would like to choose a vehicle</string>
+    <string name="step2_4">Step 4-1.\n Scan Code: Tap the scan button to scan the QR code of the vehicle you need in the catalog and go to step 6.</string>
+    <string name="step2_5">Step 4-2.\n Vehicle Selection: Choose the make → model → year
     </string>
-    <string name="step2_6">Step 5.\n Select original sensor ID input method  </string>
-    <string name="step2_7">Step 6.\n 1. input original ID number
-        2. press "PROGRAM " to proceed program
+    <string name="step2_6">Step 5.\n Select the way you would like to input original ID.</string>
+    <string name="step2_7">Step 6.\n 1. Input the original ID number
+        2. Press "PROGRAM" to start programming.
     </string>
     <string name="step2_8">Step 7.\n After the program is completed, if you need to continue to copy other sensors, please replace the next sensor and press PROG.SENSOR
     </string>
-    <string name="step2_9">Step 8.\n Program fail , please press RE-PROGRAM button to re-execute program.</string>
-    <string name="step3_1">Step 1.\n Please connect the power cable first, confirm if the USB PAD is over-current ( the bottom green light is on)  then put the pre-program sensor into
+    <string name="step2_9">Step 8.\n If the programming fails, please press RE-PROGRAM button to re-program.</string>
+    <string name="step3_1">Step 1.\n Please connect the cable to the pad with power supply(portable charger or laptop…etc.) If the light on pad is green, it is well connected with power supply. Then insert the USB sensor to the pad.
     </string>
-    <string name="step3_2">Step 2.\n Clik Program ( USB PAD )
+    <string name="step3_2">Step 2.\n Click Program ( USB PAD )
     </string>
-    <string name="step3_3">Step 3.\n USB PAD will pair with your phone for Bluetooth
-        (Please make sure the phone location function is turned on)
+    <string name="step3_3">Step 3.\n Pair the PAD with your Smartphone via Bluetooth. Make sure the location/GPS service is enabled.
     </string>
-    <string name="step3_4">Step 4.\n 1. Confirm USB PAD is connected\n
-        2. Confirm programming mode\n
-        3. Select to confirm the vehicle information method</string>
-    <string name="step3_5">Step 5-1.\n press the scan button, scan the QR code of the vehicle information you need in the catalog and skip to step 6.</string>
-    <string name="step3_6">Step 5-2.\n press the vehicle information button, select the make →   model → year
+    <string name="step3_4">Step 4.\n 1. Check USB PAD is connected\n
+        2. Select ID Copy or Program\n
+        3. Choose the way you would like to select a vehicle</string>
+    <string name="step3_5">Step 5-1.\n Scan Code: Press the scan button to scan the QR code in the catalog and skip to Step 6.</string>
+    <string name="step3_6">Step 5-2.\n Vehicle Selection: Choose the make → model → year
     </string>
-    <string name="step3_7">Step 6.\n After selecting the vehicle information, the sensor  in the PAD will be automatically read in sequence. After reading is completed, please press PROGRAM SENSOR.
+    <string name="step3_7">Step 6.\n After choosing a vehicle, sensors in the PAD will be automatically detected. After the detect is completed, please press PROGRAM SENSOR.
     </string>
-    <string name="step3_8">Step 7.\n After the program is completed, if you need to    program the same data sensor, please replace sensor in the USB PAD and press PROG.SENSOR
+    <string name="step3_8">Step 7.\n Program completed. If you would like to program with the same vehicle, please replace sensor in the USB PAD and press PROG.SENSOR
     </string>
-    <string name="step3_9">Step 8.\n Program fail , please press RE-PROGRAM button to re-execute program.
+    <string name="step3_9">Step 8.\n If program fails, please press RE-PROGRAM button to re-program.
     </string>
-    <string name="step4_1">Step 1.\n Please connect the power cable first, confirm if the USB PAD is over-current ( the bottom green light is on)  then put the pre-program sensor into
+    <string name="step4_1">Step 1.\n Please connect the cable to the pad with power supply(portable charger or laptop…etc. If the light on pad is green, it is well connected with power supply. Then insert the USB sensor to the pad.
     </string>
-    <string name="step4_10">Step 9.\n After the program is completed, if you need to  copy other sensor, please replace the sensor in USB PAD then press PROG.SENSOR
+    <string name="step4_10">Step 9.\n After the program is completed, if you would like to copy other sensor, please replace the sensor in USB PAD then press PROG.SENSOR
     </string>
-    <string name="step4_11">Step 10.\n Program fail , please press RE-PROGRAM button to re-execute program.</string>
-    <string name="step4_2">Step 2.\n Clik Program ( USB PAD )
+    <string name="step4_11">Step 10.\n If the programming fails, please press RE-PROGRAM button to re-program.</string>
+    <string name="step4_2">Step 2.\n Click Program ( USB PAD )
     </string>
-    <string name="step4_3">Step 3.\n USB PAD will pair with your phone for Bluetooth
-        (Please make sure the phone location function is turned on)
+    <string name="step4_3">Step 3.\n Pair the PAD with your Smartphone via Bluetooth. Make sure the location/GPS service is enabled.
     </string>
-    <string name="step4_4">Step 4.\n 1. Confirm USB PAD is connected
-        2. Confirm programming mode
-        3. Select to confirm the vehicle information method</string>
-    <string name="step4_5">Step 5-1.\n press the scan button, scan the QR code of the vehicle information you need in the catalog and skip to step 6.</string>
-    <string name="step4_6">Step 5-2.\n press the vehicle information button, select the make →   model → year
+    <string name="step4_4">Step 4.\n 1. Check USB PAD is connected
+        2. Select ID Copy or Program
+        3. Choose the way you would like to select a vehicle</string>
+    <string name="step4_5">Step 5-1.\n Scan Code: Press the scan button to scan the QR code in the catalog and skip to Step 6.</string>
+    <string name="step4_6">Step 5-2.\n Vehicle Selection: Choose the make → model → year
     </string>
-    <string name="step4_7">Step 6.\n Select original sensor ID input method  </string>
-    <string name="step4_8">Step 7.\n Please input the original sensor ID according to the order of the wheels. After inputting, please press the next step.
+    <string name="step4_7">Step 6.\n Select the way you would like to input original ID.</string>
+    <string name="step4_8">Step 7.\n Input the original ID number in the sequence and press NEXT
     </string>
-    <string name="step4_9">Step 8.\n The USB TPMS will automatically read the sensors in the PAD in sequence.
+    <string name="step4_9">Step 8.\n The USB TPMS will automatically detect the sensors in the PAD.
         After reading is completed, please press PROGRAM SENSOR </string>
     <string name="store_type">Store type</string>
     <string name="to_give">The application might use your area to give you local content</string>
+    <string name="transfer">Start Transfer</string>
     <string name="update">update</string>
-    <string name="update_success">update completed</string>
-    <string name="updatefault">update false,Please reconnect wifi and try again!</string>
-    <string name="wantreprogram">Do you want to Re-Program?</string>
-    <string name="would_like_to_with_pair">" USB PDA " would like to with pair your smartphone.</string>
+    <string name="update_success">Update completed</string>
+    <string name="updatefault">update failed. Please reconnect WIFI and try again!</string>
+    <string name="wait">waiting...</string>
+    <string name="wantreprogram">Do you want to reloading?</string>
+    <string name="would_like_to_with_pair">" USB PAD " would like to pair with your Smartphone.</string>
+    <string name="wrongmmy">Wrong MMY</string>
     <string name="yeargo">1 year ago</string>
 </resources>

@@ -92,5 +92,5 @@ interface control {
     //重啟app
     fun restart()
     //檢查更新並返回版本號true跳轉至商店反之不跳轉，
-    fun checkUpdate(a:Boolean):String?
+    fun checkUpdate(bundle:String,a:Boolean):String?
 }
