@@ -186,7 +186,7 @@
     <string name="Log_out">Disconnettersi</string>
     <string name="Are_you_sure_you_want_to_log_out">Sei sicuro di voler uscire?</string>
     <string name="Yes">sì</string>
-    <string name="cancel">CancellaCancella</string>
+    <string name="cancel">Cancella</string>
     <string name="ProgramUSB_TPMS">Program (USB TPMS)</string>
     <string name="Download_MYY_data">Scarica i dati MMA </string>
     <string name="ID_COPY">Copia ID</string>
