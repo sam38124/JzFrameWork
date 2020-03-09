@@ -407,7 +407,7 @@
     <string name="array_unit_psi">Psi</string>
     <string name="autolock">Changing the Sleep Timer Settings</string>
     <string name="be_register">Il dispositivo è stato registrato</string>
-    <string name="cancel">CancellaCancella</string>
+    <string name="cancel">Cancella</string>
     <string name="checkscan">Assicurarsi che il sensore sia su USB PAD, quindi selezionare la posizione del pneumatico per iniziare la scansione</string>
     <string name="confirm_password">Conferma la password</string>
     <string name="dayago">1 giorno fa</string>

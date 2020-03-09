@@ -152,16 +152,25 @@ abstract class JzActivity : AppCompatActivity(),
                             mLatestVersionName
                         )
                     ) {
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data =
-                            Uri.parse("https://play.google.com/store/apps/details?id=${applicationContext.packageName}")
-                        startActivity(intent)
+                        goStore()
 
                     }
                     return mLatestVersionName
                 } catch (e: Exception) {
                     e.printStackTrace()
                     return null
+                }
+            }
+
+            override fun goStore() {
+                try {
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.data =
+                            Uri.parse("https://play.google.com/store/apps/details?id=${applicationContext.packageName}")
+                        startActivity(intent)
+
+                } catch (e: Exception) {
+                    e.printStackTrace()
                 }
             }
 
