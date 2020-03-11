@@ -37,6 +37,7 @@ import kotlin.collections.ArrayList
 abstract class JzActivity : AppCompatActivity(),
     FragmentManager.OnBackStackChangedListener {
     companion object {
+        var fragid=0
         private lateinit var Switch_Instance: control
         const val Orientation_Vertical = 0;
         const val Orientation_Horizontal = 1;

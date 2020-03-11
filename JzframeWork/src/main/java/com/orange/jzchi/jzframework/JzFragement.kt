@@ -13,9 +13,15 @@ import com.orange.jzchi.jzframework.callback.RootShare
 
 abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
     var refresh = false
+
     lateinit var rootview: View
+
     var handler = Handler()
+
     lateinit var act: JzActivity
+
+    var fragId=0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         act = activity!! as JzActivity
@@ -25,6 +31,8 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        JzActivity.fragid+=1
+        fragId=JzActivity.fragid
             Log.e("rootfrag", "create${this}")
             if (::rootview.isInitialized && !refresh) {
                 return rootview
