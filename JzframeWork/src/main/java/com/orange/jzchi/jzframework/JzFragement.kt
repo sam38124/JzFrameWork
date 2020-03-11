@@ -37,6 +37,10 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
         return rootview
     }
 
+    fun haveRootView():Boolean{
+        return (::rootview.isInitialized)
+    }
+
     override fun dispatchKeyEvent(event: KeyEvent) {
     }
 //===============================Abstract Function===============================
