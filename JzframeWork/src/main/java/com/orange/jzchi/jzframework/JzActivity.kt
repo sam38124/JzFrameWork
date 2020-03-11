@@ -148,7 +148,7 @@ abstract class JzActivity : AppCompatActivity(),
                 try {
                     if(!a){return versionChecker.execute().get()}
                     val mLatestVersionName = versionChecker.execute().get()
-                    if (java.lang.Double.parseDouble(BuildConfig.VERSION_NAME) != java.lang.Double.parseDouble(
+                    if (PackageInformation().getVersionName().toDouble() != java.lang.Double.parseDouble(
                             mLatestVersionName
                         )
                     ) {
