@@ -517,11 +517,7 @@ abstract class JzActivity : AppCompatActivity(),
 
                 override fun dismiss() {
                     super.dismiss()
-                    for(i in mDialog){
-                        if(i.tag==tag){
-                            mDialog.remove(i)
-                        }
-                    }
+                    clearDialog(tag)
                     caller.dismess()
                 }
             }
@@ -570,11 +566,7 @@ abstract class JzActivity : AppCompatActivity(),
 
                     override fun dismiss() {
                         super.dismiss()
-                        for(i in mDialog){
-                            if(i.tag==tag){
-                                mDialog.remove(i)
-                            }
-                        }
+                        clearDialog(tag)
                         caller.dismess()
                     }
                 }
@@ -619,6 +611,15 @@ abstract class JzActivity : AppCompatActivity(),
         }
         return allchildren
     }
+private fun clearDialog(tag:String){
+    val a=ArrayList<DiaClass>()
+    for(i in mDialog){
+        if(i.tag!=tag){
+            a.add(i)
+        }
+    }
+    mDialog=a
+}
 
     private fun DaiLogDismiss(tag:String) {
         try {
