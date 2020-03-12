@@ -517,6 +517,7 @@ abstract class JzActivity : AppCompatActivity(),
 
                 override fun dismiss() {
                     super.dismiss()
+                    getControlInstance().closeDiaLog(tag)
                     caller.dismess()
                 }
             }
@@ -566,6 +567,7 @@ abstract class JzActivity : AppCompatActivity(),
                     override fun dismiss() {
                         super.dismiss()
                         caller.dismess()
+                        getControlInstance().closeDiaLog(tag)
                     }
                 }
             caller.dialog=dialog
