@@ -658,7 +658,7 @@ private fun clearDialog(tag:String){
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         Log.e("event", "" + event)
-        if (Fraging != null) {
+        if (Fraging != null && Fraging is DiapathKey) {
             (Fraging as DiapathKey).dispatchKeyEvent(event)
         }//按鍵分發
         return if (keyEventListener(event)) {
