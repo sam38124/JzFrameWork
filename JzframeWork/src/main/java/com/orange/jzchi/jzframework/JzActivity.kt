@@ -175,6 +175,10 @@ abstract class JzActivity : AppCompatActivity(),
                 }
             }
 
+            override fun getHandler():Handler {
+                return handler
+            }
+
             override fun getNowPage(): Fragment? {
                 return Fraging
             }

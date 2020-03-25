@@ -1,6 +1,7 @@
 package com.orange.jzchi.jzframework.callback
 
 import android.app.Dialog
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import com.orange.jzchi.jzframework.DiaClass
 import com.orange.jzchi.jzframework.JzActivity
@@ -95,4 +96,6 @@ interface control {
     fun checkUpdate(a:Boolean):String?
     //前往商店
     fun goStore()
+    //取得handler
+    fun getHandler(): Handler
 }
