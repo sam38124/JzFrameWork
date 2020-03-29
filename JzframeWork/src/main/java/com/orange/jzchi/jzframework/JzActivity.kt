@@ -37,7 +37,7 @@ import kotlin.collections.ArrayList
 abstract class JzActivity : AppCompatActivity(),
     FragmentManager.OnBackStackChangedListener {
     companion object {
-        var fragid=0
+        var fragid = 0
         private lateinit var Switch_Instance: control
         const val Orientation_Vertical = 0;
         const val Orientation_Horizontal = 1;
@@ -59,7 +59,7 @@ abstract class JzActivity : AppCompatActivity(),
     private var permissionRequestCode = 10
     var Fraging: Fragment? = null
     var FragName = ""
-    var mDialog= ArrayList<DiaClass>()
+    var mDialog = ArrayList<DiaClass>()
     lateinit var permissionCaller: permission_C
     lateinit var rootview: View
     lateinit var NavagationRoot: DrawerLayout
@@ -73,7 +73,9 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        if(savedInstanceAble()){ super.onCreate(savedInstanceState)}else{
+        if (savedInstanceAble()) {
+            super.onCreate(savedInstanceState)
+        } else {
             super.onCreate(null)
         }
         setContentView(LayoutId)
@@ -82,9 +84,9 @@ abstract class JzActivity : AppCompatActivity(),
         supportFragmentManager.addOnBackStackChangedListener(this)
         rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
-            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean,tag: String) {
+            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
                 screenAlwaysOn()
-                ShowDaiLog(Layout,cancelable,swip,object: SetupDialog() {
+                ShowDaiLog(Layout, cancelable, swip, object : SetupDialog() {
                     override fun setup(rootview: Dialog) {
 
                     }
@@ -96,19 +98,20 @@ abstract class JzActivity : AppCompatActivity(),
                     override fun keyevent(event: KeyEvent): Boolean {
                         return cancelable
                     }
-                },tag)
+                }, tag)
             }
 
             override fun openAPK() {
                 handler.post {
-                    val file =  File("/sdcard/update/beta.apk");
-                    val intent =  Intent(Intent.ACTION_VIEW);
+                    val file = File("/sdcard/update/beta.apk");
+                    val intent = Intent(Intent.ACTION_VIEW);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    var data:Uri?=null;
+                    var data: Uri? = null;
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {//判断版本大于等于7.0
                         // "sven.com.fileprovider.fileprovider"即是在清单文件中配置的authorities
                         // 通过FileProvider创建一个content类型的Uri
-                        data = FileProvider.getUriForFile(this@JzActivity, "abc.fileprovider", file);
+                        data =
+                            FileProvider.getUriForFile(this@JzActivity, "abc.fileprovider", file);
                         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);// 给目标应用一个临时授权
                     } else {
                         data = Uri.fromFile(file);
@@ -119,8 +122,8 @@ abstract class JzActivity : AppCompatActivity(),
                 }
             }
 
-            override fun isFrontDesk():Boolean {
-               return appOnForeground()
+            override fun isFrontDesk(): Boolean {
+                return appOnForeground()
             }
 
             override fun screenAlwaysOn() {
@@ -137,17 +140,19 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun restart() {
                 getControlInstance().closeDiaLog()
-                val intent=Intent(applicationContext,JzActivity::class.java)
+                val intent = Intent(applicationContext, JzActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 this@JzActivity.startActivity(intent)
                 android.os.Process.killProcess(android.os.Process.myPid())
             }
 
-            override fun checkUpdate(a:Boolean):String?{
+            override fun checkUpdate(a: Boolean): String? {
                 val versionChecker = VersionCheck()
-                versionChecker.packagename=applicationContext.packageName
+                versionChecker.packagename = applicationContext.packageName
                 try {
-                    if(!a){return versionChecker.execute().get()}
+                    if (!a) {
+                        return versionChecker.execute().get()
+                    }
                     val mLatestVersionName = versionChecker.execute().get()
                     if (PackageInformation().getVersionName().toDouble() != java.lang.Double.parseDouble(
                             mLatestVersionName
@@ -165,17 +170,17 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun goStore() {
                 try {
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data =
-                            Uri.parse("https://play.google.com/store/apps/details?id=${applicationContext.packageName}")
-                        startActivity(intent)
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data =
+                        Uri.parse("https://play.google.com/store/apps/details?id=${applicationContext.packageName}")
+                    startActivity(intent)
 
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
             }
 
-            override fun getHandler():Handler {
+            override fun getHandler(): Handler {
                 return handler
             }
 
@@ -195,6 +200,16 @@ abstract class JzActivity : AppCompatActivity(),
                 this@JzActivity.setLanguage(local)
             }
 
+            override fun getLanguage(): Locale? {
+                val local = getControlInstance().getPro("Language_Local", "nodata")
+                val country = getControlInstance().getPro("Language_Country", "nodata")
+                if (getControlInstance().getPro("Language_Local", "nodata") != "nodata") {
+                    return Locale(local, country)
+                } else {
+                    return null
+                }
+            }
+
             override fun findFragByTag(a: String): Fragment? {
                 return FindfragByTag(a)
             }
@@ -203,15 +218,21 @@ abstract class JzActivity : AppCompatActivity(),
                 return this@JzActivity
             }
 
-            override fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String) {
+            override fun showCustomDaiLog(
+                Layout: Int,
+                cancelable: Boolean,
+                style: Int,
+                caller: SetupDialog,
+                tag: String
+            ) {
                 screenAlwaysOn()
-                ShowDaiLog(Layout, cancelable, style, caller,tag)
+                ShowDaiLog(Layout, cancelable, style, caller, tag)
             }
 
-            override fun getDialog(tag: String):Dialog? {
-                for(i in mDialog){
-                    if(i.tag==tag){
-                        return  i.dialog
+            override fun getDialog(tag: String): Dialog? {
+                for (i in mDialog) {
+                    if (i.tag == tag) {
+                        return i.dialog
                     }
                 }
                 return null
@@ -249,28 +270,40 @@ abstract class JzActivity : AppCompatActivity(),
                 CloseApp()
             }
 
-            override fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int) {
+            override fun permissionRequest(
+                Permissions: Array<String>,
+                caller: permission_C,
+                RequestCode: Int
+            ) {
                 GetPermission(Permissions, caller, RequestCode)
             }
 
 
-            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String) {
+            override fun showDiaLog(
+                Layout: Int,
+                cancelable: Boolean,
+                swip: Boolean,
+                caller: SetupDialog,
+                tag: String
+            ) {
                 screenAlwaysOn()
-                ShowDaiLog(Layout, cancelable, swip, caller,tag)
+                ShowDaiLog(Layout, cancelable, swip, caller, tag)
             }
 
-            override fun closeDiaLog(tag:String) {
+            override fun closeDiaLog(tag: String) {
                 cancelAlwaysOn()
                 DaiLogDismiss(tag)
             }
 
             override fun closeDiaLog() {
                 try {
-                    for(i in mDialog){
+                    for (i in mDialog) {
                         i.dialog.dismiss()
                     }
                     mDialog.clear()
-                }catch (e:java.lang.Exception){e.printStackTrace()}
+                } catch (e: java.lang.Exception) {
+                    e.printStackTrace()
+                }
             }
 
             override fun setPro(key: String, value: Boolean) {
@@ -298,7 +331,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun clearPro() {
-               getSharedPreferences("Setting", Context.MODE_PRIVATE).edit().clear().commit()
+                getSharedPreferences("Setting", Context.MODE_PRIVATE).edit().clear().commit()
             }
 
             override fun goBack(tag: String) {
@@ -333,9 +366,9 @@ abstract class JzActivity : AppCompatActivity(),
                 Download.apkDownload(url, callback)
             }
         })
-        var local= getControlInstance().getPro("Language_Local","nodata")
-        var country= getControlInstance().getPro("Language_Country","nodata")
-        if(getControlInstance().getPro("Language_Local","nodata")!="nodata") {
+        var local = getControlInstance().getPro("Language_Local", "nodata")
+        var country = getControlInstance().getPro("Language_Country", "nodata")
+        if (getControlInstance().getPro("Language_Local", "nodata") != "nodata") {
             getControlInstance().setLanguage(Locale(local, country))
         }
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
@@ -499,23 +532,37 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun Toast(a: String) {
-        handler.post { android.widget.Toast.makeText(this, a, android.widget.Toast.LENGTH_SHORT).show() }
+        handler.post {
+            android.widget.Toast.makeText(this, a, android.widget.Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun Toast(id: Int) {
-        handler.post { android.widget.Toast.makeText(this, getString(id), android.widget.Toast.LENGTH_SHORT).show() }
+        handler.post {
+            android.widget.Toast.makeText(
+                this,
+                getString(id),
+                android.widget.Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
-    private fun ShowDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String) {
+    private fun ShowDaiLog(
+        Layout: Int,
+        cancelable: Boolean,
+        style: Int,
+        caller: SetupDialog,
+        tag: String
+    ) {
         try {
-            val showing=getShowing(tag)
-            if(showing!=null){
-                caller.dialog=showing.callback.dialog
-                showing.callback=caller
+            val showing = getShowing(tag)
+            if (showing != null) {
+                caller.dialog = showing.callback.dialog
+                showing.callback = caller
                 showing.callback.setup(showing.dialog)
                 return
             }
-            val dialog=object : Dialog(this, style) {
+            val dialog = object : Dialog(this, style) {
                 override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                     if (caller.keyevent(event)) {
                         return super.dispatchKeyEvent(event)
@@ -530,7 +577,7 @@ abstract class JzActivity : AppCompatActivity(),
                     caller.dismess()
                 }
             }
-            caller.dialog=dialog
+            caller.dialog = dialog
             dialog.setContentView(Layout)
             dialog.window!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
@@ -540,14 +587,14 @@ abstract class JzActivity : AppCompatActivity(),
             dialog.setCanceledOnTouchOutside(cancelable)
             dialog.show()
             if (cancelable) {
-                getAllChildViews(dialog.window!!.getDecorView(),dialog)
+                getAllChildViews(dialog.window!!.getDecorView(), dialog)
             }
             caller.setup(dialog)
             dialog.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-            val addclass=DiaClass()
-            addclass.dialog=dialog
-            addclass.tag=tag
-            addclass.callback=caller
+            val addclass = DiaClass()
+            addclass.dialog = dialog
+            addclass.tag = tag
+            addclass.callback = caller
             mDialog.add(addclass)
         } catch (e: Exception) {
             Thread.sleep(1000)
@@ -555,48 +602,54 @@ abstract class JzActivity : AppCompatActivity(),
         }
     }
 
-    private fun ShowDaiLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String) {
+    private fun ShowDaiLog(
+        Layout: Int,
+        cancelable: Boolean,
+        swip: Boolean,
+        caller: SetupDialog,
+        tag: String
+    ) {
         try {
-            val showing=getShowing(tag)
-            if(showing!=null){
-                caller.dialog=showing.callback.dialog
-                showing.callback=caller
+            val showing = getShowing(tag)
+            if (showing != null) {
+                caller.dialog = showing.callback.dialog
+                showing.callback = caller
                 showing.callback.setup(showing.dialog)
                 return
             }
-                val dialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
-                    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-                        if (caller.keyevent(event)) {
-                            return super.dispatchKeyEvent(event)
-                        } else {
-                            return false
-                        }
-                    }
-
-                    override fun dismiss() {
-                        super.dismiss()
-                        clearDialog(tag)
-                        caller.dismess()
+            val dialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
+                override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+                    if (caller.keyevent(event)) {
+                        return super.dispatchKeyEvent(event)
+                    } else {
+                        return false
                     }
                 }
-            caller.dialog=dialog
+
+                override fun dismiss() {
+                    super.dismiss()
+                    clearDialog(tag)
+                    caller.dismess()
+                }
+            }
+            caller.dialog = dialog
             dialog.setContentView(Layout)
             dialog.getWindow()!!.setLayout(
-                    WindowManager.LayoutParams.WRAP_CONTENT,
-                    WindowManager.LayoutParams.WRAP_CONTENT
-                )
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.WRAP_CONTENT
+            )
             dialog.setCancelable(true)
             dialog.setCanceledOnTouchOutside(cancelable)
             dialog.show()
-                if (cancelable) {
-                    getAllChildViews(dialog.window!!.decorView,dialog)
-                }
+            if (cancelable) {
+                getAllChildViews(dialog.window!!.decorView, dialog)
+            }
             caller.setup(dialog)
             dialog.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-            val addclass=DiaClass()
-            addclass.dialog=dialog
-            addclass.tag=tag
-            addclass.callback=caller
+            val addclass = DiaClass()
+            addclass.dialog = dialog
+            addclass.tag = tag
+            addclass.callback = caller
             mDialog.add(addclass)
         } catch (e: Exception) {
             Thread.sleep(1000)
@@ -604,14 +657,14 @@ abstract class JzActivity : AppCompatActivity(),
         }
     }
 
-    private fun getAllChildViews(view: View,dia:Dialog): List<View> {
+    private fun getAllChildViews(view: View, dia: Dialog): List<View> {
         val allchildren = ArrayList<View>()
         if (view is ViewGroup) {
             for (i in 0 until view.childCount) {
                 val viewchild = view.getChildAt(i)
                 allchildren.add(viewchild)
                 Log.d("ChildView", "$viewchild")
-                allchildren.addAll(getAllChildViews(viewchild,dia))
+                allchildren.addAll(getAllChildViews(viewchild, dia))
                 if ("$viewchild".contains("RelativeLayout")) {
                     viewchild.setOnClickListener { dia.dismiss() }
                     return allchildren
@@ -620,27 +673,29 @@ abstract class JzActivity : AppCompatActivity(),
         }
         return allchildren
     }
-private fun clearDialog(tag:String){
-    val a=ArrayList<DiaClass>()
-    for(i in mDialog){
-        if(i.tag!=tag){
-            a.add(i)
-        }
-    }
-    mDialog=a
-}
 
-    private fun DaiLogDismiss(tag:String) {
+    private fun clearDialog(tag: String) {
+        val a = ArrayList<DiaClass>()
+        for (i in mDialog) {
+            if (i.tag != tag) {
+                a.add(i)
+            }
+        }
+        mDialog = a
+    }
+
+    private fun DaiLogDismiss(tag: String) {
         try {
-            val a=ArrayList<DiaClass>()
-            for(i in mDialog){
-                if(i.tag==tag){
+            val a = ArrayList<DiaClass>()
+            for (i in mDialog) {
+                if (i.tag == tag) {
                     i.callback.dismess()
-                    i.dialog.dismiss()}else{
+                    i.dialog.dismiss()
+                } else {
                     a.add(i)
                 }
             }
-            mDialog=a
+            mDialog = a
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -652,8 +707,8 @@ private fun clearDialog(tag:String){
     }
 
     private fun setLanguage(local: Locale) {
-        getControlInstance().setPro("Language_Local",local.language)
-        getControlInstance().setPro("Language_Country",local.country)
+        getControlInstance().setPro("Language_Local", local.language)
+        getControlInstance().setPro("Language_Country", local.country)
         LanguageUtil.updateLocale(this, local);
     }
 
@@ -677,12 +732,15 @@ private fun clearDialog(tag:String){
             false
         }
     }
-   fun getShowing(tag:String):DiaClass?{
-      for(i in mDialog){
-          if(i.tag==tag){return i}
-      }
-       return null
-   }
+
+    fun getShowing(tag: String): DiaClass? {
+        for (i in mDialog) {
+            if (i.tag == tag) {
+                return i
+            }
+        }
+        return null
+    }
 //    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
 //        Log.e("event", "" + event)
 //        if (Fraging != null) {
@@ -737,8 +795,10 @@ private fun clearDialog(tag:String){
             ActivityCompat.requestPermissions(this, deniedPermissions, permissionRequestCode)
         }
     }
-     open fun appOnForeground(): Boolean {
-        val appProcesses: List<ActivityManager.RunningAppProcessInfo> =(getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager).runningAppProcesses
+
+    open fun appOnForeground(): Boolean {
+        val appProcesses: List<ActivityManager.RunningAppProcessInfo> =
+            (getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager).runningAppProcesses
         for (appProcess in appProcesses) {
             if (appProcess.processName.equals(packageName) && appProcess.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
                 return true
@@ -762,13 +822,15 @@ private fun clearDialog(tag:String){
      * 按鍵的監聽
      */
     abstract fun keyEventListener(event: KeyEvent): Boolean
+
     /**
      * 是否saveinstance
      */
     abstract fun savedInstanceAble(): Boolean
 }
-class DiaClass{
-    var tag=""
-    lateinit var dialog:Dialog
-    lateinit var callback:SetupDialog
+
+class DiaClass {
+    var tag = ""
+    lateinit var dialog: Dialog
+    lateinit var callback: SetupDialog
 }

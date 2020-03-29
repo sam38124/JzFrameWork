@@ -76,6 +76,8 @@ interface control {
     fun getRootActivity(): JzActivity
     //多國語言設定 範例:setLanuage(Locale("en"))
     fun setLanguage(local: Locale)
+    //取得設定的多國語言，如尚未設定則返回null值
+    fun getLanguage():Locale?
     //鍵盤隱藏
     fun hideKeyBoard()
     //下載apk
