@@ -333,6 +333,11 @@ abstract class JzActivity : AppCompatActivity(),
                 Download.apkDownload(url, callback)
             }
         })
+        var local= getControlInstance().getPro("Language_Local","nodata")
+        var country= getControlInstance().getPro("Language_Country","nodata")
+        if(getControlInstance().getPro("Language_Local","nodata")!="nodata") {
+            getControlInstance().setLanguage(Locale(local, country))
+        }
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         viewInit(rootview)
     }
@@ -647,8 +652,9 @@ private fun clearDialog(tag:String){
     }
 
     private fun setLanguage(local: Locale) {
+        getControlInstance().setPro("Language_Local",local.language)
+        getControlInstance().setPro("Language_Country",local.country)
         LanguageUtil.updateLocale(this, local);
-
     }
 
     private fun CloseApp() {
