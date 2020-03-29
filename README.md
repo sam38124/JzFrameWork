@@ -224,6 +224,8 @@ interface control {
     fun checkUpdate(a:Boolean):String?
     //前往商店
     fun goStore()
+    //取得handler
+    fun getHandler(): Handler
 }
 ```
 
