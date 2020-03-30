@@ -366,10 +366,8 @@ abstract class JzActivity : AppCompatActivity(),
                 Download.apkDownload(url, callback)
             }
         })
-        var local = getControlInstance().getPro("Language_Local", "nodata")
-        var country = getControlInstance().getPro("Language_Country", "nodata")
-        if (getControlInstance().getPro("Language_Local", "nodata") != "nodata") {
-            getControlInstance().setLanguage(Locale(local, country))
+        if(getControlInstance().getLanguage() != null){
+            getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
         }
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         viewInit(rootview)
