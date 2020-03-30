@@ -487,6 +487,7 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun ChangeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
+        if(getControlInstance().getLanguage()!=null){getControlInstance().setLanguage(getControlInstance().getLanguage()!!)}
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(id, Translation, tag)
@@ -513,6 +514,8 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean) {
+        if(getControlInstance().getLanguage()!=null){
+            getControlInstance().setLanguage(getControlInstance().getLanguage()!!)}
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(FragId, Translation, tag)
