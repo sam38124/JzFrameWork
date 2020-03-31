@@ -361,11 +361,11 @@ abstract class JzActivity : AppCompatActivity(),
                 Download.apkDownload(url, callback)
             }
         })
+        rootshare = RootShare(this)
         if(getControlInstance().getLanguage() != null){
             getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
         }
         setContentView(LayoutId)
-        rootshare = RootShare(this)
         NavagationRoot = findViewById(R.id.drawer)
         supportFragmentManager.addOnBackStackChangedListener(this)
         rootview = findViewById<View>(android.R.id.content).rootView
