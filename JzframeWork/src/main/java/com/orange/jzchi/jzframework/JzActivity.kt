@@ -78,11 +78,6 @@ abstract class JzActivity : AppCompatActivity(),
         } else {
             super.onCreate(null)
         }
-        setContentView(LayoutId)
-        rootshare = RootShare(this)
-        NavagationRoot = findViewById(R.id.drawer)
-        supportFragmentManager.addOnBackStackChangedListener(this)
-        rootview = findViewById<View>(android.R.id.content).rootView
         setSwitchInstance(object : control {
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
                 screenAlwaysOn()
@@ -369,6 +364,11 @@ abstract class JzActivity : AppCompatActivity(),
         if(getControlInstance().getLanguage() != null){
             getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
         }
+        setContentView(LayoutId)
+        rootshare = RootShare(this)
+        NavagationRoot = findViewById(R.id.drawer)
+        supportFragmentManager.addOnBackStackChangedListener(this)
+        rootview = findViewById<View>(android.R.id.content).rootView
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         viewInit(rootview)
     }
