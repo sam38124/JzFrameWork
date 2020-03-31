@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.orange.jzchi.jzframework.callback.DiapathKey
 import com.orange.jzchi.jzframework.callback.RootShare
+import com.orange.jzchi.jzframework.tool.LanguageUtil
 
 abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
     var refresh = false
@@ -39,11 +40,10 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
             }
             rootview = inflater.inflate(layout, container, false)
             rootview.setOnClickListener { act.HideKeyBoard() }
-            viewInit()
         if(JzActivity.getControlInstance().getLanguage() != null){
-            JzActivity.getControlInstance().setLanguage(JzActivity.getControlInstance().getLanguage()!!)
+            LanguageUtil.updateLocale(context, JzActivity.getControlInstance().getLanguage());
         }
-
+        viewInit()
         return rootview
     }
 
