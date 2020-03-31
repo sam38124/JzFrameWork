@@ -80,6 +80,9 @@ abstract class JzActivity : AppCompatActivity(),
         }
         setSwitchInstance(object : control {
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
+                if(getControlInstance().getLanguage() != null){
+                    getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
+                }
                 screenAlwaysOn()
                 ShowDaiLog(Layout, cancelable, swip, object : SetupDialog() {
                     override fun setup(rootview: Dialog) {
@@ -281,6 +284,9 @@ abstract class JzActivity : AppCompatActivity(),
                 caller: SetupDialog,
                 tag: String
             ) {
+                if(getControlInstance().getLanguage() != null){
+                    getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
+                }
                 screenAlwaysOn()
                 ShowDaiLog(Layout, cancelable, swip, caller, tag)
             }
