@@ -3,6 +3,7 @@ package com.orange.jzchi.jzframework.tool;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
 import android.util.DisplayMetrics;
 import com.google.gson.Gson;
@@ -47,6 +48,7 @@ public class LanguageUtil {
 
 
     private static void setLocale(Context pContext, Locale pUserLocale) {
+
         SharedPreferences spLocal = pContext.getSharedPreferences(LOCALE_SP, Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = spLocal.edit();
         String json = new Gson().toJson(pUserLocale);
@@ -56,19 +58,16 @@ public class LanguageUtil {
 
 
     public static boolean updateLocale(Context context, Locale locale) {
-        if (needUpdateLocale(context, locale)) {
-            Configuration configuration = context.getResources().getConfiguration();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                configuration.setLocale(locale);
-            } else {
-                configuration.locale = locale;
-            }
-            DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-            context.getResources().updateConfiguration(configuration, displayMetrics);
-            setLocale(context, locale);
-            return true;
+        Resources resources = context.getResources();
+        DisplayMetrics dm = resources.getDisplayMetrics();
+        Configuration config = resources.getConfiguration();
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN_MR1){
+            config.setLocale(locale);
+        } else {
+            config.locale = locale;
         }
-        return false;
+        resources.updateConfiguration(config, dm);
+        return true;
     }
 
 
