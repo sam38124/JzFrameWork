@@ -7,4 +7,8 @@
     <declare-styleable name="CustomTitleView">
         <attr name="TextSizeRatio" format="string" />
     </declare-styleable>
+    <integer name="card_flip_half_time">250</integer>
+    <integer name="card_flip_full_time">250</integer>
+    <integer name="card_flip_time_full">250</integer>
+
 </resources>

@@ -26,9 +26,15 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim slide_left_in
+anim slide_left_out
+anim slide_right_in
+anim slide_right_out
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
+animator enter_animtor
+animator exit_animtor
 animator mtrl_btn_state_list_anim
 animator mtrl_btn_unelevated_state_list_anim
 animator mtrl_chip_state_list_anim
@@ -36,6 +42,8 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+animator pop_enter_animtor
+animator pop_exit_animtor
 attr TextSizeRatio
 attr action
 attr actionBarDivider
@@ -1302,6 +1310,9 @@ integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
 integer bottom_sheet_slide_duration
 integer cancel_button_image_alpha
+integer card_flip_full_time
+integer card_flip_half_time
+integer card_flip_time_full
 integer config_navAnimTime
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines

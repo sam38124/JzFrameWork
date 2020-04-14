@@ -10,6 +10,9 @@
     <color name="colorStatusText">#FFDB58</color>
     <color name="diaback">#B3181818</color>
     <color name="white">#FFFFFF</color>
+    <integer name="card_flip_full_time">250</integer>
+    <integer name="card_flip_half_time">250</integer>
+    <integer name="card_flip_time_full">250</integer>
     <string name="Account_Number">Account Number</string>
     <string name="Account_creation">Account creation</string>
     <string name="Agree">Agree</string>
@@ -623,12 +626,12 @@
     <string name="would_like_to_with_pair">" USB PDA " would like to with pair your smartphone.</string>
     <string name="yeargo">1 year ago</string>
     <style name="MainAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="windowActionBar">false</item> <!-- 加这行 -->
-        <item name="windowNoTitle">true</item> <!-- 再加这行 -->
+        <item name="windowActionBar">false</item> 
+        <item name="windowNoTitle">true</item> 
         <item name="android:textColor">#32414E</item>
     </style>
     <style name="MyDialog" parent="Theme.AppCompat.Light.Dialog">

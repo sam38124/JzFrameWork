@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!--最终翻译-->
     <string name="app_agree">同意</string>
     <string name="app_disagree">不同意</string>
@@ -20,7 +19,6 @@
     <string name="app_home_cloud_information">雲端資訊</string>
     <string name="app_home_online_shopping">線上訂購</string>
     <string name="app_user_manual">使用說明</string>
-
     <string name="app_scan_2d_code">掃描二維碼</string>
     <string name="app_mmy">車輛選擇</string>
     <string name="app_select_car_makes">選擇車型</string>
@@ -38,7 +36,6 @@
     <string name="app_new_sensor_list">新感測器列表</string>
     <string name="app_my_favorite">我的最愛</string>
     <string name="app_scan">掃描</string>
-
     <string name="app_setting">系統設定</string>
     <string name="app_setting_my_favorite">系統設定/我的最愛</string>
     <string name="app_my_favorite_setting">設定我的最愛</string>

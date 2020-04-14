@@ -3,6 +3,7 @@ package com.orange.jzchi.jzframework.callback
 import android.app.Dialog
 import android.os.Handler
 import androidx.fragment.app.Fragment
+import com.orange.jzchi.jzframework.Animator
 import com.orange.jzchi.jzframework.DiaClass
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
@@ -12,12 +13,17 @@ import java.util.*
 interface control {
     /*所有對外暴露的方法*/
 
-    //頁面切換
-    fun changePage(Translation: Fragment, tag: String, goback: Boolean)
+
     //設定首頁
     fun setHome(Translation: Fragment, tag: String)
+    //頁面切換
+    fun changePage(Translation: Fragment, tag: String, goback: Boolean)
+    //頁面切換並且自定義轉場動畫
+    fun changePage(Translation: Fragment, tag: String, goback: Boolean,animator:Array<Int>)
     //頁面中的fragment切換
     fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
+    //頁面中的fragment切換並且自定義轉場動畫
+    fun changeFrag(Translation: Fragment, id: Int,tag: String, goback: Boolean,animator:Array<Int>)
     //透過tag取得推棧中的Fragement
     fun findFragByTag(a:String):Fragment?
     //取得現在顯示的頁面
@@ -76,8 +82,8 @@ interface control {
     fun getRootActivity(): JzActivity
     //多國語言設定 範例:setLanuage(Locale("en"))
     fun setLanguage(local: Locale)
-    //取得設定的多國語言，如尚未設定則返回null值
-    fun getLanguage():Locale?
+    //取得設定的多國語言
+    fun getLanguage():Locale
     //鍵盤隱藏
     fun hideKeyBoard()
     //下載apk

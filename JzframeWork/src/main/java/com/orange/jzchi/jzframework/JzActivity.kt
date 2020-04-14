@@ -22,14 +22,12 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.orange.jzchi.BuildConfig
 import com.orange.jzchi.R
 import com.orange.jzchi.jzframework.callback.*
 import com.orange.jzchi.jzframework.tool.LanguageUtil
 import com.orange.jzchi.jzframework.tool.VersionCheck
 import com.orange.jzchi.jzframework.util.Download
 import com.orange.jzchi.jzframework.util.PackageInformation
-import kotlinx.android.synthetic.main.activity_scan_ble.*
 import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
@@ -80,9 +78,7 @@ abstract class JzActivity : AppCompatActivity(),
         }
         setSwitchInstance(object : control {
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
-                if(getControlInstance().getLanguage() != null){
-                    getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
-                }
+                getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
                 screenAlwaysOn()
                 ShowDaiLog(Layout, cancelable, swip, object : SetupDialog() {
                     override fun setup(rootview: Dialog) {
@@ -198,13 +194,13 @@ abstract class JzActivity : AppCompatActivity(),
                 this@JzActivity.setLanguage(local)
             }
 
-            override fun getLanguage(): Locale? {
+            override fun getLanguage(): Locale {
                 val local = getControlInstance().getPro("Language_Local", "nodata")
                 val country = getControlInstance().getPro("Language_Country", "nodata")
                 if (getControlInstance().getPro("Language_Local", "nodata") != "nodata") {
                     return Locale(local, country)
                 } else {
-                    return null
+                    return Locale.getDefault()
                 }
             }
 
@@ -356,11 +352,30 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun changePage(Translation: Fragment, tag: String, goback: Boolean) {
-                ChangePage(Translation, tag, goback)
+                ChangePage(Translation, tag, goback,null)
+            }
+
+            override fun changePage(
+                Translation: Fragment,
+                tag: String,
+                goback: Boolean,
+                animator: Array<Int>
+            ) {
+                ChangePage(Translation, tag, goback,animator)
             }
 
             override fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
-                ChangeFrag(Translation, id, tag, goback)
+                ChangeFrag(Translation, id, tag, goback,null)
+            }
+
+            override fun changeFrag(
+                Translation: Fragment,
+                id: Int,
+                tag: String,
+                goback: Boolean,
+                animator: Array<Int>
+            ) {
+                ChangeFrag(Translation, id, tag, goback,animator)
             }
 
             override fun apkDownload(url: String, callback: DownloadCallback) {
@@ -492,21 +507,26 @@ abstract class JzActivity : AppCompatActivity(),
         NavagationRoot.openDrawer(GravityCompat.START)
     }
 
-    private fun ChangeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
-        if(getControlInstance().getLanguage()!=null){getControlInstance().setLanguage(getControlInstance().getLanguage()!!)}
+    private fun ChangeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean,anim:Array<Int>?) {
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
+            if(anim!=null){
+                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            }
             transaction.replace(id, Translation, tag)
                 .addToBackStack(FragName)
-                .commitAllowingStateLoss()
+                .commit()
         } else {
             Fraging = Translation
             FragName = tag
             Log.d("switch", tag)
             changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
+            if(anim!=null){
+                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            }
             transaction.replace(id, Translation, tag)
-                .commitAllowingStateLoss()
+                .commit()
         }
     }
 
@@ -516,14 +536,15 @@ abstract class JzActivity : AppCompatActivity(),
 
     private fun SetHome(Translation: Fragment, tag: String) {
         supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        ChangePage(Translation, tag, false)
+        ChangePage(Translation, tag, false,null)
     }
 
-    private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean) {
-        if(getControlInstance().getLanguage()!=null){
-            getControlInstance().setLanguage(getControlInstance().getLanguage()!!)}
+    private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean,anim:Array<Int>?){
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
+            if(anim!=null){
+                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            }
             transaction.replace(FragId, Translation, tag)
                 .addToBackStack(FragName)
                 .commitAllowingStateLoss()
@@ -533,6 +554,9 @@ abstract class JzActivity : AppCompatActivity(),
             Log.d("switch", tag)
             changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
+            if(anim!=null){
+                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            }
             transaction.replace(FragId, Translation, tag)
                 .commitAllowingStateLoss()
         }
