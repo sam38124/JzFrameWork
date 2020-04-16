@@ -6,9 +6,11 @@ import android.net.Uri
 import android.util.Log
 import android.view.KeyEvent
 import android.widget.Button
+import com.orange.jzchi.jzframework.Animator
 import com.orange.jzchi.jzframework.callback.SetupDialog
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
+import com.orange.jzchi.jzframework.Theme.Theme
 import com.orange.jzchi.jzframework.callback.DownloadCallback
 import com.orange.jzchi.jzframework.callback.permission_C
 import com.orange.jzframework.R
@@ -25,7 +27,7 @@ class Page_Sec : JzFragement(R.layout.sec) {
             swipe 決定Dialog背景是否透明反之為不透明
             R.layout.sampledialog 換成你的Dialog layout
             */
-            JzActivity.getControlInstance().showDiaLog(R.layout.sampledialog, true, false, object : SetupDialog() {
+            JzActivity.getControlInstance().showDiaLog( true, false, object : SetupDialog(R.layout.sampledialog) {
                 override fun keyevent(event: KeyEvent): Boolean {
                     //按鈕事件監聽
                     // return true後會繼續執行父類別的dispathKeyevent方法，反之攔截按鈕事件
@@ -48,7 +50,20 @@ class Page_Sec : JzFragement(R.layout.sec) {
             JzActivity.getControlInstance().goBack()
         }
         rootview.button3.setOnClickListener {
-            JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true)
+            JzActivity.getControlInstance().showCustomDaiLog(true,
+                Theme.downToUP,object :SetupDialog(R.layout.third_page){
+                override fun setup(rootview: Dialog) {
+
+                }
+
+                override fun dismess() {
+                }
+
+                override fun keyevent(event: KeyEvent): Boolean {
+                    return true
+                }
+            },"third_page")
+//            JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true,Animator.verticalTranslation)
         }
 
         rootview.button6.setOnClickListener {

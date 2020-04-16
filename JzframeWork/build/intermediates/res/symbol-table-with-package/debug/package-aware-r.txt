@@ -15,6 +15,10 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim dia_in
+anim dia_out
+anim down_in
+anim down_out
 anim fragment_close_enter
 anim fragment_close_exit
 anim fragment_fade_enter
@@ -30,6 +34,8 @@ anim slide_left_in
 anim slide_left_out
 anim slide_right_in
 anim slide_right_out
+anim top_in
+anim top_out
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1860,6 +1866,7 @@ string wantreprogram
 string would_like_to_with_pair
 string wrongmmy
 string yeargo
+style ActionSheetDialogAnimation
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2057,6 +2064,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style DownToUP
 style MainAppTheme
 style MyDialog
 style Platform_AppCompat

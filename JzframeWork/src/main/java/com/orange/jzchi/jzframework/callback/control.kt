@@ -41,11 +41,11 @@ interface control {
     //要求存取權限
     fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
     //顯示客製化Dialog
-    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean,tag:String)
+    fun showDiaLog(layoutid:Int ,cancelable: Boolean, swip: Boolean,tag:String)
     //顯示客製化Dialog
-    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
+    fun showDiaLog( cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
     //顯示客製化Dialog，並且自定義style
-    fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
+    fun showCustomDaiLog( cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
     //取得tag為輸入值的Dialog
     fun getDialog(tag:String): Dialog?
     //關閉tag為輸入值的Dialog

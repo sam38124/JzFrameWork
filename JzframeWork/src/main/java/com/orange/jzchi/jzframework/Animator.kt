@@ -12,4 +12,8 @@ object  Animator {
         R.anim.slide_left_out,
         R.anim.slide_left_in,
         R.anim.slide_right_out)
+    var verticalTranslation= arrayOf(R.anim.top_in,
+        R.anim.top_out,
+        R.anim.down_in,
+        R.anim.down_out)
 }

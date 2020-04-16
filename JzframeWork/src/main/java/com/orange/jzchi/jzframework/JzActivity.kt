@@ -80,7 +80,7 @@ abstract class JzActivity : AppCompatActivity(),
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
                 getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
                 screenAlwaysOn()
-                ShowDaiLog(Layout, cancelable, swip, object : SetupDialog() {
+                ShowDaiLog(cancelable, swip, object : SetupDialog(Layout) {
                     override fun setup(rootview: Dialog) {
 
                     }
@@ -213,14 +213,13 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun showCustomDaiLog(
-                Layout: Int,
                 cancelable: Boolean,
                 style: Int,
                 caller: SetupDialog,
                 tag: String
             ) {
                 screenAlwaysOn()
-                ShowDaiLog(Layout, cancelable, style, caller, tag)
+                ShowDaiLog(cancelable, style, caller, tag)
             }
 
             override fun getDialog(tag: String): Dialog? {
@@ -274,7 +273,6 @@ abstract class JzActivity : AppCompatActivity(),
 
 
             override fun showDiaLog(
-                Layout: Int,
                 cancelable: Boolean,
                 swip: Boolean,
                 caller: SetupDialog,
@@ -284,7 +282,7 @@ abstract class JzActivity : AppCompatActivity(),
                     getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
                 }
                 screenAlwaysOn()
-                ShowDaiLog(Layout, cancelable, swip, caller, tag)
+                ShowDaiLog( cancelable, swip, caller, tag)
             }
 
             override fun closeDiaLog(tag: String) {
@@ -579,7 +577,6 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun ShowDaiLog(
-        Layout: Int,
         cancelable: Boolean,
         style: Int,
         caller: SetupDialog,
@@ -609,7 +606,7 @@ abstract class JzActivity : AppCompatActivity(),
                 }
             }
             caller.dialog = dialog
-            dialog.setContentView(Layout)
+            dialog.setContentView(caller.layoutId)
             dialog.window!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT
@@ -634,7 +631,6 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun ShowDaiLog(
-        Layout: Int,
         cancelable: Boolean,
         swip: Boolean,
         caller: SetupDialog,
@@ -664,7 +660,7 @@ abstract class JzActivity : AppCompatActivity(),
                 }
             }
             caller.dialog = dialog
-            dialog.setContentView(Layout)
+            dialog.setContentView(caller.layoutId)
             dialog.getWindow()!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT
