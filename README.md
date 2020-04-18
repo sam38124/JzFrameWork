@@ -30,7 +30,7 @@ allprojects {
 在需要用到這個庫的module中的build.gradle中的dependencies中加入
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:v9.5'
+implementation 'com.github.sam38124:JzFrameWork:v10.0.1'
 ```
 <a name="Use"></a>
 ## 如何使用
@@ -117,7 +117,7 @@ JzActivity.getControlInstance().goMenu()
             swipe 決定Dialog背景是否透明反之為不透明
             R.layout.sampledialog 換成你的Dialog layout
             */
- JzActivity.getControlInstance().showDiaLog(R.layout.sampledialog, true, false, object : SetupDialog {
+ JzActivity.getControlInstance().showDiaLog( true, false, object : SetupDialog(R.layout.sampledialog) {
                 override fun keyevent(event: KeyEvent): Boolean {
                     //按鈕事件監聽
                     // return true後會繼續執行父類別的dispathKeyevent方法，反之攔截按鈕事件
@@ -140,8 +140,9 @@ JzActivity.getControlInstance().goMenu()
 ### 所有對外暴露的方法
 ```kotlin
 
+
 interface control {
-    /*所有對外暴露的方法*/
+  /*所有對外暴露的方法*/
 
 
     //設定首頁
@@ -171,11 +172,13 @@ interface control {
     //要求存取權限
     fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
     //顯示客製化Dialog
-    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean,tag:String)
+    fun showDiaLog(layoutid:Int ,cancelable: Boolean, swip: Boolean,tag:String)
     //顯示客製化Dialog
-    fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
+    fun showDiaLog( cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
     //顯示客製化Dialog，並且自定義style
-    fun showCustomDaiLog(Layout: Int, cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
+    fun showCustomDaiLog( cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
+    //顯示下方彈出Dialog，並且可以拖曳關閉
+    fun showBottomSheetDialog(cancelable: Boolean,swip:Boolean,caller: SetupDialog, tag: String)
     //取得tag為輸入值的Dialog
     fun getDialog(tag:String): Dialog?
     //關閉tag為輸入值的Dialog
