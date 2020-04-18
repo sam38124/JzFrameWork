@@ -142,7 +142,9 @@ JzActivity.getControlInstance().goMenu()
 
 
 interface control {
-    /*所有對外暴露的方法*/
+  /*所有對外暴露的方法*/
+
+
     //設定首頁
     fun setHome(Translation: Fragment, tag: String)
     //頁面切換
@@ -175,6 +177,8 @@ interface control {
     fun showDiaLog( cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
     //顯示客製化Dialog，並且自定義style
     fun showCustomDaiLog( cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
+    //顯示下方彈出Dialog，並且可以拖曳關閉
+    fun showBottomSheetDialog(cancelable: Boolean,swip:Boolean,caller: SetupDialog, tag: String)
     //取得tag為輸入值的Dialog
     fun getDialog(tag:String): Dialog?
     //關閉tag為輸入值的Dialog
