@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.third_page.view.*
 class Page_Third : JzFragement(R.layout.third_page) {
     override fun viewInit() {
         //頁面中的fragment切換
+
         rootview.imageView.setOnClickListener {
             JzActivity.getControlInstance().goBack()
         }

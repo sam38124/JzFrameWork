@@ -2,7 +2,9 @@ package com.orange.jzchi.jzframework
 
 import android.app.ActivityManager
 import android.app.Dialog
+import android.app.Instrumentation
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
@@ -14,6 +16,7 @@ import android.os.Handler
 import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -22,6 +25,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.orange.jzchi.R
 import com.orange.jzchi.jzframework.callback.*
 import com.orange.jzchi.jzframework.tool.LanguageUtil
@@ -92,7 +97,7 @@ abstract class JzActivity : AppCompatActivity(),
                     override fun keyevent(event: KeyEvent): Boolean {
                         return cancelable
                     }
-                }, tag)
+                }, tag,false)
             }
 
             override fun openAPK() {
@@ -219,7 +224,12 @@ abstract class JzActivity : AppCompatActivity(),
                 tag: String
             ) {
                 screenAlwaysOn()
-                ShowDaiLog(cancelable, style, caller, tag)
+                ShowDaiLog(cancelable, style, caller, tag,false)
+            }
+
+            override fun showBottomSheetDialog(cancelable: Boolean,swip:Boolean, caller: SetupDialog,tag: String) {
+                ShowDaiLog(cancelable, swip, caller, tag,true)
+                return
             }
 
             override fun getDialog(tag: String): Dialog? {
@@ -278,11 +288,11 @@ abstract class JzActivity : AppCompatActivity(),
                 caller: SetupDialog,
                 tag: String
             ) {
-                if(getControlInstance().getLanguage() != null){
+                if (getControlInstance().getLanguage() != null) {
                     getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
                 }
                 screenAlwaysOn()
-                ShowDaiLog( cancelable, swip, caller, tag)
+                ShowDaiLog(cancelable, swip, caller, tag,false)
             }
 
             override fun closeDiaLog(tag: String) {
@@ -350,7 +360,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun changePage(Translation: Fragment, tag: String, goback: Boolean) {
-                ChangePage(Translation, tag, goback,null)
+                ChangePage(Translation, tag, goback, null)
             }
 
             override fun changePage(
@@ -359,11 +369,11 @@ abstract class JzActivity : AppCompatActivity(),
                 goback: Boolean,
                 animator: Array<Int>
             ) {
-                ChangePage(Translation, tag, goback,animator)
+                ChangePage(Translation, tag, goback, animator)
             }
 
             override fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
-                ChangeFrag(Translation, id, tag, goback,null)
+                ChangeFrag(Translation, id, tag, goback, null)
             }
 
             override fun changeFrag(
@@ -373,7 +383,7 @@ abstract class JzActivity : AppCompatActivity(),
                 goback: Boolean,
                 animator: Array<Int>
             ) {
-                ChangeFrag(Translation, id, tag, goback,animator)
+                ChangeFrag(Translation, id, tag, goback, animator)
             }
 
             override fun apkDownload(url: String, callback: DownloadCallback) {
@@ -381,7 +391,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
         })
         rootshare = RootShare(this)
-        if(getControlInstance().getLanguage() != null){
+        if (getControlInstance().getLanguage() != null) {
             getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
         }
         setContentView(LayoutId)
@@ -505,11 +515,17 @@ abstract class JzActivity : AppCompatActivity(),
         NavagationRoot.openDrawer(GravityCompat.START)
     }
 
-    private fun ChangeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean,anim:Array<Int>?) {
+    private fun ChangeFrag(
+        Translation: Fragment,
+        id: Int,
+        tag: String,
+        goback: Boolean,
+        anim: Array<Int>?
+    ) {
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
-            if(anim!=null){
-                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            if (anim != null) {
+                transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(id, Translation, tag)
                 .addToBackStack(FragName)
@@ -520,8 +536,8 @@ abstract class JzActivity : AppCompatActivity(),
             Log.d("switch", tag)
             changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
-            if(anim!=null){
-                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            if (anim != null) {
+                transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(id, Translation, tag)
                 .commit()
@@ -534,14 +550,14 @@ abstract class JzActivity : AppCompatActivity(),
 
     private fun SetHome(Translation: Fragment, tag: String) {
         supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        ChangePage(Translation, tag, false,null)
+        ChangePage(Translation, tag, false, null)
     }
 
-    private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean,anim:Array<Int>?){
+    private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
-            if(anim!=null){
-                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            if (anim != null) {
+                transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(FragId, Translation, tag)
                 .addToBackStack(FragName)
@@ -552,8 +568,8 @@ abstract class JzActivity : AppCompatActivity(),
             Log.d("switch", tag)
             changePageListener(tag, Translation)
             val transaction = supportFragmentManager.beginTransaction()
-            if(anim!=null){
-                transaction.setCustomAnimations(anim[0],anim[1],anim[2],anim[3])
+            if (anim != null) {
+                transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(FragId, Translation, tag)
                 .commitAllowingStateLoss()
@@ -580,9 +596,10 @@ abstract class JzActivity : AppCompatActivity(),
         cancelable: Boolean,
         style: Int,
         caller: SetupDialog,
-        tag: String
+        tag: String,buttomSheet:Boolean
     ) {
         try {
+
             val showing = getShowing(tag)
             if (showing != null) {
                 caller.dialog = showing.callback.dialog
@@ -590,7 +607,21 @@ abstract class JzActivity : AppCompatActivity(),
                 showing.callback.setup(showing.dialog)
                 return
             }
-            val dialog = object : Dialog(this, style) {
+            val dialog = if (!buttomSheet) object : Dialog(this, style) {
+                override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+                    if (caller.keyevent(event)) {
+                        return super.dispatchKeyEvent(event)
+                    } else {
+                        return false
+                    }
+                }
+
+                override fun dismiss() {
+                    super.dismiss()
+                    clearDialog(tag)
+                    caller.dismess()
+                }
+            } else object : BottomSheetDialog(this, style) {
                 override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                     if (caller.keyevent(event)) {
                         return super.dispatchKeyEvent(event)
@@ -607,6 +638,11 @@ abstract class JzActivity : AppCompatActivity(),
             }
             caller.dialog = dialog
             dialog.setContentView(caller.layoutId)
+            if(buttomSheet){
+                dialog.setOnShowListener {
+                    setupFullHeight(dialog as BottomSheetDialog);
+                }
+            }
             dialog.window!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT
@@ -629,14 +665,14 @@ abstract class JzActivity : AppCompatActivity(),
             e.printStackTrace()
         }
     }
-
     private fun ShowDaiLog(
         cancelable: Boolean,
         swip: Boolean,
         caller: SetupDialog,
-        tag: String
+        tag: String,buttomSheet:Boolean
     ) {
         try {
+
             val showing = getShowing(tag)
             if (showing != null) {
                 caller.dialog = showing.callback.dialog
@@ -644,7 +680,21 @@ abstract class JzActivity : AppCompatActivity(),
                 showing.callback.setup(showing.dialog)
                 return
             }
-            val dialog = object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
+            val dialog = if(!buttomSheet)object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
+                override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+                    if (caller.keyevent(event)) {
+                        return super.dispatchKeyEvent(event)
+                    } else {
+                        return false
+                    }
+                }
+
+                override fun dismiss() {
+                    super.dismiss()
+                    clearDialog(tag)
+                    caller.dismess()
+                }
+            }else object : BottomSheetDialog(this, if (swip) R.style.DownToUPSwip else R.style.DownToUP) {
                 override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                     if (caller.keyevent(event)) {
                         return super.dispatchKeyEvent(event)
@@ -661,6 +711,11 @@ abstract class JzActivity : AppCompatActivity(),
             }
             caller.dialog = dialog
             dialog.setContentView(caller.layoutId)
+            if(buttomSheet){
+                dialog.setOnShowListener {
+                    setupFullHeight(dialog as BottomSheetDialog);
+                }
+            }
             dialog.getWindow()!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT
@@ -682,6 +737,18 @@ abstract class JzActivity : AppCompatActivity(),
             Thread.sleep(1000)
             e.printStackTrace()
         }
+    }
+
+    fun setupFullHeight(bottomSheetDialog:BottomSheetDialog){
+        val bottomSheet=bottomSheetDialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)
+        val behavior = BottomSheetBehavior.from(bottomSheet);
+        behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+    }
+    fun setupFullHeight(dia:Dialog){
+        val bottomSheetDialog=dia as BottomSheetDialog
+        val bottomSheet=bottomSheetDialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)
+        val behavior = BottomSheetBehavior.from(bottomSheet);
+        behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
     }
 
     private fun getAllChildViews(view: View, dia: Dialog): List<View> {

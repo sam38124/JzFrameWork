@@ -1,26 +1,28 @@
 package com.orange.jzframework.page
 
 import android.app.Dialog
-import android.content.Intent
-import android.net.Uri
 import android.util.Log
 import android.view.KeyEvent
+import android.view.View
 import android.widget.Button
-import com.orange.jzchi.jzframework.Animator
-import com.orange.jzchi.jzframework.callback.SetupDialog
+import android.widget.FrameLayout
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
 import com.orange.jzchi.jzframework.Theme.Theme
 import com.orange.jzchi.jzframework.callback.DownloadCallback
+import com.orange.jzchi.jzframework.callback.SetupDialog
 import com.orange.jzchi.jzframework.callback.permission_C
 import com.orange.jzframework.R
 import kotlinx.android.synthetic.main.sec.view.*
-import java.io.File
+import kotlinx.android.synthetic.main.third_page.*
+
 
 class Page_Sec : JzFragement(R.layout.sec) {
 
     override fun viewInit() {
+
         rootview.sampletext2.setOnClickListener {
+
             /*
             使用 ShowDaiLog 的方法顯示客製化Dialog
             cancelable 決定Dialog是否可以被點擊消失
@@ -45,15 +47,17 @@ class Page_Sec : JzFragement(R.layout.sec) {
                     //關閉事件的監聽
                 }
             },"")
+
         }
         rootview.button2.setOnClickListener {
             JzActivity.getControlInstance().goBack()
         }
         rootview.button3.setOnClickListener {
-            JzActivity.getControlInstance().showCustomDaiLog(true,
-                Theme.downToUP,object :SetupDialog(R.layout.third_page){
+            JzActivity.getControlInstance().showBottomSheetDialog(false,false,object :SetupDialog(R.layout.third_page){
                 override fun setup(rootview: Dialog) {
-
+                    rootview.imageView.setOnClickListener {
+                        //                        JzActivity.getControlInstance().getRootActivity().setupFullHeight(rootview)
+                    }
                 }
 
                 override fun dismess() {
