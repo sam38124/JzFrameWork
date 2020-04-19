@@ -539,16 +539,11 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(Translation is JzFragement && Translation.haveRootView()){ handler.postDelayed({
+            handler.postDelayed({
                 transaction.remove(Translation).commitNow()
                 transaction.replace(id, Translation, tag)
                     .addToBackStack(FragName)
-                    .commit()},100)}else{
-                transaction.replace(id, Translation, tag)
-                    .addToBackStack(FragName)
-                    .commit()
-            }
-
+                    .commit()},100)
         } else {
             Fraging = Translation
             FragName = tag
@@ -558,16 +553,10 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(Translation is JzFragement && Translation.haveRootView()){
-                handler.postDelayed({
-                    transaction.remove(Translation).commitNow()
-                    transaction.replace(id, Translation, tag)
-                        .commit()},100)
-
-            }else{
+            handler.postDelayed({
+                transaction.remove(Translation).commitNow()
                 transaction.replace(id, Translation, tag)
-                    .commit()
-            }
+                    .commit()},100)
 
     }}
 
