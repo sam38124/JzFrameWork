@@ -54,7 +54,8 @@ abstract class JzActivity : AppCompatActivity(),
             return Switch_Instance
         }
     }
-    var onActivityResultCallback:onActivityResultCallback?=null
+
+    var onActivityResultCallback: onActivityResultCallback? = null
     private lateinit var rootshare: RootShare
     val LayoutId = R.layout.activity_root
     val FragId = R.id.frag_root
@@ -98,7 +99,7 @@ abstract class JzActivity : AppCompatActivity(),
                     override fun keyevent(event: KeyEvent): Boolean {
                         return cancelable
                     }
-                }, tag,false)
+                }, tag, false)
             }
 
             override fun openAPK() {
@@ -185,7 +186,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun setOnActivityResultCallback(callback: onActivityResultCallback) {
-                onActivityResultCallback=callback
+                onActivityResultCallback = callback
             }
 
             override fun getNowPage(): Fragment? {
@@ -229,11 +230,16 @@ abstract class JzActivity : AppCompatActivity(),
                 tag: String
             ) {
                 screenAlwaysOn()
-                ShowDaiLog(cancelable, style, caller, tag,false)
+                ShowDaiLog(cancelable, style, caller, tag, false)
             }
 
-            override fun showBottomSheetDialog(cancelable: Boolean,swip:Boolean, caller: SetupDialog,tag: String) {
-                ShowDaiLog(cancelable, swip, caller, tag,true)
+            override fun showBottomSheetDialog(
+                cancelable: Boolean,
+                swip: Boolean,
+                caller: SetupDialog,
+                tag: String
+            ) {
+                ShowDaiLog(cancelable, swip, caller, tag, true)
                 return
             }
 
@@ -297,7 +303,7 @@ abstract class JzActivity : AppCompatActivity(),
                     getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
                 }
                 screenAlwaysOn()
-                ShowDaiLog(cancelable, swip, caller, tag,false)
+                ShowDaiLog(cancelable, swip, caller, tag, false)
             }
 
             override fun closeDiaLog(tag: String) {
@@ -532,7 +538,8 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.add(id, Translation, tag)
+            transaction.remove(Translation)
+                .add(id, Translation, tag)
                 .addToBackStack(FragName)
                 .commit()
         } else {
@@ -544,6 +551,7 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
+            transaction.remove(Translation)
             transaction.add(id, Translation, tag)
                 .commit()
         }
@@ -601,7 +609,7 @@ abstract class JzActivity : AppCompatActivity(),
         cancelable: Boolean,
         style: Int,
         caller: SetupDialog,
-        tag: String,buttomSheet:Boolean
+        tag: String, buttomSheet: Boolean
     ) {
         try {
 
@@ -643,7 +651,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
             caller.dialog = dialog
             dialog.setContentView(caller.layoutId)
-            if(buttomSheet){
+            if (buttomSheet) {
                 dialog.setOnShowListener {
                     setupFullHeight(dialog as BottomSheetDialog);
                 }
@@ -670,11 +678,12 @@ abstract class JzActivity : AppCompatActivity(),
             e.printStackTrace()
         }
     }
+
     private fun ShowDaiLog(
         cancelable: Boolean,
         swip: Boolean,
         caller: SetupDialog,
-        tag: String,buttomSheet:Boolean
+        tag: String, buttomSheet: Boolean
     ) {
         try {
 
@@ -685,7 +694,8 @@ abstract class JzActivity : AppCompatActivity(),
                 showing.callback.setup(showing.dialog)
                 return
             }
-            val dialog = if(!buttomSheet)object : Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
+            val dialog = if (!buttomSheet) object :
+                Dialog(this, if (swip) R.style.SwipTheme else R.style.MyDialog) {
                 override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                     if (caller.keyevent(event)) {
                         return super.dispatchKeyEvent(event)
@@ -699,7 +709,8 @@ abstract class JzActivity : AppCompatActivity(),
                     clearDialog(tag)
                     caller.dismess()
                 }
-            }else object : BottomSheetDialog(this, if (swip) R.style.DownToUPSwip else R.style.DownToUP) {
+            } else object :
+                BottomSheetDialog(this, if (swip) R.style.DownToUPSwip else R.style.DownToUP) {
                 override fun dispatchKeyEvent(event: KeyEvent): Boolean {
                     if (caller.keyevent(event)) {
                         return super.dispatchKeyEvent(event)
@@ -716,7 +727,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
             caller.dialog = dialog
             dialog.setContentView(caller.layoutId)
-            if(buttomSheet){
+            if (buttomSheet) {
                 dialog.setOnShowListener {
                     setupFullHeight(dialog as BottomSheetDialog);
                 }
@@ -744,14 +755,15 @@ abstract class JzActivity : AppCompatActivity(),
         }
     }
 
-    fun setupFullHeight(bottomSheetDialog:BottomSheetDialog){
-        val bottomSheet=bottomSheetDialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)
+    fun setupFullHeight(bottomSheetDialog: BottomSheetDialog) {
+        val bottomSheet = bottomSheetDialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)
         val behavior = BottomSheetBehavior.from(bottomSheet);
         behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
     }
-    fun setupFullHeight(dia:Dialog){
-        val bottomSheetDialog=dia as BottomSheetDialog
-        val bottomSheet=bottomSheetDialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)
+
+    fun setupFullHeight(dia: Dialog) {
+        val bottomSheetDialog = dia as BottomSheetDialog
+        val bottomSheet = bottomSheetDialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)
         val behavior = BottomSheetBehavior.from(bottomSheet);
         behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
     }
@@ -840,12 +852,13 @@ abstract class JzActivity : AppCompatActivity(),
         }
         return null
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-      if(onActivityResultCallback==null){
-          return
-      }
-        onActivityResultCallback!!.setonResultLinstner(requestCode,resultCode,data)
+        if (onActivityResultCallback == null) {
+            return
+        }
+        onActivityResultCallback!!.setonResultLinstner(requestCode, resultCode, data)
     }
 //    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
 //        Log.e("event", "" + event)
@@ -940,6 +953,7 @@ class DiaClass {
     lateinit var dialog: Dialog
     lateinit var callback: SetupDialog
 }
-interface onActivityResultCallback{
+
+interface onActivityResultCallback {
     fun setonResultLinstner(requestCode: Int, resultCode: Int, data: Intent?)
 }
