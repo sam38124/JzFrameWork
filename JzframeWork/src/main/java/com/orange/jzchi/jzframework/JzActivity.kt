@@ -538,12 +538,12 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(!supportFragmentManager.fragments.contains(Translation)){
-                transaction.add(id, Translation, tag)
-                    .addToBackStack(FragName)
-                    .commit()
+            if(supportFragmentManager.fragments.contains(Translation)){
+                transaction.remove(Translation).commitNow()
             }
-
+            transaction.add(id, Translation, tag)
+                .addToBackStack(FragName)
+                .commit()
         } else {
             Fraging = Translation
             FragName = tag
@@ -553,11 +553,11 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(!supportFragmentManager.fragments.contains(Translation)){
-                transaction.add(id, Translation, tag)
-                    .commit()
+            if(supportFragmentManager.fragments.contains(Translation)){
+                transaction.remove(Translation).commitNow()
             }
-
+            transaction.replace(id, Translation, tag)
+                .commit()
         }
     }
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
