@@ -1,5 +1,6 @@
 package com.orange.jzchi.jzframework
 
+import android.app.Activity
 import android.app.ActivityManager
 import android.app.Dialog
 import android.app.Instrumentation
@@ -53,7 +54,7 @@ abstract class JzActivity : AppCompatActivity(),
             return Switch_Instance
         }
     }
-
+    var onActivityResultCallback:onActivityResultCallback?=null
     private lateinit var rootshare: RootShare
     val LayoutId = R.layout.activity_root
     val FragId = R.id.frag_root
@@ -181,6 +182,10 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun getHandler(): Handler {
                 return handler
+            }
+
+            override fun setOnActivityResultCallback(callback: onActivityResultCallback) {
+                onActivityResultCallback=callback
             }
 
             override fun getNowPage(): Fragment? {
@@ -835,6 +840,13 @@ abstract class JzActivity : AppCompatActivity(),
         }
         return null
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+      if(onActivityResultCallback==null){
+          return
+      }
+        onActivityResultCallback!!.setonResultLinstner(requestCode,resultCode,data)
+    }
 //    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
 //        Log.e("event", "" + event)
 //        if (Fraging != null) {
@@ -927,4 +939,7 @@ class DiaClass {
     var tag = ""
     lateinit var dialog: Dialog
     lateinit var callback: SetupDialog
+}
+interface onActivityResultCallback{
+    fun setonResultLinstner(requestCode: Int, resultCode: Int, data: Intent?)
 }

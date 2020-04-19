@@ -3,10 +3,7 @@ package com.orange.jzchi.jzframework.callback
 import android.app.Dialog
 import android.os.Handler
 import androidx.fragment.app.Fragment
-import com.orange.jzchi.jzframework.Animator
-import com.orange.jzchi.jzframework.DiaClass
-import com.orange.jzchi.jzframework.JzActivity
-import com.orange.jzchi.jzframework.JzFragement
+import com.orange.jzchi.jzframework.*
 import com.orange.jzchi.jzframework.util.PackageInformation
 import java.util.*
 
@@ -108,4 +105,6 @@ interface control {
     fun goStore()
     //取得handler
     fun getHandler(): Handler
+    //設定Result回調
+    fun setOnActivityResultCallback(callback: onActivityResultCallback)
 }
