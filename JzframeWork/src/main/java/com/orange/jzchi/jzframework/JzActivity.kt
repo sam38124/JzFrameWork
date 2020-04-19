@@ -539,6 +539,7 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
+            if(supportFragmentManager.fragments.contains(Translation)){transaction.remove(Translation).commitNow()}
                 transaction.replace(id, Translation, tag)
                     .addToBackStack(FragName)
                     .commit()
@@ -555,6 +556,7 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
+            if(supportFragmentManager.fragments.contains(Translation)){transaction.remove(Translation).commitNow()}
                 transaction.replace(id, Translation, tag)
                     .commit()
         }
