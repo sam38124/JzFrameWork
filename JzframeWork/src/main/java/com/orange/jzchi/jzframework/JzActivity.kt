@@ -539,14 +539,10 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(supportFragmentManager.fragments.contains(Translation)){transaction.remove(Translation).commitNow()}
+            if(Translation is JzFragement && Translation.haveRootView()){transaction.remove(Translation).commitNow()}
                 transaction.replace(id, Translation, tag)
                     .addToBackStack(FragName)
                     .commit()
-//            supportFragmentManager.beginTransaction()
-//                .detach(Translation)
-//                .attach(Translation)
-//                .commit()
         } else {
             Fraging = Translation
             FragName = tag
@@ -556,7 +552,7 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(supportFragmentManager.fragments.contains(Translation)){transaction.remove(Translation).commitNow()}
+            if(Translation is JzFragement && Translation.haveRootView()){transaction.remove(Translation).commitNow()}
                 transaction.replace(id, Translation, tag)
                     .commit()
         }
