@@ -532,7 +532,7 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.replace(id, Translation, tag)
+            transaction.add(id, Translation, tag)
                 .addToBackStack(FragName)
                 .commit()
         } else {
@@ -544,7 +544,7 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.replace(id, Translation, tag)
+            transaction.add(id, Translation, tag)
                 .commit()
         }
     }
@@ -566,7 +566,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
             transaction.replace(FragId, Translation, tag)
                 .addToBackStack(FragName)
-                .commitAllowingStateLoss()
+                .commit()
         } else {
             Fraging = Translation
             FragName = tag
@@ -577,7 +577,7 @@ abstract class JzActivity : AppCompatActivity(),
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(FragId, Translation, tag)
-                .commitAllowingStateLoss()
+                .commit()
         }
     }
 

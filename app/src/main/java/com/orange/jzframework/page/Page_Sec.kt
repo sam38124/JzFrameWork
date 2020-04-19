@@ -6,6 +6,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
+import com.orange.jzchi.jzframework.Animator
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
 import com.orange.jzchi.jzframework.Theme.Theme
@@ -53,21 +54,21 @@ class Page_Sec : JzFragement(R.layout.sec) {
             JzActivity.getControlInstance().goBack()
         }
         rootview.button3.setOnClickListener {
-            JzActivity.getControlInstance().showBottomSheetDialog(false,false,object :SetupDialog(R.layout.third_page){
-                override fun setup(rootview: Dialog) {
-                    rootview.imageView.setOnClickListener {
-                        //                        JzActivity.getControlInstance().getRootActivity().setupFullHeight(rootview)
-                    }
-                }
-
-                override fun dismess() {
-                }
-
-                override fun keyevent(event: KeyEvent): Boolean {
-                    return true
-                }
-            },"third_page")
-//            JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true,Animator.verticalTranslation)
+//            JzActivity.getControlInstance().showBottomSheetDialog(false,false,object :SetupDialog(R.layout.third_page){
+//                override fun setup(rootview: Dialog) {
+//                    rootview.imageView.setOnClickListener {
+//                        //                        JzActivity.getControlInstance().getRootActivity().setupFullHeight(rootview)
+//                    }
+//                }
+//
+//                override fun dismess() {
+//                }
+//
+//                override fun keyevent(event: KeyEvent): Boolean {
+//                    return true
+//                }
+//            },"third_page")
+            JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true, Animator.verticalTranslation)
         }
 
         rootview.button6.setOnClickListener {
