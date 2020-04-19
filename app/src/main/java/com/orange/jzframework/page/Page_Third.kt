@@ -8,15 +8,18 @@ import com.orange.jzframework.R
 import kotlinx.android.synthetic.main.third_page.view.*
 
 class Page_Third : JzFragement(R.layout.third_page) {
+    val frag=Frag_1()
+
     override fun viewInit() {
         //頁面中的fragment切換
-  refresh=true
+        refresh=true
         rootview.imageView.setOnClickListener {
             JzActivity.getControlInstance().goBack()
         }
-        JzActivity.getControlInstance().changeFrag(Frag_1(), R.id.frageplace, "Frag_1", false)
+        JzActivity.getControlInstance().changeFrag(frag, R.id.frageplace, "Frag_1", false)
         rootview.textView4.setOnClickListener {
             JzActivity.getControlInstance().changePage(Page_Third(), "Page_Thirsd", true, Animator.verticalTranslation)
+
         }
     }
 

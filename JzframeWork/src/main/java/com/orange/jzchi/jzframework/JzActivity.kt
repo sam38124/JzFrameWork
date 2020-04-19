@@ -26,6 +26,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.orange.jzchi.R
@@ -538,12 +539,13 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(supportFragmentManager.fragments.contains(Translation)){
-                transaction.remove(Translation).commitNow()
-            }
-            transaction.add(id, Translation, tag)
-                .addToBackStack(FragName)
-                .commit()
+                transaction.replace(id, Translation, tag)
+                    .addToBackStack(FragName)
+                    .commit()
+//            supportFragmentManager.beginTransaction()
+//                .detach(Translation)
+//                .attach(Translation)
+//                .commit()
         } else {
             Fraging = Translation
             FragName = tag
@@ -553,13 +555,11 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            if(supportFragmentManager.fragments.contains(Translation)){
-                transaction.remove(Translation).commitNow()
-            }
-            transaction.replace(id, Translation, tag)
-                .commit()
+                transaction.replace(id, Translation, tag)
+                    .commit()
         }
     }
+
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
@@ -582,6 +582,7 @@ abstract class JzActivity : AppCompatActivity(),
                 .commit()
         }
     }
+
     private fun FindfragByTag(a: String): Fragment? {
         return supportFragmentManager.findFragmentByTag(a)
     }
