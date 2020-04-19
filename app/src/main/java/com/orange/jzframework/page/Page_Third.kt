@@ -1,5 +1,6 @@
 package com.orange.jzframework.page
 
+import com.orange.jzchi.jzframework.Animator
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.JzFragement
 import com.orange.jzframework.frag.Frag_1
@@ -14,6 +15,9 @@ class Page_Third : JzFragement(R.layout.third_page) {
             JzActivity.getControlInstance().goBack()
         }
         JzActivity.getControlInstance().changeFrag(Frag_1(), R.id.frageplace, "Frag_1", false)
+        rootview.textView4.setOnClickListener {
+            JzActivity.getControlInstance().changePage(Page_Third(), "Page_Thirsd", true, Animator.verticalTranslation)
+        }
     }
 
     override fun onResume() {

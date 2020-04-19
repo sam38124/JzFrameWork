@@ -538,9 +538,12 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.add(id, Translation, tag)
-                .addToBackStack(FragName)
-                .commit()
+            if(!supportFragmentManager.fragments.contains(Translation)){
+                transaction.add(id, Translation, tag)
+                    .addToBackStack(FragName)
+                    .commit()
+            }
+
         } else {
             Fraging = Translation
             FragName = tag
@@ -550,20 +553,13 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.add(id, Translation, tag)
-                .commit()
+            if(!supportFragmentManager.fragments.contains(Translation)){
+                transaction.add(id, Translation, tag)
+                    .commit()
+            }
+
         }
     }
-
-    private fun FindfragByTag(a: String): Fragment? {
-        return supportFragmentManager.findFragmentByTag(a)
-    }
-
-    private fun SetHome(Translation: Fragment, tag: String) {
-        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        ChangePage(Translation, tag, false, null)
-    }
-
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
         if (goback) {
             val transaction = supportFragmentManager.beginTransaction()
@@ -586,6 +582,15 @@ abstract class JzActivity : AppCompatActivity(),
                 .commit()
         }
     }
+    private fun FindfragByTag(a: String): Fragment? {
+        return supportFragmentManager.findFragmentByTag(a)
+    }
+
+    private fun SetHome(Translation: Fragment, tag: String) {
+        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        ChangePage(Translation, tag, false, null)
+    }
+
 
     private fun Toast(a: String) {
         handler.post {
