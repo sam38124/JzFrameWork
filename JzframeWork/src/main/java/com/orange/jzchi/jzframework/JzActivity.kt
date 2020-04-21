@@ -539,11 +539,9 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            handler.postDelayed({
-                transaction.remove(Translation).commitNow()
                 transaction.replace(id, Translation, tag)
                     .addToBackStack(FragName)
-                    .commit()},100)
+                    .commit()
         } else {
             Fraging = Translation
             FragName = tag
