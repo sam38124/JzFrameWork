@@ -17,7 +17,7 @@ interface control {
     fun changePage(Translation: Fragment, tag: String, goback: Boolean)
     //頁面切換並且自定義轉場動畫
     fun changePage(Translation: Fragment, tag: String, goback: Boolean,animator:Array<Int>)
-    //頁面中的fragment切換
+    //頁面中的fragment切換(//備註每個frag的ID不得相同以免同步被replace)
     fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
     //頁面中的fragment切換並且自定義轉場動畫
     fun changeFrag(Translation: Fragment, id: Int,tag: String, goback: Boolean,animator:Array<Int>)

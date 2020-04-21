@@ -539,9 +539,9 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-                transaction.replace(id, Translation, tag)
-                    .addToBackStack(FragName)
-                    .commit()
+            transaction.replace(id, Translation, tag)
+                .addToBackStack(FragName)
+                .commit()
         } else {
             Fraging = Translation
             FragName = tag
@@ -551,12 +551,9 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            handler.postDelayed({
-                transaction.remove(Translation).commitNow()
                 transaction.replace(id, Translation, tag)
-                    .commit()},100)
-
-    }}
+                    .commit()
+        }}
 
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
         if (goback) {
