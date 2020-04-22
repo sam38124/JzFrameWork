@@ -398,6 +398,20 @@ abstract class JzActivity : AppCompatActivity(),
                 ChangeFrag(Translation, id, tag, goback, animator)
             }
 
+            override fun replaceFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
+                ReplaceFrag(Translation, id, tag, goback, null)
+            }
+
+            override fun replaceFrag(
+                Translation: Fragment,
+                id: Int,
+                tag: String,
+                goback: Boolean,
+                animator: Array<Int>
+            ) {
+                ReplaceFrag(Translation, id, tag, goback, animator)
+            }
+
             override fun apkDownload(url: String, callback: DownloadCallback) {
                 Download.apkDownload(url, callback)
             }
@@ -526,7 +540,33 @@ abstract class JzActivity : AppCompatActivity(),
         HideKeyBoard()
         NavagationRoot.openDrawer(GravityCompat.START)
     }
-
+    private fun ReplaceFrag(
+        Translation: Fragment,
+        id: Int,
+        tag: String,
+        goback: Boolean,
+        anim: Array<Int>?
+    ) {
+        if (goback) {
+            val transaction = supportFragmentManager.beginTransaction()
+            if (anim != null) {
+                transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
+            }
+            transaction.replace(id, Translation, tag)
+                .addToBackStack(FragName)
+                .commit()
+        } else {
+            Fraging = Translation
+            FragName = tag
+            Log.d("switch", tag)
+            changePageListener(tag, Translation)
+            val transaction = supportFragmentManager.beginTransaction()
+            if (anim != null) {
+                transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
+            }
+            transaction.replace(id, Translation, tag)
+                .commit()
+        }}
     private fun ChangeFrag(
         Translation: Fragment,
         id: Int,
