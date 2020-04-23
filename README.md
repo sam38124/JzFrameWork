@@ -142,7 +142,7 @@ JzActivity.getControlInstance().goMenu()
 
 
 interface control {
-  /*所有對外暴露的方法*/
+   /*所有對外暴露的方法*/
 
 
     //設定首頁
@@ -155,6 +155,10 @@ interface control {
     fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
     //頁面中的fragment切換並且自定義轉場動畫
     fun changeFrag(Translation: Fragment, id: Int,tag: String, goback: Boolean,animator:Array<Int>)
+    //頁面中的fragment替換
+    fun replaceFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
+    //頁面中的fragment替換並且自定義轉場動畫
+    fun replaceFrag(Translation: Fragment, id: Int,tag: String, goback: Boolean,animator:Array<Int>)
     //透過tag取得推棧中的Fragement
     fun findFragByTag(a:String):Fragment?
     //取得現在顯示的頁面
@@ -239,6 +243,8 @@ interface control {
     fun goStore()
     //取得handler
     fun getHandler(): Handler
+    //設定Result回調
+    fun setOnActivityResultCallback(callback: onActivityResultCallback)
 }
 ```
 
