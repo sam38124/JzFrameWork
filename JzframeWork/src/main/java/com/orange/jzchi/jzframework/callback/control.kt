@@ -102,7 +102,7 @@ interface control {
     //取得app資訊
     fun getAppInformation():PackageInformation
     //重啟app
-    fun restart()
+    fun restart(a:Class<*>)
     //檢查更新並返回版本號true跳轉至商店反之不跳轉，
     fun checkUpdate(a:Boolean):String?
     //前往商店

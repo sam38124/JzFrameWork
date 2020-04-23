@@ -140,14 +140,13 @@ abstract class JzActivity : AppCompatActivity(),
                 return PackageInformation()
             }
 
-            override fun restart() {
+            override fun restart(a: Class<*>) {
                 getControlInstance().closeDiaLog()
-                val intent = Intent(applicationContext, JzActivity::class.java)
+                val intent = Intent(applicationContext, a)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 this@JzActivity.startActivity(intent)
                 android.os.Process.killProcess(android.os.Process.myPid())
             }
-
             override fun checkUpdate(a: Boolean): String? {
                 val versionChecker = VersionCheck()
                 versionChecker.packagename = applicationContext.packageName
