@@ -711,6 +711,7 @@ abstract class JzActivity : AppCompatActivity(),
             addclass.tag = tag
             addclass.callback = caller
             mDialog.add(addclass)
+            dialogLinstener(dialog,tag)
         } catch (e: Exception) {
             Thread.sleep(1000)
             e.printStackTrace()
@@ -787,6 +788,7 @@ abstract class JzActivity : AppCompatActivity(),
             addclass.tag = tag
             addclass.callback = caller
             mDialog.add(addclass)
+            dialogLinstener(dialog,tag)
         } catch (e: Exception) {
             Thread.sleep(1000)
             e.printStackTrace()
@@ -984,6 +986,10 @@ abstract class JzActivity : AppCompatActivity(),
      * 是否saveinstance
      */
     abstract fun savedInstanceAble(): Boolean
+    /**
+     * Dialog監聽
+     */
+    abstract fun dialogLinstener(dialog:Dialog,tag:String)
 }
 
 class DiaClass {

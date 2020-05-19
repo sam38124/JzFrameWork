@@ -1,5 +1,6 @@
 package com.orange.jzframework
 
+import android.app.Dialog
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
@@ -32,5 +33,9 @@ class MainActivity : JzActivity() {
 
     override fun savedInstanceAble(): Boolean {
         return true
+    }
+
+    override fun dialogLinstener(dialog: Dialog, tag: String) {
+
     }
 }
