@@ -37,5 +37,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.airbnb.android:lottie:2.7.0'
+    implementation 'com.github.sam38124:JzSqlHelper:6.8'
+    implementation 'com.github.sam38124:JzTaskHandler:2.0'
     implementation 'org.jsoup:jsoup:1.10.2'
 }
