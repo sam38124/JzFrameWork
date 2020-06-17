@@ -148,6 +148,7 @@ abstract class JzActivity : AppCompatActivity(),
                 this@JzActivity.startActivity(intent)
                 android.os.Process.killProcess(android.os.Process.myPid())
             }
+
             override fun checkUpdate(a: Boolean): String? {
                 val versionChecker = VersionCheck()
                 versionChecker.packagename = applicationContext.packageName
@@ -540,6 +541,7 @@ abstract class JzActivity : AppCompatActivity(),
         HideKeyBoard()
         NavagationRoot.openDrawer(GravityCompat.START)
     }
+
     private fun ReplaceFrag(
         Translation: Fragment,
         id: Int,
@@ -566,7 +568,9 @@ abstract class JzActivity : AppCompatActivity(),
             }
             transaction.replace(id, Translation, tag)
                 .commit()
-        }}
+        }
+    }
+
     private fun ChangeFrag(
         Translation: Fragment,
         id: Int,
@@ -591,9 +595,10 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-                transaction.add(id, Translation, tag)
-                    .commit()
-        }}
+            transaction.add(id, Translation, tag)
+                .commit()
+        }
+    }
 
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
         if (goback) {
@@ -690,10 +695,11 @@ abstract class JzActivity : AppCompatActivity(),
             }
             caller.dialog = dialog
             dialog.setContentView(caller.layoutId)
-            if(buttomSheet){
+            if (buttomSheet) {
                 dialog.setOnShowListener {
                     setupFullHeight(dialog as BottomSheetDialog);
-                }}
+                }
+            }
             dialog.window!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT
@@ -711,27 +717,33 @@ abstract class JzActivity : AppCompatActivity(),
             addclass.tag = tag
             addclass.callback = caller
             mDialog.add(addclass)
-            dialogLinstener(dialog,tag)
+            dialogLinstener(dialog, tag)
             if (buttomSheet) {
                 dialog.setOnShowListener {
                     setupFullHeight(dialog as BottomSheetDialog);
                 }
-                BottomSheetBehavior.from(dialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)).setBottomSheetCallback(object:BottomSheetBehavior.BottomSheetCallback(){
-                    var isopen=false
-                    override fun onStateChanged(p0: View, p1: Int) {
-                        if(p1==BottomSheetBehavior.STATE_COLLAPSED){
-                            if(isopen){ dialog.dismiss()}
-                        }else if(p1==BottomSheetBehavior.STATE_EXPANDED){
-                            isopen=true
-                        }else if(p1!=BottomSheetBehavior.STATE_DRAGGING){
-                            if(isopen){ dialog.dismiss()}
+                BottomSheetBehavior.from(dialog.findViewById<FrameLayout>(R.id.design_bottom_sheet))
+                    .setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+                        var isopen = false
+                        override fun onStateChanged(p0: View, p1: Int) {
+                            Log.e("onStateChanged",""+p1)
+                            if (p1 == BottomSheetBehavior.STATE_COLLAPSED) {
+                                if (isopen) {
+                                    dialog.dismiss()
+                                }
+                            } else if (p1 == BottomSheetBehavior.STATE_EXPANDED) {
+                                isopen = true
+                            } else if (p1 != BottomSheetBehavior.STATE_DRAGGING&&p1!=BottomSheetBehavior.STATE_SETTLING) {
+                                if (isopen) {
+                                    dialog.dismiss()
+                                }
+                            }
                         }
-                    }
 
-                    override fun onSlide(p0: View, p1: Float) {
+                        override fun onSlide(p0: View, p1: Float) {
 
-                    }
-                })
+                        }
+                    })
             }
         } catch (e: Exception) {
             Thread.sleep(1000)
@@ -787,10 +799,11 @@ abstract class JzActivity : AppCompatActivity(),
             }
             caller.dialog = dialog
             dialog.setContentView(caller.layoutId)
-            if(buttomSheet){
+            if (buttomSheet) {
                 dialog.setOnShowListener {
                     setupFullHeight(dialog as BottomSheetDialog);
-                }}
+                }
+            }
             dialog.setOnShowListener {
                 setupFullHeight(dialog as BottomSheetDialog);
             }
@@ -811,24 +824,30 @@ abstract class JzActivity : AppCompatActivity(),
             addclass.tag = tag
             addclass.callback = caller
             mDialog.add(addclass)
-            dialogLinstener(dialog,tag)
+            dialogLinstener(dialog, tag)
             if (buttomSheet) {
-                BottomSheetBehavior.from(dialog.findViewById<FrameLayout>(R.id.design_bottom_sheet)).setBottomSheetCallback(object:BottomSheetBehavior.BottomSheetCallback(){
-                    var isopen=false
-                    override fun onStateChanged(p0: View, p1: Int) {
-                        if(p1==BottomSheetBehavior.STATE_COLLAPSED){
-                            if(isopen){ dialog.dismiss()}
-                        }else if(p1==BottomSheetBehavior.STATE_EXPANDED){
-                            isopen=true
-                        }else if(p1!=BottomSheetBehavior.STATE_DRAGGING){
-                            if(isopen){ dialog.dismiss()}
+                BottomSheetBehavior.from(dialog.findViewById<FrameLayout>(R.id.design_bottom_sheet))
+                    .setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+                        var isopen = false
+                        override fun onStateChanged(p0: View, p1: Int) {
+                            Log.e("onStateChanged",""+p1)
+                            if (p1 == BottomSheetBehavior.STATE_COLLAPSED) {
+                                if (isopen) {
+                                    dialog.dismiss()
+                                }
+                            } else if (p1 == BottomSheetBehavior.STATE_EXPANDED) {
+                                isopen = true
+                            } else if (p1 != BottomSheetBehavior.STATE_DRAGGING&&p1!=BottomSheetBehavior.STATE_SETTLING) {
+                                if (isopen) {
+                                    dialog.dismiss()
+                                }
+                            }
                         }
-                    }
 
-                    override fun onSlide(p0: View, p1: Float) {
-
-                    }
-                })
+                        override fun onSlide(p0: View, p1: Float) {
+                            Log.e("ondlide", "$p1")
+                        }
+                    })
             }
         } catch (e: Exception) {
             Thread.sleep(1000)
@@ -1027,10 +1046,11 @@ abstract class JzActivity : AppCompatActivity(),
      * 是否saveinstance
      */
     abstract fun savedInstanceAble(): Boolean
+
     /**
      * Dialog監聽
      */
-    abstract fun dialogLinstener(dialog:Dialog,tag:String)
+    abstract fun dialogLinstener(dialog: Dialog, tag: String)
 }
 
 class DiaClass {
