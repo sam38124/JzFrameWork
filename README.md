@@ -63,6 +63,10 @@ class MainActivity : JzActivity() {
     //return true繼續執行父類別的dispathKeyEvent方法，反之攔截按鈕事件
 return true
     }
+     /*Dialog事件監聽*/
+    override fun dialogLinstener(dialog: Dialog, tag: String) {
+
+    }
 }
 ```
 #### 3.創建Fragment並且繼承JzFragement(所有Fragement皆需繼承JzFragement)
