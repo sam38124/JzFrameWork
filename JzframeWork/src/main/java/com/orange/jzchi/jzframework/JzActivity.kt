@@ -804,9 +804,7 @@ abstract class JzActivity : AppCompatActivity(),
                     setupFullHeight(dialog as BottomSheetDialog);
                 }
             }
-            dialog.setOnShowListener {
-                setupFullHeight(dialog as BottomSheetDialog);
-            }
+
             dialog.getWindow()!!.setLayout(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT

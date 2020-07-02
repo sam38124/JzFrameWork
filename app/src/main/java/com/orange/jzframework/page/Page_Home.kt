@@ -28,7 +28,7 @@ class Page_Home : JzFragement(R.layout.activity_main) {
         //true會將現在顯示的fragment加入可返回的推棧，按下返回鍵則會返回現在的頁面，反之false則不能返回現在的頁面
         rootview.sampletext.setOnClickListener {
 //            JzActivity.getControlInstance().changePage(Page_Sec(), "Page_Sec", true)
-            JzActivity.getControlInstance().showBottomSheetDialog( false, false, object : SetupDialog(R.layout.sec) {
+            JzActivity.getControlInstance().showDiaLog( false, false, object : SetupDialog(R.layout.sec) {
                 override fun keyevent(event: KeyEvent): Boolean {
                     //按鈕事件監聽
                     // return true後會繼續執行父類別的dispathKeyevent方法，反之攔截按鈕事件
