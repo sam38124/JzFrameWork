@@ -50,7 +50,7 @@ interface control {
     //顯示下方彈出Dialog，並且可以拖曳關閉
     fun showBottomSheetDialog(cancelable: Boolean,swip:Boolean,caller: SetupDialog, tag: String)
     //取得tag為輸入值的Dialog
-    fun getDialog(tag:String): Dialog?
+    fun getDialog(tag:String): DiaClass?
     //關閉tag為輸入值的Dialog
     fun closeDiaLog(tag:String)
     //關閉所有Dialog

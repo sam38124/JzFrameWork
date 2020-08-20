@@ -245,10 +245,10 @@ abstract class JzActivity : AppCompatActivity(),
                 return
             }
 
-            override fun getDialog(tag: String): Dialog? {
+            override fun getDialog(tag: String): DiaClass? {
                 for (i in mDialog) {
                     if (i.tag == tag) {
-                        return i.dialog
+                        return i
                     }
                 }
                 return null
