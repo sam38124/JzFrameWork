@@ -4,7 +4,17 @@
 # JzFrameWork
 這是一套高效能的Android開發框架，實現了近乎零延遲的畫面轉場，採用一個Activity多個Fragment的架構，為了支持所有版本的android Project，框架採用kotlin以及androidx進行開發，幫助開發者在最短的時間內部署好你的應用．
 此框架會不斷進行更新但也只能剛好滿足自身開發需求，如有其他客製化要求，歡迎克隆下來去修改!<br><br>
-基於此框架開發的APP:https://play.google.com/store/apps/details?id=com.orange.tsport<br>
+基於此框架開發的APP:<br><br>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/Obdicon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/SQCHECK 1024X1024.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/btn_icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/coffee.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/tsporticon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/tpms_logo.jpg?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/icon_default_logo.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/gotit_icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<br><br>
 另外支持ios版本:[點我查看](https://github.com/sam38124/JzOsFrameWork)
 ## 目錄
 * [如何導入到專案](#Import)
