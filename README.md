@@ -236,7 +236,7 @@ interface control {
     fun restart(a:Class<*>)
     //Check for updates and return to the version number true to jump to the store, otherwise not to jump
     fun checkUpdate(a:Boolean):String?
-    //Go to google play store
+    //Go to GooglePlay store
     fun goStore()
     //Get handler
     fun getHandler(): Handler
