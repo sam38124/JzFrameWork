@@ -2,7 +2,7 @@
 [![Platform](https://img.shields.io/badge/platform-%20Android%20-brightgreen.svg)](https://github.com/sam38124)
 [![characteristic](https://img.shields.io/badge/特點-%20輕量級%20%7C%20簡單易用%20%20%7C%20穩定%20-brightgreen.svg)](https://github.com/sam38124)
 # JzFrameWork
-This is a high-performance Android development framework that achieves almost zero-delay screen transitions. It adopts single activity and multiple fragment architecture  The framework uses kotlin and androidx for development to support all versions of android projects. Can help developers in deploy your application in the shortest time. This framework will continue to be updated, but it can only meet its own development needs. If there are other customized requirements, please clone it and modify it!<br><br>
+This is a high-performance Android development framework that achieves almost zero-delay screen transitions. It adopts single activity and multiple fragment architecture  The framework uses kotlin and androidx for development to support all versions of android projects. Can help developers in deploy your application in the shortest time. This framework will continue to be updated, But it can only meet my developemt needs. If there are other customized requirements, please clone it and modify it!<br><br>
 App developed based on this framework:<br><br>
 <img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/Obdicon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
 <img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/SQCHECK 1024X1024.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
