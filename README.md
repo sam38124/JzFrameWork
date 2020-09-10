@@ -250,7 +250,7 @@ interface control {
 #### <font color="#0000dd"> Work for: </font><br /> 
 + ##### <font color="#660000">【Orange Electronic】</font><br /> 
 #### <font color="#0000dd"> Position: </font><br /> 
-+ ##### Full stack engineer<br/>  
++ ##### Deputy Head of R&D<br/>  
 #### <font color="#0000dd"> Main defense range: </font><br /> 
 + ##### Android and IOS(4 years)<br/>  
 + ##### Jsp(2 years)<br/> 
