@@ -52,7 +52,7 @@ class MainActivity : JzActivity() {
     override fun viewInit(rootview: View) {
         //Set home page
         JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
-        //Can set swipe menu if you want
+        //Can set side drawer if you want
         JzActivity.getControlInstance().setDrawer(sampledrawer())
     }
 
