@@ -23,7 +23,6 @@ class Page_Sec : JzFragement(R.layout.sec) {
     override fun viewInit() {
 
         rootview.sampletext2.setOnClickListener {
-
             /*
             使用 ShowDaiLog 的方法顯示客製化Dialog
             cancelable 決定Dialog是否可以被點擊消失

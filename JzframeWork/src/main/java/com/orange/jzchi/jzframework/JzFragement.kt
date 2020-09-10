@@ -40,9 +40,6 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
             }
             rootview = inflater.inflate(layout, container, false)
             rootview.setOnClickListener { act.HideKeyBoard() }
-        if(JzActivity.getControlInstance().getLanguage() != null){
-            LanguageUtil.updateLocale(context, JzActivity.getControlInstance().getLanguage());
-        }
         viewInit()
         return rootview
     }

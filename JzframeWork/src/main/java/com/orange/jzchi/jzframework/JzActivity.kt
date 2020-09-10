@@ -87,7 +87,6 @@ abstract class JzActivity : AppCompatActivity(),
         }
         setSwitchInstance(object : control {
             override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
-                getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
                 screenAlwaysOn()
                 ShowDaiLog(cancelable, swip, object : SetupDialog(Layout) {
                     override fun setup(rootview: Dialog) {
@@ -301,9 +300,6 @@ abstract class JzActivity : AppCompatActivity(),
                 caller: SetupDialog,
                 tag: String
             ) {
-                if (getControlInstance().getLanguage() != null) {
-                    getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
-                }
                 screenAlwaysOn()
                 ShowDaiLog(cancelable, swip, caller, tag, false)
             }
@@ -418,9 +414,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
         })
         rootshare = RootShare(this)
-        if (getControlInstance().getLanguage() != null) {
-            getControlInstance().setLanguage(getControlInstance().getLanguage()!!)
-        }
+        getControlInstance().setLanguage(getControlInstance().getLanguage())
         setContentView(LayoutId)
         NavagationRoot = findViewById(R.id.drawer)
         supportFragmentManager.addOnBackStackChangedListener(this)

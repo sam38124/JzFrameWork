@@ -16,8 +16,8 @@ class MainActivity : JzActivity() {
     /*初次載入的代碼處理*/
     override fun viewInit(rootview: View) {
         //設定首頁
-        JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
-        JzActivity.getControlInstance().setDrawer(sampledrawer())
+        getControlInstance().setHome(Page_Home(), "Page_Home")
+        getControlInstance().setDrawer(sampledrawer())
     }
 
     /*頁面切換監聽*/

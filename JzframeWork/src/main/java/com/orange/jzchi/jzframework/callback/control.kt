@@ -10,7 +10,6 @@ import java.util.*
 interface control {
     /*所有對外暴露的方法*/
 
-
     //設定首頁
     fun setHome(Translation: Fragment, tag: String)
     //頁面切換
@@ -64,7 +63,6 @@ interface control {
     fun getPro(key: String, value: Int): Int
     //清除記錄
     fun clearPro()
-
     //關閉整個app
     fun closeApp()
     //設定螢幕方向
