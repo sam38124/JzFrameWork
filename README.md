@@ -251,7 +251,7 @@ interface control {
 + ##### <font color="#660000">【Orange Electronic】</font><br /> 
 #### <font color="#0000dd"> Position: </font><br /> 
 + ##### Deputy Head of R&D<br/>  
-#### <font color="#0000dd"> Main defense range: </font><br /> 
+#### <font color="#0000dd"> Main skill: </font><br /> 
 + ##### Android and IOS(4 years)<br/>  
 + ##### Jsp(2 years)<br/> 
 + ##### Javascript and Jquery and Ktor(1 years)<br /> 
