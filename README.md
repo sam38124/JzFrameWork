@@ -1,23 +1,32 @@
 [![](https://jitpack.io/v/sam38124/JzFrameWork.svg)](https://jitpack.io/#sam38124/JzFrameWork)
-[![Platform](https://img.shields.io/badge/平台-%20Android%20-brightgreen.svg)](https://github.com/sam38124)
+[![Platform](https://img.shields.io/badge/platform-%20Android%20-brightgreen.svg)](https://github.com/sam38124)
 [![characteristic](https://img.shields.io/badge/特點-%20輕量級%20%7C%20簡單易用%20%20%7C%20穩定%20-brightgreen.svg)](https://github.com/sam38124)
 # JzFrameWork
-這是一套高效能的Android開發框架，實現了近乎零延遲的畫面轉場，採用一個Activity多個Fragment的架構，為了支持所有版本的android Project，框架採用kotlin以及androidx進行開發，幫助開發者在最短的時間內部署好你的應用．
-此框架會不斷進行更新但也只能剛好滿足自身開發需求，如有其他客製化要求，歡迎克隆下來去修改!<br><br>
-基於此框架開發的APP:https://play.google.com/store/apps/details?id=com.orange.tsport<br>
-另外支持ios版本:[點我查看](https://github.com/sam38124/JzOsFrameWork)
-## 目錄
-* [如何導入到專案](#Import)
-* [快速使用](#Use)
-* [所有對外暴露方法](#All)
-* [關於我](#About)
+This is a high-performance Android development framework that achieves almost zero-delay screen transitions. It adopts single activity and multiple fragment architecture  The framework uses kotlin and androidx for development to support all versions of android projects. Can help developers in deploy your application in the shortest time. This framework will continue to be updated, But it can only meet my developemt needs. If there are other customized requirements, please clone it and modify it!<br><br>
+App developed based on this framework:<br><br>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/Obdicon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/SQCHECK 1024X1024.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/btn_icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/coffee.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/tsporticon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/tpms_logo.jpg?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/icon_default_logo.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/gotit_icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
+<br><br>
+Also support ios version:[Click to view](https://github.com/sam38124/JzOsFrameWork)
+## List
+* [Import to project](#Import)
+* [Quick Start](#Use)
+* [All function](#All)
+* [About me](#About)
 
 <a name="Import"></a>
-## 如何導入到項目
-> 支持jcenter。 <br/>
+## Import to project
+> Support jcenter。 <br/>
 
-### jcenter導入方式
-在app專案包的build.gradle中添加
+### jcenter
+Add into build.gradle 
 ```kotlin
 allprojects {
 		repositories {
@@ -27,235 +36,226 @@ allprojects {
 	}
 ```
 
-在需要用到這個庫的module中的build.gradle中的dependencies中加入
+Add into dependencies
+
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:10.2.5'
+implementation 'com.github.sam38124:JzFrameWork:10.2.5'}
 ```
 <a name="Use"></a>
-## 如何使用
-
-### 第一步：於Mainfest中做初次設定，之後創建Mainactivity和要成為首頁的Fragment，並且於Activty中的ViewInit設定首頁
-#### 1.在Manifest中添加
-```kotlin
-android:theme="@style/SwipTheme" //添加在Application
-android:configChanges="keyboardHidden|orientation|screenSize"//添加在Activity
-```
-#### 2.創建Activity並且繼承JzActivity(只能有一個Activity)
+## Quick Start
+#### 1.Create Activity and extend JzActivity(Only can use one Activity what extend JzActivity)
 
 ```kotlin
 class MainActivity : JzActivity() {
-    /*初次載入的代碼處理*/
+    /*Code handling for the first load*/
     override fun viewInit(rootview: View) {
-        //設定首頁
+        //Set home page
         JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
-        //設定抽屜(也可以不要)
+        //Can set side drawer if you want
         JzActivity.getControlInstance().setDrawer(sampledrawer())
     }
 
-    /*頁面切換監聽*/
+    /*Page switch linstener*/
     override fun ChangePageListener(tag: String, frag: Fragment) {
-        //SetHome完會返回"Frag_Home"以及Frag_Home()的值
     }
 
-    /*按鈕事件監聽*/
+    /*Keyboard linstener*/
     override fun keyEventListener(event: KeyEvent):Boolean {
-    //return true繼續執行父類別的dispathKeyEvent方法，反之攔截按鈕事件
-return true
+    return true
     }
-     /*Dialog事件監聽*/
+     /*Dialog linstener*/
     override fun dialogLinstener(dialog: Dialog, tag: String) {
 
     }
 }
 ```
-#### 3.創建Fragment並且繼承JzFragement(所有Fragement皆需繼承JzFragement)
+#### 2.Create Fragment and extend JzFragement(All fragements need  extend JzFragement)
 ```kotlin
-/*R.layout.activity_main替換為你的layout id*/
+/*R.layout.activity_main replace to your layout id*/
 class Frag_Home : JzFragement(R.layout.activity_main) {
 
-        /*初次載入的代碼處理*/
+        /* Code handling for the first load*/
     override fun viewInit() {
         /*
-        Refresh預設值為false
-        當Refresh為true時，下次載入會重新刷新頁面，並且重跑ViewInit的方法
-        當Refresh為false時，下次載入時會保留上次的操作動作和頁面
+        Refresh default value is false
+        When Refresh is true next time will reload viewInit function when you go back to the same page，Otherwise will keep retain page state
         */
         refresh=Boolean
-        //使用下面其中一種方式取得layout元件
-        rootview.findViewById<TextView>(R.id.sampletext).text= "method1"
-        //或者
-        rootview.sampletext.text = "method2"
 
     }
 }
 
 
 ```
-### 第二步:在任何地方進行使用
-#### 頁面的切換
+### Use in anywhere
+#### Change page 
 ```kotlin
-//普通切換
+//Nomal
 JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true)
-//自定義轉場動畫
+//With Animator
 JzActivity.getControlInstance().changePage(Page_Third(), "Page_Third", true,Animator.translation)
 ```
-#### 返回上一頁
+#### Go back 
 ```kotlin
  JzActivity.getControlInstance().goBack()
 ```
-#### 設定測邊抽屜
+#### Set drawer
 ```kotlin
-//sampledrawer替換成要成為抽屜的Fragment
+//sampledrawer replace to your fragment
 JzActivity.getControlInstance().setDrawer(sampledrawer())
 ```
-#### 返回首頁
+#### Go menu
 ```kotlin
 JzActivity.getControlInstance().goMenu()
 ```
-#### 顯示客製化Dialog
+#### Show custom dialog
 ```kotlin
  /*
-            使用 ShowDaiLog 的方法顯示客製化Dialog
-            cancelable 決定Dialog是否可以被點擊消失
-            swipe 決定Dialog背景是否透明反之為不透明
-            R.layout.sampledialog 換成你的Dialog layout
+
+            cancelable->Can close dialog by click
+            swipe ->Set background is transparent or not
             */
  JzActivity.getControlInstance().showDiaLog( true, false, object : SetupDialog(R.layout.sampledialog) {
                 override fun keyevent(event: KeyEvent): Boolean {
-                    //按鈕事件監聽
-                    // return true後會繼續執行父類別的dispathKeyevent方法，反之攔截按鈕事件
                     return true
                 }
 
                 override fun setup(rootview: Dialog) {
-                    //Dialog的載入設定
+                    //Set up your dialog
                     rootview.findViewById<Button>(R.id.button).setOnClickListener {
                         rootview.dismiss()
                     }
                 }
 
                 override fun dismess() {
-                    //Dialog關閉的監聽
+                    //Close listener
                 }
             },"sampledialog")
 ```
 <a name="All"></a>
-### 所有對外暴露的方法
+### All function
 ```kotlin
 
 
 interface control {
-   /*所有對外暴露的方法*/
+   /* All function*/
 
 
-    //設定首頁
+    //Set home page
     fun setHome(Translation: Fragment, tag: String)
-    //頁面切換
+    //Page switch
     fun changePage(Translation: Fragment, tag: String, goback: Boolean)
-    //頁面切換並且自定義轉場動畫
+    //Page switching and custom transition animation
     fun changePage(Translation: Fragment, tag: String, goback: Boolean,animator:Array<Int>)
-    //頁面中的fragment切換
+    //Fragment switching in the page
     fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
-    //頁面中的fragment切換並且自定義轉場動畫
+    //Fragment switching on the page and custom transition animation
     fun changeFrag(Translation: Fragment, id: Int,tag: String, goback: Boolean,animator:Array<Int>)
-    //頁面中的fragment替換
+    //Fragment replacement in the page
     fun replaceFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean)
-    //頁面中的fragment替換並且自定義轉場動畫
+    //Replace fragment in the page and customize transition animation
     fun replaceFrag(Translation: Fragment, id: Int,tag: String, goback: Boolean,animator:Array<Int>)
-    //透過tag取得推棧中的Fragement
+    //Get Fragement in the push stack through tag
     fun findFragByTag(a:String):Fragment?
-    //取得現在顯示的頁面
+    //Get the page currently displayed
     fun getNowPage():Fragment?
-    //取得現在顯示的頁面的Tag名稱
+    //Get the tag name of the page currently displayed
     fun getNowPageTag():String
-    //返回首頁
+    //Back to homepage
     fun goMenu()
-    //回上一頁
+    //Back to previous page
     fun goBack()
-    //反回tag為輸入值的頁面
+    //Return the page where the tag is the input value
     fun goBack(tag: String)
-    //反回某個位置的頁面
+    //Go back to the page at a certain location
     fun goBack(a: Int)
-    //要求存取權限
+    //Request access
     fun permissionRequest(Permissions: Array<String>, caller: permission_C, RequestCode: Int)
-    //顯示客製化Dialog
+    //Display customized Dialog
     fun showDiaLog(layoutid:Int ,cancelable: Boolean, swip: Boolean,tag:String)
-    //顯示客製化Dialog
+    //Display customized Dialog
     fun showDiaLog( cancelable: Boolean, swip: Boolean, caller: SetupDialog,tag:String)
-    //顯示客製化Dialog，並且自定義style
+    //Display customized Dialog, and customize style
     fun showCustomDaiLog( cancelable: Boolean, style: Int, caller: SetupDialog,tag:String)
-    //顯示下方彈出Dialog，並且可以拖曳關閉
+    //Dialog pops up below the display, and can be dragged to close
     fun showBottomSheetDialog(cancelable: Boolean,swip:Boolean,caller: SetupDialog, tag: String)
-    //取得tag為輸入值的Dialog
+    //Get the Dialog whose tag is the input value
     fun getDialog(tag:String): Dialog?
-    //關閉tag為輸入值的Dialog
+    //Close the Dialog whose tag is the input value
     fun closeDiaLog(tag:String)
-    //關閉所有Dialog
+    //Close all Dialog
     fun closeDiaLog()
-    //保存SharedPreferences紀錄
+    //Save SharedPreferences record
     fun setPro(key: String, value: Boolean)
     fun setPro(key: String, value: String)
     fun setPro(key: String, value: Int)
     fun getPro(key: String, value: String): String
     fun getPro(key: String, value: Boolean): Boolean
     fun getPro(key: String, value: Int): Int
-    //清除記錄
+    //Clear History
     fun clearPro()
 
-    //關閉整個app
+    //Close the entire app
     fun closeApp()
-    //設定螢幕方向
+    //Set screen orientation
     fun setOrientation(a: Int)
-    //設定側邊抽屜
+    //Set side drawer
     fun setDrawer(frag: JzFragement)
-    //打開側邊抽屜
+    //Open the side drawer
     fun openDrawer()
-    //關閉側邊抽屜
+    //Close the side drawer
     fun closeDrawer()
-    //刷新側邊抽屜(會重新跑一次viewInit方法)
+    //Refresh the side drawer (will run the viewInit method again)
     fun refreshDrawer()
-    //吐司的顯示
+    //Toast display
     fun toast(a:String)
-    //吐司的顯示(R.string.a)
+    //Toast display
     fun toast(a:Int)
-    //取得Activity
+    //Get JzActivity
     fun getRootActivity(): JzActivity
-    //多國語言設定 範例:setLanuage(Locale("en"))
+    //Multi-language setting Sample:setLanuage(Locale("en"))
     fun setLanguage(local: Locale)
-    //取得設定的多國語言
+    //Get the set multi-language
     fun getLanguage():Locale
-    //鍵盤隱藏
+    //Keyboard hide
     fun hideKeyBoard()
-    //下載apk
+    //Download apk
     fun apkDownload(url:String,callback:DownloadCallback)
-    //打開apk
+    //Open apk
     fun openAPK()
-    //app是否處於前台
+    //Whether the app is in the foreground
     fun isFrontDesk():Boolean
-    //螢幕常亮
+    //The screen is always on
     fun screenAlwaysOn()
-    //關閉螢幕常亮
+    //Turn off the screen is always on
     fun cancelAlwaysOn()
-    //取得app資訊
+    //Get app information
     fun getAppInformation():PackageInformation
-    //重啟app
+    //Restart app
     fun restart(a:Class<*>)
-    //檢查更新並返回版本號true跳轉至商店反之不跳轉，
+    //Check for updates and return to the version number true to jump to the store, otherwise not to jump
     fun checkUpdate(a:Boolean):String?
-    //前往商店
+    //Go to GooglePlay store
     fun goStore()
-    //取得handler
+    //Get handler
     fun getHandler(): Handler
-    //設定Result回調
+    //Set activity result callback
     fun setOnActivityResultCallback(callback: onActivityResultCallback)
 }
 ```
 
 <a name="About"></a>
-### 關於我
-橙的電子android and ios developer
+# About me
+#### <font color="#0000dd"> Work for: </font><br /> 
++ ##### <font color="#660000">【Orange Electronic】</font><br /> 
+#### <font color="#0000dd"> Position: </font><br /> 
++ ##### Deputy Head of R&D<br/>  
+#### <font color="#0000dd"> Main skill: </font><br /> 
++ ##### Android and IOS(4 years)<br/>  
++ ##### Jsp(2 years)<br/> 
++ ##### Javascript and Jquery and Ktor(1 years)<br /> 
+#### <font color="#0000dd"> Contact information: </font><br /> 
++  ##### line:sam38124<br /> 
 
-*line:sam38124
-
-*gmail:sam38124@gmail.com
++  ##### gmail:sam38124@gmail.com
