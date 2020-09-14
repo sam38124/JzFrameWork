@@ -56,7 +56,7 @@ abstract class JzActivity : AppCompatActivity(),
             return Switch_Instance
         }
     }
-    val transaction = supportFragmentManager.beginTransaction()
+
     var onActivityResultCallback: onActivityResultCallback? = null
     private lateinit var rootshare: RootShare
     val LayoutId = R.layout.activity_root
@@ -520,6 +520,7 @@ abstract class JzActivity : AppCompatActivity(),
     private fun SetNavaGation(frag: JzFragement) {
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
         NavaGationFrag = frag
+        val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.navigation_view, frag)
             .commitAllowingStateLoss()
     }
@@ -542,6 +543,7 @@ abstract class JzActivity : AppCompatActivity(),
         goback: Boolean,
         anim: Array<Int>?
     ) {
+        val transaction = supportFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
@@ -569,6 +571,7 @@ abstract class JzActivity : AppCompatActivity(),
         goback: Boolean,
         anim: Array<Int>?
     ) {
+        val transaction = supportFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
@@ -590,6 +593,7 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
+        val transaction = supportFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
