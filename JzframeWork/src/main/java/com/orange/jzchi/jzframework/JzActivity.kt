@@ -509,7 +509,7 @@ abstract class JzActivity : AppCompatActivity(),
 
     fun HideKeyBoard() {
         val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(this.getWindow().getDecorView().getWindowToken(), 0)
+        imm.hideSoftInputFromWindow(this.window.decorView.windowToken, 0)
     }
 
     private fun CloseDrawer() {
@@ -543,7 +543,7 @@ abstract class JzActivity : AppCompatActivity(),
         goback: Boolean,
         anim: Array<Int>?
     ) {
-        val transaction = supportFragmentManager.beginTransaction()
+        val transaction = Fraging!!.childFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
@@ -552,8 +552,6 @@ abstract class JzActivity : AppCompatActivity(),
                 .addToBackStack(FragName)
                 .commit()
         } else {
-            Fraging = Translation
-            FragName = tag
             Log.d("switch", tag)
             changePageListener(tag, Translation)
             if (anim != null) {
@@ -561,6 +559,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
             transaction.replace(id, Translation, tag)
                 .commitNow()
+//            supportFragmentManager.executePendingTransactions()
         }
     }
 
@@ -571,7 +570,7 @@ abstract class JzActivity : AppCompatActivity(),
         goback: Boolean,
         anim: Array<Int>?
     ) {
-        val transaction = supportFragmentManager.beginTransaction()
+        val transaction = Fraging!!.childFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
@@ -580,8 +579,6 @@ abstract class JzActivity : AppCompatActivity(),
                 .addToBackStack(FragName)
                 .commit()
         } else {
-            Fraging = Translation
-            FragName = tag
             Log.d("switch", tag)
             changePageListener(tag, Translation)
             if (anim != null) {
@@ -589,6 +586,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
             transaction.add(id, Translation, tag)
                 .commitNow()
+//            supportFragmentManager.executePendingTransactions()
         }
     }
 

@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.thirdpage_frag.view.*
 class Frag_1 : JzFragement(R.layout.thirdpage_frag) {
     override fun viewInit() {
         rootview.button4.setOnClickListener {
-            JzActivity.getControlInstance().changeFrag(Frag_2(), R.id.frageplace,"Frag_2", true)
+            JzActivity.getControlInstance().replaceFrag(Frag_2(), R.id.frageplace,"Frag_2", true)
         }
     }
 

@@ -16,7 +16,10 @@ class Page_Third : JzFragement(R.layout.third_page) {
         rootview.imageView.setOnClickListener {
             JzActivity.getControlInstance().goBack()
         }
-        JzActivity.getControlInstance().changeFrag(frag, R.id.frageplace, "Frag_1", false)
+        JzActivity.getControlInstance().getHandler().post {
+            JzActivity.getControlInstance().replaceFrag(frag, R.id.frageplace, "Frag_1", true)
+        }
+
         rootview.textView4.setOnClickListener {
             JzActivity.getControlInstance().changePage(Page_Third(), "Page_Thirsd", true, Animator.verticalTranslation)
 
