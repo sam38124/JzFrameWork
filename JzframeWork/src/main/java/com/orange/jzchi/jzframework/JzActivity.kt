@@ -902,7 +902,9 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     override fun onBackPressed() {
-        supportFragmentManager.popBackStack()
+        getControlInstance().getHandler().post {
+            supportFragmentManager.popBackStack()
+        }
     }
 
     private fun setLanguage(local: Locale) {
