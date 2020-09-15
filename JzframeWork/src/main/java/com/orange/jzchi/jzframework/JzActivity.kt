@@ -584,8 +584,8 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.add(id, Translation, tag)
-                .commitNow()
+            transaction.add(id, Translation, tag).commitNow()
+
 //            supportFragmentManager.executePendingTransactions()
         }
     }
@@ -618,7 +618,7 @@ abstract class JzActivity : AppCompatActivity(),
     }
 
     private fun SetHome(Translation: Fragment, tag: String) {
-        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         ChangePage(Translation, tag, false, null)
     }
 

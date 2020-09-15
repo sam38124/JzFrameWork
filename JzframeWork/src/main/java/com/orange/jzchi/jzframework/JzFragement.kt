@@ -39,7 +39,6 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
                     parentView.endViewTransition(rootview);//主动调用清除动画
                     parentView.removeView(rootview);
                 }
-                return rootview
             }
             rootview = inflater.inflate(layout, container, false)
             rootview.setOnClickListener { act.HideKeyBoard() }
