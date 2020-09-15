@@ -19,7 +19,7 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
 
     lateinit var act: JzActivity
 
-    var fragId = 0
+    var fragId=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,24 +30,24 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        JzActivity.fragid += 1
-        fragId = JzActivity.fragid
-        Log.e("rootfrag", "create${this}")
-        if (::rootview.isInitialized && !refresh) {
-            if (rootview.parent != null) {
-                val parentView = rootview.parent as ViewGroup
-                parentView.endViewTransition(rootview);//主动调用清除动画
-                parentView.removeView(rootview);
+        JzActivity.fragid+=1
+        fragId=JzActivity.fragid
+            Log.e("rootfrag", "create${this}")
+            if (::rootview.isInitialized && !refresh) {
+                if(rootview.parent != null){
+                    val parentView = rootview.parent as ViewGroup
+                    parentView.endViewTransition(rootview);//主动调用清除动画
+                    parentView.removeView(rootview);
+                }
+            }else{
+                rootview = inflater.inflate(layout, container, false)
+                handler.post { viewInit() }
             }
-            return rootview
-        }
-        rootview = inflater.inflate(layout, container, false)
         rootview.setOnClickListener { act.HideKeyBoard() }
-        handler.post {viewInit()}
         return rootview
     }
 
-    fun haveRootView(): Boolean {
+    fun haveRootView():Boolean{
         return (::rootview.isInitialized)
     }
 
@@ -56,7 +56,7 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        if (haveRootView() && rootview.parent != null) {
+        if (haveRootView()&&rootview.parent != null) {
             val parentView = rootview.parent as ViewGroup
             parentView.endViewTransition(rootview)
             parentView.clearAnimation()
