@@ -17,7 +17,7 @@ App developed based on this framework:<br><br>
 Also support ios version:[Click to view](https://github.com/sam38124/JzOsFrameWork)
 
 ## Create by
-<div align=center><img  src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/squarestudio.png?raw=tru"></div><br>
+<p align="center"><img width = "500"  src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/squarestudio.png?raw=tru"><a name="Use"></a></p><br>
 
 ## List
 * [Import to project](#Import)
