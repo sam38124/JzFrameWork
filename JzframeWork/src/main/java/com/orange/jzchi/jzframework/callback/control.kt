@@ -109,4 +109,10 @@ interface control {
     fun getHandler(): Handler
     //設定Result回調
     fun setOnActivityResultCallback(callback: onActivityResultCallback)
+    //開關動態字集
+    fun setDynamicFont(isopen: Boolean)
+    //設定ActionBar
+    fun setUpActionBar(frag:JzFragement)
+    //隱藏與顯示ActionBar
+    fun toggleActionBar(visible:Boolean)
 }

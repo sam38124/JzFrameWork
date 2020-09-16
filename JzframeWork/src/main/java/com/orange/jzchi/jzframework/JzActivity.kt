@@ -9,6 +9,8 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.hardware.SensorManager
 import android.net.Uri
 import android.os.Build
@@ -51,12 +53,11 @@ abstract class JzActivity : AppCompatActivity(),
         private fun setSwitchInstance(instance: control) {
             Switch_Instance = instance
         }
-
         fun getControlInstance(): control {
             return Switch_Instance
         }
     }
-
+    var DynamicFont=true
     var onActivityResultCallback: onActivityResultCallback? = null
     private lateinit var rootshare: RootShare
     val LayoutId = R.layout.activity_root
@@ -188,6 +189,18 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun setOnActivityResultCallback(callback: onActivityResultCallback) {
                 onActivityResultCallback = callback
+            }
+
+            override fun setDynamicFont(isopen: Boolean) {
+                DynamicFont=isopen
+            }
+
+            override fun setUpActionBar(frag: JzFragement) {
+                ReplaceFrag(frag,R.id.frag_bar,"frag_bar",false,null)
+            }
+
+            override fun toggleActionBar(visible: Boolean) {
+                findViewById<FrameLayout>(R.id.frag_bar).visibility = if(visible) View.VISIBLE else View.GONE
             }
 
             override fun getNowPage(): Fragment? {
@@ -412,6 +425,7 @@ abstract class JzActivity : AppCompatActivity(),
             override fun apkDownload(url: String, callback: DownloadCallback) {
                 Download.apkDownload(url, callback)
             }
+
         })
         rootshare = RootShare(this)
         getControlInstance().setLanguage(getControlInstance().getLanguage())
@@ -543,7 +557,7 @@ abstract class JzActivity : AppCompatActivity(),
         goback: Boolean,
         anim: Array<Int>?
     ) {
-        val transaction = Fraging!!.childFragmentManager.beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
@@ -558,9 +572,9 @@ abstract class JzActivity : AppCompatActivity(),
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(id, Translation, tag)
-                .commitNow()
-//            supportFragmentManager.executePendingTransactions()
+                .commit()
         }
+        supportFragmentManager.executePendingTransactions()
     }
 
     private fun ChangeFrag(
@@ -570,7 +584,7 @@ abstract class JzActivity : AppCompatActivity(),
         goback: Boolean,
         anim: Array<Int>?
     ) {
-        val transaction = Fraging!!.childFragmentManager.beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
@@ -584,10 +598,9 @@ abstract class JzActivity : AppCompatActivity(),
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
-            transaction.add(id, Translation, tag).commitNow()
-
-//            supportFragmentManager.executePendingTransactions()
+            transaction.add(id, Translation, tag).commit()
         }
+        supportFragmentManager.executePendingTransactions()
     }
 
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
@@ -609,8 +622,9 @@ abstract class JzActivity : AppCompatActivity(),
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
             }
             transaction.replace(FragId, Translation, tag)
-                .commitNow()
+                .commit()
         }
+        supportFragmentManager.executePendingTransactions()
     }
 
     private fun FindfragByTag(a: String): Fragment? {
@@ -961,6 +975,7 @@ abstract class JzActivity : AppCompatActivity(),
 //            false
 //        }
 //    }
+
     /**
      * 請求成功
      */
@@ -1015,7 +1030,23 @@ abstract class JzActivity : AppCompatActivity(),
         }
         return false
     }
+    /**
+     * 資源請求
+     */
+    override fun getResources(): Resources? {
+        //取消動態字級
+        val resources: Resources = super.getResources()
+        val configuration = Configuration()
+        configuration.setToDefaults()
+        try {
+            configuration.setLocale(getControlInstance().getLanguage())
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        if(!DynamicFont){resources.updateConfiguration(configuration, resources.displayMetrics)}
 
+        return resources
+    }
     //===============================Abstract Function===============================
     /**
      * 父頁面的載入
@@ -1026,7 +1057,6 @@ abstract class JzActivity : AppCompatActivity(),
      * 頁面切換監聽
      */
     abstract fun changePageListener(tag: String, frag: Fragment);
-
     /**
      * 按鍵的監聽
      */

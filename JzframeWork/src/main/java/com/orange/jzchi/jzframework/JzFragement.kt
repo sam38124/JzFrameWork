@@ -32,12 +32,6 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
         savedInstanceState: Bundle?
     ): View? {
         Log.e("rootfrag", "create${this}")
-        if (haveRootView() && rootview.parent != null) {
-            val parentView = rootview.parent as ViewGroup
-            parentView.endViewTransition(rootview);//主动调用清除动画
-            parentView.removeView(rootview);
-            return null
-        }
         if (haveRootView() && !refresh) {
             return rootview
         }
@@ -58,13 +52,7 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        if (haveRootView() && rootview.parent != null) {
-            val parentView = rootview.parent as ViewGroup
-            parentView.endViewTransition(rootview)
-            parentView.clearAnimation()
-            parentView.removeView(parentView)
 
-        }
     }
 //===============================Abstract Function===============================
     /**

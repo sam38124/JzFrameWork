@@ -6,11 +6,34 @@
         android:layout_height="match_parent"
         android:background="@android:color/white" android:id="@+id/drawer">
 
-    <FrameLayout
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/frag_root" android:visibility="visible">
+            android:layout_height="match_parent">
 
-    </FrameLayout>
+        <FrameLayout
+                android:id="@+id/frag_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:visibility="gone">
+
+            <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Have not set up title bar" />
+        </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/frag_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/frag_bar"
+                android:visibility="visible">
+
+        </FrameLayout>
+    </RelativeLayout>
+
     <com.google.android.material.navigation.NavigationView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

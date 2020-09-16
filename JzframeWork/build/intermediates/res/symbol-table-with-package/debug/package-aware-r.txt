@@ -1219,6 +1219,7 @@ id fill
 id filled
 id fixed
 id forever
+id frag_bar
 id frag_root
 id fragment_container_view_tag
 id ghost_view
@@ -1325,6 +1326,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
 id textView2
+id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error

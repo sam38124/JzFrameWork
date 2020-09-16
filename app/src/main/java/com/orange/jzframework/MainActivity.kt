@@ -9,6 +9,7 @@ import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.callback.DownloadCallback
 import com.orange.jzchi.jzframework.callback.permission_C
 import com.orange.jzframework.drawer.sampledrawer
+import com.orange.jzframework.frag.Frag_1
 import com.orange.jzframework.page.Page_Home
 import java.util.jar.Manifest
 
@@ -18,6 +19,13 @@ class MainActivity : JzActivity() {
         //設定首頁
         getControlInstance().setHome(Page_Home(), "Page_Home")
         getControlInstance().setDrawer(sampledrawer())
+        //是否設定動態字級
+        getControlInstance().setDynamicFont(false)
+        //Set up action bar
+        getControlInstance().setUpActionBar(Frag_1())
+        //Open Action Bar
+        getControlInstance().toggleActionBar(true)
+
     }
 
     /*頁面切換監聽*/
@@ -30,11 +38,11 @@ class MainActivity : JzActivity() {
     override fun keyEventListener(event: KeyEvent): Boolean {
         return true
     }
-
+    /*是否保留狀態*/
     override fun savedInstanceAble(): Boolean {
         return true
     }
-
+    /*Dialog監聽*/
     override fun dialogLinstener(dialog: Dialog, tag: String) {
 
     }

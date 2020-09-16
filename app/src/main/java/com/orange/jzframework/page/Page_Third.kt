@@ -12,12 +12,11 @@ class Page_Third : JzFragement(R.layout.third_page) {
 
     override fun viewInit() {
         //頁面中的fragment切換
-        refresh=true
         rootview.imageView.setOnClickListener {
             JzActivity.getControlInstance().goBack()
         }
         JzActivity.getControlInstance().getHandler().post {
-            JzActivity.getControlInstance().replaceFrag(frag, R.id.frageplace, "Frag_1", true)
+            JzActivity.getControlInstance().replaceFrag(frag, R.id.frageplace, "Frag_1", false)
         }
 
         rootview.textView4.setOnClickListener {
