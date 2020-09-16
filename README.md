@@ -40,7 +40,7 @@ Add into dependencies
 
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:10.2.5'}
+implementation 'com.github.sam38124:JzFrameWork:10.3.6'}
 ```
 <a name="Use"></a>
 ## Quick Start
@@ -54,6 +54,10 @@ class MainActivity : JzActivity() {
         JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
         //Can set side drawer if you want
         JzActivity.getControlInstance().setDrawer(sampledrawer())
+        //Set up action bar if you want
+        getControlInstance().setUpActionBar(CustomFragBar())
+        //Hide or visible actionbar
+        getControlInstance().toggleActionBar(true)
     }
 
     /*Page switch linstener*/
@@ -242,6 +246,12 @@ interface control {
     fun getHandler(): Handler
     //Set activity result callback
     fun setOnActivityResultCallback(callback: onActivityResultCallback)
+    //Toggle DynamicFon
+    fun setDynamicFont(isopen: Boolean)
+    //Set up actionbar
+    fun setUpActionBar(frag:JzFragement)
+    //Toggle actionbar
+    fun toggleActionBar(visible:Boolean)
 }
 ```
 
