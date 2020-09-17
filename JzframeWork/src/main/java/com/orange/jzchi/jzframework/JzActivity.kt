@@ -584,7 +584,7 @@ abstract class JzActivity : AppCompatActivity(),
             transaction.replace(id, Translation, tag)
                 .commit()
         }
-        supportFragmentManager.executePendingTransactions()
+        try{supportFragmentManager.executePendingTransactions()}catch (e:java.lang.Exception){e.printStackTrace()}
     }
 
     private fun ChangeFrag(
@@ -610,7 +610,7 @@ abstract class JzActivity : AppCompatActivity(),
             }
             transaction.add(id, Translation, tag).commit()
         }
-        supportFragmentManager.executePendingTransactions()
+        try{supportFragmentManager.executePendingTransactions()}catch (e:java.lang.Exception){e.printStackTrace()}
     }
 
     private fun ChangePage(Translation: Fragment, tag: String, goback: Boolean, anim: Array<Int>?) {
@@ -637,7 +637,7 @@ abstract class JzActivity : AppCompatActivity(),
             transaction.replace(FragId, Translation, tag)
                 .commit()
         }
-        supportFragmentManager.executePendingTransactions()
+        try{supportFragmentManager.executePendingTransactions()}catch (e:java.lang.Exception){e.printStackTrace()}
     }
 
     private fun FindfragByTag(a: String): Fragment? {
