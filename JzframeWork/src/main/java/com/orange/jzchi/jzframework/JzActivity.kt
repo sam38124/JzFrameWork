@@ -205,7 +205,8 @@ abstract class JzActivity : AppCompatActivity(),
             }
 
             override fun getActionBar(): JzFragement? {
-                return getControlInstance().findFragByTag("frag_bar") as JzFragement
+                val bar=getControlInstance().findFragByTag("frag_bar")
+                return if(bar==null) null else bar as JzFragement
             }
 
             override fun setUpDefaultAnimator(animator: Array<Int>) {
