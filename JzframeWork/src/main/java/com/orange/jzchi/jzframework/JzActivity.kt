@@ -1034,7 +1034,7 @@ abstract class JzActivity : AppCompatActivity(),
     /**
      * 資源請求
      */
-    override fun getResources(): Resources? {
+    override fun getResources(): Resources {
         //取消動態字級
         val resources: Resources = super.getResources()
         val configuration = Configuration()
