@@ -204,6 +204,10 @@ abstract class JzActivity : AppCompatActivity(),
                 findViewById<FrameLayout>(R.id.frag_bar).visibility = if(visible) View.VISIBLE else View.GONE
             }
 
+            override fun getActionBar(): JzFragement? {
+                return getControlInstance().findFragByTag("frag_bar") as JzFragement
+            }
+
             override fun setUpDefaultAnimator(animator: Array<Int>) {
                 defaultAnimator=animator
             }
