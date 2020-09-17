@@ -115,4 +115,6 @@ interface control {
     fun setUpActionBar(frag:JzFragement)
     //隱藏與顯示ActionBar
     fun toggleActionBar(visible:Boolean)
+    //設定預設轉場動畫
+    fun setUpDefaultAnimator(animator:Array<Int>)
 }

@@ -57,6 +57,7 @@ abstract class JzActivity : AppCompatActivity(),
             return Switch_Instance
         }
     }
+    var defaultAnimator:Array<Int>? =null
     var DynamicFont=true
     var onActivityResultCallback: onActivityResultCallback? = null
     private lateinit var rootshare: RootShare
@@ -201,6 +202,10 @@ abstract class JzActivity : AppCompatActivity(),
 
             override fun toggleActionBar(visible: Boolean) {
                 findViewById<FrameLayout>(R.id.frag_bar).visibility = if(visible) View.VISIBLE else View.GONE
+            }
+
+            override fun setUpDefaultAnimator(animator: Array<Int>) {
+                defaultAnimator=animator
             }
 
             override fun getNowPage(): Fragment? {
@@ -608,6 +613,8 @@ abstract class JzActivity : AppCompatActivity(),
         if (goback) {
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
+            }else if(defaultAnimator != null){
+                transaction.setCustomAnimations(defaultAnimator!![0],defaultAnimator!![1],defaultAnimator!![2],defaultAnimator!![3])
             }
             transaction.replace(FragId, Translation, tag)
                 .addToBackStack(FragName)
@@ -617,9 +624,10 @@ abstract class JzActivity : AppCompatActivity(),
             FragName = tag
             Log.d("switch", tag)
             changePageListener(tag, Translation)
-
             if (anim != null) {
                 transaction.setCustomAnimations(anim[0], anim[1], anim[2], anim[3])
+            }else if(defaultAnimator != null){
+                transaction.setCustomAnimations(defaultAnimator!![0],defaultAnimator!![1],defaultAnimator!![2],defaultAnimator!![3])
             }
             transaction.replace(FragId, Translation, tag)
                 .commit()
@@ -964,18 +972,6 @@ abstract class JzActivity : AppCompatActivity(),
         }
         onActivityResultCallback!!.setonResultLinstner(requestCode, resultCode, data)
     }
-//    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-//        Log.e("event", "" + event)
-//        if (Fraging != null) {
-//            (Fraging as DiapathKey).dispatchKeyEvent(event)
-//        }//按鍵分發
-//        return if(keyEventListener(event)){
-//            super.dispatchKeyEvent(event)
-//        }else{
-//            false
-//        }
-//    }
-
     /**
      * 請求成功
      */

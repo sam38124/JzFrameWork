@@ -37,9 +37,7 @@ abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
         }
         rootview = inflater.inflate(layout, container, false)
         rootview.setOnClickListener { JzActivity.getControlInstance().hideKeyBoard() }
-        handler.post {
-            viewInit()
-        }
+        viewInit()
         return rootview
     }
 
