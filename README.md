@@ -15,6 +15,10 @@ App developed based on this framework:<br><br>
 <img src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/gotit_icon.png?raw=true" width = "70"  alt="i1" /><a name="Use"></a>
 <br><br>
 Also support ios version:[Click to view](https://github.com/sam38124/JzOsFrameWork)
+
+## Create by
+<p align="center"><img width = "500"  src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/squarestudio.png?raw=tru"><a name="Use"></a></p>
+
 ## List
 * [Import to project](#Import)
 * [Quick Start](#Use)
@@ -40,7 +44,7 @@ Add into dependencies
 
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:10.2.5'}
+implementation 'com.github.sam38124:JzFrameWork:10.3.6'}
 ```
 <a name="Use"></a>
 ## Quick Start
@@ -54,6 +58,10 @@ class MainActivity : JzActivity() {
         JzActivity.getControlInstance().setHome(Page_Home(), "Page_Home")
         //Can set side drawer if you want
         JzActivity.getControlInstance().setDrawer(sampledrawer())
+        //Set up action bar if you want
+        getControlInstance().setUpActionBar(CustomFragBar())
+        //Hide or visible actionbar
+        getControlInstance().toggleActionBar(true)
     }
 
     /*Page switch linstener*/
@@ -242,15 +250,20 @@ interface control {
     fun getHandler(): Handler
     //Set activity result callback
     fun setOnActivityResultCallback(callback: onActivityResultCallback)
+    //Toggle DynamicFon
+    fun setDynamicFont(isopen: Boolean)
+    //Set up actionbar
+    fun setUpActionBar(frag:JzFragement)
+    //Toggle actionbar
+    fun toggleActionBar(visible:Boolean)
 }
 ```
 
 <a name="About"></a>
 # About me
 #### <font color="#0000dd"> Work for: </font><br /> 
-+ ##### <font color="#660000">【Orange Electronic】</font><br /> 
-#### <font color="#0000dd"> Position: </font><br /> 
-+ ##### Deputy Head of R&D<br/>  
++ ##### <font color="#660000">【Orange Electronic】橙的電子-Deputy Head of R&D </font><br /> 
++ ##### <font color="#660000">【Square Studio】四方工作室-CEO </font><br />
 #### <font color="#0000dd"> Main skill: </font><br /> 
 + ##### Android and IOS(4 years)<br/>  
 + ##### Jsp(2 years)<br/> 
@@ -259,3 +272,4 @@ interface control {
 +  ##### line:sam38124<br /> 
 
 +  ##### gmail:sam38124@gmail.com
+
