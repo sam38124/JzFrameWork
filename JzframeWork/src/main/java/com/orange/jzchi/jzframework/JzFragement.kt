@@ -13,6 +13,8 @@ import com.orange.jzchi.jzframework.callback.DiapathKey
 abstract class JzFragement(val layout: Int) : Fragment(), DiapathKey {
     var refresh = false
 
+    val act :JzActivity get() = JzActivity.getControlInstance().getRootActivity()
+
     lateinit var rootview: View
 
     var handler = Handler()
