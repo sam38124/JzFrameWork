@@ -734,7 +734,7 @@ abstract class JzActivity : AppCompatActivity(),
             addclass.tag = tag
             addclass.callback = caller
             mDialog.add(addclass)
-            dialogLinstener(dialog, tag)
+            dialogLinstener(addclass, tag)
             if (buttomSheet) {
                 dialog.setOnShowListener {
                     setupFullHeight(dialog as BottomSheetDialog);
@@ -839,7 +839,7 @@ abstract class JzActivity : AppCompatActivity(),
             addclass.tag = tag
             addclass.callback = caller
             mDialog.add(addclass)
-            dialogLinstener(dialog, tag)
+            dialogLinstener(addclass, tag)
             if (buttomSheet) {
                 BottomSheetBehavior.from(dialog.findViewById<FrameLayout>(R.id.design_bottom_sheet))
                     .setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
@@ -1071,7 +1071,7 @@ abstract class JzActivity : AppCompatActivity(),
     /**
      * Dialog監聽
      */
-    abstract fun dialogLinstener(dialog: Dialog, tag: String)
+    abstract fun dialogLinstener(dialog: DiaClass, tag: String)
 }
 
 class DiaClass {

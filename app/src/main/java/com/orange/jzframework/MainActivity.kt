@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.orange.jzchi.jzframework.DiaClass
 import com.orange.jzchi.jzframework.JzActivity
 import com.orange.jzchi.jzframework.callback.DownloadCallback
 import com.orange.jzchi.jzframework.callback.permission_C
@@ -43,7 +44,7 @@ class MainActivity : JzActivity() {
         return true
     }
     /*Dialog監聽*/
-    override fun dialogLinstener(dialog: Dialog, tag: String) {
+    override fun dialogLinstener(dialog: DiaClass, tag: String) {
 
     }
 }
