@@ -30,7 +30,7 @@ Also support ios version:[Click to view](https://github.com/sam38124/JzOsFrameWo
 > Support jcenter。 <br/>
 
 ### jcenter
-Add into build.gradle 
+Add  into your build.gradle 
 ```kotlin
 allprojects {
 		repositories {
@@ -40,11 +40,11 @@ allprojects {
 	}
 ```
 
-Add into dependencies
+Add into your dependencies
 
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:10.3.6'}
+implementation 'com.github.sam38124:JzFrameWork:10.4.02'}
 ```
 <a name="Use"></a>
 ## Quick Start
