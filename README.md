@@ -34,7 +34,7 @@ Add into your dependencies
 
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124:JzFrameWork:10.4.02'}
+implementation 'com.github.sam38124:JzFrameWork:10.4.03'}
 ```
 <a name="Use"></a>
 ## Quick Start
