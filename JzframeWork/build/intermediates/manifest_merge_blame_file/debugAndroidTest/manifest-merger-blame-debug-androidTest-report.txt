@@ -1,0 +1,73 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.orange.jzchi.test" >
+4
+5    <uses-sdk
+5-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:5:15-41
+7        android:targetSdkVersion="28" />
+7-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:11:5-15:71
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:11:22-76
+11        android:functionalTest="false"
+11-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:13:22-53
+13        android:label="Tests for com.orange.jzchi.test"
+13-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:15:22-69
+14        android:targetPackage="com.orange.jzchi.test" />
+14-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:12:22-67
+15
+16    <uses-feature android:name="android.hardware.camera.autofocus" />
+16-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-70
+16-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:19-67
+17
+18    <uses-permission android:name="android.permission.CAMERA" />
+18-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-65
+18-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-62
+19
+20    <uses-feature android:name="android.hardware.camera" />
+20-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-60
+20-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:19-57
+21
+22    <uses-permission android:name="android.permission.BLUETOOTH" />
+22-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-68
+22-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:22-65
+23    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+23-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-74
+23-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:22-71
+24    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- File Permission -->
+24-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:5-77
+24-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:22-74
+25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+25-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:5-81
+25-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:22-78
+26    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+26-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:5-80
+26-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:22-77
+27    <uses-permission android:name="android.permission.INTERNET" />
+27-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:5-67
+27-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:22-64
+28    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+28-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:5-81
+28-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:22-78
+29    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+29-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:5-79
+29-->[__tested_artifact__::JzframeWork] /Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:22-76
+30
+31    <application
+31-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:7:5-9:19
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.6.0-rc01] /Users/jianzhi.wang/.gradle/caches/transforms-2/files-2.1/5d0c8ddc89c1b9fc3135af5e217cd7e1/core-1.6.0-rc01/AndroidManifest.xml:24:18-86
+33        android:debuggable="true" >
+33-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:7:18-43
+34        <uses-library android:name="android.test.runner" />
+34-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:8:9-60
+34-->/Users/jianzhi.wang/Desktop/Android_framework/JzFrameWork/JzframeWork/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger7995816251165369125.xml:8:23-57
+35    </application>
+36
+37</manifest>

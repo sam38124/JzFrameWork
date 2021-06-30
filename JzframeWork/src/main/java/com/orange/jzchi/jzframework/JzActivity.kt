@@ -80,363 +80,363 @@ abstract class JzActivity : AppCompatActivity(),
             changePageListener(FragName, Fraging!!)
         }
     }
+    var control=object : control {
+        override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
+            screenAlwaysOn()
+            ShowDaiLog(cancelable, swip, object : SetupDialog(Layout) {
+                override fun setup(rootview: Dialog) {
 
+                }
+
+                override fun dismess() {
+
+                }
+
+                override fun keyevent(event: KeyEvent): Boolean {
+                    return cancelable
+                }
+            }, tag, false)
+        }
+
+        override fun openAPK() {
+            handler.post {
+                val file = File("/sdcard/update/beta.apk");
+                val intent = Intent(Intent.ACTION_VIEW);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                var data: Uri? = null;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {//判断版本大于等于7.0
+                    // "sven.com.fileprovider.fileprovider"即是在清单文件中配置的authorities
+                    // 通过FileProvider创建一个content类型的Uri
+                    data =
+                        FileProvider.getUriForFile(this@JzActivity, "abc.fileprovider", file);
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);// 给目标应用一个临时授权
+                } else {
+                    data = Uri.fromFile(file);
+                }
+                intent.setDataAndType(data, "application/vnd.android.package-archive");
+                startActivity(intent);
+                closeApp()
+            }
+        }
+
+        override fun isFrontDesk(): Boolean {
+            return appOnForeground()
+        }
+
+        override fun screenAlwaysOn() {
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+
+        override fun cancelAlwaysOn() {
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+
+        override fun getAppInformation(): PackageInformation {
+            return PackageInformation()
+        }
+
+        override fun restart(a: Class<*>) {
+            getControlInstance().closeDiaLog()
+            val intent = Intent(applicationContext, a)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            this@JzActivity.startActivity(intent)
+            android.os.Process.killProcess(android.os.Process.myPid())
+        }
+
+        override fun checkUpdate(a: Boolean): String? {
+            val versionChecker = VersionCheck()
+            versionChecker.packagename = applicationContext.packageName
+            try {
+                if (!a) {
+                    return versionChecker.execute().get()
+                }
+                val mLatestVersionName = versionChecker.execute().get()
+                if (PackageInformation().getVersionName().toDouble() != java.lang.Double.parseDouble(
+                        mLatestVersionName
+                    )
+                ) {
+                    goStore()
+
+                }
+                return mLatestVersionName
+            } catch (e: Exception) {
+                e.printStackTrace()
+                return null
+            }
+        }
+
+        override fun goStore() {
+            try {
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data =
+                    Uri.parse("https://play.google.com/store/apps/details?id=${applicationContext.packageName}")
+                startActivity(intent)
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        override fun getHandler(): Handler {
+            return handler
+        }
+
+        override fun setOnActivityResultCallback(callback: onActivityResultCallback) {
+            onActivityResultCallback = callback
+        }
+
+        override fun setDynamicFont(isopen: Boolean) {
+            DynamicFont=isopen
+        }
+
+        override fun setUpActionBar(frag: JzFragement) {
+            ReplaceFrag(frag,R.id.frag_bar,"frag_bar",false,null)
+        }
+
+        override fun toggleActionBar(visible: Boolean) {
+            findViewById<FrameLayout>(R.id.frag_bar).visibility = if(visible) View.VISIBLE else View.GONE
+        }
+
+        override fun getActionBar(): JzFragement? {
+            val bar=getControlInstance().findFragByTag("frag_bar")
+            return if(bar==null) null else bar as JzFragement
+        }
+
+        override fun setUpDefaultAnimator(animator: Array<Int>) {
+            defaultAnimator=animator
+        }
+
+        override fun getNowPage(): Fragment? {
+            return Fraging
+        }
+
+        override fun getNowPageTag(): String {
+            return FragName
+        }
+
+        override fun hideKeyBoard() {
+            HideKeyBoard()
+        }
+
+        override fun setLanguage(local: Locale) {
+            this@JzActivity.setLanguage(local)
+        }
+
+        override fun getLanguage(): Locale {
+            val local = getControlInstance().getPro("Language_Local", "nodata")
+            val country = getControlInstance().getPro("Language_Country", "nodata")
+            if (getControlInstance().getPro("Language_Local", "nodata") != "nodata") {
+                return Locale(local, country)
+            } else {
+                return Locale.getDefault()
+            }
+        }
+
+        override fun findFragByTag(a: String): Fragment? {
+            return FindfragByTag(a)
+        }
+
+        override fun getRootActivity(): JzActivity {
+            return this@JzActivity
+        }
+
+        override fun showCustomDaiLog(
+            cancelable: Boolean,
+            style: Int,
+            caller: SetupDialog,
+            tag: String
+        ) {
+            screenAlwaysOn()
+            ShowDaiLog(cancelable, style, caller, tag, false)
+        }
+
+        override fun showBottomSheetDialog(
+            cancelable: Boolean,
+            swip: Boolean,
+            caller: SetupDialog,
+            tag: String
+        ) {
+            ShowDaiLog(cancelable, swip, caller, tag, true)
+            return
+        }
+
+        override fun getDialog(tag: String): DiaClass? {
+            for (i in mDialog) {
+                if (i.tag == tag) {
+                    return i
+                }
+            }
+            return null
+        }
+
+        override fun toast(a: String) {
+            Toast(a)
+        }
+
+        override fun toast(a: Int) {
+            Toast(a)
+        }
+
+        override fun refreshDrawer() {
+            RefreshNavaGation()
+        }
+
+        override fun setDrawer(frag: JzFragement) {
+            SetNavaGation(frag)
+        }
+
+        override fun openDrawer() {
+            OpenNavaGation()
+        }
+
+        override fun closeDrawer() {
+            CloseDrawer()
+        }
+
+        override fun setOrientation(a: Int) {
+            SetOrientation(a)
+        }
+
+        override fun closeApp() {
+            CloseApp()
+        }
+
+        override fun permissionRequest(
+            Permissions: Array<String>,
+            caller: permission_C,
+            RequestCode: Int
+        ) {
+            GetPermission(Permissions, caller, RequestCode)
+        }
+
+
+        override fun showDiaLog(
+            cancelable: Boolean,
+            swip: Boolean,
+            caller: SetupDialog,
+            tag: String
+        ) {
+            screenAlwaysOn()
+            ShowDaiLog(cancelable, swip, caller, tag, false)
+        }
+
+        override fun closeDiaLog(tag: String) {
+            cancelAlwaysOn()
+            DaiLogDismiss(tag)
+        }
+
+        override fun closeDiaLog() {
+            try {
+                for (i in mDialog) {
+                    i.dialog.dismiss()
+                }
+                mDialog.clear()
+            } catch (e: java.lang.Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        override fun setPro(key: String, value: Boolean) {
+            rootshare.SetPro(key, value)
+        }
+
+        override fun setPro(key: String, value: String) {
+            rootshare.SetPro(key, value)
+        }
+
+        override fun setPro(key: String, value: Int) {
+            rootshare.SetPro(key, value)
+        }
+
+        override fun getPro(key: String, value: String): String {
+            return rootshare.GetPro(key, value)
+        }
+
+        override fun getPro(key: String, value: Boolean): Boolean {
+            return rootshare.GetPro(key, value)
+        }
+
+        override fun getPro(key: String, value: Int): Int {
+            return rootshare.GetPro(key, value)
+        }
+
+        override fun clearPro() {
+            getSharedPreferences("Setting", Context.MODE_PRIVATE).edit().clear().commit()
+        }
+
+        override fun goBack(tag: String) {
+            GoBack(tag)
+        }
+
+        override fun goBack(a: Int) {
+            GoBack(a)
+        }
+
+        override fun goBack() {
+            GoBack()
+        }
+
+        override fun goMenu() {
+            GoMenu()
+        }
+
+        override fun setHome(Translation: Fragment, tag: String) {
+            SetHome(Translation, tag)
+        }
+
+        override fun changePage(Translation: Fragment, tag: String, goback: Boolean) {
+            ChangePage(Translation, tag, goback, null)
+        }
+
+        override fun changePage(
+            Translation: Fragment,
+            tag: String,
+            goback: Boolean,
+            animator: Array<Int>
+        ) {
+            ChangePage(Translation, tag, goback, animator)
+        }
+
+        override fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
+            ChangeFrag(Translation, id, tag, goback, null)
+        }
+
+        override fun changeFrag(
+            Translation: Fragment,
+            id: Int,
+            tag: String,
+            goback: Boolean,
+            animator: Array<Int>
+        ) {
+            ChangeFrag(Translation, id, tag, goback, animator)
+        }
+
+        override fun replaceFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
+            ReplaceFrag(Translation, id, tag, goback, null)
+        }
+
+        override fun replaceFrag(
+            Translation: Fragment,
+            id: Int,
+            tag: String,
+            goback: Boolean,
+            animator: Array<Int>
+        ) {
+            ReplaceFrag(Translation, id, tag, goback, animator)
+        }
+
+        override fun apkDownload(url: String, callback: DownloadCallback) {
+            Download.apkDownload(url, callback)
+        }
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         if (savedInstanceAble()) {
             super.onCreate(savedInstanceState)
         } else {
             super.onCreate(null)
         }
-        setSwitchInstance(object : control {
-            override fun showDiaLog(Layout: Int, cancelable: Boolean, swip: Boolean, tag: String) {
-                screenAlwaysOn()
-                ShowDaiLog(cancelable, swip, object : SetupDialog(Layout) {
-                    override fun setup(rootview: Dialog) {
-
-                    }
-
-                    override fun dismess() {
-
-                    }
-
-                    override fun keyevent(event: KeyEvent): Boolean {
-                        return cancelable
-                    }
-                }, tag, false)
-            }
-
-            override fun openAPK() {
-                handler.post {
-                    val file = File("/sdcard/update/beta.apk");
-                    val intent = Intent(Intent.ACTION_VIEW);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    var data: Uri? = null;
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {//判断版本大于等于7.0
-                        // "sven.com.fileprovider.fileprovider"即是在清单文件中配置的authorities
-                        // 通过FileProvider创建一个content类型的Uri
-                        data =
-                            FileProvider.getUriForFile(this@JzActivity, "abc.fileprovider", file);
-                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);// 给目标应用一个临时授权
-                    } else {
-                        data = Uri.fromFile(file);
-                    }
-                    intent.setDataAndType(data, "application/vnd.android.package-archive");
-                    startActivity(intent);
-                    closeApp()
-                }
-            }
-
-            override fun isFrontDesk(): Boolean {
-                return appOnForeground()
-            }
-
-            override fun screenAlwaysOn() {
-                window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-            }
-
-            override fun cancelAlwaysOn() {
-                window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-            }
-
-            override fun getAppInformation(): PackageInformation {
-                return PackageInformation()
-            }
-
-            override fun restart(a: Class<*>) {
-                getControlInstance().closeDiaLog()
-                val intent = Intent(applicationContext, a)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                this@JzActivity.startActivity(intent)
-                android.os.Process.killProcess(android.os.Process.myPid())
-            }
-
-            override fun checkUpdate(a: Boolean): String? {
-                val versionChecker = VersionCheck()
-                versionChecker.packagename = applicationContext.packageName
-                try {
-                    if (!a) {
-                        return versionChecker.execute().get()
-                    }
-                    val mLatestVersionName = versionChecker.execute().get()
-                    if (PackageInformation().getVersionName().toDouble() != java.lang.Double.parseDouble(
-                            mLatestVersionName
-                        )
-                    ) {
-                        goStore()
-
-                    }
-                    return mLatestVersionName
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    return null
-                }
-            }
-
-            override fun goStore() {
-                try {
-                    val intent = Intent(Intent.ACTION_VIEW)
-                    intent.data =
-                        Uri.parse("https://play.google.com/store/apps/details?id=${applicationContext.packageName}")
-                    startActivity(intent)
-
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
-
-            override fun getHandler(): Handler {
-                return handler
-            }
-
-            override fun setOnActivityResultCallback(callback: onActivityResultCallback) {
-                onActivityResultCallback = callback
-            }
-
-            override fun setDynamicFont(isopen: Boolean) {
-                DynamicFont=isopen
-            }
-
-            override fun setUpActionBar(frag: JzFragement) {
-                ReplaceFrag(frag,R.id.frag_bar,"frag_bar",false,null)
-            }
-
-            override fun toggleActionBar(visible: Boolean) {
-                findViewById<FrameLayout>(R.id.frag_bar).visibility = if(visible) View.VISIBLE else View.GONE
-            }
-
-            override fun getActionBar(): JzFragement? {
-                val bar=getControlInstance().findFragByTag("frag_bar")
-                return if(bar==null) null else bar as JzFragement
-            }
-
-            override fun setUpDefaultAnimator(animator: Array<Int>) {
-                defaultAnimator=animator
-            }
-
-            override fun getNowPage(): Fragment? {
-                return Fraging
-            }
-
-            override fun getNowPageTag(): String {
-                return FragName
-            }
-
-            override fun hideKeyBoard() {
-                HideKeyBoard()
-            }
-
-            override fun setLanguage(local: Locale) {
-                this@JzActivity.setLanguage(local)
-            }
-
-            override fun getLanguage(): Locale {
-                val local = getControlInstance().getPro("Language_Local", "nodata")
-                val country = getControlInstance().getPro("Language_Country", "nodata")
-                if (getControlInstance().getPro("Language_Local", "nodata") != "nodata") {
-                    return Locale(local, country)
-                } else {
-                    return Locale.getDefault()
-                }
-            }
-
-            override fun findFragByTag(a: String): Fragment? {
-                return FindfragByTag(a)
-            }
-
-            override fun getRootActivity(): JzActivity {
-                return this@JzActivity
-            }
-
-            override fun showCustomDaiLog(
-                cancelable: Boolean,
-                style: Int,
-                caller: SetupDialog,
-                tag: String
-            ) {
-                screenAlwaysOn()
-                ShowDaiLog(cancelable, style, caller, tag, false)
-            }
-
-            override fun showBottomSheetDialog(
-                cancelable: Boolean,
-                swip: Boolean,
-                caller: SetupDialog,
-                tag: String
-            ) {
-                ShowDaiLog(cancelable, swip, caller, tag, true)
-                return
-            }
-
-            override fun getDialog(tag: String): DiaClass? {
-                for (i in mDialog) {
-                    if (i.tag == tag) {
-                        return i
-                    }
-                }
-                return null
-            }
-
-            override fun toast(a: String) {
-                Toast(a)
-            }
-
-            override fun toast(a: Int) {
-                Toast(a)
-            }
-
-            override fun refreshDrawer() {
-                RefreshNavaGation()
-            }
-
-            override fun setDrawer(frag: JzFragement) {
-                SetNavaGation(frag)
-            }
-
-            override fun openDrawer() {
-                OpenNavaGation()
-            }
-
-            override fun closeDrawer() {
-                CloseDrawer()
-            }
-
-            override fun setOrientation(a: Int) {
-                SetOrientation(a)
-            }
-
-            override fun closeApp() {
-                CloseApp()
-            }
-
-            override fun permissionRequest(
-                Permissions: Array<String>,
-                caller: permission_C,
-                RequestCode: Int
-            ) {
-                GetPermission(Permissions, caller, RequestCode)
-            }
-
-
-            override fun showDiaLog(
-                cancelable: Boolean,
-                swip: Boolean,
-                caller: SetupDialog,
-                tag: String
-            ) {
-                screenAlwaysOn()
-                ShowDaiLog(cancelable, swip, caller, tag, false)
-            }
-
-            override fun closeDiaLog(tag: String) {
-                cancelAlwaysOn()
-                DaiLogDismiss(tag)
-            }
-
-            override fun closeDiaLog() {
-                try {
-                    for (i in mDialog) {
-                        i.dialog.dismiss()
-                    }
-                    mDialog.clear()
-                } catch (e: java.lang.Exception) {
-                    e.printStackTrace()
-                }
-            }
-
-            override fun setPro(key: String, value: Boolean) {
-                rootshare.SetPro(key, value)
-            }
-
-            override fun setPro(key: String, value: String) {
-                rootshare.SetPro(key, value)
-            }
-
-            override fun setPro(key: String, value: Int) {
-                rootshare.SetPro(key, value)
-            }
-
-            override fun getPro(key: String, value: String): String {
-                return rootshare.GetPro(key, value)
-            }
-
-            override fun getPro(key: String, value: Boolean): Boolean {
-                return rootshare.GetPro(key, value)
-            }
-
-            override fun getPro(key: String, value: Int): Int {
-                return rootshare.GetPro(key, value)
-            }
-
-            override fun clearPro() {
-                getSharedPreferences("Setting", Context.MODE_PRIVATE).edit().clear().commit()
-            }
-
-            override fun goBack(tag: String) {
-                GoBack(tag)
-            }
-
-            override fun goBack(a: Int) {
-                GoBack(a)
-            }
-
-            override fun goBack() {
-                GoBack()
-            }
-
-            override fun goMenu() {
-                GoMenu()
-            }
-
-            override fun setHome(Translation: Fragment, tag: String) {
-                SetHome(Translation, tag)
-            }
-
-            override fun changePage(Translation: Fragment, tag: String, goback: Boolean) {
-                ChangePage(Translation, tag, goback, null)
-            }
-
-            override fun changePage(
-                Translation: Fragment,
-                tag: String,
-                goback: Boolean,
-                animator: Array<Int>
-            ) {
-                ChangePage(Translation, tag, goback, animator)
-            }
-
-            override fun changeFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
-                ChangeFrag(Translation, id, tag, goback, null)
-            }
-
-            override fun changeFrag(
-                Translation: Fragment,
-                id: Int,
-                tag: String,
-                goback: Boolean,
-                animator: Array<Int>
-            ) {
-                ChangeFrag(Translation, id, tag, goback, animator)
-            }
-
-            override fun replaceFrag(Translation: Fragment, id: Int, tag: String, goback: Boolean) {
-                ReplaceFrag(Translation, id, tag, goback, null)
-            }
-
-            override fun replaceFrag(
-                Translation: Fragment,
-                id: Int,
-                tag: String,
-                goback: Boolean,
-                animator: Array<Int>
-            ) {
-                ReplaceFrag(Translation, id, tag, goback, animator)
-            }
-
-            override fun apkDownload(url: String, callback: DownloadCallback) {
-                Download.apkDownload(url, callback)
-            }
-
-        })
+        setSwitchInstance(control)
         rootshare = RootShare(this)
         getControlInstance().setLanguage(getControlInstance().getLanguage())
         setContentView(LayoutId)
@@ -445,6 +445,11 @@ abstract class JzActivity : AppCompatActivity(),
         rootview = findViewById<View>(android.R.id.content).rootView
         NavagationRoot.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         viewInit(rootview)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setSwitchInstance(control)
     }
 
     fun SetOrientation(a: Int) {
