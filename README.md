@@ -253,7 +253,7 @@ interface control {
 # About me
 #### <font color="#0000dd"> Work for: </font><br /> 
 + ##### <font color="#660000">【Orange Electronic】橙的電子-Deputy Head of R&D </font><br /> 
-+ ##### <font color="#660000">【Square Studio】萊恩設計有限公司-CEO </font><br />
++ ##### <font color="#660000">【Nc Design】萊恩設計有限公司-CEO </font><br />
 #### <font color="#0000dd"> Main skill: </font><br /> 
 + ##### Android and IOS(5 years)<br/>  
 + ##### FrontEnd(2 years)<br/> 
