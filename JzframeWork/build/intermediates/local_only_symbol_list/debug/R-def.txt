@@ -1,0 +1,56 @@
+R_DEF: Internal format may change without notice
+local
+anim dia_in
+anim dia_out
+anim down_in
+anim down_out
+anim slide_left_in
+anim slide_left_out
+anim slide_right_in
+anim slide_right_out
+anim top_in
+anim top_out
+animator enter_animtor
+animator exit_animtor
+animator pop_enter_animtor
+animator pop_exit_animtor
+attr? TextSizeRatio
+attr? ratio
+color backgroung
+color buttoncolor
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+color colorRecieveText
+color colorSendText
+color colorStatusText
+color diaback
+color white
+drawable corner
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id drawer
+id frag_bar
+id frag_root
+id lin
+id navigation_view
+id textView
+id textView2
+id textView3
+integer card_flip_full_time
+integer card_flip_half_time
+integer card_flip_time_full
+layout activity_main
+layout activity_root
+layout selectble
+mipmap ic_launcher
+mipmap ic_launcher_round
+style ActionSheetDialogAnimation
+style DownToUP
+style DownToUPSwip
+style MainAppTheme
+style MyDialog
+style SwipDialog
+style SwipTheme
+styleable CustomTitleView TextSizeRatio
+styleable PieChart ratio

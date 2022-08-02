@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EC671A</color>
+    <color name="colorPrimaryDark">#BF360C</color>
+    <color name="colorAccent">#FF6E40</color>
+    <color name="buttoncolor">#32414E</color>
+    <color name="colorRecieveText">#359235</color>
+    <color name="colorSendText">#82CAFF</color>
+    <color name="colorStatusText">#FFDB58</color>
+    <color name="white">#FFFFFF</color>
+    <color name="backgroung">#FFF5ED</color>
+    <color name="diaback">#B3181818</color>
+</resources>

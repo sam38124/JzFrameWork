@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MainAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item> <!-- 加这行 -->
+        <item name="windowNoTitle">true</item> <!-- 再加这行 -->
+        <item name="android:textColor">#32414E</item>
+    </style>
+    <style name="SwipTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowIsTranslucent">true</item> 　　
+
+        <item name="android:windowAnimationStyle">
+
+            @android:style/Animation.Translucent
+
+        </item>
+
+    </style>
+    <style name="MyDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="SwipDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="DownToUP" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮於Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 邊框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的區域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 無標題 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--點選dialog以外區域關閉彈窗-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+
+
+        <!-- Dialog進入及退出動畫 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <style name="DownToUPSwip" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮於Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 邊框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的區域模糊效果 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 無標題 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--點選dialog以外區域關閉彈窗-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+
+
+        <!-- Dialog進入及退出動畫 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <!-- ActionSheet進出動畫 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dia_in</item>
+        <item name="android:windowExitAnimation">@anim/dia_out</item>
+
+    </style>
+</resources>
+
