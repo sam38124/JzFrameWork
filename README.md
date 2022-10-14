@@ -6,9 +6,6 @@ This is a high-performance Android development framework that achieves almost ze
 
 Also support ios version:[Click to view](https://github.com/sam38124/JzOsFrameWork)
 
-## Create by
-<p align="center"><img width = "500"  src="https://github.com/sam38124/JzFrameWork/blob/master/App%20icon/squarestudio.png?raw=tru"><a name="Use"></a></p>
-
 ## List
 * [Import to project](#Import)
 * [Quick Start](#Use)
@@ -253,11 +250,7 @@ interface control {
 # About me
 #### <font color="#0000dd"> Work for: </font><br /> 
 + ##### <font color="#660000">【Orange Electronic】橙的電子-Deputy Head of R&D </font><br /> 
-+ ##### <font color="#660000">【Square Studio】四方工作室-CEO </font><br />
-#### <font color="#0000dd"> Main skill: </font><br /> 
-+ ##### Android and IOS(5 years)<br/>  
-+ ##### Jsp(2 years)<br/> 
-+ ##### Javascript and Jquery and React and Ktor(1 years)<br /> 
++ ##### <font color="#660000">【Square Studio】萊恩設計-CEO </font><br />
 #### <font color="#0000dd"> Contact information: </font><br /> 
 +  ##### line:sam38124<br /> 
 
